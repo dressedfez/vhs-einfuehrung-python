@@ -179,3 +179,5 @@ pyrightconfig.json
 __marimo__
 # 
 .DS_Store
+
+*.drawio.bkp
