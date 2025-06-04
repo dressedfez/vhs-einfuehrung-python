@@ -1,4 +1,3 @@
-from matplotlib import pyplot as pt
 
 
 def main():

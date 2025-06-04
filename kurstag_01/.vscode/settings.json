@@ -1,0 +1,10 @@
+{
+    // Ruff VSCode extension handles linting and formatting
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "ruff.enable": true,
+    "ruff.configuration": "ruff.toml",
+    "ruff.importStrategy": "useBundled" // or pyproject.toml
+}
