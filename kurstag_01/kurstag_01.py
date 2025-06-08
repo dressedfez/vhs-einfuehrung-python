@@ -135,9 +135,31 @@ def _(mo):
     1. **int** - ganze Zahlen mit den mathematischen Operationen, z.B. Plus, Minus, etc
     2. **str** - Zeichenketten mit verschiedenen Operationen, z.B. Verbinden von Zeicheketten
 
-    ## Pythons Basisdatentypen
 
-    Python kennt einige Grundlegende
+    | Type | Python-Ausdruck |
+    | - | - |
+    |Text Type |	str |
+    | Numeric Types|	int, float, complex|
+    | Boolean Type | 	bool | 
+    | None Type|	NoneType |
+    | Sequence Types |	list, tuple, range |
+    | Mapping Type |	dict |
+    | Set Types |	set, frozenset |
+    | Binary Types |	bytes, bytearray, memoryview|
+
+    Weitere Datentypen können von uns definiert werden, mehr dazu später.
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    ## Zeichenketten-Datentyp (str)
+
+    Mit Zeichenketten (str = Strings) lassen sich Buchstaben, Worte und Sätze abspeichern  und manipulieren.
     """
     )
     return
@@ -145,6 +167,95 @@ def _(mo):
 
 @app.cell
 def _():
+    s1 = 'ein' # können mit einfachem Apostroph
+    s2 = "String" # oder mit Gänsefüßschen erzeugt werden
+    return s1, s2
+
+
+@app.cell
+def _(s1, s2):
+    s1+s2 # das + erlaubt Zeichenketten zu verbinden (concatonate)
+    return
+
+
+@app.cell
+def _(s1, s2):
+    s1+' '+s2 # hier haben wir nur noch eine dritten leeren String zur Lesbarkeit hinzugefügt
+    return
+
+
+@app.cell
+def _():
+    multiline_string = """
+    Dies ist ein ein 
+    sehr 
+    langer String, der über 
+    mehrere Zeilen geht.
+    """
+    multiline_string
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""Interessant sind auch noch formatierte Strings, die wie folgt definiert werden können:""")
+    return
+
+
+@app.cell
+def _():
+    zahl = 2
+    sf = f"Dies ist ein formatiertier String, mit Variable-Interpolation, wie z.B. dieer Zahl {zahl} oder {zahl:.2f}, wobei letztere zwei Nachkommastellen hat."
+    sf
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    ## Numerische Datentypen
+    ### Ganze Zahlen
+
+    Sind alles natürlichen Zahlen ${\mathbb N}$, d.h. ...-2,-1,0,1,2,...., wobei der Computer nur einen endlichen Speicher hat und diese deshalb eingeschränkt sind auf einen endlichen Bereich. Bei Python, anders als bei Java, ist die Einschränkung nur durch den RAM-Speicher des benutzten Computer begrenzt. Es gibt keine obere Schranke innerhalb der Programmierspache.
+    """
+    )
+    return
+
+
+@app.cell
+def _():
+    ganze_zahl = 3
+    return (ganze_zahl,)
+
+
+@app.cell
+def _(ganze_zahl):
+    type(ganze_zahl)
+    return
+
+
+@app.cell
+def _():
+    10**100 # ein Google kann ohne Probleme mit Python dargestellt werden
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""Operationen mit **int** werden wir am nächsten Kurstag besprechen.""")
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    ## Gleitkommazahlen
+
+    Gleitkommazahlen
+    """
+    )
     return
 
 
