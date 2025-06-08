@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.11"
+__generated_with = "0.13.15"
 app = marimo.App(width="medium")
 
 
@@ -722,7 +722,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""**Beispiel: Liste mit Quadratzahlen von 1 bis 10**""")
     return
@@ -748,7 +748,7 @@ def _(mo):
         ```
 
         erstelle eine neuen Liste bei der alle ersten Buchstaben groß geschrieben sind.
-  
+
     1.  Gebe von obiger Liste nur die Worte aus, die weniger als sechs Buchstaben haben.
     ///
     """
@@ -816,20 +816,22 @@ def _(mo):
 
 
 @app.cell
-def _(choice, choices):
-    # wenn die Auswahl (choice) eine Wert enthält, dann Speichern wir ihn
-    # in dem Fall aktualisieren wir auch die Anzeige
-    if choice.value is not None:
-        choices.append(choice.value)
-        print(len(choices))
-    return
-
-
-@app.cell
 def _(mo):
     clear_choices = mo.ui.run_button(label="Lösche Auswahl")
     clear_choices
     return (clear_choices,)
+
+
+@app.cell
+def _(choice, choices, clear_choices):
+    # wenn die Auswahl (choice) eine Wert enthält, dann Speichern wir ihn
+    # in dem Fall aktualisieren wir auch die Anzeige
+    clear_choices
+    if choice.value is not None:
+        choices.append(choice.value)
+
+    choices
+    return
 
 
 @app.cell
@@ -841,14 +843,8 @@ def _(choices, clear_choices):
 
 
 @app.cell
-def _(choices):
-    choices
-    return
-
-
-@app.cell
 def _(mo):
-    options = ["Äpfel", "Orangen", "Pfirsiche"]
+    options = ["Äpfel", "Orangen", "Pfirsich"]
     radio = mo.ui.radio(options=options)
     radio
     return (radio,)
