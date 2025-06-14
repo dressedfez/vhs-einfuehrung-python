@@ -51,24 +51,6 @@ def _():
 def _(mo):
     mo.md(
         r"""
-    und hier eine grafische Darstellung eines Arrays von Strings (str)
-    <img src="./public/str_memory.svg" width="200">
-    """
-    )
-    return
-
-
-@app.cell
-def _():
-    meldung = ["Hallo", "Welt"]
-    meldung
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(
-        r"""
     Python hat einige Konvenntionen und Regeln, die für Variablennamen gelten. Hier zunächst die Regeln: 
 
     /// tip | Regeln 
@@ -167,20 +149,22 @@ def _(mo):
 
 @app.cell
 def _():
-    s1 = 'ein' # können mit einfachem Apostroph
-    s2 = "String" # oder mit Gänsefüßschen erzeugt werden
+    s1 = "ein"  # können mit einfachem Apostroph
+    s2 = "String"  # oder mit Gänsefüßschen erzeugt werden
     return s1, s2
 
 
 @app.cell
 def _(s1, s2):
-    s1+s2 # das + erlaubt Zeichenketten zu verbinden (concatonate)
+    s1 + s2  # das + erlaubt Zeichenketten zu verbinden (concatonate)
     return
 
 
 @app.cell
 def _(s1, s2):
-    s1+' '+s2 # hier haben wir nur noch eine dritten leeren String zur Lesbarkeit hinzugefügt
+    (
+        s1 + " " + s2
+    )  # hier haben wir nur noch eine dritten leeren String zur Lesbarkeit hinzugefügt
     return
 
 
@@ -198,7 +182,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""Interessant sind auch noch formatierte Strings, die wie folgt definiert werden können:""")
+    mo.md(
+        r"""Interessant sind auch noch formatierte Strings, die wie folgt definiert werden können:"""
+    )
     return
 
 
@@ -235,25 +221,52 @@ def _(ganze_zahl):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""folgendes zeigt, dass die riesige Zahlen darstellen kann: """)
+    return
+
+
 @app.cell
 def _():
-    10**100 # ein Google kann ohne Probleme mit Python dargestellt werden
+    10**100  # ein Google kann ohne Probleme mit Python dargestellt werden
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""Operationen mit **int** werden wir am nächsten Kurstag besprechen.""")
+    mo.md(r"""man kann auch einfach von Gleitkommazahlen oder String (siehe nächste Abschnitt) nach in **int** konvertieren:""")
     return
 
 
 @app.cell
+def _():
+    int(3.14)
+    return
+
+
+@app.cell
+def _():
+    anzahl_studenten = "2"
+    int(anzahl_studenten)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""Operationen mit **int** werden wir am nächsten Kurstag besprechen."""
+    )
+    return
+
+
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
     ## Gleitkommazahlen
 
-    Gleitkommazahlen
+    Gleitkommazahlen sind Zahlen, die einen Nachkommaanteil haben. Dies können einfach mit Python erstellt werden.
     """
     )
     return
@@ -261,15 +274,310 @@ def _(mo):
 
 @app.cell
 def _():
-    a = 1
-    b = 2
-    a + b
+    2.5
     return
 
 
 @app.cell
 def _():
-    mein_name = 1
+    1 / 127
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""Es gibt auch einige bekannte Konstanten, die in Pyhton eingebaut sind:""")
+    return
+
+
+@app.cell
+def _():
+    import math
+
+    math.pi, math.e
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""Wie bei **int** kann man von Strings und ganzen Zahlen nach Gleitkommazahlen konvertieren:""")
+    return
+
+
+@app.cell
+def _():
+    float(3)
+    return
+
+
+@app.cell
+def _():
+    float("3.14")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    ## Listen und Mengen (set)
+
+    Python kennt einige Datentypen, die es erlauben mehrere Elemente eines **bestimmten** Datentypen zusammenzufassen. Wir stellen hier als wichtigste Vertreter den `List` und `Set`-Type vor.
+
+    ### Listen
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    und hier eine grafische Darstellung eines Arrays/Liste von Strings (str)
+    <img src="./public/str_memory.svg" width="200">
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""eine leere Liste kann auf diese Weise: """)
+    return
+
+
+@app.cell
+def _():
+    leere_liste = list()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""eine Liste, die schon Elemente enthält, kann so erzeugt werden: """)
+    return
+
+
+@app.cell
+def _():
+    meldung = ["Hallo", "Welt"]
+    meldung
+    return (meldung,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""und so kann Elemente hinzufügen""")
+    return
+
+
+@app.cell
+def _(meldung):
+    meldung.append("und")
+    meldung.append("Kurs")
+    meldung.append("Kurs") # ein Element kann auch zwei Mal hinzugefügt werden
+    meldung
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// tip 
+    `append` hängt Element am Ende der Liste an.
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""sowie entfernen""")
+    return
+
+
+@app.cell
+def _(meldung):
+    meldung.remove("und")
+    meldung
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""es gibt auch einen Befehl, der analog zu `append`, das letzte Element entfernt: """)
+    return
+
+
+@app.cell
+def _(meldung):
+    el = meldung.pop()
+    el
+    return
+
+
+@app.cell
+def _(meldung):
+    meldung
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// tip
+    `pop` entfernt ohne weiteres Argument das letzte Element der Liste.
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// attention | Bemerkung
+    Eine Liste kann beliebige Elemente enthalten, die auch nicht unbedingt vom gleichen Typ sein müssen. Im Allgemeinen ist es aber üblich, dass die Elemente den gleichen Datentyp haben.
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""**Beispiel:** Liste mit unterschielichen Typen""")
+    return
+
+
+@app.cell
+def _():
+    unterschielicher_typ_liste = [1, "Hallo", 3.14]
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// note | Übungen
+
+    1. Welche weiteren Operationen kann man mit Listen noch machen (tab-completion)?
+    2. Prüfe mittels des Vergleichsoperators (==), ob ein Wort ein Palindrom ist. Zum Beispiel ist das Wort `ANNA` ist ein Palindrom. Ein Wort besteht aus einer Liste von Buchstaben und man kann eine Operation die von Listen 
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _():
+    test_wort = "ANNA"
+    test_wort
+    wort = list(test_wort)
+    wort.reverse()
+    "".join(wort) == test_wort
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    ### Sets/Mengen
+
+    Mengen haben die Eigenschaft, dass jedes Element nur ein Mal in der Menge vorkommen kann. Ein doppeltes Element, wie bei Listen möglich ist, ist hier nicht erlaubt.
+
+    Eine leere Menge wird analog zu der Liste mit: 
+    """
+    )
+    return
+
+
+@app.cell
+def _():
+    menge1 = set()
+    return (menge1,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""erzeugt. Man kann Elemente hinzufügen: """)
+    return
+
+
+@app.cell
+def _(menge1):
+    menge1.add("Hallo")
+    menge1
+    return
+
+
+@app.cell
+def _(menge1):
+    menge1.add("Hallo") # nochmaliges Hinzufügen ist nicht möglich
+    menge1
+    return
+
+
+@app.cell
+def _():
+    menge2 = set(['Welt'])
+    menge2
+    return (menge2,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""### Mengenoperationen""")
+    return
+
+
+@app.cell
+def _(menge1, menge2):
+    # Vereinigung von zwei Mengen
+    vereinigungs_menge = menge1.union(menge2)
+    vereinigungs_menge
+    return (vereinigungs_menge,)
+
+
+@app.cell
+def _(menge1, vereinigungs_menge):
+    # Teilmengenprüfung
+    menge1.issubset(vereinigungs_menge)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// note | Übungen
+    1. Wir haben zwei Listen mit Schülern, die in GTAs gehen wollen, die zur gleichen Zeit stattfinden. Welche Schüler müssen sich nur für eine GTA entscheiden?
+    ```python  
+    volleyball = ["Frank", "Egon", "Markus", "Georg", "Frank"]
+    fussball = ["Egon", "Franz","Steffi","Markus"]
+    ```
+    Was machen die Befehle `intersection`, `difference` und `symmetric_difference`?
+    2. Was passiert, wenn man eine Zeichenkette (einen String) in als Argument `set(arg)` 
+    übergibt?
+    3. Bestimme die Buchstaben, die sowohl in
+    ```python
+    text1 = "Hallo Welt"
+    ```
+    also auch 
+    ```python
+    text2 = "Weltraum"
+    ```
+    enthalten sind. Welche sind nicht in `text1`, aber in `text2` unumgekehrt enthalten?
+    ///
+    """
+    )
     return
 
 
