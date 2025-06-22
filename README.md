@@ -10,6 +10,7 @@ Folgende Programme werden genutzt:
 
 <br>
 <img src="https://docs.marimo.io/_static/marimo-logotype-thick.svg" width=50 alt="marimo">
+<img src="https://docs.astral.sh/uv/assets/logo-letter.svg" width=38 alt="uv" align="right">
 
 ## Kursübersicht
 
@@ -20,6 +21,7 @@ Datenanalyse und Nutzung von maschinellem Lernen und künstlicher Intelligenz li
 | ---- | ----- |
 | 1 | <ul><li>Übersicht</li><li>Einführung in Paketmanagement mit <br>[uv](https://docs.astral.sh/uv/)</br><ul><li>Instalation von Python</li><li>Erste Schritte in Python-REPL</li><li>Projekt-Management</li></ul></li><li>Einführung in [marimo](https://docs.marimo.io)</li><ul><li>marimo starten und Tutorials</li><li>Erste Schritte in Python unter marimo</li></ul><li>Datentypen</li><li>Variablen</li> </ul> |
 | 2 | <ul> <li>mathematische Standard-Operatoren</li> <li>Bedingungen</li><li>Schleifen</li><li>Nutzung interaktiver Elemente in marimo</li></ul>  |
+| 3 | <ul> <li>Funktionen</li> <li>Lambda- oder Anonyme Funktionen</li><li>Map, Filter und Reduce</li><li>Klassen und Vererbung</li><li>Duck-Typing und Polymorphismus</li></ul>  |
 
 
 

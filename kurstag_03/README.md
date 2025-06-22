@@ -6,4 +6,4 @@ Folgende Themen werden bearbeitet:
  - Map, Filter und Reduce
  - Klassen und Vererbung
  - Duck-Typing
-
+ - Polymorphismus
