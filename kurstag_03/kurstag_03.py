@@ -1,7 +1,7 @@
 import marimo
 
-__generated_with = "0.13.15"
-app = marimo.App(width="medium")
+__generated_with = "0.14.9"
+app = marimo.App(width="full")
 
 
 @app.cell
@@ -402,7 +402,7 @@ def _(reduce):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
@@ -411,7 +411,7 @@ def _(mo):
 
         $$n! = n\cdot (n-1)\cdot(n-2)\cdot\dots\cdot 2\cdot 1$$
         berechnet.
-   
+
     3. Burger mit reduce() bauen 🍔: Gegeben ist eine Liste von Zutaten, die in der richtigen Reihenfolge
 
         übereinandergeschichtet werden sollen. Verwende die Funktion reduce() aus dem Modul functools, um daraus eine lesbare Bauanleitung für einen Burger zu erzeugen.
@@ -448,6 +448,107 @@ def _(reduce):
 
     print("🍔 Burger-Bauplan:")
     print(burger)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    ## Klassen
+
+    In objektorientierten Programmiersprachen, zu denen Python gehört, werden Klassen unter anderem dazu genutzt: 
+
+    1. Daten zu kapseln, so dass sie nicht von jedem geändert werden können und
+    2. spezielles Verhalten, dass zu dieser Kategorie von Dingen gehört zu sammeln und mit diesen zu assoziieren.
+
+
+    Bevor wir uns Klassen und Objekten zuwenden, betrachten wir zunächst den Python internen Typ `Tupel`.
+
+    ### Kurzes Ausflug: Tupel
+
+    /// note | Definition
+    Tupel sind wie Listen und Mengen (Sets) Kontainertypen, d.h. man kann diesen Tupeln `Daten` speichern. Tupel haben dabei verschiedene Eigenschaften, die sie von Listen und Mengen unterscheiden:
+
+    1. Ein Tupel kann noch der Erstellung nicht mehr geändert werden (**unchangeable**).
+    2. Ein Tupel ist geordnet, d.h. die Reihenfolge ist fest.
+    ///
+
+    Gleiche Einträge können auch **mehrfach** in einem Tupel vorkommen.
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""Tupel werden mit runden Klammen erzeugt:""")
+    return
+
+
+@app.cell
+def _():
+    t1 = ("Frank", "Zimmer", 51)
+    t1
+    return (t1,)
+
+
+@app.cell
+def _():
+    t2 = tuple(
+        ["Egon", "Zimmer", 93]
+    )  # hier könnten auch andere Kontainertypen verwendet werden
+    t2
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""wie bei Listen können die Elemente über Indizes referenziert werden"""
+    )
+    return
+
+
+@app.cell
+def _(t1):
+    t1[1]
+    return
+
+
+@app.cell
+def _(t1):
+    t1[0:2]  # entnehme Elemente 0 und 1
+    return
+
+
+@app.cell
+def _(t1):
+    t1[-1]  # entnehme letztes Element
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""Man kann Tupel **nicht** ändern""")
+    return
+
+
+@app.cell
+def _():
+    # t2[0] = "Karl" # enterne das Hash am Anfang der Zeile
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    Tupel sind gut dafür zusammengehörende Daten zu speichern. Der Nachteil ist: 
+
+    1. das man die Felder nicht mittels einem
+    """
+    )
     return
 
 
