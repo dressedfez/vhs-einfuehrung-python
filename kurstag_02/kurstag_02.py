@@ -1,7 +1,7 @@
 import marimo
 
-__generated_with = "0.13.15"
-app = marimo.App(width="medium")
+__generated_with = "0.18.1"
+app = marimo.App(width="full")
 
 
 @app.cell
@@ -12,8 +12,7 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     # Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft
 
     An diesem Kurstag werden wir verschiedene Punkte, die essentiell für die Programmierung in Python (oder auch jeder anderen Programmiersprache) wichtig sind. Wir behandeln:
@@ -31,8 +30,7 @@ def _(mo):
     ### Addition
 
     Die Addition von zwei **int**-Werten führt wieder zu einem **int**-Wert:
-    """
-    )
+    """)
     return
 
 
@@ -50,8 +48,7 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     Die Addition von **int** und **float** führt zu einem **float**-Wert. Dies nennt man:
 
     /// note | Definition **Widening**
@@ -59,8 +56,7 @@ def _(mo):
     ///
 
     **Beispiel**
-    """
-    )
+    """)
     return
 
 
@@ -78,16 +74,14 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// tip | Bemerkung
     **Widening** wird bei Python und vielen anderen höheren Programmiersprachen implizit durchgeführt, d.h.
-    man muss sich nicht selbst um die Konvertierung in den "größeren" Datentyp kümmern. 
+    man muss sich nicht selbst um die Konvertierung in den "größeren" Datentyp kümmern.
     ///
 
     Man kann mittels **float(zahl)** auch explizit konvertieren, d.h. man erhält das gleichen Ergebnis, wenn man
-    """
-    )
+    """)
     return
 
 
@@ -99,13 +93,11 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ### Subtraktion
 
     Das Verhalten bezüglich Typen ist analog der Addition.
-    """
-    )
+    """)
     return
 
 
@@ -123,8 +115,7 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// attention | Achtung
     Das Rechnen mit **float**-Zahlen kann, wegen der Binärdarstellung der Zahlen und der Endlichkeit des Computerspeichers zu Ungenauigkeiten (Rundungsfehlern) führen.
     ///
@@ -137,26 +128,23 @@ def _(mo):
 
     $\frac{1}{3}\approx0.3333$
 
-    Im obigen Beispiel von 0.1 ist die Binärdarstellung im Computer 0.0001100110011... 
+    Im obigen Beispiel von 0.1 ist die Binärdarstellung im Computer 0.0001100110011...
     und muss deshalb auch irgendwann abgeschnitten werden. Dies führt zu dem "Fehler".
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ### Multiplikation
 
-    Für die Multiplikation wird in Python der Operator `*` genutzt. 
+    Für die Multiplikation wird in Python der Operator `*` genutzt.
 
     /// attention | Achtung
     Der Operator `*` wird auch im Zusammenhang mit dem Verbinden (Concatanation) von zwei oder mehreren Zeichenketten (str) genutzt.
     ///
-    """
-    )
+    """)
     return
 
 
@@ -180,13 +168,11 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ### Division
 
     Für die Division (Teilen) wird der Opertor / genutzt.
-    """
-    )
+    """)
     return
 
 
@@ -204,17 +190,15 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     in diesem Fall kommt immer ein **float** als Ergbnis aus, auch, wenn man die Zahl ohne Rest teilen kann.
     Bei der Division gibt es neben dem Standard-Operator noch zwei weitere Operatoren:
 
     - die Division ohne Rest //
-    - der Modulo-Opertor % zur Bestimmung des Restes 
+    - der Modulo-Opertor % zur Bestimmung des Restes
 
     **Beispiele**
-    """
-    )
+    """)
     return
 
 
@@ -232,8 +216,7 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Rechnen mit komplexen Zahlen
 
     Komplexe Zahlen sind Zahlen in der Ebene, die "erweitererte" Standard-Opertoren nutzen.
@@ -255,20 +238,17 @@ def _(mo):
     Wenn $a_1=x_1+j y_1$ und $a_2=x_2+j y_2$ zwei komplexe Zahlen sind, dann ist ihre Division gegeben durch
 
     $$\frac{a_1}{a_2} = \frac{x_1 x_2 + y_1 y_2+ j (y_1 x_2 - x_1 y_2)}{x_2^2+y_2^2}$$
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ### Beispiele
 
     **Definition der komplexen Zahlen**
-    """
-    )
+    """)
     return
 
 
@@ -286,7 +266,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Addition**""")
+    mo.md(r"""
+    **Addition**
+    """)
     return
 
 
@@ -298,7 +280,9 @@ def _(a_1, a_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Multiplikation**""")
+    mo.md(r"""
+    **Multiplikation**
+    """)
     return
 
 
@@ -310,7 +294,9 @@ def _(a_1, a_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Division**""")
+    mo.md(r"""
+    **Division**
+    """)
     return
 
 
@@ -322,8 +308,7 @@ def _(a_1, a_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// note  | Übungen
 
      1. Definiere Höhe $h$ und Grundseite $g$ eines Dreieckes und berechne den Flächeninhalt mittels $$A_D = \frac{1}{2} \cdot g\cdot  h$$
@@ -334,15 +319,13 @@ def _(mo):
         $$|a|=\sqrt{x^{2}+y^{2}}$$
         und die eingebaute Funktion `abs`.
     ///
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Bedingungen oder bedingte Ausführung von Programmteilen
 
     ### `if-elif-else`-Ausdruck
@@ -372,14 +355,15 @@ def _(mo):
     -  Benutze `else`, wenn Du einen Fallback-Fall hast (kann oft auch vermieden werden).
     -  Füge ausreichend Kommentare zu Deinem Programm hinzu, sodass Du die Logik schnell erfassen kannst.
     -  Nutze, wenn von Vorteil, Regeln der boolschen Algebra, um die Bedingungen zu vereinfachen.
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Beispiel**""")
+    mo.md(r"""
+    **Beispiel**
+    """)
     return
 
 
@@ -403,13 +387,12 @@ def _(number):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ### Kurzschreibweise `if-else`-Ausdruck
 
-    Es gibt für den `if-else`-Ausdruck, der sich im Prinzip, wie ein englischer Satz liest. 
+    Es gibt für den `if-else`-Ausdruck, der sich im Prinzip, wie ein englischer Satz liest.
 
-    /// note | Definition 
+    /// note | Definition
     Die Kurzschreibweise des `if-else`-Ausdruckes hat die Form:
     ```python
     <Code Block 1> if Bedingung else <Code Block 2>
@@ -420,14 +403,15 @@ def _(mo):
 
     - man kann diesen `if-else`-Ausdruck auch aneinanderhängen
     - dieser Ansatz ist besonders hilfreich, wenn man zwischen zwei Handlungen unterscheiden möchte
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Beispiel**""")
+    mo.md(r"""
+    **Beispiel**
+    """)
     return
 
 
@@ -439,8 +423,7 @@ def _(number):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// note | Übungen
 
     1.	Temperatur-Checker
@@ -468,15 +451,13 @@ def _(mo):
         - 18 bis 64 Jahre: “Normalpreis: 10 €”
         - ab 65 Jahren: “Seniorenpreis: 6 €”
     ///
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Schleife oder wiederholende Ausführung von Programmteilen
 
     Python kennt verschiedene Schleifentypen, die unterschiedliche Anwendungsgebiete haben. Die wichtgiste und verbreiteste Schleife ist die **for-loop**. Weniger oft wird die **while-loop** eingesetzt. Trotzdem behandeln wir diese hier zu erst.
@@ -487,13 +468,13 @@ def _(mo):
 
     /// note | Definition
 
-    Einfache Variante: 
+    Einfache Variante:
     ```python
     while Bedingung:
         <Code Block>
     ```
 
-    Obiger `<Code Block>` wird so lange ausgeführt, wie die Bedingung erfüllt ist. 
+    Obiger `<Code Block>` wird so lange ausgeführt, wie die Bedingung erfüllt ist.
 
     Variante mit `else`-Abschnitt:
     ```python
@@ -507,8 +488,7 @@ def _(mo):
     ///
 
     **Beispiel mit `continue`**
-    """
-    )
+    """)
     return
 
 
@@ -528,13 +508,11 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     **Beispiel mit `break`**
 
     Der `else`-Zweig wird in diesem Fall nicht durchlaufen. Dies gilt aber nur, wenn es zum `break` kommt.
-    """
-    )
+    """)
     return
 
 
@@ -554,22 +532,59 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// tip | Bemerkung
 
     Die Keywords **break** und **continue** werden auch in anderen Konstruktionen, wie z.B. der **for-loop** benutzt.
 
     ///
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
+    /// note | Übung
+    Schreibe ein Programm, dass die Tilgung eines Kredits modelliert. Nehme dazu folgende Parameter auf:
+    - kreditsumme = 150_000 (Euro)
+    - Rate = 20_000 (Euro)
+    - anfänglicher Jahreszins = 12_000 (Euro)
+    - anfängliche Tilgung = 8_000 (Euro)
+
+    Nutze den Zusammenhang : zinsatz = jahreszins / kreditsumme.
+    ///
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _():
+    # Lösungs für die Kredittilgung-Übung
+
+    kreditsumme = 150_000
+    tilgung = 8_000
+    jahreszinsen = 12_000
+    rate = 20_000
+
+    zinssatz = jahreszinsen / kreditsumme
+
+    jahr = 0
+    while kreditsumme >= 0:
+        jahr = jahr + 1
+        kreditsumme = kreditsumme - tilgung
+        jahreszinsen = kreditsumme * zinssatz
+        tilgung = rate - jahreszinsen
+        if kreditsumme > 0:
+            print(
+                f"Nach Jahr {jahr} verbleibt Kreditsumme: {kreditsumme:.2f}€, Tilgung: {tilgung:.2f}€, Zinsen: {jahreszinsen:.2f}€ (Rate: {rate:.2f}€)"
+            )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     ### **For-loop**-Schleife
 
     /// note | Definiton
@@ -587,14 +602,15 @@ def _(mo):
     Wie schon bei der **While**-Schleife können die Keyworte **continue** und **break** genutzt werden. Wird das Keyword **break** for dem Ende der Schleife genutzt wird der optionale **else**-Zweig durchlaufen.
 
     ///
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Beispiel mit Iterable**""")
+    mo.md(r"""
+    **Beispiel mit Iterable**
+    """)
     return
 
 
@@ -609,7 +625,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Beispiel mit Liste**""")
+    mo.md(r"""
+    **Beispiel mit Liste**
+    """)
     return
 
 
@@ -627,8 +645,7 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// note | Übungen
     1. Primzahlprüfung (for-Schleife mit break und else)
 
@@ -663,22 +680,19 @@ def _(mo):
         Gib die Zahlen von 1 bis 10 aus, aber überspringe die Zahlen 3 und 7.
         Verwende continue, um diese beiden Zahlen nicht auszugeben.
     ///
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// attention | Achtung
     Verändere niemals die Sammlung über die Du iterierst! Dies führt zu unerwartete Ergebnisse. Diese Aussage gilt für alle Arten von Schleifen.
     ///
 
     **Beispiel**
-    """
-    )
+    """)
     return
 
 
@@ -701,11 +715,10 @@ def _(teilnehmer):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ### List-Comprehension
 
-    Dies ist eine spezielle Form der **for**-Schleife, die dazu genutzt wird _spezielle_ Listen zu erzeugen. **List-Comprehensions** lassen sich wie folgt definieren: 
+    Dies ist eine spezielle Form der **for**-Schleife, die dazu genutzt wird _spezielle_ Listen zu erzeugen. **List-Comprehensions** lassen sich wie folgt definieren:
 
     /// note | Definition
     Definition einer **List-Comprehension**:
@@ -715,16 +728,17 @@ def _(mo):
 
     -  `x`  -  ein Element
     -  `f(x)` - Ausdruck, der auf jedes Element angewandt wird
-    -  `g(x)` - wenn Bedigung erfüllt, wie `f(x)` der Liste hinzugefügt 
+    -  `g(x)` - wenn Bedigung erfüllt, wie `f(x)` der Liste hinzugefügt
     ///
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""**Beispiel: Liste mit Quadratzahlen von 1 bis 10**""")
+    mo.md(r"""
+    **Beispiel: Liste mit Quadratzahlen von 1 bis 10**
+    """)
     return
 
 
@@ -737,8 +751,7 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// note | Übungen
 
     1.	Gegeben ist die Liste
@@ -751,15 +764,13 @@ def _(mo):
 
     1.  Gebe von obiger Liste nur die Worte aus, die weniger als sechs Buchstaben haben.
     ///
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     ## Einführung von Interaktivität durch Nutzung von **marimo**-Elementen
 
     **Marimo** verfügt über eine Menge von **interaktiven** Elementen und Darstellungsmöglichkeiten, die wir nicht alle hier ansprechen können. Um für spätere Arbeiten und Manipulationsmöglichkeiten vorbereitetet zu sein, werden hier verschiedene Elemente besprochen.
@@ -776,14 +787,15 @@ def _(mo):
     - Slider:  sind z.B. dafür geeignet die Abhängigkeit von Parameter zu realisieren.
     - Dropdown-Multiple-Choice-Menü: sind dafür geeignet kategorische Auswahl zu treffen
     - Radio-Button:
-    """
-    )
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Slider""")
+    mo.md(r"""
+    ### Slider
+    """)
     return
 
 
@@ -796,7 +808,9 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Dropdown-Multiple-Choice-Menü""")
+    mo.md(r"""
+    ### Dropdown-Multiple-Choice-Menü
+    """)
     return
 
 
@@ -858,8 +872,7 @@ def _(radio):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
+    mo.md(r"""
     /// note | Übungen
 
     Geht zur den folgenden Seiten: 🛜
@@ -869,8 +882,12 @@ def _(mo):
 
     und informiert Euch über weitere Möglichkeiten sowie testet dies bei Euch lokal.
     ///
-    """
-    )
+    """)
+    return
+
+
+@app.cell
+def _():
     return
 
 
