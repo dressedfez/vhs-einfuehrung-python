@@ -6,7 +6,7 @@
 In diesem Tag werden wir die folgenden Themen bearbeiten:
 
 - Übersicht
-- Einführung in Paketmanagement mit <br>[uv](https://docs.astral.sh/uv/)
+- Einführung in Paketmanagement mit [uv](https://docs.astral.sh/uv/)
   - Instalation von Python
   - Erste Schritte in Python-REPL
   - Projekt-Management mit uv
