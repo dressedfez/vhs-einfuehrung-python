@@ -1,4 +1,7 @@
-# Kurstag 1
+# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
+## Kurstag 1: Einführung in uv, Python  und marimo
+
+**Themen:**
 
 In diesem Tag werden wir die folgenden Themen bearbeiten:
 

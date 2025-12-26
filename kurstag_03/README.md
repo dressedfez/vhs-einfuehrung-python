@@ -1,4 +1,7 @@
-# Themen zu Kurstag 3
+# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
+## Kurstag 3: Fortgeschrittene Programmierkonzepte in Python
+
+**Themen:**
 
 Folgende Themen werden bearbeitet:
  - Funktionen
@@ -7,3 +10,5 @@ Folgende Themen werden bearbeitet:
  - Klassen und Vererbung
  - Duck-Typing
  - Polymorphismus
+ - Module und Pakete
+ - Importing - verstehen und anwenden
