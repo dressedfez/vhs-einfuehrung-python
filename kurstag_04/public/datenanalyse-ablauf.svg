@@ -1,0 +1,127 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hintergrund -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Titel -->
+  <text x="400" y="40" font-size="28" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Typischer Ablauf der Datenanalyse
+  </text>
+  
+  <!-- Schritt 1: Datensammlung -->
+  <rect x="50" y="100" width="180" height="80" rx="10" fill="#3498db" opacity="0.9"/>
+  <text x="140" y="130" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    1. Datensammlung
+  </text>
+  <text x="140" y="155" font-size="13" text-anchor="middle" fill="white">
+    Rohdaten aus verschiedenen
+  </text>
+  <text x="140" y="172" font-size="13" text-anchor="middle" fill="white">
+    Quellen erfassen
+  </text>
+  
+  <!-- Pfeil 1 -->
+  <path d="M 230 140 L 280 140" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Schritt 2: Datenbereinigung -->
+  <rect x="280" y="100" width="180" height="80" rx="10" fill="#e74c3c" opacity="0.9"/>
+  <text x="370" y="130" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    2. Datenbereinigung
+  </text>
+  <text x="370" y="155" font-size="13" text-anchor="middle" fill="white">
+    Fehler korrigieren,
+  </text>
+  <text x="370" y="172" font-size="13" text-anchor="middle" fill="white">
+    Duplikate entfernen
+  </text>
+  
+  <!-- Pfeil 2 -->
+  <path d="M 460 140 L 510 140" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Schritt 3: Exploration -->
+  <rect x="510" y="100" width="180" height="80" rx="10" fill="#9b59b6" opacity="0.9"/>
+  <text x="600" y="130" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    3. Exploration
+  </text>
+  <text x="600" y="155" font-size="13" text-anchor="middle" fill="white">
+    Daten verstehen,
+  </text>
+  <text x="600" y="172" font-size="13" text-anchor="middle" fill="white">
+    erste Muster erkennen
+  </text>
+  
+  <!-- Pfeil nach unten -->
+  <path d="M 600 180 L 600 250" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Schritt 4: Visualisierung -->
+  <rect x="510" y="250" width="180" height="80" rx="10" fill="#f39c12" opacity="0.9"/>
+  <text x="600" y="280" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    4. Visualisierung
+  </text>
+  <text x="600" y="305" font-size="13" text-anchor="middle" fill="white">
+    Diagramme und Grafiken
+  </text>
+  <text x="600" y="322" font-size="13" text-anchor="middle" fill="white">
+    erstellen
+  </text>
+  
+  <!-- Pfeil nach links -->
+  <path d="M 510 290 L 460 290" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Schritt 5: Analyse -->
+  <rect x="280" y="250" width="180" height="80" rx="10" fill="#16a085" opacity="0.9"/>
+  <text x="370" y="280" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    5. Analyse
+  </text>
+  <text x="370" y="305" font-size="13" text-anchor="middle" fill="white">
+    Statistische Methoden,
+  </text>
+  <text x="370" y="322" font-size="13" text-anchor="middle" fill="white">
+    Modelle anwenden
+  </text>
+  
+  <!-- Pfeil nach links -->
+  <path d="M 280 290 L 230 290" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Schritt 6: Interpretation -->
+  <rect x="50" y="250" width="180" height="80" rx="10" fill="#27ae60" opacity="0.9"/>
+  <text x="140" y="280" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    6. Interpretation
+  </text>
+  <text x="140" y="305" font-size="13" text-anchor="middle" fill="white">
+    Erkenntnisse ableiten,
+  </text>
+  <text x="140" y="322" font-size="13" text-anchor="middle" fill="white">
+    Bedeutung verstehen
+  </text>
+  
+  <!-- Pfeil nach unten -->
+  <path d="M 140 330 L 140 400" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Schritt 7: Kommunikation -->
+  <rect x="50" y="400" width="180" height="80" rx="10" fill="#e67e22" opacity="0.9"/>
+  <text x="140" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    7. Kommunikation
+  </text>
+  <text x="140" y="455" font-size="13" text-anchor="middle" fill="white">
+    Ergebnisse präsentieren,
+  </text>
+  <text x="140" y="472" font-size="13" text-anchor="middle" fill="white">
+    Entscheidungen treffen
+  </text>
+  
+  <!-- Iterativer Prozess Pfeil -->
+  <path d="M 230 440 Q 400 500 600 440" stroke="#c0392b" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowhead-red)"/>
+  <text x="400" y="530" font-size="14" font-style="italic" text-anchor="middle" fill="#c0392b">
+    Iterativer Prozess
+  </text>
+  
+  <!-- Pfeilspitzen definieren -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>

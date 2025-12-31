@@ -1,0 +1,1338 @@
+Studenten_ID,Vorname,Nachname,Studiengang,Kurs,Credits,Semester,Note,Anwesenheit_Prozent,Bestanden
+S10323,Finn,Hofmann,Data Science,Algorithmen,8,SS2024,4.3,86,Nein
+S10323,Finn,Hofmann,Data Science,Betriebssysteme,6,SS2024,3,73,Ja
+S10323,Finn,Hofmann,Data Science,Datenbanken,6,WS2023,4.3,75,Nein
+S10323,Finn,Hofmann,Data Science,Mathematik I,6,WS2024,5,84,Nein
+S10323,Finn,Hofmann,Data Science,Softwareengineering,8,WS2024,3.3,73,Ja
+S10356,Niklas,Weber,Informatik,Algorithmen,8,WS2024,1.3,84,Ja
+S10356,Niklas,Weber,Informatik,Betriebssysteme,6,SS2024,5,89,Nein
+S10356,Niklas,Weber,Informatik,Datenbanken,6,SS2024,4,84,Ja
+S10356,Niklas,Weber,Informatik,Webentwicklung,6,SS2024,4.7,89,Nein
+S10927,Jan,Schmitt,Software Engineering,Betriebssysteme,6,SS2024,2.7,79,Ja
+S10927,Jan,Schmitt,Software Engineering,IT-Sicherheit,6,WS2023,3,70,Ja
+S10927,Jan,Schmitt,Software Engineering,Netzwerke,6,WS2023,3.7,73,Ja
+S11324,Max,Koch,Informatik,Algorithmen,8,WS2023,3,85,Ja
+S11324,Max,Koch,Informatik,Datenbanken,6,WS2023,5,81,Nein
+S11324,Max,Koch,Informatik,Netzwerke,6,SS2024,1,76,Ja
+S11667,Julia,Fischer,Wirtschaftsinformatik,Algorithmen,8,WS2024,3,69,Ja
+S11667,Julia,Fischer,Wirtschaftsinformatik,Betriebssysteme,6,WS2024,1.7,91,Ja
+S11667,Julia,Fischer,Wirtschaftsinformatik,Datenbanken,6,WS2023,3,81,Ja
+S11667,Julia,Fischer,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,4.7,83,Nein
+S11667,Julia,Fischer,Wirtschaftsinformatik,Programmierung I,8,WS2024,4.3,83,Nein
+S11729,Nina,Schneider,Data Science,Algorithmen,8,WS2024,5,80,Nein
+S11729,Nina,Schneider,Data Science,Mathematik I,6,WS2023,5,84,Nein
+S11729,Nina,Schneider,Data Science,Softwareengineering,8,SS2024,5,68,Nein
+S11729,Nina,Schneider,Data Science,Statistik,6,WS2024,5,71,Nein
+S11865,Jan,Krause,Wirtschaftsinformatik,Algorithmen,8,WS2023,5,80,Nein
+S11865,Jan,Krause,Wirtschaftsinformatik,Betriebssysteme,6,WS2024,3,70,Ja
+S11865,Jan,Krause,Wirtschaftsinformatik,Datenbanken,6,WS2024,2.7,82,Ja
+S11978,Simon,Klein,Data Science,Betriebssysteme,6,WS2023,4.3,78,Nein
+S11978,Simon,Klein,Data Science,IT-Sicherheit,6,WS2024,4,76,Ja
+S11978,Simon,Klein,Data Science,Programmierung I,8,WS2023,5,66,Nein
+S12213,Moritz,Wagner,Medieninformatik,Betriebssysteme,6,WS2024,2.3,84,Ja
+S12213,Moritz,Wagner,Medieninformatik,Datenbanken,6,WS2023,3,87,Ja
+S12213,Moritz,Wagner,Medieninformatik,Softwareengineering,8,WS2024,4,78,Ja
+S12213,Moritz,Wagner,Medieninformatik,Webentwicklung,6,WS2024,4.3,81,Nein
+S12645,Julia,Krause,Wirtschaftsinformatik,Mathematik I,6,SS2024,5,74,Nein
+S12645,Julia,Krause,Wirtschaftsinformatik,Programmierung I,8,WS2024,2.7,72,Ja
+S12645,Julia,Krause,Wirtschaftsinformatik,Softwareengineering,8,WS2024,3,75,Ja
+S12645,Julia,Krause,Wirtschaftsinformatik,Webentwicklung,6,SS2024,5,90,Nein
+S13291,Finn,Schmitt,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,3,77,Ja
+S13291,Finn,Schmitt,Wirtschaftsinformatik,Netzwerke,6,SS2024,2.3,73,Ja
+S13291,Finn,Schmitt,Wirtschaftsinformatik,Programmierung I,8,WS2023,5,84,Nein
+S13341,Julia,Schröder,Software Engineering,Algorithmen,8,WS2024,2.3,82,Ja
+S13341,Julia,Schröder,Software Engineering,Betriebssysteme,6,WS2023,4.7,82,Nein
+S13341,Julia,Schröder,Software Engineering,Datenbanken,6,WS2023,2.3,93,Ja
+S13341,Julia,Schröder,Software Engineering,Softwareengineering,8,WS2024,4.3,84,Nein
+S13341,Julia,Schröder,Software Engineering,Webentwicklung,6,SS2024,3,89,Ja
+S13597,Emma,Meyer,Wirtschaftsinformatik,Algorithmen,8,WS2024,5,83,Nein
+S13597,Emma,Meyer,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,2.7,89,Ja
+S13597,Emma,Meyer,Wirtschaftsinformatik,Mathematik I,6,WS2024,1.7,92,Ja
+S13597,Emma,Meyer,Wirtschaftsinformatik,Webentwicklung,6,SS2024,4,78,Ja
+S13715,Niklas,Meyer,Software Engineering,Betriebssysteme,6,SS2024,4.3,83,Nein
+S13715,Niklas,Meyer,Software Engineering,Datenbanken,6,WS2023,3,71,Ja
+S13715,Niklas,Meyer,Software Engineering,Mathematik I,6,WS2024,4.3,77,Nein
+S13715,Niklas,Meyer,Software Engineering,Netzwerke,6,WS2023,3.3,85,Ja
+S13715,Niklas,Meyer,Software Engineering,Programmierung I,8,WS2024,3,87,Ja
+S13715,Niklas,Meyer,Software Engineering,Softwareengineering,8,WS2023,4,85,Ja
+S13819,Laura,Schröder,Data Science,Betriebssysteme,6,WS2023,5,87,Nein
+S13819,Laura,Schröder,Data Science,Mathematik I,6,WS2024,5,86,Nein
+S13819,Laura,Schröder,Data Science,Softwareengineering,8,WS2024,3,85,Ja
+S13954,Sarah,Richter,Informatik,Datenbanken,6,WS2023,4.3,89,Nein
+S13954,Sarah,Richter,Informatik,Netzwerke,6,SS2024,2,79,Ja
+S13954,Sarah,Richter,Informatik,Programmierung I,8,WS2024,2.7,88,Ja
+S13954,Sarah,Richter,Informatik,Statistik,6,SS2024,5,83,Nein
+S14010,Lukas,Wolf,Data Science,Algorithmen,8,WS2024,4.3,89,Nein
+S14010,Lukas,Wolf,Data Science,Betriebssysteme,6,WS2024,2.7,84,Ja
+S14010,Lukas,Wolf,Data Science,Datenbanken,6,SS2024,3.3,78,Ja
+S14010,Lukas,Wolf,Data Science,Programmierung I,8,WS2024,4.3,71,Nein
+S14010,Lukas,Wolf,Data Science,Softwareengineering,8,WS2023,3.3,84,Ja
+S14029,Tim,Lange,Medieninformatik,Datenbanken,6,SS2024,3.3,84,Ja
+S14029,Tim,Lange,Medieninformatik,Mathematik I,6,WS2023,3,79,Ja
+S14029,Tim,Lange,Medieninformatik,Netzwerke,6,SS2024,3,71,Ja
+S14029,Tim,Lange,Medieninformatik,Softwareengineering,8,WS2023,4.3,93,Nein
+S14029,Tim,Lange,Medieninformatik,Statistik,6,WS2023,3,80,Ja
+S14799,Lea,Meyer,Software Engineering,Algorithmen,8,WS2023,2.7,89,Ja
+S14799,Lea,Meyer,Software Engineering,Datenbanken,6,SS2024,5,81,Nein
+S14799,Lea,Meyer,Software Engineering,IT-Sicherheit,6,SS2024,1.7,71,Ja
+S14799,Lea,Meyer,Software Engineering,Programmierung I,8,WS2024,2.3,79,Ja
+S14799,Lea,Meyer,Software Engineering,Softwareengineering,8,WS2023,5,71,Nein
+S14974,Mia,Weber,Informatik,Algorithmen,8,WS2023,4,88,Ja
+S14974,Mia,Weber,Informatik,Datenbanken,6,SS2024,5,77,Nein
+S14974,Mia,Weber,Informatik,IT-Sicherheit,6,SS2024,4,75,Ja
+S14974,Niklas,Hoffmann,Data Science,Netzwerke,6,WS2024,4,78,Ja
+S14974,Mia,Weber,Informatik,Netzwerke,6,WS2023,4.7,79,Nein
+S14974,Mia,Weber,Informatik,Programmierung I,8,SS2024,4.3,78,Nein
+S14974,Niklas,Hoffmann,Data Science,Softwareengineering,8,WS2023,3,86,Ja
+S14974,Niklas,Hoffmann,Data Science,Statistik,6,WS2023,1.7,71,Ja
+S15007,Hannah,Bauer,Wirtschaftsinformatik,Algorithmen,8,WS2023,4,75,Ja
+S15007,Hannah,Bauer,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,2.3,85,Ja
+S15007,Hannah,Bauer,Wirtschaftsinformatik,Mathematik I,6,WS2023,2.7,85,Ja
+S15007,Hannah,Bauer,Wirtschaftsinformatik,Softwareengineering,8,WS2023,3.3,90,Ja
+S15484,Anna,Wolf,Informatik,Algorithmen,8,WS2024,1.7,93,Ja
+S15484,Anna,Wolf,Informatik,IT-Sicherheit,6,SS2024,2.3,79,Ja
+S15484,Anna,Wolf,Informatik,Programmierung I,8,SS2024,3,67,Ja
+S15484,Anna,Wolf,Informatik,Softwareengineering,8,WS2024,2.3,79,Ja
+S15484,Anna,Wolf,Informatik,Statistik,6,SS2024,5,84,Nein
+S15484,Anna,Wolf,Informatik,Webentwicklung,6,WS2024,2.7,80,Ja
+S15566,Lena,Krüger,Wirtschaftsinformatik,Algorithmen,8,WS2023,4.7,81,Nein
+S15566,Lena,Krüger,Wirtschaftsinformatik,Betriebssysteme,6,WS2023,4,69,Ja
+S15566,Lena,Krüger,Wirtschaftsinformatik,Datenbanken,6,SS2024,1.7,88,Ja
+S15566,Lena,Krüger,Wirtschaftsinformatik,Netzwerke,6,WS2023,3,86,Ja
+S15566,Lena,Krüger,Wirtschaftsinformatik,Programmierung I,8,SS2024,1.7,86,Ja
+S15566,Lena,Krüger,Wirtschaftsinformatik,Webentwicklung,6,WS2024,4,70,Ja
+S16258,Tim,Schäfer,Medieninformatik,Betriebssysteme,6,SS2024,2,86,Ja
+S16258,Tim,Schäfer,Medieninformatik,Datenbanken,6,WS2023,3.3,84,Ja
+S16258,Tim,Schäfer,Medieninformatik,Mathematik I,6,SS2024,5,87,Nein
+S16375,Sophie,Becker,Medieninformatik,Algorithmen,8,WS2024,2,74,Ja
+S16375,Sophie,Becker,Medieninformatik,Mathematik I,6,WS2023,3.7,82,Ja
+S16375,Sophie,Becker,Medieninformatik,Netzwerke,6,WS2023,4,84,Ja
+S16375,Sophie,Becker,Medieninformatik,Programmierung I,8,SS2024,3.7,74,Ja
+S16375,Sophie,Becker,Medieninformatik,Softwareengineering,8,WS2023,2.7,77,Ja
+S16375,Sophie,Becker,Medieninformatik,Statistik,6,SS2024,5,81,Nein
+S16576,Tom,Koch,Medieninformatik,Algorithmen,8,WS2024,5,84,Nein
+S16576,Tom,Koch,Medieninformatik,Betriebssysteme,6,WS2023,4.3,80,Nein
+S16576,Tom,Koch,Medieninformatik,IT-Sicherheit,6,WS2024,2,78,Ja
+S16576,Tom,Koch,Medieninformatik,Statistik,6,WS2023,5,74,Nein
+S16576,Tom,Koch,Medieninformatik,Webentwicklung,6,WS2024,4.7,91,Nein
+S16638,Moritz,Hofmann,Informatik,Algorithmen,8,SS2024,2.3,82,Ja
+S16638,Moritz,Hofmann,Informatik,Datenbanken,6,WS2023,5,74,Nein
+S16638,Moritz,Hofmann,Informatik,IT-Sicherheit,6,SS2024,3,84,Ja
+S16638,Moritz,Hofmann,Informatik,Mathematik I,6,WS2023,2.3,73,Ja
+S16638,Moritz,Hofmann,Informatik,Netzwerke,6,SS2024,1.3,80,Ja
+S16842,Laura,Meyer,Software Engineering,IT-Sicherheit,6,SS2024,4.7,86,Nein
+S16842,Laura,Meyer,Software Engineering,Programmierung I,8,WS2023,3,92,Ja
+S16842,Laura,Meyer,Software Engineering,Softwareengineering,8,WS2023,3.3,72,Ja
+S16842,Laura,Meyer,Software Engineering,Statistik,6,SS2024,4.7,82,Nein
+S17411,Sarah,Klein,Wirtschaftsinformatik,Algorithmen,8,WS2023,4.7,87,Nein
+S17411,Sarah,Klein,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,2.7,93,Ja
+S17411,Sarah,Klein,Wirtschaftsinformatik,Datenbanken,6,WS2024,4,83,Ja
+S17411,Sarah,Klein,Wirtschaftsinformatik,Netzwerke,6,WS2023,2,85,Ja
+S17411,Sarah,Klein,Wirtschaftsinformatik,Webentwicklung,6,WS2023,2,84,Ja
+S17748,Niklas,Weber,Wirtschaftsinformatik,Algorithmen,8,WS2023,2.7,78,Ja
+S17748,Niklas,Weber,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,2.3,80,Ja
+S17748,Niklas,Weber,Wirtschaftsinformatik,Programmierung I,8,WS2023,2,81,Ja
+S17921,Lukas,Krüger,Informatik,Betriebssysteme,6,WS2024,1.3,77,Ja
+S17921,Lukas,Krüger,Informatik,Programmierung I,8,WS2023,4.3,82,Nein
+S17921,Lukas,Krüger,Informatik,Webentwicklung,6,WS2023,2,75,Ja
+S18844,Simon,Schmitt,Software Engineering,Algorithmen,8,SS2024,4.7,79,Nein
+S18844,Simon,Schmitt,Software Engineering,Betriebssysteme,6,WS2023,2,76,Ja
+S18844,Simon,Schmitt,Software Engineering,IT-Sicherheit,6,SS2024,2,80,Ja
+S18844,Simon,Schmitt,Software Engineering,Netzwerke,6,SS2024,3.3,86,Ja
+S18844,Simon,Schmitt,Software Engineering,Programmierung I,8,WS2023,2,74,Ja
+S18844,Simon,Schmitt,Software Engineering,Softwareengineering,8,WS2024,3,71,Ja
+S19030,Jan,Klein,Software Engineering,Netzwerke,6,WS2024,3.7,68,Ja
+S19030,Jan,Klein,Software Engineering,Softwareengineering,8,SS2024,5,70,Nein
+S19030,Jan,Klein,Software Engineering,Webentwicklung,6,WS2024,1.3,78,Ja
+S19354,Felix,Weber,Data Science,Datenbanken,6,SS2024,3.7,88,Ja
+S19354,Felix,Weber,Data Science,IT-Sicherheit,6,WS2024,3,81,Ja
+S19354,Felix,Weber,Data Science,Netzwerke,6,WS2024,2,68,Ja
+S19354,Felix,Weber,Data Science,Webentwicklung,6,WS2023,4.7,81,Nein
+S19726,Julia,Werner,Software Engineering,Betriebssysteme,6,WS2023,3,83,Ja
+S19726,Julia,Werner,Software Engineering,Datenbanken,6,WS2023,3.7,75,Ja
+S19726,Julia,Werner,Software Engineering,IT-Sicherheit,6,SS2024,2.7,83,Ja
+S19726,Julia,Werner,Software Engineering,Programmierung I,8,SS2024,2,68,Ja
+S19726,Julia,Werner,Software Engineering,Statistik,6,WS2023,3,93,Ja
+S19726,Julia,Werner,Software Engineering,Webentwicklung,6,WS2023,3.3,86,Ja
+S20234,Emma,Hofmann,Software Engineering,Algorithmen,8,WS2023,3,76,Ja
+S20234,Emma,Hofmann,Software Engineering,Datenbanken,6,WS2024,4.7,69,Nein
+S20234,Emma,Hofmann,Software Engineering,IT-Sicherheit,6,SS2024,1.3,72,Ja
+S20234,Emma,Hofmann,Software Engineering,Netzwerke,6,WS2024,2.7,87,Ja
+S20234,Emma,Hofmann,Software Engineering,Softwareengineering,8,WS2024,5,85,Nein
+S20234,Emma,Hofmann,Software Engineering,Webentwicklung,6,WS2024,3.3,74,Ja
+S21121,Ben,Wagner,Medieninformatik,Betriebssysteme,6,WS2024,1.7,87,Ja
+S21121,Ben,Wagner,Medieninformatik,Datenbanken,6,WS2023,4.7,69,Nein
+S21121,Ben,Wagner,Medieninformatik,Netzwerke,6,SS2024,3,85,Ja
+S21121,Ben,Wagner,Medieninformatik,Statistik,6,WS2024,4.3,68,Nein
+S21121,Ben,Wagner,Medieninformatik,Webentwicklung,6,WS2023,4.3,81,Nein
+S21143,Sophie,Schmidt,Data Science,Algorithmen,8,WS2024,3.3,85,Ja
+S21143,Sophie,Schmidt,Data Science,Betriebssysteme,6,WS2024,4,86,Ja
+S21143,Sophie,Schmidt,Data Science,Datenbanken,6,WS2023,4.7,83,Nein
+S21143,Sophie,Schmidt,Data Science,Mathematik I,6,WS2023,3.3,69,Ja
+S21143,Sophie,Schmidt,Data Science,Netzwerke,6,SS2024,5,80,Nein
+S21143,Sophie,Schmidt,Data Science,Softwareengineering,8,SS2024,1.3,88,Ja
+S21174,Felix,Schneider,Software Engineering,IT-Sicherheit,6,SS2024,4,84,Ja
+S21174,Felix,Schneider,Software Engineering,Mathematik I,6,SS2024,2.3,89,Ja
+S21174,Felix,Schneider,Software Engineering,Netzwerke,6,WS2024,3.7,67,Ja
+S21174,Felix,Schneider,Software Engineering,Statistik,6,WS2023,1.7,87,Ja
+S21192,Leon,Fischer,Software Engineering,Datenbanken,6,SS2024,4,80,Ja
+S21192,Leon,Fischer,Software Engineering,Netzwerke,6,WS2023,2,86,Ja
+S21192,Leon,Fischer,Software Engineering,Programmierung I,8,SS2024,2.7,72,Ja
+S21192,Leon,Fischer,Software Engineering,Statistik,6,SS2024,5,79,Nein
+S21195,Moritz,Schulz,Wirtschaftsinformatik,Betriebssysteme,6,WS2024,2.3,75,Ja
+S21195,Moritz,Schulz,Wirtschaftsinformatik,Datenbanken,6,WS2023,5,69,Nein
+S21195,Moritz,Schulz,Wirtschaftsinformatik,Netzwerke,6,WS2024,4,82,Ja
+S21195,Moritz,Schulz,Wirtschaftsinformatik,Programmierung I,8,SS2024,5,76,Nein
+S21195,Moritz,Schulz,Wirtschaftsinformatik,Webentwicklung,6,WS2023,3,80,Ja
+S22434,Clara,Klein,Software Engineering,IT-Sicherheit,6,WS2024,4.3,70,Nein
+S22434,Clara,Klein,Software Engineering,Mathematik I,6,WS2024,5,77,Nein
+S22434,Clara,Klein,Software Engineering,Softwareengineering,8,SS2024,4,71,Ja
+S22434,Clara,Klein,Software Engineering,Statistik,6,SS2024,5,80,Nein
+S23115,Lena,Hoffmann,Wirtschaftsinformatik,Algorithmen,8,SS2024,2.7,85,Ja
+S23115,Lena,Hoffmann,Wirtschaftsinformatik,Betriebssysteme,6,WS2023,4.3,92,Nein
+S23115,Lena,Hoffmann,Wirtschaftsinformatik,Datenbanken,6,WS2023,4.7,74,Nein
+S23115,Lena,Hoffmann,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,4.7,85,Nein
+S23115,Lena,Hoffmann,Wirtschaftsinformatik,Mathematik I,6,WS2024,4.7,75,Nein
+S23115,Lena,Hoffmann,Wirtschaftsinformatik,Statistik,6,WS2024,3.7,92,Ja
+S23417,Ben,Koch,Wirtschaftsinformatik,Algorithmen,8,WS2024,4.7,75,Nein
+S23417,Ben,Koch,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,4.3,71,Nein
+S23417,Ben,Koch,Wirtschaftsinformatik,Softwareengineering,8,WS2024,2.7,93,Ja
+S23453,Clara,Schneider,Informatik,Algorithmen,8,SS2024,4.3,86,Nein
+S23453,Clara,Schneider,Informatik,IT-Sicherheit,6,WS2023,2.3,86,Ja
+S23453,Clara,Schneider,Informatik,Programmierung I,8,WS2023,4,84,Ja
+S23453,Clara,Schneider,Informatik,Softwareengineering,8,SS2024,4.3,74,Nein
+S23520,Sarah,Bauer,Data Science,Algorithmen,8,WS2024,2.3,83,Ja
+S23520,Sarah,Bauer,Data Science,Netzwerke,6,WS2023,2.7,88,Ja
+S23520,Sarah,Bauer,Data Science,Softwareengineering,8,WS2023,2,72,Ja
+S23520,Sarah,Bauer,Data Science,Statistik,6,SS2024,4.3,77,Nein
+S23520,Sarah,Bauer,Data Science,Webentwicklung,6,SS2024,2.3,81,Ja
+S23549,Jonas,Fischer,Data Science,Betriebssysteme,6,SS2024,2.7,72,Ja
+S23549,Jonas,Fischer,Data Science,Datenbanken,6,SS2024,3.7,86,Ja
+S23549,Jonas,Fischer,Data Science,IT-Sicherheit,6,WS2024,2.7,86,Ja
+S23549,Jonas,Fischer,Data Science,Programmierung I,8,SS2024,2.7,85,Ja
+S23549,Jonas,Fischer,Data Science,Softwareengineering,8,WS2024,2,77,Ja
+S23549,Jonas,Fischer,Data Science,Webentwicklung,6,WS2023,5,75,Nein
+S23611,Paul,Schäfer,Medieninformatik,Algorithmen,8,WS2024,5,72,Nein
+S23611,Paul,Schäfer,Medieninformatik,Betriebssysteme,6,SS2024,1.3,86,Ja
+S23611,Paul,Schäfer,Medieninformatik,Datenbanken,6,WS2024,1.3,87,Ja
+S23611,Paul,Schäfer,Medieninformatik,IT-Sicherheit,6,WS2024,2.7,82,Ja
+S23611,Paul,Schäfer,Medieninformatik,Netzwerke,6,SS2024,5,71,Nein
+S23611,Paul,Schäfer,Medieninformatik,Statistik,6,WS2023,3.7,75,Ja
+S23836,Mia,Klein,Informatik,Betriebssysteme,6,SS2024,2.7,85,Ja
+S23836,Mia,Klein,Informatik,IT-Sicherheit,6,WS2023,4.3,78,Nein
+S23836,Mia,Klein,Informatik,Statistik,6,WS2023,3.7,81,Ja
+S23888,Max,Schäfer,Informatik,Betriebssysteme,6,SS2024,2.3,78,Ja
+S23888,Max,Schäfer,Informatik,IT-Sicherheit,6,WS2024,5,78,Nein
+S23888,Max,Schäfer,Informatik,Mathematik I,6,WS2023,2.7,71,Ja
+S23888,Max,Schäfer,Informatik,Programmierung I,8,SS2024,5,72,Nein
+S23888,Max,Schäfer,Informatik,Softwareengineering,8,WS2024,2.7,84,Ja
+S23888,Max,Schäfer,Informatik,Statistik,6,SS2024,5,71,Nein
+S24162,Max,Zimmermann,Medieninformatik,Betriebssysteme,6,SS2024,2.3,73,Ja
+S24162,Max,Zimmermann,Medieninformatik,Datenbanken,6,WS2023,5,81,Nein
+S24162,Max,Zimmermann,Medieninformatik,IT-Sicherheit,6,SS2024,4,72,Ja
+S24162,Max,Zimmermann,Medieninformatik,Mathematik I,6,SS2024,2.3,81,Ja
+S24162,Max,Zimmermann,Medieninformatik,Netzwerke,6,WS2023,4.7,79,Nein
+S24162,Max,Zimmermann,Medieninformatik,Webentwicklung,6,WS2024,3.7,89,Ja
+S24364,Niklas,Schäfer,Medieninformatik,Betriebssysteme,6,WS2024,3,90,Ja
+S24364,Niklas,Schäfer,Medieninformatik,Datenbanken,6,SS2024,3.7,76,Ja
+S24364,Niklas,Schäfer,Medieninformatik,Statistik,6,WS2024,4,79,Ja
+S25019,Jonas,Klein,Data Science,Algorithmen,8,WS2024,5,81,Nein
+S25019,Jonas,Klein,Data Science,Betriebssysteme,6,SS2024,5,77,Nein
+S25019,Jonas,Klein,Data Science,IT-Sicherheit,6,WS2024,4.3,84,Nein
+S25019,Jonas,Klein,Data Science,Mathematik I,6,SS2024,1.3,92,Ja
+S25019,Jonas,Klein,Data Science,Programmierung I,8,WS2024,5,86,Nein
+S25080,Sarah,Hoffmann,Wirtschaftsinformatik,Softwareengineering,8,WS2023,2.3,82,Ja
+S25080,Sarah,Hoffmann,Wirtschaftsinformatik,Statistik,6,SS2024,2.3,89,Ja
+S25080,Sarah,Hoffmann,Wirtschaftsinformatik,Webentwicklung,6,WS2023,4,83,Ja
+S25245,Ben,Bauer,Informatik,Datenbanken,6,SS2024,4.3,89,Nein
+S25245,Ben,Bauer,Informatik,IT-Sicherheit,6,WS2023,2.7,72,Ja
+S25245,Ben,Bauer,Informatik,Mathematik I,6,WS2024,3,84,Ja
+S25245,Ben,Bauer,Informatik,Webentwicklung,6,WS2023,3.3,70,Ja
+S25349,Lukas,Klein,Informatik,Algorithmen,8,WS2023,4.3,67,Nein
+S25349,Lukas,Klein,Informatik,Betriebssysteme,6,WS2024,2.7,80,Ja
+S25349,Lukas,Klein,Informatik,Datenbanken,6,WS2024,4.3,80,Nein
+S25349,Lukas,Klein,Informatik,IT-Sicherheit,6,WS2023,5,81,Nein
+S25349,Lukas,Klein,Informatik,Mathematik I,6,SS2024,2.3,81,Ja
+S25349,Lukas,Klein,Informatik,Webentwicklung,6,WS2024,3.3,90,Ja
+S25592,David,Schmitz,Informatik,Algorithmen,8,WS2024,2.7,78,Ja
+S25592,David,Schmitz,Informatik,Betriebssysteme,6,WS2023,2.7,77,Ja
+S25592,David,Schmitz,Informatik,Datenbanken,6,WS2024,1.7,80,Ja
+S25592,David,Schmitz,Informatik,IT-Sicherheit,6,WS2024,3,82,Ja
+S25592,David,Schmitz,Informatik,Mathematik I,6,SS2024,4,88,Ja
+S25592,David,Schmitz,Informatik,Programmierung I,8,SS2024,3.3,74,Ja
+S25780,Niklas,Hartmann,Medieninformatik,Algorithmen,8,WS2023,2.3,77,Ja
+S25780,Niklas,Hartmann,Medieninformatik,Betriebssysteme,6,SS2024,1.7,78,Ja
+S25780,Niklas,Hartmann,Medieninformatik,Datenbanken,6,WS2023,5,85,Nein
+S25780,Niklas,Hartmann,Medieninformatik,Mathematik I,6,WS2023,4.7,70,Nein
+S25780,Niklas,Hartmann,Medieninformatik,Statistik,6,WS2023,2,87,Ja
+S25780,Niklas,Hartmann,Medieninformatik,Webentwicklung,6,SS2024,5,81,Nein
+S25802,Clara,Lange,Medieninformatik,Betriebssysteme,6,SS2024,1.7,91,Ja
+S25802,Clara,Lange,Medieninformatik,Datenbanken,6,WS2023,5,72,Nein
+S25802,Clara,Lange,Medieninformatik,Softwareengineering,8,WS2024,2,91,Ja
+S25802,Clara,Lange,Medieninformatik,Webentwicklung,6,WS2023,2.3,78,Ja
+S25991,Simon,Koch,Wirtschaftsinformatik,Datenbanken,6,WS2023,3,72,Ja
+S25991,Simon,Koch,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,4.3,84,Nein
+S25991,Simon,Koch,Wirtschaftsinformatik,Netzwerke,6,SS2024,3.3,80,Ja
+S25991,Simon,Koch,Wirtschaftsinformatik,Softwareengineering,8,WS2024,2.3,82,Ja
+S26297,Lisa,Schmitz,Wirtschaftsinformatik,Algorithmen,8,WS2024,5,85,Nein
+S26297,Lisa,Schmitz,Wirtschaftsinformatik,Betriebssysteme,6,WS2024,4.3,87,Nein
+S26297,Lisa,Schmitz,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,4.7,80,Nein
+S26297,Lisa,Schmitz,Wirtschaftsinformatik,Mathematik I,6,WS2024,3,79,Ja
+S26297,Lisa,Schmitz,Wirtschaftsinformatik,Statistik,6,WS2024,5,82,Nein
+S26358,Moritz,Wagner,Wirtschaftsinformatik,Datenbanken,6,SS2024,3.3,74,Ja
+S26358,Moritz,Wagner,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,4.7,80,Nein
+S26358,Moritz,Wagner,Wirtschaftsinformatik,Softwareengineering,8,WS2024,4.7,66,Nein
+S26358,Moritz,Wagner,Wirtschaftsinformatik,Webentwicklung,6,WS2024,3.7,93,Ja
+S26524,Paul,Schwarz,Medieninformatik,Algorithmen,8,WS2023,4.7,73,Nein
+S26524,Paul,Schwarz,Medieninformatik,Betriebssysteme,6,SS2024,4.3,89,Nein
+S26524,Paul,Schwarz,Medieninformatik,Datenbanken,6,WS2023,4.7,72,Nein
+S26524,Paul,Schwarz,Medieninformatik,IT-Sicherheit,6,WS2023,1,88,Ja
+S26524,Paul,Schwarz,Medieninformatik,Mathematik I,6,WS2023,1.7,72,Ja
+S26524,Paul,Schwarz,Medieninformatik,Statistik,6,WS2024,2.7,79,Ja
+S26758,Sophie,Neumann,Software Engineering,Betriebssysteme,6,SS2024,3.3,84,Ja
+S26758,Sophie,Neumann,Software Engineering,Mathematik I,6,WS2023,4.3,83,Nein
+S26758,Sophie,Neumann,Software Engineering,Softwareengineering,8,SS2024,4.7,71,Nein
+S27013,Lisa,Hoffmann,Wirtschaftsinformatik,Algorithmen,8,WS2024,4,82,Ja
+S27013,Lisa,Hoffmann,Wirtschaftsinformatik,Betriebssysteme,6,WS2023,4.7,90,Nein
+S27013,Lisa,Hoffmann,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,1.7,91,Ja
+S27013,Lisa,Hoffmann,Wirtschaftsinformatik,Mathematik I,6,SS2024,4,80,Ja
+S27013,Lisa,Hoffmann,Wirtschaftsinformatik,Netzwerke,6,SS2024,5,80,Nein
+S27648,Mia,Braun,Data Science,IT-Sicherheit,6,WS2024,3.7,75,Ja
+S27648,Mia,Braun,Data Science,Netzwerke,6,WS2024,5,81,Nein
+S27648,Mia,Braun,Data Science,Statistik,6,WS2023,3.7,73,Ja
+S28487,Leon,Meyer,Informatik,Algorithmen,8,WS2024,4,88,Ja
+S28487,Leon,Meyer,Informatik,Mathematik I,6,WS2023,1.7,75,Ja
+S28487,Leon,Meyer,Informatik,Softwareengineering,8,WS2024,4,84,Ja
+S29311,Sarah,Schäfer,Wirtschaftsinformatik,Datenbanken,6,WS2023,3.3,78,Ja
+S29311,Sarah,Schäfer,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,3.7,84,Ja
+S29311,Sarah,Schäfer,Wirtschaftsinformatik,Netzwerke,6,WS2024,4.3,83,Nein
+S29311,Sarah,Schäfer,Wirtschaftsinformatik,Softwareengineering,8,WS2023,3.7,84,Ja
+S29311,Sarah,Schäfer,Wirtschaftsinformatik,Webentwicklung,6,WS2024,1,86,Ja
+S29402,Tom,Weber,Software Engineering,Datenbanken,6,SS2024,1.7,79,Ja
+S29402,Tom,Weber,Software Engineering,Programmierung I,8,SS2024,3.3,79,Ja
+S29402,Tom,Weber,Software Engineering,Softwareengineering,8,SS2024,5,81,Nein
+S29727,Sophie,Lange,Informatik,Mathematik I,6,WS2024,2,79,Ja
+S29727,Sophie,Lange,Informatik,Softwareengineering,8,SS2024,5,87,Nein
+S29727,Sophie,Lange,Informatik,Statistik,6,WS2024,5,82,Nein
+S29727,Sophie,Lange,Informatik,Webentwicklung,6,WS2023,1.7,71,Ja
+S29925,Hannah,Schäfer,Informatik,Betriebssysteme,6,WS2023,3.3,80,Ja
+S29925,Hannah,Schäfer,Informatik,Datenbanken,6,SS2024,5,82,Nein
+S29925,Hannah,Schäfer,Informatik,Netzwerke,6,WS2023,1.7,75,Ja
+S29925,Hannah,Schäfer,Informatik,Statistik,6,SS2024,2,71,Ja
+S29925,Hannah,Schäfer,Informatik,Webentwicklung,6,WS2023,1.7,79,Ja
+S30070,Julia,Becker,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,3.3,79,Ja
+S30070,Julia,Becker,Wirtschaftsinformatik,Mathematik I,6,WS2023,4.7,71,Nein
+S30070,Julia,Becker,Wirtschaftsinformatik,Webentwicklung,6,SS2024,2,71,Ja
+S30315,Jonas,Braun,Medieninformatik,Betriebssysteme,6,WS2024,1.7,71,Ja
+S30315,Jonas,Braun,Medieninformatik,Programmierung I,8,SS2024,1.7,88,Ja
+S30315,Jonas,Braun,Medieninformatik,Statistik,6,WS2024,5,71,Nein
+S30445,Nina,Hoffmann,Data Science,Algorithmen,8,SS2024,2.3,78,Ja
+S30445,Nina,Hoffmann,Data Science,IT-Sicherheit,6,WS2023,4.7,83,Nein
+S30445,Nina,Hoffmann,Data Science,Netzwerke,6,SS2024,2.7,80,Ja
+S30445,Nina,Hoffmann,Data Science,Statistik,6,SS2024,5,79,Nein
+S30592,Laura,Müller,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,4,75,Ja
+S30592,Laura,Müller,Wirtschaftsinformatik,Datenbanken,6,WS2024,5,69,Nein
+S30592,Laura,Müller,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,2.7,77,Ja
+S30592,Laura,Müller,Wirtschaftsinformatik,Mathematik I,6,SS2024,5,81,Nein
+S30592,Laura,Müller,Wirtschaftsinformatik,Programmierung I,8,WS2023,5,80,Nein
+S30597,Mia,Hoffmann,Informatik,Betriebssysteme,6,WS2024,5,79,Nein
+S30597,Mia,Hoffmann,Informatik,Netzwerke,6,SS2024,2.7,72,Ja
+S30597,Mia,Hoffmann,Informatik,Statistik,6,WS2023,3.3,85,Ja
+S30789,Leon,Bauer,Data Science,Datenbanken,6,WS2024,4,83,Ja
+S30789,Leon,Bauer,Data Science,IT-Sicherheit,6,SS2024,4.3,71,Nein
+S30789,Leon,Bauer,Data Science,Mathematik I,6,WS2023,3.3,78,Ja
+S30789,Leon,Bauer,Data Science,Softwareengineering,8,WS2023,2,91,Ja
+S30789,Leon,Bauer,Data Science,Webentwicklung,6,WS2024,2,80,Ja
+S30937,Paul,Krüger,Software Engineering,Algorithmen,8,WS2023,2.3,78,Ja
+S30937,Paul,Krüger,Software Engineering,Betriebssysteme,6,SS2024,5,78,Nein
+S30937,Paul,Krüger,Software Engineering,Netzwerke,6,WS2023,4,78,Ja
+S30937,Paul,Krüger,Software Engineering,Programmierung I,8,SS2024,1.3,77,Ja
+S30937,Paul,Krüger,Software Engineering,Softwareengineering,8,WS2023,2.7,78,Ja
+S30937,Paul,Krüger,Software Engineering,Statistik,6,WS2023,4.7,78,Nein
+S31004,Marie,Müller,Medieninformatik,Betriebssysteme,6,WS2023,4,69,Ja
+S31004,Marie,Müller,Medieninformatik,Datenbanken,6,WS2023,4.7,87,Nein
+S31004,Marie,Müller,Medieninformatik,IT-Sicherheit,6,WS2024,5,72,Nein
+S31004,Marie,Müller,Medieninformatik,Mathematik I,6,WS2023,2,81,Ja
+S31356,Ben,Bauer,Software Engineering,Algorithmen,8,WS2023,4.7,77,Nein
+S31356,Ben,Bauer,Software Engineering,Datenbanken,6,WS2024,4.3,77,Nein
+S31356,Ben,Bauer,Software Engineering,IT-Sicherheit,6,WS2023,4.3,87,Nein
+S31356,Ben,Bauer,Software Engineering,Netzwerke,6,WS2024,3.7,65,Ja
+S31356,Ben,Bauer,Software Engineering,Programmierung I,8,SS2024,3.3,77,Ja
+S31356,Ben,Bauer,Software Engineering,Softwareengineering,8,WS2024,1.3,80,Ja
+S31984,Emma,Schneider,Wirtschaftsinformatik,Algorithmen,8,WS2024,5,67,Nein
+S31984,Emma,Schneider,Wirtschaftsinformatik,Betriebssysteme,6,WS2024,3.3,70,Ja
+S31984,Emma,Schneider,Wirtschaftsinformatik,Datenbanken,6,WS2023,3.3,82,Ja
+S31984,Emma,Schneider,Wirtschaftsinformatik,Softwareengineering,8,WS2024,1.7,71,Ja
+S32175,Tom,Koch,Informatik,IT-Sicherheit,6,WS2024,1.7,90,Ja
+S32175,Tom,Koch,Informatik,Mathematik I,6,SS2024,3,76,Ja
+S32175,Tom,Koch,Informatik,Netzwerke,6,SS2024,3.7,73,Ja
+S32175,Tom,Koch,Informatik,Programmierung I,8,WS2023,5,72,Nein
+S32175,Tom,Koch,Informatik,Softwareengineering,8,WS2024,3.7,85,Ja
+S32175,Tom,Koch,Informatik,Statistik,6,SS2024,1.7,89,Ja
+S32570,Moritz,Braun,Informatik,Betriebssysteme,6,WS2023,2,74,Ja
+S32570,Moritz,Braun,Informatik,Netzwerke,6,SS2024,2.7,74,Ja
+S32570,Moritz,Braun,Informatik,Programmierung I,8,WS2024,1.7,91,Ja
+S32570,Moritz,Braun,Informatik,Softwareengineering,8,SS2024,3.7,71,Ja
+S32570,Moritz,Braun,Informatik,Statistik,6,SS2024,4.3,92,Nein
+S33548,Niklas,Bauer,Software Engineering,Datenbanken,6,WS2023,1.7,71,Ja
+S33548,Niklas,Bauer,Software Engineering,IT-Sicherheit,6,WS2024,5,69,Nein
+S33548,Niklas,Bauer,Software Engineering,Programmierung I,8,WS2023,2.7,82,Ja
+S33548,Niklas,Bauer,Software Engineering,Softwareengineering,8,WS2023,5,75,Nein
+S33593,Amelie,Zimmermann,Data Science,Datenbanken,6,SS2024,2.3,83,Ja
+S33593,Amelie,Zimmermann,Data Science,Programmierung I,8,WS2023,4,83,Ja
+S33593,Amelie,Zimmermann,Data Science,Webentwicklung,6,WS2024,4.3,77,Nein
+S34254,Max,Klein,Wirtschaftsinformatik,Betriebssysteme,6,WS2023,4.7,83,Nein
+S34254,Max,Klein,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,2.7,85,Ja
+S34254,Max,Klein,Wirtschaftsinformatik,Programmierung I,8,WS2024,1.7,92,Ja
+S34332,Lisa,Wagner,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,2.7,82,Ja
+S34332,Lisa,Wagner,Wirtschaftsinformatik,Softwareengineering,8,SS2024,5,89,Nein
+S34332,Lisa,Wagner,Wirtschaftsinformatik,Statistik,6,SS2024,4.7,83,Nein
+S34779,Ben,Meier,Software Engineering,Algorithmen,8,WS2024,4.7,67,Nein
+S34779,Ben,Meier,Software Engineering,IT-Sicherheit,6,WS2023,3.7,78,Ja
+S34779,Ben,Meier,Software Engineering,Mathematik I,6,SS2024,1.7,85,Ja
+S34779,Ben,Meier,Software Engineering,Netzwerke,6,SS2024,4.7,77,Nein
+S34779,Ben,Meier,Software Engineering,Softwareengineering,8,WS2024,1,93,Ja
+S34820,Leon,Wagner,Medieninformatik,Algorithmen,8,SS2024,4,90,Ja
+S34820,Leon,Wagner,Medieninformatik,Datenbanken,6,WS2023,2.3,78,Ja
+S34820,Leon,Wagner,Medieninformatik,Mathematik I,6,WS2024,2.3,82,Ja
+S34820,Leon,Wagner,Medieninformatik,Statistik,6,WS2023,3.7,72,Ja
+S35019,Amelie,Meier,Informatik,Betriebssysteme,6,WS2023,4,72,Ja
+S35019,Amelie,Meier,Informatik,IT-Sicherheit,6,SS2024,2.3,81,Ja
+S35019,Amelie,Meier,Informatik,Mathematik I,6,WS2023,5,83,Nein
+S35019,Amelie,Meier,Informatik,Programmierung I,8,WS2023,5,75,Nein
+S35019,Amelie,Meier,Informatik,Statistik,6,WS2023,4.3,85,Nein
+S35064,Mia,Hartmann,Data Science,Algorithmen,8,WS2024,3.3,89,Ja
+S35064,Mia,Hartmann,Data Science,Betriebssysteme,6,SS2024,2,76,Ja
+S35064,Mia,Hartmann,Data Science,IT-Sicherheit,6,WS2024,2,83,Ja
+S35064,Mia,Hartmann,Data Science,Mathematik I,6,SS2024,4.7,80,Nein
+S35064,Mia,Hartmann,Data Science,Statistik,6,SS2024,4.3,81,Nein
+S35064,Mia,Hartmann,Data Science,Webentwicklung,6,WS2024,1.7,80,Ja
+S35716,Simon,Schneider,Informatik,Datenbanken,6,WS2023,4,75,Ja
+S35716,Simon,Schneider,Informatik,IT-Sicherheit,6,WS2024,5,76,Nein
+S35716,Simon,Schneider,Informatik,Netzwerke,6,WS2023,2.3,88,Ja
+S35716,Simon,Schneider,Informatik,Programmierung I,8,WS2024,2.7,73,Ja
+S35716,Simon,Schneider,Informatik,Softwareengineering,8,WS2023,5,80,Nein
+S35716,Simon,Schneider,Informatik,Webentwicklung,6,SS2024,2.7,79,Ja
+S35902,Anna,Bauer,Software Engineering,Algorithmen,8,WS2023,3.3,69,Ja
+S35902,Anna,Bauer,Software Engineering,Datenbanken,6,WS2023,3,86,Ja
+S35902,Anna,Bauer,Software Engineering,IT-Sicherheit,6,SS2024,5,76,Nein
+S35902,Anna,Bauer,Software Engineering,Programmierung I,8,WS2024,3,77,Ja
+S35902,Anna,Bauer,Software Engineering,Statistik,6,WS2024,5,73,Nein
+S36095,Finn,Meier,Wirtschaftsinformatik,Algorithmen,8,WS2023,5,87,Nein
+S36095,Finn,Meier,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,4.3,77,Nein
+S36095,Finn,Meier,Wirtschaftsinformatik,Mathematik I,6,SS2024,4.3,76,Nein
+S36095,Finn,Meier,Wirtschaftsinformatik,Netzwerke,6,WS2024,2.7,81,Ja
+S36095,Finn,Meier,Wirtschaftsinformatik,Softwareengineering,8,WS2023,4,89,Ja
+S36575,Finn,Koch,Software Engineering,Algorithmen,8,WS2023,2.7,87,Ja
+S36575,Finn,Koch,Software Engineering,Mathematik I,6,SS2024,4.7,67,Nein
+S36575,Finn,Koch,Software Engineering,Netzwerke,6,WS2024,2,80,Ja
+S36575,Finn,Koch,Software Engineering,Webentwicklung,6,SS2024,3.3,75,Ja
+S37286,Lukas,Neumann,Software Engineering,Algorithmen,8,SS2024,2.3,71,Ja
+S37286,Lukas,Neumann,Software Engineering,Betriebssysteme,6,SS2024,4.3,85,Nein
+S37286,Lukas,Neumann,Software Engineering,Datenbanken,6,WS2024,4.3,73,Nein
+S37286,Lukas,Neumann,Software Engineering,Mathematik I,6,SS2024,3,88,Ja
+S37286,Lukas,Neumann,Software Engineering,Netzwerke,6,SS2024,4,81,Ja
+S37286,Lukas,Neumann,Software Engineering,Webentwicklung,6,SS2024,2.3,85,Ja
+S37542,Max,Braun,Software Engineering,Algorithmen,8,SS2024,2.3,87,Ja
+S37542,Max,Braun,Software Engineering,Netzwerke,6,SS2024,4,75,Ja
+S37542,Max,Braun,Software Engineering,Programmierung I,8,WS2023,3,78,Ja
+S37542,Max,Braun,Software Engineering,Webentwicklung,6,WS2024,2,87,Ja
+S37740,Tim,Schmitz,Data Science,Algorithmen,8,WS2024,3.3,78,Ja
+S37740,Tim,Schmitz,Data Science,Programmierung I,8,WS2024,3.3,81,Ja
+S37740,Tim,Schmitz,Data Science,Softwareengineering,8,WS2024,5,86,Nein
+S37740,Tim,Schmitz,Data Science,Webentwicklung,6,SS2024,2,83,Ja
+S37952,Jan,Schmitt,Software Engineering,Algorithmen,8,WS2024,3.3,76,Ja
+S37952,Jan,Schmitt,Software Engineering,Softwareengineering,8,WS2023,2.3,79,Ja
+S37952,Jan,Schmitt,Software Engineering,Webentwicklung,6,WS2024,2.7,68,Ja
+S38193,Tim,Schulz,Wirtschaftsinformatik,Datenbanken,6,SS2024,5,84,Nein
+S38193,Tim,Schulz,Wirtschaftsinformatik,Mathematik I,6,WS2024,4.7,91,Nein
+S38193,Tim,Schulz,Wirtschaftsinformatik,Softwareengineering,8,WS2024,4.3,72,Nein
+S38193,Tim,Schulz,Wirtschaftsinformatik,Webentwicklung,6,WS2023,2.3,88,Ja
+S38308,Leon,Meyer,Wirtschaftsinformatik,Datenbanken,6,WS2023,4,74,Ja
+S38308,Leon,Meyer,Wirtschaftsinformatik,Mathematik I,6,WS2023,4,79,Ja
+S38308,Leon,Meyer,Wirtschaftsinformatik,Netzwerke,6,WS2024,1.3,82,Ja
+S38445,Ben,Werner,Wirtschaftsinformatik,Algorithmen,8,SS2024,4.3,71,Nein
+S38445,Ben,Werner,Wirtschaftsinformatik,Mathematik I,6,SS2024,5,80,Nein
+S38445,Ben,Werner,Wirtschaftsinformatik,Netzwerke,6,WS2024,3.7,73,Ja
+S38445,Ben,Werner,Wirtschaftsinformatik,Softwareengineering,8,WS2023,5,83,Nein
+S38445,Ben,Werner,Wirtschaftsinformatik,Statistik,6,SS2024,3.7,77,Ja
+S38679,Marie,Schmitz,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,3,76,Ja
+S38679,Marie,Schmitz,Wirtschaftsinformatik,Datenbanken,6,SS2024,2.3,84,Ja
+S38679,Marie,Schmitz,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,4,81,Ja
+S38679,Marie,Schmitz,Wirtschaftsinformatik,Statistik,6,SS2024,1.7,80,Ja
+S38679,Marie,Schmitz,Wirtschaftsinformatik,Webentwicklung,6,SS2024,2.7,84,Ja
+S39252,Felix,Müller,Informatik,Algorithmen,8,WS2023,3.7,83,Ja
+S39252,Felix,Müller,Informatik,IT-Sicherheit,6,SS2024,1.7,87,Ja
+S39252,Felix,Müller,Informatik,Netzwerke,6,WS2024,4.3,70,Nein
+S40423,Ben,Müller,Informatik,IT-Sicherheit,6,WS2023,1,90,Ja
+S40423,Ben,Müller,Informatik,Mathematik I,6,WS2024,4,75,Ja
+S40423,Ben,Müller,Informatik,Programmierung I,8,WS2023,4.3,71,Nein
+S40423,Ben,Müller,Informatik,Softwareengineering,8,SS2024,2.7,73,Ja
+S40423,Ben,Müller,Informatik,Statistik,6,WS2024,2,70,Ja
+S40629,Mia,Lange,Informatik,Algorithmen,8,WS2023,5,80,Nein
+S40629,Mia,Lange,Informatik,Datenbanken,6,WS2023,3,85,Ja
+S40629,Mia,Lange,Informatik,IT-Sicherheit,6,WS2023,2,90,Ja
+S40629,Mia,Lange,Informatik,Netzwerke,6,SS2024,4,91,Ja
+S40629,Mia,Lange,Informatik,Softwareengineering,8,WS2024,3.3,77,Ja
+S40629,Mia,Lange,Informatik,Webentwicklung,6,WS2023,5,73,Nein
+S40634,Laura,Braun,Software Engineering,Datenbanken,6,SS2024,4.3,92,Nein
+S40634,Laura,Braun,Software Engineering,Mathematik I,6,WS2024,5,85,Nein
+S40634,Laura,Braun,Software Engineering,Netzwerke,6,WS2023,1.7,80,Ja
+S40634,Laura,Braun,Software Engineering,Programmierung I,8,WS2023,2.3,85,Ja
+S40634,Laura,Braun,Software Engineering,Statistik,6,SS2024,2,83,Ja
+S40634,Laura,Braun,Software Engineering,Webentwicklung,6,WS2024,3,71,Ja
+S41103,Simon,Zimmermann,Medieninformatik,Betriebssysteme,6,WS2023,3,80,Ja
+S41103,Simon,Zimmermann,Medieninformatik,Datenbanken,6,WS2024,5,80,Nein
+S41103,Simon,Zimmermann,Medieninformatik,IT-Sicherheit,6,WS2023,1.7,83,Ja
+S41103,Simon,Zimmermann,Medieninformatik,Netzwerke,6,SS2024,1,92,Ja
+S41103,Simon,Zimmermann,Medieninformatik,Softwareengineering,8,SS2024,3.3,78,Ja
+S41103,Simon,Zimmermann,Medieninformatik,Statistik,6,WS2023,5,74,Nein
+S42108,Moritz,Koch,Software Engineering,Algorithmen,8,WS2023,1.3,88,Ja
+S42108,Moritz,Koch,Software Engineering,Datenbanken,6,WS2023,5,83,Nein
+S42108,Moritz,Koch,Software Engineering,Programmierung I,8,WS2024,2.7,87,Ja
+S42108,Moritz,Koch,Software Engineering,Statistik,6,WS2024,2,72,Ja
+S42108,Moritz,Koch,Software Engineering,Webentwicklung,6,SS2024,3.3,68,Ja
+S43176,Ben,Richter,Informatik,Datenbanken,6,WS2024,3.7,69,Ja
+S43176,Ben,Richter,Informatik,Mathematik I,6,WS2023,4,84,Ja
+S43176,Ben,Richter,Informatik,Netzwerke,6,WS2024,2.3,78,Ja
+S43176,Ben,Richter,Informatik,Statistik,6,SS2024,4.7,73,Nein
+S43176,Ben,Richter,Informatik,Webentwicklung,6,WS2024,2.7,79,Ja
+S43467,Jan,Werner,Software Engineering,Datenbanken,6,WS2024,1.7,74,Ja
+S43467,Jan,Werner,Software Engineering,IT-Sicherheit,6,WS2024,1.3,85,Ja
+S43467,Jan,Werner,Software Engineering,Netzwerke,6,WS2024,2.3,78,Ja
+S43467,Jan,Werner,Software Engineering,Programmierung I,8,WS2024,5,77,Nein
+S43467,Jan,Werner,Software Engineering,Softwareengineering,8,WS2024,5,85,Nein
+S43467,Jan,Werner,Software Engineering,Webentwicklung,6,SS2024,4.3,78,Nein
+S43494,Jan,Hofmann,Medieninformatik,Algorithmen,8,WS2024,1.7,77,Ja
+S43494,Jan,Hofmann,Medieninformatik,Datenbanken,6,WS2023,5,84,Nein
+S43494,Jan,Hofmann,Medieninformatik,IT-Sicherheit,6,SS2024,3,88,Ja
+S43532,Anna,Schmitt,Medieninformatik,IT-Sicherheit,6,SS2024,5,78,Nein
+S43532,Anna,Schmitt,Medieninformatik,Netzwerke,6,SS2024,3.7,81,Ja
+S43532,Anna,Schmitt,Medieninformatik,Softwareengineering,8,WS2024,5,78,Nein
+S43532,Anna,Schmitt,Medieninformatik,Statistik,6,SS2024,4.7,75,Nein
+S43532,Anna,Schmitt,Medieninformatik,Webentwicklung,6,WS2024,4,80,Ja
+S43581,Finn,Weber,Software Engineering,Algorithmen,8,WS2024,3,89,Ja
+S43581,Finn,Weber,Software Engineering,Mathematik I,6,WS2024,4.7,83,Nein
+S43581,Finn,Weber,Software Engineering,Programmierung I,8,WS2024,2,77,Ja
+S43581,Finn,Weber,Software Engineering,Softwareengineering,8,WS2023,3,75,Ja
+S43581,Finn,Weber,Software Engineering,Statistik,6,WS2023,4.7,77,Nein
+S43581,Finn,Weber,Software Engineering,Webentwicklung,6,WS2024,5,92,Nein
+S43715,Moritz,Wolf,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,3.7,79,Ja
+S43715,Moritz,Wolf,Wirtschaftsinformatik,Mathematik I,6,WS2023,5,75,Nein
+S43715,Moritz,Wolf,Wirtschaftsinformatik,Netzwerke,6,SS2024,5,81,Nein
+S43715,Moritz,Wolf,Wirtschaftsinformatik,Softwareengineering,8,WS2023,3.7,83,Ja
+S43715,Moritz,Wolf,Wirtschaftsinformatik,Statistik,6,WS2023,4,78,Ja
+S44577,Max,Bauer,Wirtschaftsinformatik,Programmierung I,8,SS2024,5,82,Nein
+S44577,Max,Bauer,Wirtschaftsinformatik,Softwareengineering,8,SS2024,2.3,88,Ja
+S44577,Max,Bauer,Wirtschaftsinformatik,Statistik,6,WS2024,4.7,71,Nein
+S44623,Jonas,Schmitt,Medieninformatik,Algorithmen,8,WS2024,2.7,87,Ja
+S44623,Jonas,Schmitt,Medieninformatik,Betriebssysteme,6,WS2023,2.7,73,Ja
+S44623,Jonas,Schmitt,Medieninformatik,IT-Sicherheit,6,WS2023,2.7,78,Ja
+S44623,Jonas,Schmitt,Medieninformatik,Netzwerke,6,SS2024,2.3,76,Ja
+S44623,Jonas,Schmitt,Medieninformatik,Statistik,6,WS2023,5,84,Nein
+S44623,Jonas,Schmitt,Medieninformatik,Webentwicklung,6,WS2023,4.7,79,Nein
+S45010,Anna,Schröder,Wirtschaftsinformatik,Algorithmen,8,WS2023,3.3,79,Ja
+S45010,Anna,Schröder,Wirtschaftsinformatik,Netzwerke,6,WS2024,4.3,82,Nein
+S45010,Anna,Schröder,Wirtschaftsinformatik,Statistik,6,WS2024,4.7,84,Nein
+S45208,Anna,Meyer,Data Science,Betriebssysteme,6,WS2023,2.3,77,Ja
+S45208,Anna,Meyer,Data Science,Datenbanken,6,SS2024,3,78,Ja
+S45208,Anna,Meyer,Data Science,IT-Sicherheit,6,SS2024,4.7,84,Nein
+S45208,Anna,Meyer,Data Science,Mathematik I,6,WS2024,4.3,77,Nein
+S45208,Anna,Meyer,Data Science,Webentwicklung,6,WS2023,5,92,Nein
+S45744,Leon,Schneider,Wirtschaftsinformatik,Algorithmen,8,SS2024,2.7,74,Ja
+S45744,Leon,Schneider,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,3.3,85,Ja
+S45744,Leon,Schneider,Wirtschaftsinformatik,Mathematik I,6,SS2024,4,71,Ja
+S45744,Leon,Schneider,Wirtschaftsinformatik,Statistik,6,WS2023,3.7,82,Ja
+S45744,Leon,Schneider,Wirtschaftsinformatik,Webentwicklung,6,WS2024,3,88,Ja
+S46365,Amelie,Neumann,Informatik,Algorithmen,8,WS2023,3,75,Ja
+S46365,Amelie,Neumann,Informatik,IT-Sicherheit,6,WS2024,4,75,Ja
+S46365,Amelie,Neumann,Informatik,Netzwerke,6,SS2024,3,86,Ja
+S46365,Amelie,Neumann,Informatik,Softwareengineering,8,SS2024,4,79,Ja
+S46365,Amelie,Neumann,Informatik,Statistik,6,SS2024,3.7,80,Ja
+S46485,Amelie,Schmidt,Informatik,Mathematik I,6,SS2024,3,72,Ja
+S46485,Amelie,Schmidt,Informatik,Netzwerke,6,WS2024,4.3,77,Nein
+S46485,Amelie,Schmidt,Informatik,Statistik,6,WS2023,5,77,Nein
+S46746,Tim,Richter,Data Science,Betriebssysteme,6,SS2024,2.3,67,Ja
+S46746,Tim,Richter,Data Science,IT-Sicherheit,6,SS2024,2,91,Ja
+S46746,Tim,Richter,Data Science,Netzwerke,6,WS2024,4,82,Ja
+S46746,Tim,Richter,Data Science,Programmierung I,8,SS2024,2.7,88,Ja
+S46746,Tim,Richter,Data Science,Webentwicklung,6,WS2024,4,85,Ja
+S47077,Sophie,Meyer,Data Science,Algorithmen,8,WS2024,5,75,Nein
+S47077,Sophie,Meyer,Data Science,Betriebssysteme,6,WS2023,4.3,81,Nein
+S47077,Sophie,Meyer,Data Science,IT-Sicherheit,6,WS2024,2.3,79,Ja
+S47077,Sophie,Meyer,Data Science,Programmierung I,8,WS2024,4.7,83,Nein
+S47167,Hannah,Müller,Software Engineering,Algorithmen,8,SS2024,1.3,82,Ja
+S47167,Hannah,Müller,Software Engineering,Datenbanken,6,WS2024,4,72,Ja
+S47167,Hannah,Müller,Software Engineering,Mathematik I,6,SS2024,5,75,Nein
+S47167,Hannah,Müller,Software Engineering,Netzwerke,6,WS2024,3.7,89,Ja
+S47167,Hannah,Müller,Software Engineering,Softwareengineering,8,WS2023,5,73,Nein
+S47167,Hannah,Müller,Software Engineering,Statistik,6,WS2023,3.7,78,Ja
+S47204,Finn,Schneider,Informatik,Mathematik I,6,SS2024,2.3,80,Ja
+S47204,Finn,Schneider,Informatik,Netzwerke,6,WS2023,5,83,Nein
+S47204,Finn,Schneider,Informatik,Programmierung I,8,WS2023,5,72,Nein
+S47204,Finn,Schneider,Informatik,Softwareengineering,8,WS2023,4,85,Ja
+S47204,Finn,Schneider,Informatik,Statistik,6,SS2024,5,86,Nein
+S47317,Max,Schmitt,Software Engineering,Algorithmen,8,WS2024,1,92,Ja
+S47317,Max,Schmitt,Software Engineering,IT-Sicherheit,6,WS2024,2.7,75,Ja
+S47317,Max,Schmitt,Software Engineering,Programmierung I,8,SS2024,4,81,Ja
+S47317,Max,Schmitt,Software Engineering,Softwareengineering,8,WS2023,4.7,79,Nein
+S47317,Max,Schmitt,Software Engineering,Statistik,6,WS2024,5,77,Nein
+S47331,Jonas,Hartmann,Medieninformatik,Betriebssysteme,6,SS2024,3.7,79,Ja
+S47331,Jonas,Hartmann,Medieninformatik,Mathematik I,6,WS2023,2.7,77,Ja
+S47331,Jonas,Hartmann,Medieninformatik,Webentwicklung,6,WS2024,3.3,68,Ja
+S47339,Lisa,Meier,Data Science,Algorithmen,8,WS2023,2.7,77,Ja
+S47339,Lisa,Meier,Data Science,Betriebssysteme,6,WS2023,3.3,82,Ja
+S47339,Lisa,Meier,Data Science,Mathematik I,6,WS2024,4.7,78,Nein
+S47339,Lisa,Meier,Data Science,Softwareengineering,8,SS2024,5,73,Nein
+S47339,Lisa,Meier,Data Science,Statistik,6,WS2023,4.3,81,Nein
+S47339,Lisa,Meier,Data Science,Webentwicklung,6,SS2024,4.3,81,Nein
+S47655,Hannah,Werner,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,5,87,Nein
+S47655,Hannah,Werner,Wirtschaftsinformatik,Datenbanken,6,WS2023,2.7,77,Ja
+S47655,Hannah,Werner,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,5,79,Nein
+S47655,Hannah,Werner,Wirtschaftsinformatik,Netzwerke,6,WS2024,4.3,88,Nein
+S47655,Hannah,Werner,Wirtschaftsinformatik,Softwareengineering,8,WS2023,4.7,78,Nein
+S47655,Hannah,Werner,Wirtschaftsinformatik,Webentwicklung,6,WS2024,4,79,Ja
+S47922,Paul,Meyer,Data Science,Betriebssysteme,6,WS2023,2.3,76,Ja
+S47922,Paul,Meyer,Data Science,Datenbanken,6,SS2024,5,73,Nein
+S47922,Paul,Meyer,Data Science,IT-Sicherheit,6,SS2024,5,85,Nein
+S47922,Paul,Meyer,Data Science,Mathematik I,6,SS2024,5,73,Nein
+S47922,Paul,Meyer,Data Science,Netzwerke,6,SS2024,1.3,86,Ja
+S48131,Paul,Schröder,Wirtschaftsinformatik,Algorithmen,8,WS2024,3.3,74,Ja
+S48131,Paul,Schröder,Wirtschaftsinformatik,Datenbanken,6,WS2023,5,76,Nein
+S48131,Paul,Schröder,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,4.7,74,Nein
+S48131,Paul,Schröder,Wirtschaftsinformatik,Programmierung I,8,WS2024,5,81,Nein
+S48131,Paul,Schröder,Wirtschaftsinformatik,Webentwicklung,6,WS2023,3.3,79,Ja
+S48872,Clara,Zimmermann,Informatik,Algorithmen,8,WS2023,3.3,78,Ja
+S48872,Clara,Zimmermann,Informatik,Netzwerke,6,WS2024,3,85,Ja
+S48872,Clara,Zimmermann,Informatik,Programmierung I,8,WS2023,4.3,93,Nein
+S48872,Clara,Zimmermann,Informatik,Softwareengineering,8,WS2024,4.7,74,Nein
+S49475,Marie,Krause,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,4,83,Ja
+S49475,Marie,Krause,Wirtschaftsinformatik,Datenbanken,6,SS2024,2.3,69,Ja
+S49475,Marie,Krause,Wirtschaftsinformatik,Netzwerke,6,SS2024,4.3,74,Nein
+S49475,Marie,Krause,Wirtschaftsinformatik,Softwareengineering,8,WS2024,2,69,Ja
+S49475,Marie,Krause,Wirtschaftsinformatik,Statistik,6,WS2024,4,83,Ja
+S49475,Marie,Krause,Wirtschaftsinformatik,Webentwicklung,6,WS2023,3.3,83,Ja
+S49779,Jonas,Schulz,Medieninformatik,Betriebssysteme,6,WS2023,3,87,Ja
+S49779,Jonas,Schulz,Medieninformatik,Softwareengineering,8,SS2024,3.7,79,Ja
+S49779,Jonas,Schulz,Medieninformatik,Statistik,6,WS2023,4.3,83,Nein
+S50702,Marie,Lange,Software Engineering,Betriebssysteme,6,SS2024,4.3,78,Nein
+S50702,Marie,Lange,Software Engineering,IT-Sicherheit,6,WS2023,2,88,Ja
+S50702,Marie,Lange,Software Engineering,Netzwerke,6,WS2023,3,75,Ja
+S50702,Marie,Lange,Software Engineering,Softwareengineering,8,SS2024,3.7,75,Ja
+S50702,Marie,Lange,Software Engineering,Statistik,6,WS2024,4.7,80,Nein
+S50702,Marie,Lange,Software Engineering,Webentwicklung,6,WS2024,3.3,86,Ja
+S51703,Tim,Schmidt,Medieninformatik,Betriebssysteme,6,SS2024,4,79,Ja
+S51703,Tim,Schmidt,Medieninformatik,Datenbanken,6,WS2024,3,81,Ja
+S51703,Tim,Schmidt,Medieninformatik,IT-Sicherheit,6,SS2024,3.3,82,Ja
+S51703,Tim,Schmidt,Medieninformatik,Netzwerke,6,WS2023,5,85,Nein
+S51703,Tim,Schmidt,Medieninformatik,Programmierung I,8,SS2024,2.3,73,Ja
+S51703,Tim,Schmidt,Medieninformatik,Softwareengineering,8,SS2024,3.7,89,Ja
+S52010,Jan,Werner,Wirtschaftsinformatik,Datenbanken,6,WS2023,3.7,83,Ja
+S52010,Jan,Werner,Wirtschaftsinformatik,Netzwerke,6,WS2024,3,92,Ja
+S52010,Jan,Werner,Wirtschaftsinformatik,Programmierung I,8,SS2024,2,78,Ja
+S52010,Jan,Werner,Wirtschaftsinformatik,Softwareengineering,8,WS2024,4,85,Ja
+S52488,David,Hoffmann,Wirtschaftsinformatik,Betriebssysteme,6,WS2023,1.3,81,Ja
+S52488,David,Hoffmann,Wirtschaftsinformatik,Netzwerke,6,WS2024,4.7,80,Nein
+S52488,David,Hoffmann,Wirtschaftsinformatik,Softwareengineering,8,WS2024,5,85,Nein
+S52488,David,Hoffmann,Wirtschaftsinformatik,Webentwicklung,6,SS2024,5,81,Nein
+S52614,David,Krause,Wirtschaftsinformatik,Algorithmen,8,WS2023,3.3,88,Ja
+S52614,David,Krause,Wirtschaftsinformatik,Datenbanken,6,SS2024,4.3,82,Nein
+S52614,David,Krause,Wirtschaftsinformatik,Webentwicklung,6,WS2023,3,78,Ja
+S52635,David,Richter,Informatik,Datenbanken,6,SS2024,3.3,79,Ja
+S52635,David,Richter,Informatik,IT-Sicherheit,6,WS2023,5,81,Nein
+S52635,David,Richter,Informatik,Netzwerke,6,WS2023,3.7,87,Ja
+S52635,David,Richter,Informatik,Webentwicklung,6,WS2024,4.3,79,Nein
+S52844,Tim,Hartmann,Informatik,IT-Sicherheit,6,SS2024,2,88,Ja
+S52844,Tim,Hartmann,Informatik,Mathematik I,6,WS2024,5,76,Nein
+S52844,Tim,Hartmann,Informatik,Programmierung I,8,WS2024,5,78,Nein
+S52844,Tim,Hartmann,Informatik,Statistik,6,SS2024,4.3,73,Nein
+S52981,Mia,Hoffmann,Informatik,Algorithmen,8,SS2024,3,69,Ja
+S52981,Mia,Hoffmann,Informatik,IT-Sicherheit,6,WS2024,3.3,77,Ja
+S52981,Mia,Hoffmann,Informatik,Mathematik I,6,WS2023,5,83,Nein
+S52981,Mia,Hoffmann,Informatik,Netzwerke,6,WS2024,5,82,Nein
+S52981,Mia,Hoffmann,Informatik,Programmierung I,8,SS2024,2.3,78,Ja
+S52981,Mia,Hoffmann,Informatik,Softwareengineering,8,WS2023,3.3,74,Ja
+S53538,Clara,Fischer,Informatik,Algorithmen,8,WS2023,2,71,Ja
+S53538,Clara,Fischer,Informatik,Betriebssysteme,6,SS2024,1.7,90,Ja
+S53538,Clara,Fischer,Informatik,Datenbanken,6,WS2023,3,93,Ja
+S53538,Clara,Fischer,Informatik,Programmierung I,8,WS2023,5,80,Nein
+S53824,Lukas,Schwarz,Data Science,Datenbanken,6,WS2024,2.3,83,Ja
+S53824,Lukas,Schwarz,Data Science,Netzwerke,6,WS2023,4.3,80,Nein
+S53824,Lukas,Schwarz,Data Science,Softwareengineering,8,SS2024,4,67,Ja
+S54201,Amelie,Schmidt,Software Engineering,Algorithmen,8,SS2024,3.3,91,Ja
+S54201,Amelie,Schmidt,Software Engineering,Mathematik I,6,SS2024,4,70,Ja
+S54201,Amelie,Schmidt,Software Engineering,Netzwerke,6,WS2024,3.3,87,Ja
+S54201,Amelie,Schmidt,Software Engineering,Programmierung I,8,SS2024,4,86,Ja
+S54832,Emma,Zimmermann,Informatik,Programmierung I,8,WS2024,3.7,78,Ja
+S54832,Emma,Zimmermann,Informatik,Softwareengineering,8,WS2023,3,81,Ja
+S54832,Emma,Zimmermann,Informatik,Webentwicklung,6,WS2024,3.7,83,Ja
+S55089,Paul,Schneider,Informatik,Betriebssysteme,6,WS2023,3.7,81,Ja
+S55089,Paul,Schneider,Informatik,Datenbanken,6,WS2023,1.7,81,Ja
+S55089,Paul,Schneider,Informatik,IT-Sicherheit,6,WS2024,5,73,Nein
+S55089,Paul,Schneider,Informatik,Programmierung I,8,WS2024,3,81,Ja
+S55293,Laura,Wolf,Data Science,Betriebssysteme,6,WS2023,5,73,Nein
+S55293,Laura,Wolf,Data Science,Datenbanken,6,WS2023,3,86,Ja
+S55293,Laura,Wolf,Data Science,IT-Sicherheit,6,WS2024,3,81,Ja
+S55293,Laura,Wolf,Data Science,Netzwerke,6,WS2023,4.7,69,Nein
+S55293,Laura,Wolf,Data Science,Statistik,6,WS2024,5,74,Nein
+S55293,Laura,Wolf,Data Science,Webentwicklung,6,WS2024,3.3,77,Ja
+S55499,Leon,Hartmann,Software Engineering,Algorithmen,8,WS2024,2,84,Ja
+S55499,Leon,Hartmann,Software Engineering,Betriebssysteme,6,SS2024,2.3,89,Ja
+S55499,Leon,Hartmann,Software Engineering,IT-Sicherheit,6,WS2024,5,81,Nein
+S55499,Leon,Hartmann,Software Engineering,Netzwerke,6,WS2023,4.3,92,Nein
+S55499,Leon,Hartmann,Software Engineering,Webentwicklung,6,WS2023,1.7,67,Ja
+S55759,Sophie,Wolf,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,4.3,91,Nein
+S55759,Sophie,Wolf,Wirtschaftsinformatik,Datenbanken,6,WS2023,4.3,78,Nein
+S55759,Sophie,Wolf,Wirtschaftsinformatik,Programmierung I,8,SS2024,5,76,Nein
+S55759,Sophie,Wolf,Wirtschaftsinformatik,Webentwicklung,6,SS2024,4.3,83,Nein
+S55782,Tim,Weber,Medieninformatik,Mathematik I,6,WS2023,4.3,79,Nein
+S55782,Tim,Weber,Medieninformatik,Netzwerke,6,WS2024,1.3,92,Ja
+S55782,Tim,Weber,Medieninformatik,Programmierung I,8,SS2024,5,86,Nein
+S55782,Tim,Weber,Medieninformatik,Softwareengineering,8,WS2024,4.7,83,Nein
+S55782,Tim,Weber,Medieninformatik,Statistik,6,SS2024,3.7,82,Ja
+S55782,Tim,Weber,Medieninformatik,Webentwicklung,6,WS2023,2,85,Ja
+S55851,Lisa,Müller,Software Engineering,Algorithmen,8,SS2024,3,85,Ja
+S55851,Lisa,Müller,Software Engineering,Betriebssysteme,6,WS2024,5,75,Nein
+S55851,Lisa,Müller,Software Engineering,Datenbanken,6,SS2024,2.7,79,Ja
+S55851,Lisa,Müller,Software Engineering,IT-Sicherheit,6,WS2023,5,83,Nein
+S55851,Lisa,Müller,Software Engineering,Netzwerke,6,WS2023,5,82,Nein
+S56360,Felix,Braun,Informatik,Algorithmen,8,WS2024,2.7,80,Ja
+S56360,Felix,Braun,Informatik,Datenbanken,6,SS2024,4,85,Ja
+S56360,Felix,Braun,Informatik,Programmierung I,8,WS2023,2.7,83,Ja
+S56598,Lukas,Müller,Data Science,Algorithmen,8,WS2023,2.7,87,Ja
+S56598,Lukas,Müller,Data Science,Datenbanken,6,SS2024,4,82,Ja
+S56598,Lukas,Müller,Data Science,IT-Sicherheit,6,SS2024,3.3,84,Ja
+S56598,Lukas,Müller,Data Science,Mathematik I,6,WS2024,2,94,Ja
+S56598,Lukas,Müller,Data Science,Softwareengineering,8,WS2023,4.7,81,Nein
+S56862,Moritz,Hoffmann,Informatik,Algorithmen,8,SS2024,4.7,85,Nein
+S56862,Moritz,Hoffmann,Informatik,Datenbanken,6,WS2024,4.7,72,Nein
+S56862,Moritz,Hoffmann,Informatik,IT-Sicherheit,6,WS2023,3.7,82,Ja
+S56862,Moritz,Hoffmann,Informatik,Mathematik I,6,SS2024,2.7,72,Ja
+S56862,Moritz,Hoffmann,Informatik,Programmierung I,8,SS2024,3.7,77,Ja
+S57084,Tom,Schmidt,Wirtschaftsinformatik,Datenbanken,6,WS2024,4.3,84,Nein
+S57084,Tom,Schmidt,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,2,79,Ja
+S57084,Tom,Schmidt,Wirtschaftsinformatik,Mathematik I,6,SS2024,4,78,Ja
+S57084,Tom,Schmidt,Wirtschaftsinformatik,Programmierung I,8,WS2023,3.7,77,Ja
+S57084,Tom,Schmidt,Wirtschaftsinformatik,Softwareengineering,8,WS2023,5,81,Nein
+S57084,Tom,Schmidt,Wirtschaftsinformatik,Statistik,6,WS2023,4.3,87,Nein
+S57176,Lukas,Schneider,Medieninformatik,Datenbanken,6,WS2023,3.7,77,Ja
+S57176,Lukas,Schneider,Medieninformatik,Softwareengineering,8,WS2023,3.3,79,Ja
+S57176,Lukas,Schneider,Medieninformatik,Statistik,6,WS2023,5,88,Nein
+S57176,Lukas,Schneider,Medieninformatik,Webentwicklung,6,WS2023,2.3,76,Ja
+S57204,Amelie,Koch,Data Science,Betriebssysteme,6,WS2024,3,74,Ja
+S57204,Amelie,Koch,Data Science,Mathematik I,6,WS2023,3.3,91,Ja
+S57204,Amelie,Koch,Data Science,Webentwicklung,6,WS2023,2.7,73,Ja
+S57321,Niklas,Schmitt,Informatik,Betriebssysteme,6,WS2024,5,79,Nein
+S57321,Niklas,Schmitt,Informatik,Datenbanken,6,WS2023,2,75,Ja
+S57321,Niklas,Schmitt,Informatik,Netzwerke,6,WS2023,4.7,91,Nein
+S57455,Lea,Bauer,Software Engineering,Datenbanken,6,WS2024,5,82,Nein
+S57455,Lea,Bauer,Software Engineering,Statistik,6,WS2023,2,87,Ja
+S57455,Lea,Bauer,Software Engineering,Webentwicklung,6,WS2023,1.7,93,Ja
+S57494,Laura,Meier,Informatik,Datenbanken,6,WS2023,4.7,91,Nein
+S57494,Laura,Meier,Informatik,IT-Sicherheit,6,WS2024,2.3,80,Ja
+S57494,Laura,Meier,Informatik,Netzwerke,6,SS2024,2.3,71,Ja
+S57494,Laura,Meier,Informatik,Programmierung I,8,SS2024,4.3,84,Nein
+S57494,Laura,Meier,Informatik,Webentwicklung,6,WS2023,5,71,Nein
+S57647,Hannah,Koch,Data Science,Datenbanken,6,SS2024,4,82,Ja
+S57647,Hannah,Koch,Data Science,IT-Sicherheit,6,WS2024,5,78,Nein
+S57647,Hannah,Koch,Data Science,Mathematik I,6,WS2023,1,87,Ja
+S57647,Hannah,Koch,Data Science,Statistik,6,WS2024,5,90,Nein
+S57647,Hannah,Koch,Data Science,Webentwicklung,6,SS2024,3.3,93,Ja
+S57929,Sarah,Hartmann,Informatik,Datenbanken,6,WS2024,4.7,69,Nein
+S57929,Sarah,Hartmann,Informatik,IT-Sicherheit,6,WS2023,2,88,Ja
+S57929,Sarah,Hartmann,Informatik,Mathematik I,6,SS2024,2.7,82,Ja
+S57929,Sarah,Hartmann,Informatik,Softwareengineering,8,WS2024,4,83,Ja
+S57929,Sarah,Hartmann,Informatik,Statistik,6,WS2024,4,71,Ja
+S57981,Anna,Lange,Medieninformatik,Algorithmen,8,WS2024,2,81,Ja
+S57981,Anna,Lange,Medieninformatik,IT-Sicherheit,6,WS2024,2.3,82,Ja
+S57981,Anna,Lange,Medieninformatik,Netzwerke,6,WS2024,1.7,80,Ja
+S57981,Anna,Lange,Medieninformatik,Programmierung I,8,WS2023,5,78,Nein
+S57981,Anna,Lange,Medieninformatik,Softwareengineering,8,SS2024,2.3,78,Ja
+S57981,Anna,Lange,Medieninformatik,Statistik,6,WS2024,3.7,81,Ja
+S58397,Leon,Schwarz,Software Engineering,Datenbanken,6,WS2024,1.3,78,Ja
+S58397,Leon,Schwarz,Software Engineering,IT-Sicherheit,6,SS2024,3.7,72,Ja
+S58397,Leon,Schwarz,Software Engineering,Netzwerke,6,SS2024,4.3,87,Nein
+S58576,Lea,Lange,Medieninformatik,Betriebssysteme,6,SS2024,1.7,79,Ja
+S58576,Lea,Lange,Medieninformatik,Datenbanken,6,SS2024,5,92,Nein
+S58576,Lea,Lange,Medieninformatik,IT-Sicherheit,6,WS2023,3,86,Ja
+S58576,Lea,Lange,Medieninformatik,Mathematik I,6,WS2023,4,84,Ja
+S58576,Lea,Lange,Medieninformatik,Netzwerke,6,SS2024,4,84,Ja
+S58732,Hannah,Schäfer,Software Engineering,Betriebssysteme,6,WS2023,5,88,Nein
+S58732,Hannah,Schäfer,Software Engineering,IT-Sicherheit,6,SS2024,5,79,Nein
+S58732,Hannah,Schäfer,Software Engineering,Programmierung I,8,WS2024,5,90,Nein
+S58732,Hannah,Schäfer,Software Engineering,Softwareengineering,8,WS2023,4,84,Ja
+S58732,Hannah,Schäfer,Software Engineering,Statistik,6,WS2023,3.7,82,Ja
+S59149,Nina,Schmitt,Wirtschaftsinformatik,Mathematik I,6,SS2024,2,92,Ja
+S59149,Nina,Schmitt,Wirtschaftsinformatik,Netzwerke,6,SS2024,2,77,Ja
+S59149,Nina,Schmitt,Wirtschaftsinformatik,Programmierung I,8,WS2024,2.3,73,Ja
+S59149,Nina,Schmitt,Wirtschaftsinformatik,Statistik,6,WS2024,4.3,76,Nein
+S59260,Jan,Hofmann,Medieninformatik,Betriebssysteme,6,SS2024,5,77,Nein
+S59260,Jan,Hofmann,Medieninformatik,Datenbanken,6,WS2023,5,72,Nein
+S59260,Jan,Hofmann,Medieninformatik,IT-Sicherheit,6,WS2023,5,77,Nein
+S59260,Jan,Hofmann,Medieninformatik,Programmierung I,8,WS2023,2,78,Ja
+S59260,Jan,Hofmann,Medieninformatik,Webentwicklung,6,WS2023,3.7,77,Ja
+S60098,Lisa,Müller,Data Science,Algorithmen,8,WS2023,4,76,Ja
+S60098,Lisa,Müller,Data Science,IT-Sicherheit,6,WS2024,3.3,94,Ja
+S60098,Lisa,Müller,Data Science,Programmierung I,8,WS2023,4.3,89,Nein
+S60098,Lisa,Müller,Data Science,Softwareengineering,8,SS2024,4,82,Ja
+S60098,Lisa,Müller,Data Science,Webentwicklung,6,WS2023,3.3,88,Ja
+S60484,Felix,Werner,Software Engineering,Algorithmen,8,WS2024,1.7,68,Ja
+S60484,Felix,Werner,Software Engineering,IT-Sicherheit,6,WS2024,5,71,Nein
+S60484,Felix,Werner,Software Engineering,Mathematik I,6,SS2024,4.7,79,Nein
+S60484,Felix,Werner,Software Engineering,Statistik,6,WS2023,4,81,Ja
+S60484,Felix,Werner,Software Engineering,Webentwicklung,6,WS2023,1.7,75,Ja
+S61065,Sarah,Richter,Informatik,Betriebssysteme,6,WS2024,1.3,94,Ja
+S61065,Sarah,Richter,Informatik,Datenbanken,6,WS2024,2.7,81,Ja
+S61065,Sarah,Richter,Informatik,IT-Sicherheit,6,WS2024,2.3,85,Ja
+S61065,Sarah,Richter,Informatik,Mathematik I,6,WS2024,5,90,Nein
+S61065,Sarah,Richter,Informatik,Softwareengineering,8,WS2023,5,73,Nein
+S61317,Leon,Krause,Data Science,Algorithmen,8,WS2024,2.7,86,Ja
+S61317,Leon,Krause,Data Science,Netzwerke,6,WS2023,1.3,81,Ja
+S61317,Leon,Krause,Data Science,Softwareengineering,8,WS2023,2.7,78,Ja
+S61426,Finn,Schröder,Informatik,Algorithmen,8,WS2024,4,74,Ja
+S61426,Finn,Schröder,Informatik,Betriebssysteme,6,WS2023,3.3,81,Ja
+S61426,Finn,Schröder,Informatik,Mathematik I,6,SS2024,5,85,Nein
+S61679,Hannah,Richter,Data Science,Mathematik I,6,SS2024,3,80,Ja
+S61679,Hannah,Richter,Data Science,Programmierung I,8,SS2024,4.7,81,Nein
+S61679,Hannah,Richter,Data Science,Statistik,6,WS2024,2.3,79,Ja
+S61691,Jan,Becker,Medieninformatik,Algorithmen,8,SS2024,2.7,72,Ja
+S61691,Jan,Becker,Medieninformatik,Betriebssysteme,6,WS2023,3.3,76,Ja
+S61691,Jan,Becker,Medieninformatik,Netzwerke,6,SS2024,3.3,92,Ja
+S61691,Jan,Becker,Medieninformatik,Softwareengineering,8,SS2024,5,78,Nein
+S61691,Jan,Becker,Medieninformatik,Statistik,6,SS2024,2.7,80,Ja
+S61691,Jan,Becker,Medieninformatik,Webentwicklung,6,WS2023,2,69,Ja
+S61997,Lena,Schmitt,Data Science,Betriebssysteme,6,SS2024,5,85,Nein
+S61997,Lena,Schmitt,Data Science,Mathematik I,6,WS2024,4,81,Ja
+S61997,Lena,Schmitt,Data Science,Statistik,6,WS2024,2.3,85,Ja
+S62047,Marie,Schmitz,Software Engineering,Algorithmen,8,WS2024,3.7,73,Ja
+S62047,Marie,Schmitz,Software Engineering,Betriebssysteme,6,WS2024,3.7,90,Ja
+S62047,Marie,Schmitz,Software Engineering,Datenbanken,6,SS2024,1.7,84,Ja
+S62047,Marie,Schmitz,Software Engineering,Mathematik I,6,WS2024,3.3,85,Ja
+S62047,Marie,Schmitz,Software Engineering,Softwareengineering,8,SS2024,4.3,82,Nein
+S63048,Jonas,Schneider,Informatik,Datenbanken,6,WS2023,5,72,Nein
+S63048,Jonas,Schneider,Informatik,IT-Sicherheit,6,WS2023,5,81,Nein
+S63048,Jonas,Schneider,Informatik,Softwareengineering,8,WS2024,2,76,Ja
+S64343,Leon,Wagner,Informatik,Algorithmen,8,WS2024,4.7,70,Nein
+S64343,Leon,Wagner,Informatik,Betriebssysteme,6,WS2023,4.3,80,Nein
+S64343,Leon,Wagner,Informatik,Programmierung I,8,WS2024,4.7,81,Nein
+S64343,Leon,Wagner,Informatik,Softwareengineering,8,WS2023,2,75,Ja
+S64343,Leon,Wagner,Informatik,Webentwicklung,6,WS2023,4.3,83,Nein
+S64538,Felix,Wolf,Data Science,Betriebssysteme,6,SS2024,2.7,71,Ja
+S64538,Felix,Wolf,Data Science,Datenbanken,6,SS2024,4,75,Ja
+S64538,Felix,Wolf,Data Science,IT-Sicherheit,6,SS2024,2.7,85,Ja
+S66150,Niklas,Müller,Informatik,Betriebssysteme,6,WS2023,2.7,85,Ja
+S66150,Niklas,Müller,Informatik,Netzwerke,6,WS2023,2,84,Ja
+S66150,Niklas,Müller,Informatik,Softwareengineering,8,WS2024,3,73,Ja
+S66150,Niklas,Müller,Informatik,Webentwicklung,6,WS2023,3.3,88,Ja
+S66715,Ben,Schmidt,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,5,77,Nein
+S66715,Ben,Schmidt,Wirtschaftsinformatik,Datenbanken,6,SS2024,3.7,83,Ja
+S66715,Ben,Schmidt,Wirtschaftsinformatik,Programmierung I,8,WS2024,3.3,91,Ja
+S66715,Ben,Schmidt,Wirtschaftsinformatik,Softwareengineering,8,SS2024,5,78,Nein
+S66715,Ben,Schmidt,Wirtschaftsinformatik,Statistik,6,WS2024,2.3,81,Ja
+S66715,Ben,Schmidt,Wirtschaftsinformatik,Webentwicklung,6,WS2023,4.3,75,Nein
+S67110,Mia,Becker,Software Engineering,Betriebssysteme,6,WS2023,5,84,Nein
+S67110,Mia,Becker,Software Engineering,Datenbanken,6,SS2024,4.3,81,Nein
+S67110,Mia,Becker,Software Engineering,Programmierung I,8,WS2024,4.3,79,Nein
+S69177,Emma,Klein,Wirtschaftsinformatik,Datenbanken,6,SS2024,1.3,86,Ja
+S69177,Emma,Klein,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,1.7,87,Ja
+S69177,Emma,Klein,Wirtschaftsinformatik,Mathematik I,6,WS2023,5,79,Nein
+S69177,Emma,Klein,Wirtschaftsinformatik,Programmierung I,8,WS2023,1.3,89,Ja
+S69177,Emma,Klein,Wirtschaftsinformatik,Softwareengineering,8,WS2023,1.7,74,Ja
+S69177,Emma,Klein,Wirtschaftsinformatik,Statistik,6,WS2024,2,80,Ja
+S69234,Max,Schmidt,Wirtschaftsinformatik,Betriebssysteme,6,WS2023,2.3,80,Ja
+S69234,Max,Schmidt,Wirtschaftsinformatik,Datenbanken,6,WS2024,4.7,82,Nein
+S69234,Max,Schmidt,Wirtschaftsinformatik,Programmierung I,8,SS2024,4,76,Ja
+S69234,Max,Schmidt,Wirtschaftsinformatik,Statistik,6,WS2023,2.7,88,Ja
+S69234,Max,Schmidt,Wirtschaftsinformatik,Webentwicklung,6,WS2023,4.7,76,Nein
+S69655,Julia,Werner,Medieninformatik,Algorithmen,8,SS2024,4,92,Ja
+S69655,Julia,Werner,Medieninformatik,Betriebssysteme,6,SS2024,2.7,75,Ja
+S69655,Julia,Werner,Medieninformatik,Netzwerke,6,SS2024,3.7,80,Ja
+S69655,Julia,Werner,Medieninformatik,Programmierung I,8,WS2024,3,85,Ja
+S69655,Julia,Werner,Medieninformatik,Softwareengineering,8,WS2024,5,75,Nein
+S69655,Julia,Werner,Medieninformatik,Webentwicklung,6,SS2024,3,74,Ja
+S69898,Jan,Zimmermann,Medieninformatik,Betriebssysteme,6,SS2024,5,77,Nein
+S69898,Jan,Zimmermann,Medieninformatik,Datenbanken,6,SS2024,1.3,91,Ja
+S69898,Jan,Zimmermann,Medieninformatik,IT-Sicherheit,6,WS2024,2.3,79,Ja
+S69898,Jan,Zimmermann,Medieninformatik,Softwareengineering,8,SS2024,2.7,73,Ja
+S69898,Jan,Zimmermann,Medieninformatik,Statistik,6,WS2023,5,78,Nein
+S70378,Moritz,Neumann,Medieninformatik,Betriebssysteme,6,WS2024,5,87,Nein
+S70378,Moritz,Neumann,Medieninformatik,Datenbanken,6,WS2023,5,69,Nein
+S70378,Moritz,Neumann,Medieninformatik,Programmierung I,8,WS2023,2.3,86,Ja
+S70378,Moritz,Neumann,Medieninformatik,Softwareengineering,8,WS2023,4.3,72,Nein
+S70378,Moritz,Neumann,Medieninformatik,Statistik,6,WS2023,4.3,86,Nein
+S70378,Moritz,Neumann,Medieninformatik,Webentwicklung,6,WS2024,4.7,78,Nein
+S70471,Ben,Meyer,Informatik,Netzwerke,6,WS2023,2.3,76,Ja
+S70471,Ben,Meyer,Informatik,Programmierung I,8,SS2024,4,83,Ja
+S70471,Ben,Meyer,Informatik,Softwareengineering,8,WS2024,5,83,Nein
+S70982,Sophie,Schmidt,Wirtschaftsinformatik,Datenbanken,6,WS2024,5,73,Nein
+S70982,Sophie,Schmidt,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,3.7,74,Ja
+S70982,Sophie,Schmidt,Wirtschaftsinformatik,Netzwerke,6,WS2023,2,69,Ja
+S70982,Sophie,Schmidt,Wirtschaftsinformatik,Programmierung I,8,WS2023,4.7,77,Nein
+S70982,Sophie,Schmidt,Wirtschaftsinformatik,Softwareengineering,8,WS2023,4.7,66,Nein
+S70982,Sophie,Schmidt,Wirtschaftsinformatik,Statistik,6,WS2024,4.3,74,Nein
+S71089,Max,Schröder,Software Engineering,Algorithmen,8,WS2023,5,89,Nein
+S71089,Max,Schröder,Software Engineering,Betriebssysteme,6,SS2024,4,79,Ja
+S71089,Max,Schröder,Software Engineering,Datenbanken,6,WS2023,3.3,82,Ja
+S71089,Max,Schröder,Software Engineering,Programmierung I,8,WS2024,1.7,87,Ja
+S71089,Max,Schröder,Software Engineering,Softwareengineering,8,WS2024,5,83,Nein
+S71089,Max,Schröder,Software Engineering,Statistik,6,SS2024,4.7,83,Nein
+S71192,Marie,Schmidt,Data Science,Mathematik I,6,WS2024,5,81,Nein
+S71192,Marie,Schmidt,Data Science,Softwareengineering,8,WS2024,2.3,81,Ja
+S71192,Marie,Schmidt,Data Science,Webentwicklung,6,WS2024,4,86,Ja
+S71449,Tom,Schröder,Software Engineering,Algorithmen,8,SS2024,5,78,Nein
+S71449,Tom,Schröder,Software Engineering,Datenbanken,6,SS2024,4,82,Ja
+S71449,Tom,Schröder,Software Engineering,IT-Sicherheit,6,SS2024,1.3,70,Ja
+S71449,Tom,Schröder,Software Engineering,Mathematik I,6,WS2024,4,69,Ja
+S71449,Tom,Schröder,Software Engineering,Programmierung I,8,WS2023,4.3,94,Nein
+S71449,Tom,Schröder,Software Engineering,Webentwicklung,6,SS2024,4.7,85,Nein
+S71789,Jonas,Krause,Medieninformatik,Betriebssysteme,6,SS2024,2.3,76,Ja
+S71789,Jonas,Krause,Medieninformatik,Datenbanken,6,WS2024,2.3,71,Ja
+S71789,Jonas,Krause,Medieninformatik,Webentwicklung,6,SS2024,4,85,Ja
+S71808,Marie,Schmitz,Informatik,Betriebssysteme,6,WS2023,3.7,76,Ja
+S71808,Marie,Schmitz,Informatik,Mathematik I,6,WS2023,3.3,86,Ja
+S71808,Marie,Schmitz,Informatik,Statistik,6,WS2024,3,84,Ja
+S71808,Marie,Schmitz,Informatik,Webentwicklung,6,WS2023,4.7,82,Nein
+S71939,Tim,Schäfer,Software Engineering,Datenbanken,6,WS2024,2.3,86,Ja
+S71939,Tim,Schäfer,Software Engineering,IT-Sicherheit,6,WS2023,1.3,90,Ja
+S71939,Tim,Schäfer,Software Engineering,Netzwerke,6,WS2023,1.7,84,Ja
+S71939,Tim,Schäfer,Software Engineering,Webentwicklung,6,WS2024,5,70,Nein
+S72143,Paul,Schwarz,Software Engineering,Algorithmen,8,WS2024,5,73,Nein
+S72143,Paul,Schwarz,Software Engineering,Netzwerke,6,SS2024,5,69,Nein
+S72143,Paul,Schwarz,Software Engineering,Programmierung I,8,WS2023,3.3,79,Ja
+S72143,Paul,Schwarz,Software Engineering,Softwareengineering,8,WS2024,5,77,Nein
+S72402,Niklas,Krause,Data Science,Algorithmen,8,WS2024,4.3,81,Nein
+S72402,Niklas,Krause,Data Science,Datenbanken,6,SS2024,2,84,Ja
+S72402,Niklas,Krause,Data Science,Programmierung I,8,SS2024,3.3,77,Ja
+S72402,Niklas,Krause,Data Science,Softwareengineering,8,WS2023,2.3,75,Ja
+S72402,Niklas,Krause,Data Science,Statistik,6,WS2023,4.7,85,Nein
+S72402,Niklas,Krause,Data Science,Webentwicklung,6,WS2023,1.7,78,Ja
+S72569,Jan,Fischer,Informatik,Algorithmen,8,SS2024,5,77,Nein
+S72569,Jan,Fischer,Informatik,Betriebssysteme,6,WS2023,2,84,Ja
+S72569,Jan,Fischer,Informatik,Webentwicklung,6,SS2024,2.3,75,Ja
+S72664,Moritz,Richter,Medieninformatik,Betriebssysteme,6,WS2023,2,75,Ja
+S72664,Moritz,Richter,Medieninformatik,Mathematik I,6,SS2024,3.7,89,Ja
+S72664,Moritz,Richter,Medieninformatik,Programmierung I,8,WS2024,3.3,87,Ja
+S72664,Moritz,Richter,Medieninformatik,Softwareengineering,8,SS2024,3.7,79,Ja
+S72664,Moritz,Richter,Medieninformatik,Statistik,6,WS2023,3.3,80,Ja
+S72664,Moritz,Richter,Medieninformatik,Webentwicklung,6,SS2024,4.3,79,Nein
+S72668,Anna,Zimmermann,Wirtschaftsinformatik,Mathematik I,6,SS2024,3.3,70,Ja
+S72668,Anna,Zimmermann,Wirtschaftsinformatik,Netzwerke,6,WS2024,5,84,Nein
+S72668,Anna,Zimmermann,Wirtschaftsinformatik,Programmierung I,8,WS2023,3,82,Ja
+S72887,Tim,Lange,Informatik,Algorithmen,8,SS2024,4.3,80,Nein
+S72887,Tim,Lange,Informatik,Betriebssysteme,6,WS2024,1,89,Ja
+S72887,Tim,Lange,Informatik,Netzwerke,6,SS2024,4.7,80,Nein
+S72887,Tim,Lange,Informatik,Softwareengineering,8,WS2023,5,71,Nein
+S72890,Max,Koch,Informatik,Datenbanken,6,WS2023,1.3,89,Ja
+S72890,Max,Koch,Informatik,IT-Sicherheit,6,WS2023,2.3,77,Ja
+S72890,Max,Koch,Informatik,Mathematik I,6,WS2024,2.3,79,Ja
+S72890,Max,Koch,Informatik,Netzwerke,6,WS2023,5,77,Nein
+S72890,Max,Koch,Informatik,Softwareengineering,8,WS2024,3.3,84,Ja
+S73356,Emma,Becker,Software Engineering,Datenbanken,6,SS2024,2.3,84,Ja
+S73356,Emma,Becker,Software Engineering,IT-Sicherheit,6,WS2024,3.3,82,Ja
+S73356,Emma,Becker,Software Engineering,Netzwerke,6,WS2023,2,83,Ja
+S73356,Emma,Becker,Software Engineering,Webentwicklung,6,WS2023,2,78,Ja
+S73582,Hannah,Meier,Software Engineering,Betriebssysteme,6,WS2023,4.7,82,Nein
+S73582,Hannah,Meier,Software Engineering,Mathematik I,6,SS2024,4,82,Ja
+S73582,Hannah,Meier,Software Engineering,Statistik,6,SS2024,4.7,89,Nein
+S73582,Hannah,Meier,Software Engineering,Webentwicklung,6,SS2024,2.3,79,Ja
+S74041,Tim,Schneider,Data Science,Algorithmen,8,WS2024,5,81,Nein
+S74041,Tim,Schneider,Data Science,Datenbanken,6,SS2024,4,78,Ja
+S74041,Tim,Schneider,Data Science,IT-Sicherheit,6,WS2023,4.7,92,Nein
+S74041,Tim,Schneider,Data Science,Mathematik I,6,WS2024,3.7,69,Ja
+S74041,Tim,Schneider,Data Science,Netzwerke,6,WS2023,1.7,77,Ja
+S74041,Tim,Schneider,Data Science,Programmierung I,8,SS2024,2.7,88,Ja
+S74055,Mia,Schröder,Medieninformatik,Betriebssysteme,6,WS2023,4.3,72,Nein
+S74055,Mia,Schröder,Medieninformatik,Netzwerke,6,SS2024,2.7,74,Ja
+S74055,Mia,Schröder,Medieninformatik,Statistik,6,SS2024,4.3,86,Nein
+S74072,Lena,Müller,Software Engineering,Datenbanken,6,SS2024,3.3,70,Ja
+S74072,Lena,Müller,Software Engineering,IT-Sicherheit,6,WS2024,3.3,80,Ja
+S74072,Lena,Müller,Software Engineering,Netzwerke,6,WS2024,2.7,75,Ja
+S74072,Lena,Müller,Software Engineering,Softwareengineering,8,SS2024,1.7,75,Ja
+S74354,Emma,Schwarz,Data Science,Algorithmen,8,WS2024,3,79,Ja
+S74354,Emma,Schwarz,Data Science,Mathematik I,6,WS2023,3,84,Ja
+S74354,Emma,Schwarz,Data Science,Programmierung I,8,WS2024,4,86,Ja
+S74664,Jan,Wagner,Software Engineering,Betriebssysteme,6,WS2023,2,81,Ja
+S74664,Jan,Wagner,Software Engineering,Mathematik I,6,WS2023,5,81,Nein
+S74664,Jan,Wagner,Software Engineering,Softwareengineering,8,WS2024,4.7,77,Nein
+S74664,Jan,Wagner,Software Engineering,Webentwicklung,6,SS2024,4.7,71,Nein
+S74790,Lukas,Braun,Informatik,Betriebssysteme,6,SS2024,5,88,Nein
+S74790,Lukas,Braun,Informatik,IT-Sicherheit,6,WS2023,5,80,Nein
+S74790,Lukas,Braun,Informatik,Mathematik I,6,WS2024,2.3,92,Ja
+S74790,Lukas,Braun,Informatik,Softwareengineering,8,WS2024,2.7,81,Ja
+S74790,Lukas,Braun,Informatik,Statistik,6,WS2023,5,78,Nein
+S74790,Lukas,Braun,Informatik,Webentwicklung,6,WS2024,4.7,89,Nein
+S74836,Simon,Schmitt,Medieninformatik,IT-Sicherheit,6,SS2024,4,76,Ja
+S74836,Simon,Schmitt,Medieninformatik,Mathematik I,6,WS2023,4.3,80,Nein
+S74836,Simon,Schmitt,Medieninformatik,Softwareengineering,8,WS2023,3.3,80,Ja
+S75042,Nina,Schulz,Medieninformatik,Datenbanken,6,SS2024,5,73,Nein
+S75042,Nina,Schulz,Medieninformatik,IT-Sicherheit,6,WS2024,3.3,78,Ja
+S75042,Nina,Schulz,Medieninformatik,Netzwerke,6,WS2023,2.7,79,Ja
+S75313,Max,Neumann,Wirtschaftsinformatik,Algorithmen,8,SS2024,3,85,Ja
+S75313,Max,Neumann,Wirtschaftsinformatik,Datenbanken,6,WS2024,2.7,75,Ja
+S75313,Max,Neumann,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,5,76,Nein
+S75313,Max,Neumann,Wirtschaftsinformatik,Mathematik I,6,WS2023,2.7,76,Ja
+S76197,Niklas,Werner,Data Science,Betriebssysteme,6,WS2023,3,75,Ja
+S76197,Niklas,Werner,Data Science,Netzwerke,6,WS2024,3.3,84,Ja
+S76197,Niklas,Werner,Data Science,Programmierung I,8,WS2023,4.7,77,Nein
+S76197,Niklas,Werner,Data Science,Webentwicklung,6,SS2024,3.7,79,Ja
+S76256,Nina,Hoffmann,Informatik,Betriebssysteme,6,WS2023,2.7,83,Ja
+S76256,Nina,Hoffmann,Informatik,Mathematik I,6,WS2024,3.7,76,Ja
+S76256,Nina,Hoffmann,Informatik,Netzwerke,6,SS2024,3.7,83,Ja
+S76256,Nina,Hoffmann,Informatik,Programmierung I,8,SS2024,1,86,Ja
+S76256,Nina,Hoffmann,Informatik,Softwareengineering,8,WS2024,4.3,80,Nein
+S76256,Nina,Hoffmann,Informatik,Webentwicklung,6,WS2024,3.7,84,Ja
+S76297,Clara,Klein,Informatik,Betriebssysteme,6,WS2023,5,83,Nein
+S76297,Clara,Klein,Informatik,IT-Sicherheit,6,WS2024,3.3,90,Ja
+S76297,Clara,Klein,Informatik,Softwareengineering,8,WS2024,3,85,Ja
+S76297,Clara,Klein,Informatik,Statistik,6,SS2024,2,81,Ja
+S76297,Clara,Klein,Informatik,Webentwicklung,6,WS2023,5,90,Nein
+S76415,Lena,Zimmermann,Medieninformatik,Algorithmen,8,WS2024,2.7,92,Ja
+S76415,Lena,Zimmermann,Medieninformatik,Softwareengineering,8,WS2023,3,75,Ja
+S76415,Lena,Zimmermann,Medieninformatik,Statistik,6,WS2024,1.3,76,Ja
+S77008,Sophie,Schulz,Medieninformatik,Betriebssysteme,6,WS2023,2.7,74,Ja
+S77008,Sophie,Schulz,Medieninformatik,Datenbanken,6,WS2024,4.7,76,Nein
+S77008,Sophie,Schulz,Medieninformatik,Mathematik I,6,WS2024,3,80,Ja
+S77008,Sophie,Schulz,Medieninformatik,Netzwerke,6,WS2023,4.7,85,Nein
+S77008,Sophie,Schulz,Medieninformatik,Webentwicklung,6,WS2024,2.7,75,Ja
+S77581,Marie,Hartmann,Medieninformatik,Datenbanken,6,WS2023,4,78,Ja
+S77581,Marie,Hartmann,Medieninformatik,IT-Sicherheit,6,WS2024,3,75,Ja
+S77581,Marie,Hartmann,Medieninformatik,Mathematik I,6,SS2024,1,80,Ja
+S77581,Marie,Hartmann,Medieninformatik,Statistik,6,WS2023,2.7,77,Ja
+S77581,Marie,Hartmann,Medieninformatik,Webentwicklung,6,SS2024,4.7,74,Nein
+S77784,Simon,Schneider,Medieninformatik,Datenbanken,6,SS2024,2.7,84,Ja
+S77784,Simon,Schneider,Medieninformatik,Mathematik I,6,SS2024,1.7,76,Ja
+S77784,Simon,Schneider,Medieninformatik,Softwareengineering,8,SS2024,2.3,82,Ja
+S77784,Simon,Schneider,Medieninformatik,Webentwicklung,6,WS2023,4.3,81,Nein
+S78196,Jan,Neumann,Wirtschaftsinformatik,Algorithmen,8,WS2023,3,79,Ja
+S78196,Jan,Neumann,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,5,85,Nein
+S78196,Jan,Neumann,Wirtschaftsinformatik,Netzwerke,6,WS2023,4.7,82,Nein
+S78196,Jan,Neumann,Wirtschaftsinformatik,Statistik,6,SS2024,3.3,66,Ja
+S78196,Jan,Neumann,Wirtschaftsinformatik,Webentwicklung,6,SS2024,3,87,Ja
+S78698,Lisa,Schwarz,Data Science,Datenbanken,6,SS2024,5,76,Nein
+S78698,Lisa,Schwarz,Data Science,Programmierung I,8,WS2024,1.3,73,Ja
+S78698,Lisa,Schwarz,Data Science,Webentwicklung,6,SS2024,5,77,Nein
+S78776,Paul,Bauer,Informatik,Algorithmen,8,WS2024,4.7,81,Nein
+S78776,Paul,Bauer,Informatik,Statistik,6,WS2024,5,83,Nein
+S78776,Paul,Bauer,Informatik,Webentwicklung,6,SS2024,4.3,73,Nein
+S79916,Sarah,Müller,Software Engineering,Algorithmen,8,WS2023,1.3,82,Ja
+S79916,Sarah,Müller,Software Engineering,Betriebssysteme,6,WS2024,2,77,Ja
+S79916,Sarah,Müller,Software Engineering,Softwareengineering,8,WS2024,3,79,Ja
+S80399,Amelie,Becker,Data Science,Algorithmen,8,SS2024,2.7,77,Ja
+S80399,Amelie,Becker,Data Science,Betriebssysteme,6,SS2024,4.3,71,Nein
+S80399,Amelie,Becker,Data Science,Mathematik I,6,WS2024,4.3,82,Nein
+S80399,Amelie,Becker,Data Science,Netzwerke,6,WS2024,5,72,Nein
+S80399,Amelie,Becker,Data Science,Softwareengineering,8,WS2023,3,87,Ja
+S80399,Amelie,Becker,Data Science,Statistik,6,WS2024,2.3,89,Ja
+S80906,Paul,Hoffmann,Data Science,IT-Sicherheit,6,WS2023,2.3,74,Ja
+S80906,Paul,Hoffmann,Data Science,Mathematik I,6,WS2023,2.7,86,Ja
+S80906,Paul,Hoffmann,Data Science,Statistik,6,SS2024,4.7,88,Nein
+S80906,Paul,Hoffmann,Data Science,Webentwicklung,6,WS2024,3.7,86,Ja
+S82208,Hannah,Schneider,Wirtschaftsinformatik,Algorithmen,8,WS2024,3.3,79,Ja
+S82208,Hannah,Schneider,Wirtschaftsinformatik,Betriebssysteme,6,SS2024,4.7,79,Nein
+S82208,Hannah,Schneider,Wirtschaftsinformatik,Programmierung I,8,WS2024,3,90,Ja
+S82283,Jan,Meier,Data Science,Datenbanken,6,WS2023,5,73,Nein
+S82283,Jan,Meier,Data Science,Mathematik I,6,SS2024,4.3,74,Nein
+S82283,Jan,Meier,Data Science,Netzwerke,6,WS2023,5,92,Nein
+S82283,Jan,Meier,Data Science,Webentwicklung,6,SS2024,5,84,Nein
+S82577,Sarah,Wagner,Data Science,Algorithmen,8,WS2024,2,81,Ja
+S82577,Sarah,Wagner,Data Science,Datenbanken,6,SS2024,4.3,72,Nein
+S82577,Sarah,Wagner,Data Science,Mathematik I,6,WS2024,5,71,Nein
+S82577,Sarah,Wagner,Data Science,Softwareengineering,8,SS2024,2.3,74,Ja
+S82577,Sarah,Wagner,Data Science,Webentwicklung,6,WS2024,5,78,Nein
+S82593,Amelie,Koch,Medieninformatik,Programmierung I,8,WS2023,3,79,Ja
+S82593,Amelie,Koch,Medieninformatik,Softwareengineering,8,WS2023,4.3,81,Nein
+S82593,Amelie,Koch,Medieninformatik,Statistik,6,WS2023,3.3,80,Ja
+S82593,Amelie,Koch,Medieninformatik,Webentwicklung,6,SS2024,2.3,84,Ja
+S82595,Hannah,Müller,Software Engineering,Betriebssysteme,6,SS2024,2.7,81,Ja
+S82595,Hannah,Müller,Software Engineering,Mathematik I,6,WS2024,5,77,Nein
+S82595,Hannah,Müller,Software Engineering,Netzwerke,6,WS2024,1.3,93,Ja
+S82595,Hannah,Müller,Software Engineering,Softwareengineering,8,SS2024,5,86,Nein
+S82595,Hannah,Müller,Software Engineering,Statistik,6,WS2024,2.7,86,Ja
+S82595,Hannah,Müller,Software Engineering,Webentwicklung,6,SS2024,2.7,75,Ja
+S82993,Simon,Schäfer,Software Engineering,Algorithmen,8,SS2024,5,81,Nein
+S82993,Simon,Schäfer,Software Engineering,Netzwerke,6,SS2024,4.3,68,Nein
+S82993,Simon,Schäfer,Software Engineering,Softwareengineering,8,WS2024,5,89,Nein
+S83186,Moritz,Krüger,Software Engineering,Netzwerke,6,SS2024,2.3,82,Ja
+S83186,Moritz,Krüger,Software Engineering,Programmierung I,8,WS2024,5,82,Nein
+S83186,Moritz,Krüger,Software Engineering,Softwareengineering,8,WS2023,1.7,84,Ja
+S83186,Moritz,Krüger,Software Engineering,Webentwicklung,6,WS2024,3,80,Ja
+S83273,Lisa,Krause,Software Engineering,Algorithmen,8,WS2024,4.7,77,Nein
+S83273,Lisa,Krause,Software Engineering,Mathematik I,6,WS2023,5,91,Nein
+S83273,Lisa,Krause,Software Engineering,Netzwerke,6,WS2024,5,74,Nein
+S83273,Lisa,Krause,Software Engineering,Programmierung I,8,WS2024,4.7,84,Nein
+S83273,Lisa,Krause,Software Engineering,Softwareengineering,8,WS2024,2.3,82,Ja
+S83273,Lisa,Krause,Software Engineering,Webentwicklung,6,WS2023,1.3,83,Ja
+S83873,Felix,Lange,Data Science,Mathematik I,6,WS2023,3,71,Ja
+S83873,Felix,Lange,Data Science,Programmierung I,8,SS2024,5,78,Nein
+S83873,Felix,Lange,Data Science,Statistik,6,WS2023,2,72,Ja
+S83873,Felix,Lange,Data Science,Webentwicklung,6,SS2024,3.7,77,Ja
+S84126,Laura,Fischer,Software Engineering,Datenbanken,6,WS2023,1.7,86,Ja
+S84126,Laura,Fischer,Software Engineering,Softwareengineering,8,SS2024,2,77,Ja
+S84126,Laura,Fischer,Software Engineering,Webentwicklung,6,WS2024,2.3,74,Ja
+S84197,Tim,Hartmann,Informatik,Mathematik I,6,SS2024,5,90,Nein
+S84197,Tim,Hartmann,Informatik,Netzwerke,6,WS2024,2,72,Ja
+S84197,Tim,Hartmann,Informatik,Programmierung I,8,WS2023,1.7,74,Ja
+S84267,Hannah,Schwarz,Data Science,Algorithmen,8,WS2023,2.3,73,Ja
+S84267,Hannah,Schwarz,Data Science,Betriebssysteme,6,WS2024,4.7,74,Nein
+S84267,Hannah,Schwarz,Data Science,Datenbanken,6,WS2024,4.7,77,Nein
+S84267,Hannah,Schwarz,Data Science,Netzwerke,6,SS2024,2,83,Ja
+S84267,Hannah,Schwarz,Data Science,Webentwicklung,6,WS2024,3,76,Ja
+S84421,Lena,Richter,Software Engineering,Algorithmen,8,WS2023,3.7,87,Ja
+S84421,Lena,Richter,Software Engineering,Betriebssysteme,6,SS2024,2,83,Ja
+S84421,Lena,Richter,Software Engineering,Datenbanken,6,WS2023,3.7,73,Ja
+S84421,Lena,Richter,Software Engineering,IT-Sicherheit,6,WS2024,2.7,82,Ja
+S84421,Lena,Richter,Software Engineering,Mathematik I,6,WS2023,3,70,Ja
+S84632,Finn,Schmitz,Software Engineering,Algorithmen,8,WS2023,3.7,85,Ja
+S84632,Finn,Schmitz,Software Engineering,IT-Sicherheit,6,SS2024,3.7,94,Ja
+S84632,Finn,Schmitz,Software Engineering,Mathematik I,6,WS2024,3,76,Ja
+S84632,Finn,Schmitz,Software Engineering,Netzwerke,6,SS2024,4.3,71,Nein
+S84632,Finn,Schmitz,Software Engineering,Statistik,6,WS2023,2.7,79,Ja
+S84632,Finn,Schmitz,Software Engineering,Webentwicklung,6,SS2024,3.3,77,Ja
+S84805,Lukas,Bauer,Wirtschaftsinformatik,Datenbanken,6,SS2024,2.7,77,Ja
+S84805,Lukas,Bauer,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,3.3,89,Ja
+S84805,Lukas,Bauer,Wirtschaftsinformatik,Softwareengineering,8,WS2023,4,88,Ja
+S84805,Lukas,Bauer,Wirtschaftsinformatik,Statistik,6,WS2024,3.7,74,Ja
+S85028,Max,Zimmermann,Software Engineering,Algorithmen,8,WS2023,5,69,Nein
+S85028,Max,Zimmermann,Software Engineering,IT-Sicherheit,6,SS2024,3,84,Ja
+S85028,Max,Zimmermann,Software Engineering,Netzwerke,6,WS2024,5,73,Nein
+S85028,Max,Zimmermann,Software Engineering,Programmierung I,8,WS2024,4.7,79,Nein
+S85028,Max,Zimmermann,Software Engineering,Softwareengineering,8,SS2024,2.3,82,Ja
+S85293,Hannah,Richter,Data Science,Algorithmen,8,WS2023,3.7,69,Ja
+S85293,Hannah,Richter,Data Science,Betriebssysteme,6,SS2024,3.3,75,Ja
+S85293,Hannah,Richter,Data Science,Datenbanken,6,WS2024,2,77,Ja
+S85293,Hannah,Richter,Data Science,IT-Sicherheit,6,WS2024,2.3,88,Ja
+S85293,Hannah,Richter,Data Science,Netzwerke,6,WS2023,1.7,84,Ja
+S85293,Hannah,Richter,Data Science,Statistik,6,WS2023,3.3,69,Ja
+S85993,Mia,Koch,Informatik,Datenbanken,6,SS2024,3.7,76,Ja
+S85993,Mia,Koch,Informatik,Mathematik I,6,SS2024,4.3,86,Nein
+S85993,Mia,Koch,Informatik,Netzwerke,6,SS2024,4,91,Ja
+S85993,Mia,Koch,Informatik,Programmierung I,8,WS2023,2.7,80,Ja
+S85993,Mia,Koch,Informatik,Statistik,6,SS2024,3,80,Ja
+S85993,Mia,Koch,Informatik,Webentwicklung,6,WS2023,4.7,71,Nein
+S86356,Laura,Koch,Wirtschaftsinformatik,Algorithmen,8,SS2024,3.3,87,Ja
+S86356,Laura,Koch,Wirtschaftsinformatik,Datenbanken,6,SS2024,2,82,Ja
+S86356,Laura,Koch,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,1.7,71,Ja
+S86356,Laura,Koch,Wirtschaftsinformatik,Statistik,6,WS2023,5,76,Nein
+S86356,Laura,Koch,Wirtschaftsinformatik,Webentwicklung,6,WS2023,5,72,Nein
+S86606,Hannah,Meyer,Medieninformatik,Algorithmen,8,WS2024,2,84,Ja
+S86606,Hannah,Meyer,Medieninformatik,IT-Sicherheit,6,WS2023,4.3,77,Nein
+S86606,Hannah,Meyer,Medieninformatik,Netzwerke,6,SS2024,3.3,80,Ja
+S86606,Hannah,Meyer,Medieninformatik,Programmierung I,8,WS2023,2,78,Ja
+S86606,Hannah,Meyer,Medieninformatik,Statistik,6,WS2024,3,73,Ja
+S86730,Lukas,Schulz,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,1.3,86,Ja
+S86730,Lukas,Schulz,Wirtschaftsinformatik,Mathematik I,6,WS2023,3,70,Ja
+S86730,Lukas,Schulz,Wirtschaftsinformatik,Statistik,6,SS2024,2,71,Ja
+S87179,Lea,Schröder,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,5,90,Nein
+S87179,Lea,Schröder,Wirtschaftsinformatik,Programmierung I,8,WS2023,2.7,83,Ja
+S87179,Lea,Schröder,Wirtschaftsinformatik,Statistik,6,WS2024,3,73,Ja
+S88183,Julia,Lange,Data Science,Betriebssysteme,6,WS2023,2.7,82,Ja
+S88183,Julia,Lange,Data Science,Datenbanken,6,SS2024,3.7,71,Ja
+S88183,Julia,Lange,Data Science,IT-Sicherheit,6,SS2024,3.7,72,Ja
+S88183,Julia,Lange,Data Science,Programmierung I,8,SS2024,3,75,Ja
+S88183,Julia,Lange,Data Science,Softwareengineering,8,SS2024,4,89,Ja
+S88183,Julia,Lange,Data Science,Webentwicklung,6,WS2023,2,87,Ja
+S88217,Julia,Hoffmann,Medieninformatik,Algorithmen,8,SS2024,3.7,76,Ja
+S88217,Julia,Hoffmann,Medieninformatik,Softwareengineering,8,WS2024,4.3,89,Nein
+S88217,Julia,Hoffmann,Medieninformatik,Statistik,6,WS2024,1.3,86,Ja
+S88217,Julia,Hoffmann,Medieninformatik,Webentwicklung,6,SS2024,4.7,77,Nein
+S88426,Paul,Koch,Informatik,Datenbanken,6,SS2024,1.3,70,Ja
+S88426,Paul,Koch,Informatik,IT-Sicherheit,6,WS2023,3.3,85,Ja
+S88426,Paul,Koch,Informatik,Netzwerke,6,SS2024,5,77,Nein
+S88480,Marie,Werner,Software Engineering,Algorithmen,8,SS2024,5,71,Nein
+S88480,Marie,Werner,Software Engineering,IT-Sicherheit,6,WS2023,5,75,Nein
+S88480,Marie,Werner,Software Engineering,Softwareengineering,8,WS2023,4.7,91,Nein
+S88480,Marie,Werner,Software Engineering,Statistik,6,WS2023,5,79,Nein
+S88601,Emma,Schneider,Data Science,Betriebssysteme,6,SS2024,4.3,74,Nein
+S88601,Emma,Schneider,Data Science,Datenbanken,6,SS2024,5,84,Nein
+S88601,Emma,Schneider,Data Science,Netzwerke,6,WS2024,2.7,86,Ja
+S88601,Emma,Schneider,Data Science,Webentwicklung,6,WS2023,3.3,82,Ja
+S88703,Jan,Meier,Software Engineering,Betriebssysteme,6,SS2024,2.7,82,Ja
+S88703,Jan,Meier,Software Engineering,Mathematik I,6,WS2023,5,83,Nein
+S88703,Jan,Meier,Software Engineering,Statistik,6,WS2024,5,81,Nein
+S88803,Max,Krüger,Informatik,Algorithmen,8,WS2023,5,84,Nein
+S88803,Max,Krüger,Informatik,Betriebssysteme,6,WS2023,2,73,Ja
+S88803,Max,Krüger,Informatik,Netzwerke,6,WS2023,3.3,77,Ja
+S88803,Max,Krüger,Informatik,Softwareengineering,8,WS2023,4,75,Ja
+S88845,Leon,Schäfer,Data Science,Betriebssysteme,6,WS2024,3,87,Ja
+S88845,Leon,Schäfer,Data Science,IT-Sicherheit,6,WS2023,4.3,87,Nein
+S88845,Leon,Schäfer,Data Science,Mathematik I,6,WS2024,5,85,Nein
+S88845,Leon,Schäfer,Data Science,Softwareengineering,8,WS2023,1.7,89,Ja
+S88845,Leon,Schäfer,Data Science,Webentwicklung,6,WS2023,2.3,70,Ja
+S88904,Sophie,Neumann,Informatik,Mathematik I,6,SS2024,5,80,Nein
+S88904,Sophie,Neumann,Informatik,Netzwerke,6,SS2024,1.3,88,Ja
+S88904,Sophie,Neumann,Informatik,Programmierung I,8,WS2024,4,79,Ja
+S88904,Sophie,Neumann,Informatik,Softwareengineering,8,WS2023,1,74,Ja
+S88904,Sophie,Neumann,Informatik,Webentwicklung,6,WS2024,4,84,Ja
+S89013,Jonas,Wagner,Software Engineering,IT-Sicherheit,6,WS2024,2,73,Ja
+S89013,Jonas,Wagner,Software Engineering,Programmierung I,8,WS2023,3,78,Ja
+S89013,Jonas,Wagner,Software Engineering,Softwareengineering,8,WS2023,3.7,76,Ja
+S89034,Paul,Braun,Data Science,Algorithmen,8,WS2023,4,83,Ja
+S89034,Paul,Braun,Data Science,Betriebssysteme,6,WS2024,4.3,79,Nein
+S89034,Paul,Braun,Data Science,Programmierung I,8,WS2024,4,79,Ja
+S89034,Paul,Braun,Data Science,Statistik,6,SS2024,3.3,77,Ja
+S89153,Moritz,Schäfer,Informatik,Betriebssysteme,6,SS2024,4.7,77,Nein
+S89153,Moritz,Schäfer,Informatik,Datenbanken,6,WS2023,2.7,81,Ja
+S89153,Moritz,Schäfer,Informatik,Mathematik I,6,WS2023,5,74,Nein
+S89153,Moritz,Schäfer,Informatik,Programmierung I,8,SS2024,4,86,Ja
+S89549,David,Wagner,Software Engineering,Betriebssysteme,6,SS2024,3,73,Ja
+S89549,David,Wagner,Software Engineering,Mathematik I,6,WS2024,4.7,69,Nein
+S89549,David,Wagner,Software Engineering,Statistik,6,SS2024,5,83,Nein
+S89549,David,Wagner,Software Engineering,Webentwicklung,6,WS2023,3.7,80,Ja
+S89609,Felix,Zimmermann,Informatik,Betriebssysteme,6,SS2024,2,88,Ja
+S89609,Felix,Zimmermann,Informatik,Datenbanken,6,SS2024,3.3,85,Ja
+S89609,Felix,Zimmermann,Informatik,IT-Sicherheit,6,WS2024,5,79,Nein
+S89609,Felix,Zimmermann,Informatik,Netzwerke,6,WS2023,1.7,87,Ja
+S89609,Felix,Zimmermann,Informatik,Programmierung I,8,WS2024,5,67,Nein
+S89609,Felix,Zimmermann,Informatik,Softwareengineering,8,SS2024,2.3,71,Ja
+S89791,Amelie,Richter,Informatik,Betriebssysteme,6,WS2024,5,80,Nein
+S89791,Amelie,Richter,Informatik,Softwareengineering,8,WS2024,5,70,Nein
+S89791,Amelie,Richter,Informatik,Webentwicklung,6,WS2023,4,88,Ja
+S89957,Laura,Bauer,Data Science,Algorithmen,8,WS2023,3.7,83,Ja
+S89957,Laura,Bauer,Data Science,Betriebssysteme,6,WS2023,3,81,Ja
+S89957,Laura,Bauer,Data Science,Datenbanken,6,WS2023,3.7,89,Ja
+S89957,Laura,Bauer,Data Science,Mathematik I,6,WS2024,3.3,79,Ja
+S90083,Hannah,Müller,Informatik,Betriebssysteme,6,WS2023,4,83,Ja
+S90083,Hannah,Müller,Informatik,Programmierung I,8,SS2024,2.7,91,Ja
+S90083,Hannah,Müller,Informatik,Softwareengineering,8,WS2023,1.7,73,Ja
+S90083,Hannah,Müller,Informatik,Webentwicklung,6,WS2023,2,71,Ja
+S90256,Sophie,Meier,Data Science,Algorithmen,8,WS2023,1.3,87,Ja
+S90256,Sophie,Meier,Data Science,Mathematik I,6,SS2024,4.7,83,Nein
+S90256,Sophie,Meier,Data Science,Netzwerke,6,WS2024,2.7,89,Ja
+S90256,Sophie,Meier,Data Science,Programmierung I,8,SS2024,3.7,74,Ja
+S90256,Sophie,Meier,Data Science,Statistik,6,WS2023,3.7,68,Ja
+S90847,Jonas,Krüger,Data Science,Betriebssysteme,6,WS2023,2,78,Ja
+S90847,Jonas,Krüger,Data Science,Mathematik I,6,WS2024,2.3,89,Ja
+S90847,Jonas,Krüger,Data Science,Programmierung I,8,WS2024,2,74,Ja
+S90847,Jonas,Krüger,Data Science,Softwareengineering,8,WS2024,4,82,Ja
+S91280,Tom,Hofmann,Data Science,Datenbanken,6,SS2024,3.7,77,Ja
+S91280,Tom,Hofmann,Data Science,IT-Sicherheit,6,SS2024,2.7,73,Ja
+S91280,Tom,Hofmann,Data Science,Netzwerke,6,SS2024,3.7,86,Ja
+S91280,Tom,Hofmann,Data Science,Statistik,6,WS2024,2.3,82,Ja
+S91532,Paul,Hofmann,Software Engineering,Algorithmen,8,WS2023,2.3,73,Ja
+S91532,Paul,Hofmann,Software Engineering,Betriebssysteme,6,WS2023,2,81,Ja
+S91532,Paul,Hofmann,Software Engineering,Datenbanken,6,WS2024,4.7,79,Nein
+S91532,Paul,Hofmann,Software Engineering,IT-Sicherheit,6,SS2024,3.3,86,Ja
+S91532,Paul,Hofmann,Software Engineering,Mathematik I,6,WS2024,1.7,80,Ja
+S91532,Paul,Hofmann,Software Engineering,Netzwerke,6,SS2024,5,68,Nein
+S91581,Leon,Braun,Medieninformatik,Algorithmen,8,WS2023,5,84,Nein
+S91581,Leon,Braun,Medieninformatik,Datenbanken,6,SS2024,4.7,84,Nein
+S91581,Leon,Braun,Medieninformatik,IT-Sicherheit,6,SS2024,3.3,72,Ja
+S91581,Leon,Braun,Medieninformatik,Programmierung I,8,SS2024,4.3,69,Nein
+S91581,Leon,Braun,Medieninformatik,Softwareengineering,8,WS2023,4.7,74,Nein
+S91610,Lisa,Schulz,Wirtschaftsinformatik,Algorithmen,8,WS2023,3.3,79,Ja
+S91610,Lisa,Schulz,Wirtschaftsinformatik,Datenbanken,6,WS2024,5,77,Nein
+S91610,Lisa,Schulz,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,4.3,78,Nein
+S91610,Lisa,Schulz,Wirtschaftsinformatik,Netzwerke,6,SS2024,5,83,Nein
+S91610,Lisa,Schulz,Wirtschaftsinformatik,Programmierung I,8,WS2024,2.3,86,Ja
+S91610,Lisa,Schulz,Wirtschaftsinformatik,Statistik,6,WS2023,3,88,Ja
+S91651,Felix,Lange,Software Engineering,Algorithmen,8,WS2024,3.3,80,Ja
+S91651,Felix,Lange,Software Engineering,Betriebssysteme,6,WS2023,5,87,Nein
+S91651,Felix,Lange,Software Engineering,Programmierung I,8,SS2024,1.3,70,Ja
+S91651,Felix,Lange,Software Engineering,Webentwicklung,6,WS2024,3.3,87,Ja
+S91675,Ben,Fischer,Software Engineering,Algorithmen,8,WS2024,2.3,81,Ja
+S91675,Ben,Fischer,Software Engineering,Betriebssysteme,6,WS2023,2.7,68,Ja
+S91675,Ben,Fischer,Software Engineering,Datenbanken,6,WS2023,4.3,70,Nein
+S91675,Ben,Fischer,Software Engineering,Netzwerke,6,WS2023,2.7,78,Ja
+S91683,Amelie,Klein,Medieninformatik,Algorithmen,8,WS2023,2.7,89,Ja
+S91683,Amelie,Klein,Medieninformatik,IT-Sicherheit,6,WS2023,4.3,86,Nein
+S91683,Amelie,Klein,Medieninformatik,Programmierung I,8,WS2023,4.3,82,Nein
+S91683,Amelie,Klein,Medieninformatik,Webentwicklung,6,SS2024,1.7,86,Ja
+S92301,Max,Klein,Wirtschaftsinformatik,Netzwerke,6,SS2024,4.3,83,Nein
+S92301,Max,Klein,Wirtschaftsinformatik,Softwareengineering,8,SS2024,3.7,83,Ja
+S92301,Max,Klein,Wirtschaftsinformatik,Statistik,6,WS2024,3.3,85,Ja
+S92301,Max,Klein,Wirtschaftsinformatik,Webentwicklung,6,SS2024,3.7,75,Ja
+S92453,Leon,Meier,Data Science,Algorithmen,8,WS2024,4,72,Ja
+S92453,Leon,Meier,Data Science,Programmierung I,8,WS2024,2.3,77,Ja
+S92453,Leon,Meier,Data Science,Softwareengineering,8,SS2024,5,75,Nein
+S92453,Leon,Meier,Data Science,Webentwicklung,6,WS2023,5,85,Nein
+S92591,Emma,Braun,Software Engineering,Datenbanken,6,WS2024,4,80,Ja
+S92591,Emma,Braun,Software Engineering,Mathematik I,6,SS2024,2,80,Ja
+S92591,Emma,Braun,Software Engineering,Netzwerke,6,WS2023,2.3,84,Ja
+S92591,Emma,Braun,Software Engineering,Statistik,6,WS2024,3.3,86,Ja
+S92693,Julia,Bauer,Software Engineering,Betriebssysteme,6,SS2024,2.3,77,Ja
+S92693,Julia,Bauer,Software Engineering,Netzwerke,6,WS2024,1.7,73,Ja
+S92693,Julia,Bauer,Software Engineering,Programmierung I,8,SS2024,4.3,78,Nein
+S92693,Julia,Bauer,Software Engineering,Softwareengineering,8,WS2023,1.7,87,Ja
+S92693,Julia,Bauer,Software Engineering,Statistik,6,WS2023,4.3,78,Nein
+S92693,Julia,Bauer,Software Engineering,Webentwicklung,6,WS2023,2.3,83,Ja
+S93003,Nina,Fischer,Software Engineering,Algorithmen,8,WS2023,4,82,Ja
+S93003,Nina,Fischer,Software Engineering,Datenbanken,6,WS2024,4.7,82,Nein
+S93003,Nina,Fischer,Software Engineering,IT-Sicherheit,6,WS2024,4,80,Ja
+S93003,Nina,Fischer,Software Engineering,Programmierung I,8,WS2023,3.7,78,Ja
+S93003,Nina,Fischer,Software Engineering,Softwareengineering,8,SS2024,3.7,81,Ja
+S93003,Nina,Fischer,Software Engineering,Statistik,6,SS2024,2,71,Ja
+S93103,Felix,Wagner,Data Science,Betriebssysteme,6,SS2024,5,82,Nein
+S93103,Felix,Wagner,Data Science,Datenbanken,6,WS2024,2.7,88,Ja
+S93103,Felix,Wagner,Data Science,Programmierung I,8,SS2024,3.3,85,Ja
+S93103,Felix,Wagner,Data Science,Statistik,6,WS2024,4,75,Ja
+S93103,Felix,Wagner,Data Science,Webentwicklung,6,WS2023,5,79,Nein
+S93167,Lisa,Weber,Wirtschaftsinformatik,Algorithmen,8,WS2023,5,84,Nein
+S93167,Lisa,Weber,Wirtschaftsinformatik,Betriebssysteme,6,WS2023,4.3,80,Nein
+S93167,Lisa,Weber,Wirtschaftsinformatik,Netzwerke,6,SS2024,3,78,Ja
+S93167,Lisa,Weber,Wirtschaftsinformatik,Softwareengineering,8,WS2024,2.7,79,Ja
+S93167,Lisa,Weber,Wirtschaftsinformatik,Statistik,6,SS2024,5,79,Nein
+S93167,Lisa,Weber,Wirtschaftsinformatik,Webentwicklung,6,WS2023,2.3,79,Ja
+S93978,David,Krüger,Data Science,Algorithmen,8,SS2024,3.3,79,Ja
+S93978,David,Krüger,Data Science,Datenbanken,6,SS2024,4,82,Ja
+S93978,David,Krüger,Data Science,Mathematik I,6,WS2023,2,90,Ja
+S93978,David,Krüger,Data Science,Netzwerke,6,WS2023,5,73,Nein
+S93978,David,Krüger,Data Science,Webentwicklung,6,WS2023,4.7,75,Nein
+S94928,Clara,Koch,Informatik,Datenbanken,6,WS2023,1.7,75,Ja
+S94928,Clara,Koch,Informatik,Mathematik I,6,WS2023,3.3,80,Ja
+S94928,Clara,Koch,Informatik,Programmierung I,8,WS2024,2.7,80,Ja
+S94928,Clara,Koch,Informatik,Statistik,6,WS2023,5,74,Nein
+S94928,Clara,Koch,Informatik,Webentwicklung,6,SS2024,3,75,Ja
+S96144,Anna,Hoffmann,Informatik,Betriebssysteme,6,WS2023,5,83,Nein
+S96144,Anna,Hoffmann,Informatik,Datenbanken,6,WS2023,2.7,87,Ja
+S96144,Anna,Hoffmann,Informatik,Statistik,6,SS2024,3.3,80,Ja
+S96357,Ben,Becker,Informatik,Betriebssysteme,6,SS2024,4.7,77,Nein
+S96357,Ben,Becker,Informatik,Datenbanken,6,WS2023,2.7,72,Ja
+S96357,Ben,Becker,Informatik,IT-Sicherheit,6,SS2024,3.3,81,Ja
+S96357,Ben,Becker,Informatik,Programmierung I,8,WS2023,1,89,Ja
+S96357,Ben,Becker,Informatik,Softwareengineering,8,SS2024,5,68,Nein
+S96575,Moritz,Krause,Data Science,Algorithmen,8,WS2024,3.3,85,Ja
+S96575,Moritz,Krause,Data Science,Softwareengineering,8,WS2023,5,81,Nein
+S96575,Moritz,Krause,Data Science,Webentwicklung,6,SS2024,1.7,75,Ja
+S96889,Mia,Schneider,Wirtschaftsinformatik,Softwareengineering,8,SS2024,3,84,Ja
+S96889,Mia,Schneider,Wirtschaftsinformatik,Statistik,6,WS2023,5,90,Nein
+S96889,Mia,Schneider,Wirtschaftsinformatik,Webentwicklung,6,WS2023,2.3,79,Ja
+S97154,Nina,Schulz,Medieninformatik,Algorithmen,8,WS2023,4.7,69,Nein
+S97154,Nina,Schulz,Medieninformatik,Softwareengineering,8,WS2023,4.7,85,Nein
+S97154,Nina,Schulz,Medieninformatik,Statistik,6,SS2024,2.3,84,Ja
+S97613,Moritz,Krause,Wirtschaftsinformatik,Betriebssysteme,6,WS2024,5,78,Nein
+S97613,Moritz,Krause,Wirtschaftsinformatik,IT-Sicherheit,6,SS2024,4.7,67,Nein
+S97613,Moritz,Krause,Wirtschaftsinformatik,Netzwerke,6,WS2024,1,88,Ja
+S97613,Moritz,Krause,Wirtschaftsinformatik,Softwareengineering,8,WS2024,2.7,72,Ja
+S97913,Julia,Braun,Medieninformatik,Algorithmen,8,SS2024,2.3,80,Ja
+S97913,Julia,Braun,Medieninformatik,Betriebssysteme,6,WS2023,3.3,77,Ja
+S97913,Julia,Braun,Medieninformatik,IT-Sicherheit,6,WS2024,4,86,Ja
+S97913,Julia,Braun,Medieninformatik,Programmierung I,8,WS2023,4.3,87,Nein
+S97913,Julia,Braun,Medieninformatik,Softwareengineering,8,SS2024,3.7,73,Ja
+S97913,Julia,Braun,Medieninformatik,Statistik,6,WS2024,4.3,87,Nein
+S97932,Felix,Schmitt,Informatik,Betriebssysteme,6,WS2023,1,87,Ja
+S97932,Felix,Schmitt,Informatik,Datenbanken,6,WS2023,4.7,74,Nein
+S97932,Felix,Schmitt,Informatik,Mathematik I,6,SS2024,4.3,86,Nein
+S97932,Felix,Schmitt,Informatik,Programmierung I,8,WS2024,2.7,86,Ja
+S97932,Felix,Schmitt,Informatik,Statistik,6,SS2024,5,84,Nein
+S98212,Ben,Fischer,Informatik,Algorithmen,8,WS2024,5,85,Nein
+S98212,Ben,Fischer,Informatik,Mathematik I,6,WS2023,3.3,90,Ja
+S98212,Ben,Fischer,Informatik,Netzwerke,6,WS2024,2,82,Ja
+S98212,Ben,Fischer,Informatik,Softwareengineering,8,WS2023,1.7,86,Ja
+S98879,Mia,Schäfer,Data Science,Algorithmen,8,SS2024,4.7,79,Nein
+S98879,Mia,Schäfer,Data Science,IT-Sicherheit,6,SS2024,1.7,79,Ja
+S98879,Mia,Schäfer,Data Science,Netzwerke,6,WS2024,5,81,Nein
+S98879,Mia,Schäfer,Data Science,Webentwicklung,6,WS2024,3.7,77,Ja
+S99322,Lisa,Hofmann,Wirtschaftsinformatik,Algorithmen,8,WS2023,3.3,87,Ja
+S99322,Lisa,Hofmann,Wirtschaftsinformatik,IT-Sicherheit,6,WS2024,5,87,Nein
+S99322,Lisa,Hofmann,Wirtschaftsinformatik,Mathematik I,6,SS2024,5,68,Nein
+S99322,Lisa,Hofmann,Wirtschaftsinformatik,Programmierung I,8,SS2024,4,86,Ja
+S99789,Amelie,Schulz,Wirtschaftsinformatik,Algorithmen,8,SS2024,5,80,Nein
+S99789,Amelie,Schulz,Wirtschaftsinformatik,Datenbanken,6,SS2024,4.7,84,Nein
+S99789,Amelie,Schulz,Wirtschaftsinformatik,IT-Sicherheit,6,WS2023,3.3,89,Ja
+S99789,Amelie,Schulz,Wirtschaftsinformatik,Netzwerke,6,WS2023,1.7,84,Ja
+S99789,Amelie,Schulz,Wirtschaftsinformatik,Programmierung I,8,WS2024,2,89,Ja
+S99789,Amelie,Schulz,Wirtschaftsinformatik,Webentwicklung,6,WS2024,4.7,78,Nein
+S99840,Paul,Hoffmann,Informatik,Betriebssysteme,6,WS2024,1.7,81,Ja
+S99840,Paul,Hoffmann,Informatik,IT-Sicherheit,6,SS2024,3,73,Ja
+S99840,Paul,Hoffmann,Informatik,Netzwerke,6,WS2024,2.7,75,Ja
+S99840,Paul,Hoffmann,Informatik,Webentwicklung,6,WS2023,4,80,Ja

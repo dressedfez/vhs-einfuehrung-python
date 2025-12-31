@@ -1,0 +1,301 @@
+Studenten-ID,Name,Kurs,Note,Semester,Studiengang,Anwesenheit
+S1017,Leon Richter,Mathematik I,1.2,WS 2023,Physik,96
+S1063,Paul Wagner,Statistik,1.8,SS 2024,Ingenieurwesen,74
+S1100,Tom Fischer,Mathematik I,1.0,WS 2023,Physik,88
+S1114,Marie Klein,Statistik,1.2,WS 2023,Ingenieurwesen,97
+S1089,Paul Wagner,Statistik,1.7,WS 2023,Mathematik,83
+S1075,Max Schmidt,Mathematik I,1.0,WS 2023,Mathematik,94
+S1003,Sophie Braun,Mathematik I,1.9,WS 2024,Physik,76
+S1027,Marie Klein,Lineare Algebra,1.2,WS 2023,Physik,91
+S1097,Paul Wagner,Statistik,1.7,WS 2023,Ingenieurwesen,78
+S1044,Tom Fischer,Mathematik I,2.1,SS 2024,Informatik,80
+S1118,Anna Müller,Statistik,2.6,WS 2024,Ingenieurwesen,68
+S1012,Laura Becker,Mathematik I,1.8,WS 2024,Mathematik,89
+S1042,Sophie Braun,Statistik,1.4,WS 2024,Ingenieurwesen,89
+S1024,Julia Weber,Statistik,1.7,SS 2024,Mathematik,78
+S1108,Sophie Braun,Statistik,2.1,WS 2023,Ingenieurwesen,77
+S1061,Tom Fischer,Mathematik I,2.0,WS 2024,Ingenieurwesen,73
+S1022,Lukas Hoffmann,Mathematik I,1.9,SS 2024,Mathematik,73
+S1084,Sophie Braun,Physik I,2.1,WS 2024,Physik,73
+S1107,Marie Klein,Lineare Algebra,2.3,WS 2024,Mathematik,68
+S1003,Paul Wagner,Mathematik I,1.6,WS 2024,Physik,96
+S1108,Leon Richter,Statistik,1.7,WS 2023,Ingenieurwesen,78
+S1021,Sophie Braun,Informatik I,2.6,WS 2023,Informatik,72
+S1069,Sophie Braun,Mathematik I,1.7,WS 2024,Informatik,80
+S1044,Leon Richter,Lineare Algebra,2.5,SS 2024,Mathematik,81
+S1084,Sophie Braun,Mathematik I,2.1,WS 2024,Physik,81
+S1065,Laura Becker,Mathematik I,1.7,WS 2023,Informatik,83
+S1061,Lukas Hoffmann,Statistik,2.2,SS 2024,Informatik,68
+S1062,Lukas Hoffmann,Mathematik I,2.2,WS 2023,Ingenieurwesen,77
+S1068,Sophie Braun,Lineare Algebra,1.9,WS 2024,Mathematik,88
+S1003,Tom Fischer,Statistik,2.1,WS 2024,Informatik,82
+S1023,Max Schmidt,Mathematik I,2.5,WS 2024,Mathematik,72
+S1009,Max Schmidt,Mathematik I,1.7,WS 2023,Physik,85
+S1096,Julia Weber,Mathematik I,1.8,WS 2023,Informatik,84
+S1102,Leon Richter,Mathematik I,2.0,SS 2024,Informatik,91
+S1008,Laura Becker,Mathematik I,1.0,WS 2024,Informatik,100
+S1021,Julia Weber,Lineare Algebra,2.2,WS 2024,Mathematik,65
+S1041,Paul Wagner,Physik I,2.1,WS 2023,Ingenieurwesen,81
+S1039,Marie Klein,Lineare Algebra,1.2,WS 2023,Mathematik,83
+S1033,Max Schmidt,Statistik,2.3,WS 2024,Mathematik,76
+S1026,Leon Richter,Physik I,2.1,WS 2023,Ingenieurwesen,82
+S1002,Marie Klein,Informatik I,1.9,WS 2024,Informatik,77
+S1020,Paul Wagner,Statistik,2.0,WS 2023,Ingenieurwesen,81
+S1080,Sophie Braun,Physik I,1.9,WS 2024,Ingenieurwesen,81
+S1083,Anna Müller,Statistik,2.2,WS 2024,Ingenieurwesen,73
+S1102,Lukas Hoffmann,Physik I,2.2,WS 2024,Ingenieurwesen,81
+S1038,Laura Becker,Informatik I,1.6,SS 2024,Informatik,91
+S1009,Max Schmidt,Lineare Algebra,1.8,WS 2024,Mathematik,76
+S1020,Marie Klein,Mathematik I,1.8,WS 2023,Mathematik,84
+S1071,Anna Müller,Statistik,2.0,SS 2024,Informatik,76
+S1021,Leon Richter,Mathematik I,2.3,WS 2023,Physik,73
+S1044,Max Schmidt,Statistik,2.4,WS 2024,Informatik,75
+S1114,Marie Klein,Mathematik I,2.0,WS 2023,Informatik,84
+S1085,Marie Klein,Statistik,2.3,SS 2024,Mathematik,69
+S1002,Lukas Hoffmann,Mathematik I,1.4,WS 2023,Ingenieurwesen,87
+S1020,Tom Fischer,Statistik,2.0,WS 2023,Mathematik,77
+S1043,Marie Klein,Mathematik I,2.4,WS 2024,Informatik,66
+S1012,Marie Klein,Statistik,1.4,WS 2024,Mathematik,88
+S1062,Sophie Braun,Informatik I,1.4,WS 2024,Informatik,83
+S1005,Max Schmidt,Informatik I,1.4,WS 2023,Informatik,79
+S1116,Sophie Braun,Mathematik I,1.7,SS 2024,Informatik,91
+S1076,Sophie Braun,Lineare Algebra,1.7,SS 2024,Mathematik,79
+S1043,Max Schmidt,Mathematik I,2.1,WS 2024,Mathematik,92
+S1099,Paul Wagner,Statistik,2.8,WS 2024,Informatik,61
+S1098,Max Schmidt,Mathematik I,1.5,SS 2024,Mathematik,96
+S1009,Marie Klein,Informatik I,2.5,SS 2024,Informatik,68
+S1014,Leon Richter,Physik I,1.8,WS 2024,Ingenieurwesen,78
+S1070,Tom Fischer,Mathematik I,2.5,SS 2024,Physik,67
+S1114,Julia Weber,Mathematik I,1.5,SS 2024,Physik,87
+S1013,Anna Müller,Mathematik I,1.4,WS 2024,Mathematik,85
+S1085,Anna Müller,Mathematik I,1.7,WS 2023,Physik,88
+S1105,Anna Müller,Informatik I,1.9,WS 2024,Informatik,78
+S1053,Laura Becker,Mathematik I,1.9,WS 2023,Physik,88
+S1087,Tom Fischer,Statistik,1.8,WS 2023,Informatik,85
+S1055,Marie Klein,Statistik,2.1,SS 2024,Mathematik,80
+S1091,Paul Wagner,Mathematik I,2.0,WS 2023,Mathematik,82
+S1083,Lukas Hoffmann,Physik I,1.3,WS 2023,Physik,76
+S1100,Julia Weber,Lineare Algebra,2.3,SS 2024,Mathematik,90
+S1040,Marie Klein,Physik I,1.7,SS 2024,Physik,84
+S1076,Paul Wagner,Mathematik I,1.9,WS 2023,Physik,78
+S1100,Leon Richter,Statistik,1.6,SS 2024,Ingenieurwesen,80
+S1033,Laura Becker,Mathematik I,1.8,WS 2023,Informatik,74
+S1031,Lukas Hoffmann,Mathematik I,1.8,WS 2023,Physik,82
+S1096,Paul Wagner,Lineare Algebra,1.7,WS 2024,Physik,84
+S1082,Lukas Hoffmann,Mathematik I,1.7,SS 2024,Informatik,89
+S1005,Lukas Hoffmann,Mathematik I,1.0,WS 2024,Informatik,100
+S1114,Julia Weber,Mathematik I,2.4,WS 2023,Informatik,73
+S1069,Leon Richter,Physik I,1.2,WS 2023,Physik,100
+S1002,Tom Fischer,Physik I,1.8,SS 2024,Ingenieurwesen,80
+S1070,Max Schmidt,Physik I,1.4,WS 2024,Physik,93
+S1001,Julia Weber,Lineare Algebra,1.6,SS 2024,Mathematik,86
+S1110,Laura Becker,Lineare Algebra,2.4,SS 2024,Physik,67
+S1009,Sophie Braun,Informatik I,2.1,WS 2023,Informatik,85
+S1018,Lukas Hoffmann,Mathematik I,1.8,WS 2024,Mathematik,78
+S1065,Leon Richter,Mathematik I,1.8,WS 2023,Mathematik,85
+S1018,Sophie Braun,Mathematik I,1.8,WS 2024,Physik,82
+S1102,Sophie Braun,Informatik I,1.7,SS 2024,Informatik,91
+S1055,Sophie Braun,Informatik I,1.7,WS 2024,Informatik,99
+S1110,Tom Fischer,Mathematik I,1.2,WS 2024,Mathematik,86
+S1057,Marie Klein,Statistik,1.8,SS 2024,Mathematik,86
+S1108,Sophie Braun,Physik I,2.0,SS 2024,Ingenieurwesen,88
+S1107,Lukas Hoffmann,Mathematik I,2.3,SS 2024,Informatik,75
+S1003,Marie Klein,Physik I,2.7,WS 2024,Physik,74
+S1045,Leon Richter,Statistik,1.8,WS 2023,Informatik,66
+S1017,Julia Weber,Lineare Algebra,2.1,WS 2024,Mathematik,63
+S1051,Laura Becker,Physik I,2.8,SS 2024,Physik,68
+S1000,Laura Becker,Statistik,1.6,WS 2024,Mathematik,76
+S1117,Paul Wagner,Informatik I,1.4,SS 2024,Informatik,91
+S1063,Paul Wagner,Statistik,2.6,SS 2024,Informatik,67
+S1043,Sophie Braun,Statistik,1.6,WS 2023,Mathematik,86
+S1006,Max Schmidt,Mathematik I,1.5,WS 2024,Mathematik,94
+S1098,Tom Fischer,Lineare Algebra,1.6,WS 2024,Mathematik,96
+S1038,Sophie Braun,Mathematik I,1.5,WS 2024,Mathematik,95
+S1089,Paul Wagner,Physik I,3.0,WS 2024,Physik,67
+S1065,Leon Richter,Physik I,2.0,WS 2023,Ingenieurwesen,74
+S1032,Marie Klein,Statistik,2.1,WS 2024,Informatik,72
+S1096,Anna Müller,Statistik,1.9,SS 2024,Ingenieurwesen,82
+S1091,Lukas Hoffmann,Statistik,2.3,WS 2023,Ingenieurwesen,86
+S1069,Anna Müller,Mathematik I,1.6,WS 2024,Physik,78
+S1012,Julia Weber,Physik I,2.1,WS 2024,Physik,68
+S1107,Max Schmidt,Physik I,2.7,SS 2024,Ingenieurwesen,63
+S1102,Marie Klein,Physik I,2.0,SS 2024,Ingenieurwesen,75
+S1056,Laura Becker,Physik I,1.5,WS 2023,Ingenieurwesen,79
+S1055,Leon Richter,Physik I,2.4,WS 2024,Ingenieurwesen,71
+S1037,Julia Weber,Mathematik I,1.6,WS 2024,Informatik,86
+S1071,Anna Müller,Statistik,1.0,SS 2024,Informatik,98
+S1074,Anna Müller,Lineare Algebra,2.0,WS 2024,Physik,76
+S1031,Julia Weber,Informatik I,3.3,SS 2024,Informatik,52
+S1018,Sophie Braun,Mathematik I,1.5,SS 2024,Informatik,83
+S1074,Julia Weber,Physik I,1.5,WS 2024,Ingenieurwesen,100
+S1045,Paul Wagner,Physik I,1.6,WS 2023,Ingenieurwesen,84
+S1073,Marie Klein,Mathematik I,1.4,WS 2023,Informatik,81
+S1115,Anna Müller,Lineare Algebra,1.6,WS 2024,Physik,87
+S1001,Sophie Braun,Statistik,2.2,WS 2024,Mathematik,81
+S1083,Laura Becker,Lineare Algebra,1.9,SS 2024,Physik,82
+S1073,Julia Weber,Statistik,1.6,WS 2024,Ingenieurwesen,82
+S1045,Sophie Braun,Mathematik I,2.1,WS 2023,Mathematik,88
+S1056,Paul Wagner,Lineare Algebra,2.0,WS 2024,Mathematik,87
+S1051,Lukas Hoffmann,Physik I,1.9,WS 2024,Ingenieurwesen,71
+S1117,Marie Klein,Physik I,2.7,WS 2024,Ingenieurwesen,65
+S1000,Julia Weber,Mathematik I,2.4,WS 2024,Informatik,77
+S1106,Sophie Braun,Statistik,2.0,WS 2024,Ingenieurwesen,72
+S1039,Laura Becker,Statistik,2.2,WS 2024,Ingenieurwesen,80
+S1067,Tom Fischer,Statistik,2.0,WS 2023,Mathematik,80
+S1086,Marie Klein,Mathematik I,2.0,SS 2024,Ingenieurwesen,80
+S1110,Leon Richter,Mathematik I,2.3,WS 2024,Physik,68
+S1031,Julia Weber,Mathematik I,1.9,WS 2024,Physik,78
+S1080,Laura Becker,Mathematik I,1.6,WS 2023,Ingenieurwesen,84
+S1098,Max Schmidt,Mathematik I,1.8,SS 2024,Physik,79
+S1102,Marie Klein,Mathematik I,2.0,SS 2024,Mathematik,84
+S1106,Julia Weber,Physik I,2.4,SS 2024,Ingenieurwesen,70
+S1065,Anna Müller,Statistik,1.0,WS 2023,Mathematik,100
+S1095,Leon Richter,Physik I,1.9,SS 2024,Ingenieurwesen,71
+S1008,Paul Wagner,Physik I,2.5,WS 2024,Physik,77
+S1090,Laura Becker,Mathematik I,1.7,WS 2024,Physik,80
+S1088,Julia Weber,Mathematik I,1.5,WS 2024,Mathematik,86
+S1026,Tom Fischer,Lineare Algebra,1.7,WS 2023,Mathematik,91
+S1009,Sophie Braun,Lineare Algebra,1.3,WS 2024,Mathematik,93
+S1071,Anna Müller,Mathematik I,1.5,WS 2024,Informatik,100
+S1094,Sophie Braun,Lineare Algebra,1.7,WS 2024,Mathematik,86
+S1094,Tom Fischer,Statistik,1.9,SS 2024,Ingenieurwesen,72
+S1022,Paul Wagner,Statistik,1.7,SS 2024,Mathematik,78
+S1091,Tom Fischer,Statistik,1.6,WS 2024,Mathematik,82
+S1031,Anna Müller,Mathematik I,2.0,SS 2024,Ingenieurwesen,86
+S1119,Tom Fischer,Mathematik I,2.5,WS 2023,Mathematik,72
+S1080,Laura Becker,Statistik,2.3,WS 2024,Ingenieurwesen,77
+S1018,Leon Richter,Lineare Algebra,2.1,WS 2024,Mathematik,84
+S1020,Laura Becker,Statistik,2.2,SS 2024,Informatik,70
+S1046,Julia Weber,Physik I,1.3,WS 2023,Ingenieurwesen,94
+S1091,Tom Fischer,Mathematik I,1.9,WS 2023,Mathematik,59
+S1029,Marie Klein,Lineare Algebra,2.0,WS 2023,Mathematik,54
+S1023,Anna Müller,Lineare Algebra,2.4,WS 2023,Physik,75
+S1113,Tom Fischer,Mathematik I,2.1,WS 2024,Physik,75
+S1067,Leon Richter,Mathematik I,2.0,WS 2024,Ingenieurwesen,78
+S1107,Julia Weber,Lineare Algebra,1.9,WS 2024,Physik,78
+S1022,Max Schmidt,Mathematik I,1.4,WS 2023,Informatik,84
+S1063,Paul Wagner,Physik I,1.9,WS 2023,Ingenieurwesen,90
+S1030,Julia Weber,Statistik,2.2,WS 2024,Ingenieurwesen,78
+S1049,Tom Fischer,Statistik,2.0,SS 2024,Ingenieurwesen,72
+S1042,Paul Wagner,Physik I,1.8,WS 2023,Physik,81
+S1005,Anna Müller,Mathematik I,1.8,SS 2024,Physik,75
+S1113,Marie Klein,Mathematik I,2.4,SS 2024,Mathematik,74
+S1020,Laura Becker,Physik I,2.6,SS 2024,Physik,60
+S1018,Sophie Braun,Lineare Algebra,2.2,SS 2024,Physik,77
+S1032,Laura Becker,Mathematik I,1.0,WS 2024,Physik,85
+S1107,Julia Weber,Physik I,1.8,WS 2024,Physik,85
+S1007,Sophie Braun,Informatik I,1.8,SS 2024,Informatik,80
+S1099,Max Schmidt,Physik I,1.5,WS 2023,Ingenieurwesen,88
+S1003,Paul Wagner,Statistik,1.5,SS 2024,Informatik,98
+S1087,Tom Fischer,Mathematik I,1.1,SS 2024,Ingenieurwesen,100
+S1080,Julia Weber,Statistik,2.7,WS 2024,Mathematik,62
+S1031,Tom Fischer,Lineare Algebra,1.7,WS 2024,Physik,88
+S1022,Lukas Hoffmann,Statistik,2.2,WS 2024,Ingenieurwesen,64
+S1071,Sophie Braun,Mathematik I,1.7,WS 2024,Physik,86
+S1052,Sophie Braun,Statistik,1.9,WS 2024,Informatik,78
+S1054,Max Schmidt,Statistik,2.0,WS 2024,Mathematik,70
+S1092,Max Schmidt,Mathematik I,2.9,WS 2023,Mathematik,65
+S1019,Anna Müller,Mathematik I,2.2,WS 2023,Informatik,75
+S1006,Max Schmidt,Statistik,2.5,SS 2024,Ingenieurwesen,69
+S1012,Lukas Hoffmann,Physik I,2.7,WS 2024,Physik,61
+S1004,Paul Wagner,Mathematik I,2.6,WS 2024,Informatik,79
+S1115,Paul Wagner,Lineare Algebra,2.3,WS 2024,Physik,66
+S1034,Max Schmidt,Lineare Algebra,2.2,WS 2023,Mathematik,83
+S1038,Anna Müller,Physik I,2.1,WS 2024,Ingenieurwesen,75
+S1033,Lukas Hoffmann,Mathematik I,2.3,SS 2024,Informatik,58
+S1103,Max Schmidt,Mathematik I,2.1,SS 2024,Mathematik,84
+S1107,Tom Fischer,Mathematik I,2.6,SS 2024,Informatik,77
+S1065,Marie Klein,Physik I,1.4,WS 2023,Ingenieurwesen,97
+S1083,Paul Wagner,Mathematik I,2.1,WS 2024,Physik,55
+S1020,Tom Fischer,Lineare Algebra,2.5,WS 2024,Mathematik,72
+S1041,Max Schmidt,Mathematik I,1.2,WS 2023,Ingenieurwesen,83
+S1073,Max Schmidt,Mathematik I,2.5,WS 2024,Physik,77
+S1068,Lukas Hoffmann,Mathematik I,1.8,SS 2024,Ingenieurwesen,76
+S1045,Julia Weber,Statistik,1.3,WS 2024,Mathematik,100
+S1066,Sophie Braun,Lineare Algebra,2.2,WS 2023,Physik,75
+S1019,Lukas Hoffmann,Lineare Algebra,1.8,WS 2024,Mathematik,80
+S1008,Paul Wagner,Lineare Algebra,1.9,SS 2024,Mathematik,92
+S1116,Lukas Hoffmann,Physik I,1.6,WS 2024,Ingenieurwesen,88
+S1102,Anna Müller,Informatik I,1.6,WS 2024,Informatik,91
+S1062,Leon Richter,Mathematik I,2.1,WS 2024,Mathematik,84
+S1073,Lukas Hoffmann,Statistik,2.2,SS 2024,Mathematik,88
+S1051,Julia Weber,Statistik,1.3,SS 2024,Ingenieurwesen,84
+S1068,Sophie Braun,Informatik I,2.7,WS 2023,Informatik,68
+S1032,Tom Fischer,Informatik I,2.1,WS 2023,Informatik,76
+S1098,Marie Klein,Physik I,2.5,WS 2024,Physik,71
+S1087,Julia Weber,Physik I,2.5,SS 2024,Physik,76
+S1008,Leon Richter,Physik I,2.4,WS 2023,Physik,74
+S1082,Laura Becker,Physik I,1.5,WS 2024,Ingenieurwesen,86
+S1047,Paul Wagner,Mathematik I,1.3,WS 2023,Mathematik,90
+S1076,Paul Wagner,Mathematik I,2.4,SS 2024,Informatik,71
+S1086,Lukas Hoffmann,Mathematik I,1.9,WS 2024,Informatik,73
+S1009,Julia Weber,Physik I,1.7,WS 2023,Ingenieurwesen,76
+S1095,Sophie Braun,Statistik,1.8,SS 2024,Ingenieurwesen,90
+S1009,Marie Klein,Physik I,1.9,SS 2024,Ingenieurwesen,79
+S1108,Paul Wagner,Physik I,2.3,SS 2024,Physik,84
+S1089,Anna Müller,Mathematik I,1.5,WS 2024,Physik,88
+S1113,Lukas Hoffmann,Statistik,1.7,SS 2024,Mathematik,87
+S1069,Sophie Braun,Statistik,2.5,WS 2024,Ingenieurwesen,78
+S1074,Julia Weber,Mathematik I,1.9,WS 2023,Ingenieurwesen,75
+S1064,Paul Wagner,Statistik,2.1,WS 2023,Informatik,60
+S1032,Anna Müller,Statistik,1.6,WS 2024,Ingenieurwesen,84
+S1072,Anna Müller,Lineare Algebra,1.4,SS 2024,Mathematik,85
+S1036,Anna Müller,Physik I,2.3,WS 2023,Physik,72
+S1049,Julia Weber,Mathematik I,1.7,SS 2024,Ingenieurwesen,94
+S1081,Paul Wagner,Lineare Algebra,2.1,SS 2024,Mathematik,91
+S1102,Max Schmidt,Mathematik I,1.3,WS 2023,Ingenieurwesen,90
+S1053,Laura Becker,Physik I,2.1,SS 2024,Physik,78
+S1047,Laura Becker,Lineare Algebra,2.2,SS 2024,Mathematik,75
+S1065,Julia Weber,Statistik,2.1,SS 2024,Ingenieurwesen,64
+S1055,Lukas Hoffmann,Physik I,1.1,WS 2024,Ingenieurwesen,85
+S1106,Paul Wagner,Statistik,2.3,SS 2024,Ingenieurwesen,68
+S1011,Max Schmidt,Informatik I,2.5,WS 2023,Informatik,62
+S1029,Anna Müller,Mathematik I,2.1,WS 2023,Physik,72
+S1061,Max Schmidt,Statistik,2.0,WS 2024,Ingenieurwesen,77
+S1023,Anna Müller,Mathematik I,2.1,WS 2024,Physik,74
+S1006,Sophie Braun,Statistik,2.3,SS 2024,Informatik,73
+S1044,Anna Müller,Lineare Algebra,1.5,WS 2024,Physik,96
+S1086,Marie Klein,Mathematik I,1.5,WS 2024,Physik,81
+S1035,Laura Becker,Statistik,1.5,WS 2023,Ingenieurwesen,86
+S1100,Tom Fischer,Mathematik I,2.3,WS 2023,Physik,71
+S1085,Paul Wagner,Statistik,2.2,WS 2024,Mathematik,81
+S1063,Marie Klein,Lineare Algebra,1.3,SS 2024,Physik,94
+S1013,Laura Becker,Statistik,2.4,WS 2024,Ingenieurwesen,81
+S1025,Laura Becker,Lineare Algebra,1.8,WS 2024,Mathematik,89
+S1113,Sophie Braun,Lineare Algebra,1.3,WS 2024,Mathematik,93
+S1114,Sophie Braun,Statistik,2.1,SS 2024,Informatik,86
+S1110,Paul Wagner,Physik I,1.2,WS 2024,Physik,96
+S1084,Lukas Hoffmann,Mathematik I,2.1,WS 2024,Mathematik,77
+S1080,Paul Wagner,Mathematik I,1.9,WS 2023,Mathematik,77
+S1065,Julia Weber,Statistik,1.6,WS 2023,Mathematik,86
+S1052,Laura Becker,Mathematik I,2.5,WS 2023,Informatik,62
+S1052,Sophie Braun,Lineare Algebra,1.8,WS 2024,Physik,75
+S1065,Laura Becker,Mathematik I,2.7,SS 2024,Ingenieurwesen,64
+S1061,Julia Weber,Lineare Algebra,2.1,WS 2023,Mathematik,57
+S1063,Lukas Hoffmann,Physik I,2.4,SS 2024,Ingenieurwesen,77
+S1022,Leon Richter,Statistik,1.2,WS 2024,Informatik,93
+S1088,Paul Wagner,Informatik I,1.5,WS 2024,Informatik,78
+S1041,Sophie Braun,Statistik,1.2,WS 2023,Informatik,90
+S1040,Leon Richter,Mathematik I,2.3,SS 2024,Ingenieurwesen,78
+S1015,Laura Becker,Statistik,2.4,SS 2024,Informatik,77
+S1028,Max Schmidt,Lineare Algebra,2.3,WS 2023,Physik,71
+S1087,Max Schmidt,Statistik,1.6,WS 2023,Informatik,88
+S1064,Leon Richter,Lineare Algebra,1.7,SS 2024,Mathematik,93
+S1000,Anna Müller,Statistik,3.6,WS 2023,Mathematik,63
+S1010,Tom Fischer,Statistik,1.8,WS 2024,Mathematik,86
+S1110,Lukas Hoffmann,Statistik,2.3,WS 2024,Mathematik,66
+S1066,Marie Klein,Physik I,2.2,SS 2024,Physik,75
+S1044,Laura Becker,Mathematik I,2.4,WS 2023,Physik,83
+S1087,Leon Richter,Mathematik I,2.0,WS 2023,Physik,81
+S1011,Max Schmidt,Lineare Algebra,1.8,WS 2023,Mathematik,83
+S1034,Sophie Braun,Mathematik I,2.3,WS 2023,Physik,78
+S1010,Laura Becker,Mathematik I,1.5,WS 2024,Ingenieurwesen,87
+S1081,Tom Fischer,Lineare Algebra,2.2,SS 2024,Physik,68
+S1035,Anna Müller,Mathematik I,1.6,SS 2024,Mathematik,91
+S1118,Laura Becker,Lineare Algebra,1.2,WS 2023,Mathematik,97
+S1086,Leon Richter,Statistik,1.1,SS 2024,Ingenieurwesen,81
+S1068,Marie Klein,Mathematik I,2.0,WS 2024,Mathematik,74
+S1038,Sophie Braun,Informatik I,2.3,WS 2024,Informatik,85
+S1065,Max Schmidt,Informatik I,2.3,WS 2023,Informatik,80
+S1114,Marie Klein,Statistik,2.0,WS 2023,Mathematik,86
+S1032,Sophie Braun,Statistik,2.5,SS 2024,Mathematik,75
