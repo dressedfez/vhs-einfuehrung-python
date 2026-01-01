@@ -215,6 +215,214 @@ def _():
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Auswahl und Filtern in DataFrames
+
+    #### Auswahl von Spalten
+
+    Die Auswahl von Spalten geschieht in Pandas DataFrames typischerweise durch Angabe des Spaltennamens in eckigen Klammern. Es ist auch möglich mehrere Spalten gleichzeitig auszuwählen.
+
+    <div align="center">
+    <img src="./public/03_subset_columns.svg"/>
+    </div>
+
+    **Beispiele:**
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic[["Name", "Age"]].head()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Man kann Spalten auch mithilfe des Attributzugriffs auswählen (gehr nur für eine Spalte):
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.Name.head()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Wichtig für die Auswahl von Spalten (und Zeilen) sind die Methoden `loc` und `iloc`. Mittels `iloc` können Zeilen und Spalten über ihre integer-basierten Positionen ausgewählt werden und mit `loc` über ihre Labels (Namen).
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    # Auswahl aller Zeilen, aber nur der Spalten "Name" und "Age"
+    df_titanic.loc[:, ["Name", "Age"]].head()
+    return
+
+
+@app.cell
+def _(df_titanic):
+    # Auswahl aller Zeilen, aber nur der Spalten an Position 3 und 5
+    # ACHTUNG: wenn sich die Spaltenreihenfolge ändert, ändert sich auch die Auswahl!
+    df_titanic.iloc[:, [3, 5]].head()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    #### Auswahl von Zeilen
+
+    <div align="center">
+    <img src="./public/03_subset_rows.svg"/>
+    </div>
+
+    **Beispiele:**
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Die ersten Beispiele nutzten `iloc`, um Zeilen basierend auf ihrer Position auszuwählen. Dem Thema `loc` widmen wir uns später.
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.iloc[0:5]  # Auswahl der ersten 5 Zeilen
+    return
+
+
+@app.cell
+def _(df_titanic):
+    # Auswahl der ersten Zeile (Zeilenindex 0) und der Spalte "Name" (Spaltenindex 3) und "Age" (Spaltenindex 5)
+    df_titanic.iloc[[0], [3, 5]]
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Wenn man sich den letzten Befehl genau anschaut, sieht man eine unerwartete Notation, die
+    Aufgrund von Dimensionalitätsregeln in Pandas notwendig ist.
+
+    /// tip
+    Merksatz 🧠
+
+    In Pandas lieber „Listen statt Skalar“, wenn du Dimensionen behalten willst.
+    ///
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    # Auswahl der ersten Zeile (Zeilenlabel 0) und der Spalte "Name" und "Age"
+    df_titanic.iloc[[0, 5], [3, 5]]
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Für `iloc` und `loc` gilt:
+    - `df.iloc[zeilen_index, spalten_index]`
+    - `df.loc[zeilen_label, spalten_label]`
+    - Beide Methoden unterstützen sowohl einzelne Indizes/Labels als auch Listen von Indizes/Labels.
+    - Sowohl `iloc` als auch `loc` unterstützen Slicing (Bereichsauswahl) für Zeilen und Spalten.
+    - Bei `loc` sind die Endindizes im Slicing inklusive, während bei `iloc` die Endindizes exklusiv sind.
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.loc[[0], ["Name", "Age"]]
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.index
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Wie man sieht wird die Auswahl der Zeile über die `Index` - Spalte durchgeführt.
+
+    Interessant wird es, wenn man die Auswahl der Zeilen über Bedingungen (Filter) durchführt. Diese Filterung kann
+    mittels boolescher Arrays oder Bedingungen erfolgen.
+
+    Hier zunächst ein Beispiel mit eines booleschen Arrays:
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic_bool = df_titanic["Age"] > 30
+    df_titanic_bool.head()
+    return (df_titanic_bool,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Mittels dieser booleschen Serie können wir nun den DataFrame filtern:
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic, df_titanic_bool):
+    df_titanic_older_than_30 = df_titanic.loc[df_titanic_bool]
+    df_titanic_older_than_30.head()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **2-dimensionalle Filterung**
+
+    Auswählen von Zeilen und Spalten mittels Pandas ist auch möglich und erlaubt einem zusammen mit *marimo* interaktive Tabellen zu erzeugen.
+
+    <div align="center">
+    <img src="./public/03_subset_columns_rows.svg"/>
+    </div>
+
+    Zum Beispiel kann man mittels Multiselect-Widget Spalten auswählen und mittels eines Filters Zeilen auswählen.
+    Dies wird unten gemacht.
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic, mo):
+    ausgewaehlte_spalten = mo.ui.multiselect(df_titanic.columns)
+    ausgewaehlte_spalten
+    return (ausgewaehlte_spalten,)
+
+
+@app.cell
+def _(ausgewaehlte_spalten, df_titanic, df_titanic_bool):
+    df_titanic.loc[df_titanic_bool, ausgewaehlte_spalten.value]
+    return
+
+
 @app.cell
 def _():
     return
