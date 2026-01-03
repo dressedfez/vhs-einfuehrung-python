@@ -423,8 +423,84 @@ def _(ausgewaehlte_spalten, df_titanic, df_titanic_bool):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Erstellen von Spalten
+    ### Erstellen einer Spalte mittels einer Ausgangsspalte
+
+    Aus bereits bestehenden Spalten können neue Spalten erstellt werden. Zunächst schauen wir uns an, wie man mittels einer Spalte eine neue Spalte erstellt.
+    <div align="center">
+    <img src="./public/05_newcolumn_1.svg"/>
+    </div>
+
+    /// tip
+    Merksatz 🧠
+    Eine neue Spalte wird erstellt, indem man auf der linken Seite den neuen Spaltennamen in eckigen Klammern angibt und auf der rechten Seite den Ausdruck, der die Werte für die neue Spalte definiert.
+
+    ```python
+    df["new_column"] = <expression>
+    ```
+    ///
+    **Beispiel:**
+    """)
+    return
+
+
 @app.cell
-def _():
+def _(df_titanic):
+    df_titanic["percentage_fare"] = (
+        df_titanic["Fare"] / df_titanic["Fare"].mean()
+    ) * 100
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.columns
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic[["Fare", "percentage_fare"]].head()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Erstellen einer Spalte mittels mehrerer Ausgangsspalten
+
+    Der Normalfall ist das Erstellen einer neuen Spalte mittels mehrerer Ausgangsspalten. Hierfür können verschiedene Methoden genutzt werden, wie z.B. arithmetische Operationen, bedingte Logik oder Funktionen.
+
+    <div align="center">
+    <img src="./public/05_newcolumn_2.svg"/>
+    </div>
+
+    Analog zu dem Fall mit einer Ausgangsspalte können wir auch hier eine neue Spalte erstellen, indem wir auf der linken Seite den neuen Spaltennamen in eckigen Klammern angeben und auf der rechten Seite den Ausdruck, der die Werte für die neue Spalte definiert.
+
+    **Beispiele:**
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic["age_fare_ratio"] = df_titanic["Age"] / df_titanic["Fare"]
+    df_titanic[["Age", "Fare", "age_fare_ratio"]].head()
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    ## Statistische Auswertungen
+
+    ### Aggregation
+
+    Der `DataFrame` stellt verschiedene Methoden zur Verfügung, um statistische Auswertungen durchzuführen. Dazu gehören Methoden wie `mean()`, `sum()`, `min()`, `max()`, `count()`, `std()` und viele mehr.
+    """)
     return
 
 
