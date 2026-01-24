@@ -1,6 +1,9 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
+#     "marimo>=0.19.2",
+#     "matplotlib==3.10.8",
+#     "mcp==1.25.0",
 #     "openpyxl==3.1.5",
 #     "pandas==2.3.3",
 #     "polars==1.36.1",
@@ -9,7 +12,7 @@
 
 import marimo
 
-__generated_with = "0.18.4"
+__generated_with = "0.19.6"
 app = marimo.App(width="medium")
 
 
@@ -31,6 +34,9 @@ def _(mo):
     mo.md(r"""
     # Datenanalyse mit Pandas
     ## Einführung in Pandas Konzepte
+
+    Die Abbildungen in diesem Notebook habe ich von der Pandas Dokumentation übernommen: https://pandas.pydata.org/docs/index.html
+
 
     Das normale Vorgehen ist Daten aus Dateien, wie z.B. CSV oder Excel einzulesen und mittels Pandas zu analysieren und/oder darzustellen.
 
@@ -426,6 +432,19 @@ def _(ausgewaehlte_spalten, df_titanic, df_titanic_bool):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
+    /// note | Übungen
+    1. Filtere den DataFrame `df_people`, so dass nur Personen mit einem Alter über 30 Jahren enthalten sind.`
+    2. Filtere den DataFrame `df_people`, so dass nur weibliche Personen über 30 Jahren enthalten sind.
+    3. Filtere den DataFrame `students`, so dass nur Zeilen für Wintersemester enthalten sind.
+    4. Erstelle ein DataFrame, der aus dem `students`-DataFrame nur die Studenten-ID und Note enthalten sind.
+    ///
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     ## Erstellen von Spalten
     ### Erstellen einer Spalte mittels einer Ausgangsspalte
 
@@ -492,15 +511,268 @@ def _(df_titanic):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     ## Statistische Auswertungen
 
-    ### Aggregation
+    ### Aggregationen
 
-    Der `DataFrame` stellt verschiedene Methoden zur Verfügung, um statistische Auswertungen durchzuführen. Dazu gehören Methoden wie `mean()`, `sum()`, `min()`, `max()`, `count()`, `std()` und viele mehr.
+    Der `DataFrame` stellt verschiedene Methoden zur Verfügung, um statistische Auswertungen durchzuführen. Dazu gehören Methoden wie `mean()`, `sum()`, `min()`, `max()`, `count()`, `std()` und viele mehr. Diese Methoden können auf den gesamten DataFrame oder auf einzelne Spalten angewendet werden. Sie machen natürlich nur  für numerische Spalten Sinn.
     """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    # Achtung: die Methode mean() ignoriert automatisch fehlende Werte (NaN)
+    # und liefert eine Serie mit dem Mittelwert für jede numerische Spalte zurück.
+    (
+        df_titanic[["Age"]].mean(),
+        df_titanic[["Age"]].sum() / df_titanic[["Age"]].count(),
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Man kann diese statistischen Methoden auch auf mehrere Spalten gleichzeitig anwenden:
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    # Standardabweichung für mehrere Spalten
+    df_titanic[["Age", "Fare"]].mean()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Agregationen von gruppierten Daten
+
+    Das Gruppieren von Daten nach Kategorien ist eine wichtige Funktion in Pandas. Mit der `groupby()`-Methode können Daten nach einer oder mehreren Spalten gruppiert werden, um aggregierte Statistiken für jede Gruppe zu berechnen.
+
+    /// tip
+     **Merksätze** 🧠
+
+    Daten ohne Gruppierung sind Zahlen – Daten mit Gruppierung erzählen Geschichten.
+
+    groupby ist der Übergang von Deskription zu Erklärung.
+    ///
+
+    **Beispiele:**
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.groupby("Pclass")["Fare"].mean()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Der preisliche Unterschied zwischen den Passagierklassen ist deutlich zu erkennen. Die erste Klasse war ca. 5-6 mal teurer als die dritte Klasse.
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.groupby("Sex")["Survived"].mean()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Die Wahrscheinlichkeit zu überleben hing stark vom Geschlecht ab. Frauen hatten eine deutlich höhere Überlebensrate als Männer.
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.groupby(["Sex", "Pclass"])["Survived"].mean()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Der Klassenunterschied zeigt sich auch hier deutlich. Frauen in der ersten Klasse hatten die höchste Überlebensrate, während Männer in der dritten Klasse die niedrigste Überlebensrate hatten.
+
+    Als Frau in der dritten Klasse war die Überlebensrate immer noch höher als die der Männer in der ersten Klasse.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Anzahl pro Kategorie
+
+    Für manche Auswertungen ist es interessnat die **Anzahl der Einträge pro Kategorie** zu kennen.
+
+    **Beispiel**:
+
+    Wir möchte wissen wie viele Personen jeweils in einer Klasse auf der Titanic waren.
+    Dazu nutzt man:
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic["Pclass"].value_counts()
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    dies ist eine Abkürzung für
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic):
+    df_titanic.groupby("Pclass")["Pclass"].count()
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    /// note | Übungen
+    1. Bestimme die Anzahl der Personen gruppiert nach Sex und pro Kabinenklasse.
+    ///
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Pivotieren von Tabelle (DataFrames)
+
+    Um die Beziehungen zwischen mehreren Variablen in einem DataFrame zu analysieren, kann es hilfreich sein, die Daten in eine Pivot-Tabelle umzuwandeln. Eine Pivot-Tabelle ermöglicht es, Daten zu aggregieren und neu zu organisieren, um Muster und Trends leichter erkennen zu können.
+
+    Man unterscheited im Rahmen von Pandas zwischen den beiden Funktionen `pivot()` und `pivot_table()`. Erstere erlaubt nur die Umstrukturierung von Daten ohne Aggregation, während `pivot_table()` auch Aggregationsfunktionen unterstützt.
+
+    /// tip
+    **Merksätze** 🧠
+
+    Das Pivotieren von Tabellen dient zur Umstruktierung (mit und ohne Aggregation), um tiefere Einblicke in die Struktur der
+    Daten zu erlangen.
+
+    1. pivot() dient zur Umstrukturierung von Daten ohne Aggregation.
+    2. pivot_table() ermöglicht die Aggregation von Daten während der Umstrukturierung.
+
+    ///
+
+    Hier ein graphisches Beispiel für das reine Pivotieren ohne Aggregation:
+
+    <div align="center">
+        <img src="./public/07_pivot.svg"/>
+    </div>
+
+    Wie man sieht werden katogorische Daten aus aus Zeilen einer Spalte in Spalten umgewandelt, um die Tabelle (DataFrame) neu zu strukturieren.
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic, pd):
+    pivot_name_pclass_fare = pd.pivot(
+        df_titanic, index="Name", columns="Pclass", values="Fare"
+    )
+    pivot_name_pclass_fare.head()
+    # Das Problem mit den Integer Spaltennamen lösen wir im nächsten Beispiel.
+    return
+
+
+@app.cell
+def _():
+    # Folgendes funktioniert nicht, da es mehrere Werte pro Index gleich sind, d.h. die Zeilen der Tabelle nicht eindeutig sind.
+
+    # pivot_sex_pclass_fare = pd.pivot(
+    #    df_titanic,
+    #    index="Sex",
+    #    columns="Pclass",
+    #    values="Fare"
+    # )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Diese Grafik erläutern nochmals wo hier das Problem liegt. Wenn man als Spalte den Name wählt ist im gezeigten Beispiel der Name nicht eindeutig (nicht so in den Originaldaten der Titanic). Deshalb kann man in dem Beispiel, wie auch für den Fall, dass man `Sex` als Spalte nimmt, nicht pivotieren.
+
+    <div align="center">
+      <img alt="Test" src="./public/pivot_titanic_fehler.png"/>
+    </div>
+
+    /// warning | Achtung:
+    Ein **Ausweg** ist die Nutzung von `pivot_table()`, da hier eine Aggregationsfunktion angegeben werden kann, die die Mehrdeutigkeit auflöst.
+    ///
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Pivot-Tabellen mit Aggregationen
+
+    Wie schon oben beschrieben, können wir das Problem der Mehrdeutigkeit durch die Nutzung von `pivot_table()` lösen, da hier eine Aggregationsfunktion angegeben werden kann, die die Mehrdeutigkeit auflöst. In der folgenden Grafik wird dies nochmals verdeutlicht:
+
+    <div align="center">
+        <img src="./public/07_pivot_table.svg"/>
+    </div>
+
+    Es kann jede Aggregationsfunktion verwendet werden, die auch bei `groupby()` genutzt werden kann, wie z.B. `mean()`, `sum()`, `count()`, `min()`, `max()` etc.
+
+    Ebenfalls können mehrere Aggregationsfunktionen gleichzeitig angewendet werden, indem eine Liste von Funktionen angegeben wird.
+
+    **Beispiel:**
+    """)
+    return
+
+
+@app.cell
+def _(df_titanic, pd):
+    pivot_sex_pclass_fare = pd.pivot_table(
+        df_titanic, index="Sex", columns="Pclass", values="Fare", aggfunc="mean"
+    )
+    pivot_sex_pclass_fare.columns = pivot_sex_pclass_fare.columns.astype(str)
+    pivot_sex_pclass_fare
+    return
+
+
+@app.cell
+def _(df_titanic, pd):
+    pivot_sex_pclass_fare_2 = pd.pivot_table(
+        df_titanic,
+        index="Sex",
+        columns="Pclass",
+        values="Fare",
+        aggfunc=["count", "mean"],
+    )
+    pivot_sex_pclass_fare_2
+    return
+
+
+@app.cell
+def _():
     return
 
 
