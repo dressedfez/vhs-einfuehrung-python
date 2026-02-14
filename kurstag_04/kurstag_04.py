@@ -1,5 +1,5 @@
 # /// script
-# requires-python = ">=3.13"
+# requires-python = ">=3.12"
 # dependencies = [
 #     "marimo>=0.19.2",
 #     "matplotlib==3.10.8",
@@ -12,13 +12,14 @@
 
 import marimo
 
-__generated_with = "0.19.6"
+__generated_with = "0.19.11"
 app = marimo.App(width="medium")
 
 
 @app.cell
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -26,6 +27,7 @@ def _():
 def _():
     import pandas as pd
     import polars as pl
+
     return (pd,)
 
 
@@ -42,7 +44,15 @@ def _(mo):
 
     Damit wir aber verschiedene Konzepte von Pandas besser verstehen können, werden wir hier Daten "manuell" erstellen und
     so die Hauptdatenstrukturen kennenlernen.
+
+    Die Hauptdatenstruktur bei Pandas (und Polars) sind DataFrames, welche aus mehreren Series (bzw. Spalten) bestehen.
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image("public/01_table_dataframe.svg"))
     return
 
 
@@ -51,18 +61,22 @@ def _(mo):
     mo.md(r"""
     Die Hauptdatenstruktur bei Pandas (und Polars) sind DataFrames, welche aus mehreren Series (bzw. Spalten) bestehen.
 
-    <div align="center">
-    <img src="./public/01_table_dataframe.svg"/>
-    </div>
-
     Eine Serie (Series) ist eine eindimensionale Datenstruktur, die eine Liste von Werten mit einem zugehörigen Index darstellt.
 
     > Jede Spalte (column) in einem DataFrame ist eine Serie (Series).
+    """)
+    return
 
-    <div align="center">
-    <img src="./public/01_table_series.svg"/>
-    </div>
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image("/public/01_table_series.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     ### Erzeugung einer Series
     """)
     return
@@ -218,6 +232,7 @@ def _(mo):
 @app.cell
 def _():
     from timeit import default_timer as timer
+
     return
 
 
@@ -231,9 +246,21 @@ def _(mo):
     Die Auswahl von Spalten geschieht in Pandas DataFrames typischerweise durch Angabe des Spaltennamens in eckigen Klammern. Es ist auch möglich mehrere Spalten gleichzeitig auszuwählen.
 
     <div align="center">
-    <img src="./public/03_subset_columns.svg"/>
-    </div>
 
+    </div>
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image("/public/03_subset_columns.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     **Beispiele:**
     """)
     return
@@ -286,19 +313,21 @@ def _(df_titanic):
 def _(mo):
     mo.md(r"""
     #### Auswahl von Zeilen
-
-    <div align="center">
-    <img src="./public/03_subset_rows.svg"/>
-    </div>
-
-    **Beispiele:**
     """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
+    mo.center(mo.image("./public/03_subset_rows.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
     mo.md(r"""
+    **Beispiele:**
+
     Die ersten Beispiele nutzten `iloc`, um Zeilen basierend auf ihrer Position auszuwählen. Dem Thema `loc` widmen wir uns später.
     """)
     return
@@ -405,11 +434,19 @@ def _(mo):
     **2-dimensionalle Filterung**
 
     Auswählen von Zeilen und Spalten mittels Pandas ist auch möglich und erlaubt einem zusammen mit *marimo* interaktive Tabellen zu erzeugen.
+    """)
+    return
 
-    <div align="center">
-    <img src="./public/03_subset_columns_rows.svg"/>
-    </div>
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image("./public/03_subset_columns_rows.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     Zum Beispiel kann man mittels Multiselect-Widget Spalten auswählen und mittels eines Filters Zeilen auswählen.
     Dies wird unten gemacht.
     """)

@@ -7,6 +7,7 @@ app = marimo.App(width="full")
 @app.cell
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -23,7 +24,7 @@ def _(mo):
     - Einführung von Interaktivität durch Nutzung von **marimo**-Elementen
 
 
-    ## Mathematische Standard-Opertoren/Operationen
+    ## Mathematische Standard-Operatoren/Operationen
 
     Die Lösungen von naturwissenschaftlichen oder mathematischen Problemen macht es erforderlich, dass man mit Programmiersprachen auch Berechnungen durchführen kann. Hier sollen zunächst die einfachsten mathematischen Operationen einführen und uns kurz über die Reihenfolge der Ausführung unterhalten.
 
@@ -171,7 +172,7 @@ def _(mo):
     mo.md(r"""
     ### Division
 
-    Für die Division (Teilen) wird der Opertor / genutzt.
+    Für die Division (Teilen) wird der Operator / genutzt.
     """)
     return
 
@@ -191,11 +192,11 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    in diesem Fall kommt immer ein **float** als Ergbnis aus, auch, wenn man die Zahl ohne Rest teilen kann.
+    in diesem Fall kommt immer ein **float** als Ergebnis aus, auch, wenn man die Zahl ohne Rest teilen kann.
     Bei der Division gibt es neben dem Standard-Operator noch zwei weitere Operatoren:
 
     - die Division ohne Rest //
-    - der Modulo-Opertor % zur Bestimmung des Restes
+    - der Modulo-Operator % zur Bestimmung des Restes
 
     **Beispiele**
     """)
@@ -219,7 +220,7 @@ def _(mo):
     mo.md(r"""
     ## Rechnen mit komplexen Zahlen
 
-    Komplexe Zahlen sind Zahlen in der Ebene, die "erweitererte" Standard-Opertoren nutzen.
+    Komplexe Zahlen sind Zahlen in der Ebene, die "erweiterte" Standard-Operatoren nutzen.
 
     __Addition von komplexen Zahlen:__
 
@@ -312,8 +313,8 @@ def _(mo):
     /// note  | Übungen
 
      1. Definiere Höhe $h$ und Grundseite $g$ eines Dreieckes und berechne den Flächeninhalt mittels $$A_D = \frac{1}{2} \cdot g\cdot  h$$
-     1. Informiere Dich über die eigebaute Funktion `pow` [hier](https://docs.python.org/3/library/functions.html) und erkläre, was sie macht.
-     1. Berechne den folgenden Ausdrück:
+     1. Informiere Dich über die eingebaute Funktion `pow` [hier](https://docs.python.org/3/library/functions.html) und erkläre, was sie macht.
+     1. Berechne den folgenden Ausdruck:
         $$\left(\frac{2+5}{5}\right)^{2}, \left((2+5) \% 5\right)^{2}$$
      1. Berechne den Absolutwert einer komplexen Zahl $a = x+ j y$ über
         $$|a|=\sqrt{x^{2}+y^{2}}$$
@@ -351,10 +352,10 @@ def _(mo):
 
     -  ⚠️ Nur der **erste** Code-Block wird ausgeführt, für den die Bedingung erfüllt ist.
     -  Versuche Bedingungen einfach und lesbar zu formulieren.
-    -  Benutze `elif`,wenn  die Bedingungen gegegenseitig ausschließend sind.
+    -  Benutze `elif`,wenn  die Bedingungen gegenseitig ausschließend sind.
     -  Benutze `else`, wenn Du einen Fallback-Fall hast (kann oft auch vermieden werden).
     -  Füge ausreichend Kommentare zu Deinem Programm hinzu, sodass Du die Logik schnell erfassen kannst.
-    -  Nutze, wenn von Vorteil, Regeln der boolschen Algebra, um die Bedingungen zu vereinfachen.
+    -  Nutze, wenn von Vorteil, Regeln der booleschen Algebra, um die Bedingungen zu vereinfachen.
     """)
     return
 
@@ -460,7 +461,7 @@ def _(mo):
     mo.md(r"""
     ## Schleife oder wiederholende Ausführung von Programmteilen
 
-    Python kennt verschiedene Schleifentypen, die unterschiedliche Anwendungsgebiete haben. Die wichtgiste und verbreiteste Schleife ist die **for-loop**. Weniger oft wird die **while-loop** eingesetzt. Trotzdem behandeln wir diese hier zu erst.
+    Python kennt verschiedene Schleifentypen, die unterschiedliche Anwendungsgebiete haben. Die wichtigste und verbreitetste Schleife ist die **for-loop**. Weniger oft wird die **while-loop** eingesetzt. Trotzdem behandeln wir diese hier zu erst.
 
     ### **While-loop**-Schleife
 
