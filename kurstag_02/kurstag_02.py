@@ -1,6 +1,13 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "marimo>=0.19.11",
+# ]
+# ///
+
 import marimo
 
-__generated_with = "0.18.1"
+__generated_with = "0.19.11"
 app = marimo.App(width="full")
 
 
@@ -312,12 +319,19 @@ def _(mo):
     mo.md(r"""
     /// note  | Übungen
 
-     1. Definiere Höhe $h$ und Grundseite $g$ eines Dreieckes und berechne den Flächeninhalt mittels $$A_D = \frac{1}{2} \cdot g\cdot  h$$
-     1. Informiere Dich über die eingebaute Funktion `pow` [hier](https://docs.python.org/3/library/functions.html) und erkläre, was sie macht.
-     1. Berechne den folgenden Ausdruck:
-        $$\left(\frac{2+5}{5}\right)^{2}, \left((2+5) \% 5\right)^{2}$$
-     1. Berechne den Absolutwert einer komplexen Zahl $a = x+ j y$ über
-        $$|a|=\sqrt{x^{2}+y^{2}}$$
+    1. Definiere Höhe $h$ und Grundseite $g$ eines Dreieckes und berechne den Flächeninhalt mittels
+
+    $$A_D = \frac{1}{2} \cdot g\cdot  h$$
+
+    3. Informiere Dich über die eingebaute Funktion `pow` [hier](https://docs.python.org/3/library/functions.html) und erkläre, was sie macht.
+    4. Berechne den folgenden Ausdruck:
+
+    $$\left(\frac{2+5}{5}\right)^{2}, \left((2+5) \% 5\right)^{2}$$
+
+    7. Berechne den Absolutwert einer komplexen Zahl $a = x+ j y$ über
+
+    $$|a|=\sqrt{x^{2}+y^{2}}$$
+
         und die eingebaute Funktion `abs`.
     ///
     """)
