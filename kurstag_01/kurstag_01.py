@@ -1,12 +1,20 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "marimo>=0.19.11",
+# ]
+# ///
+
 import marimo
 
-__generated_with = "0.18.1"
+__generated_with = "0.19.11"
 app = marimo.App()
 
 
 @app.cell(hide_code=True)
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -31,8 +39,13 @@ def _(mo):
     ///
 
     Hier ein grafische Darstellung für eine gespeicherte Zahl
-    <img src="./public/int_memory.svg" width="200">
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image("./public/int_memory.svg", width=200))
     return
 
 
@@ -339,8 +352,13 @@ def _(mo):
 
 
     Hier eine grafische Darstellung eines Liste (Arrays) von Strings (str)
-    <img src="./public/str_memory.svg" width="200">
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image("./public/str_memory.svg", width=200))
     return
 
 
