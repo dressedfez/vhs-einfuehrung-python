@@ -486,16 +486,25 @@ def _(mo):
     ### Erstellen einer Spalte mittels einer Ausgangsspalte
 
     Aus bereits bestehenden Spalten können neue Spalten erstellt werden. Zunächst schauen wir uns an, wie man mittels einer Spalte eine neue Spalte erstellt.
-    <div align="center">
-    <img src="./public/05_newcolumn_1.svg"/>
-    </div>
+    """)
+    return
 
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image(src="./public/05_newcolumn_1.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     /// tip
     Merksatz 🧠
     Eine neue Spalte wird erstellt, indem man auf der linken Seite den neuen Spaltennamen in eckigen Klammern angibt und auf der rechten Seite den Ausdruck, der die Werte für die neue Spalte definiert.
 
     ```python
-    df["new_column"] = <expression>
+    df["new_column"] = <Ausdruck>
     ```
     ///
     **Beispiel:**
@@ -529,11 +538,19 @@ def _(mo):
     ### Erstellen einer Spalte mittels mehrerer Ausgangsspalten
 
     Der Normalfall ist das Erstellen einer neuen Spalte mittels mehrerer Ausgangsspalten. Hierfür können verschiedene Methoden genutzt werden, wie z.B. arithmetische Operationen, bedingte Logik oder Funktionen.
+    """)
+    return
 
-    <div align="center">
-    <img src="./public/05_newcolumn_2.svg"/>
-    </div>
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image(src="./public/05_newcolumn_2.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     Analog zu dem Fall mit einer Ausgangsspalte können wir auch hier eine neue Spalte erstellen, indem wir auf der linken Seite den neuen Spaltennamen in eckigen Klammern angeben und auf der rechten Seite den Ausdruck, der die Werte für die neue Spalte definiert.
 
     **Beispiele:**
@@ -716,11 +733,19 @@ def _(mo):
     ///
 
     Hier ein graphisches Beispiel für das reine Pivotieren ohne Aggregation:
+    """)
+    return
 
-    <div align="center">
-        <img src="./public/07_pivot.svg"/>
-    </div>
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image(src="./public/07_pivot.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     Wie man sieht werden katogorische Daten aus aus Zeilen einer Spalte in Spalten umgewandelt, um die Tabelle (DataFrame) neu zu strukturieren.
     """)
     return
@@ -753,11 +778,19 @@ def _():
 def _(mo):
     mo.md(r"""
     Diese Grafik erläutern nochmals wo hier das Problem liegt. Wenn man als Spalte den Name wählt ist im gezeigten Beispiel der Name nicht eindeutig (nicht so in den Originaldaten der Titanic). Deshalb kann man in dem Beispiel, wie auch für den Fall, dass man `Sex` als Spalte nimmt, nicht pivotieren.
+    """)
+    return
 
-    <div align="center">
-      <img alt="Test" src="./public/pivot_titanic_fehler.png"/>
-    </div>
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image(alt="Test", src="./public/pivot_titanic_fehler.png"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     /// warning | Achtung:
     Ein **Ausweg** ist die Nutzung von `pivot_table()`, da hier eine Aggregationsfunktion angegeben werden kann, die die Mehrdeutigkeit auflöst.
     ///
@@ -771,11 +804,19 @@ def _(mo):
     ### Pivot-Tabellen mit Aggregationen
 
     Wie schon oben beschrieben, können wir das Problem der Mehrdeutigkeit durch die Nutzung von `pivot_table()` lösen, da hier eine Aggregationsfunktion angegeben werden kann, die die Mehrdeutigkeit auflöst. In der folgenden Grafik wird dies nochmals verdeutlicht:
+    """)
+    return
 
-    <div align="center">
-        <img src="./public/07_pivot_table.svg"/>
-    </div>
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image(src="./public/07_pivot_table.svg"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     Es kann jede Aggregationsfunktion verwendet werden, die auch bei `groupby()` genutzt werden kann, wie z.B. `mean()`, `sum()`, `count()`, `min()`, `max()` etc.
 
     Ebenfalls können mehrere Aggregationsfunktionen gleichzeitig angewendet werden, indem eine Liste von Funktionen angegeben wird.
