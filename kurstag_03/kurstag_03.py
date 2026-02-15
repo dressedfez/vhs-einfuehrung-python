@@ -1,12 +1,20 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#     "marimo>=0.19.11",
+# ]
+# ///
+
 import marimo
 
-__generated_with = "0.18.3"
+__generated_with = "0.19.11"
 app = marimo.App(width="full")
 
 
 @app.cell
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -386,6 +394,7 @@ def _(mo):
 @app.cell
 def _():
     from functools import reduce
+
     return (reduce,)
 
 
@@ -434,6 +443,7 @@ def _(mo):
 def _(reduce):
     def fac(n):
         return reduce(lambda a, b: a * b, range(1, n + 1))
+
     return
 
 
@@ -567,10 +577,24 @@ def _(mo):
     Eine Klasse ist wie eine Blaupause/Schablone (Vorlage) für ein Ding, dass man erzeugen will. Wobei dieses Ding auch Verhalten und veränderbare Eigenschaften haben kann.
     ///
     Hier zum Beispiel eine Schablone eines Buchstabens:
+    """)
+    return
 
-    <div align="center">
-        <img alt="Blaupause Buchstabe" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Metal_Stencil_W.jpg"/>
-    </div>
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(
+        mo.image(
+            "https://upload.wikimedia.org/wikipedia/commons/e/ee/Metal_Stencil_W.jpg",
+            alt="Blaupause Buchstabe",
+        )
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     sowie eine konkreter Buchstabe W.
 
     Der Buchstabe könnte z.B. die Eigenschaften:
@@ -587,10 +611,19 @@ def _(mo):
 
 
     Grafisch kannn dies mittels eines Klassen-(-UML)-Diagrammes dargestellt werden
-    <div align="center">
-    <img alt="Klassendiagramm" src="public/Klassendiagramm.png"/>
-    </div>
+    """)
+    return
 
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image(alt="Klassendiagram", src="public/Klassendiagramm.png"))
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     In Python lässt sich eine **Klasse** folgendermaßen definieren:
 
     /// note | Definition
@@ -599,11 +632,6 @@ def _(mo):
     ```python
      class KlassenName:
     ```
-    Dies definiert ein minimale Klasse, die aber noch nicht sehr nützlich ist.
-
-    ///
-
-    **Beispiel**
     """)
     return
 
@@ -781,11 +809,13 @@ def _(mo):
 
     an Objekte weiterzugeben, die von einer anderen Klasse abstammen (erben). Hier ein Beispiel, dass verschiedene Beziehungen darstellt.
     Die `Ist-eine-Relation` wird durch Vererbung modelliert. Die `Hat-eine-Relation` wird nicht durch Vererbung modelliert, sondern durch Komposition.
-
-    <div align="center">
-    <img src="public/KlassendiagrammVererbung.png"/>
-    </div>
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(mo.image(src="public/KlassendiagrammVererbung.png"))
     return
 
 
