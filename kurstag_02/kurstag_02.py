@@ -2,6 +2,7 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "marimo>=0.19.11",
+#     "pillow==12.1.1",
 # ]
 # ///
 
@@ -898,6 +899,71 @@ def _(mo):
     und informiert Euch über weitere Möglichkeiten sowie testet dies bei Euch lokal.
     ///
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    /// note | Übungen
+
+    Arbeiten mit den Paket `Pillow`. Mit diesem Paket kann man Bilder laden, bearbeiten und speichern. Hier ein paar Übungen, um sich mit diesem Paket vertraut zu machen.
+
+
+    1.	Lade ein Bild Deiner Wahl und zeige es an.
+    2. Beschneide das Bild auf einen bestimmten Bereich (z.B. die obere linke Ecke) und zeige das beschnittene Bild an.
+    3. Ändere die Größe des Bildes (z.B. auf 200x200) und zeige das Ergebnis an.
+    4. Drehe das Bild um 90 Grad und zeige das Ergebnis an.
+    5. Speichere das bearbeitete Bild unter einem neuen Namen ab.
+    ///
+    """)
+    return
+
+
+@app.cell
+def _():
+    from PIL import Image
+
+    return (Image,)
+
+
+@app.cell
+def _(Image):
+    frank = Image.open("wasserfarben.png")
+    return (frank,)
+
+
+@app.cell
+def _(frank, mo):
+    slider_x = mo.ui.slider(0, frank.size[0], label="xmax")
+    slider_y = mo.ui.slider(0, frank.size[1], label="ymax")
+    slider_x, slider_y
+    return slider_x, slider_y
+
+
+@app.cell
+def _(slider_x, slider_y):
+    xmax = slider_x.value
+    ymax = slider_y.value
+    return xmax, ymax
+
+
+@app.cell
+def _(frank, xmax, ymax):
+    frank_cropped = frank.crop((0, 0, xmax, ymax))
+    frank_cropped
+    return
+
+
+@app.cell
+def _(frank):
+    frank.size
+    return
+
+
+@app.cell
+def _(frank):
+    frank
     return
 
 
