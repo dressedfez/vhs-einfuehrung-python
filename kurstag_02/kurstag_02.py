@@ -8,7 +8,7 @@
 
 import marimo
 
-__generated_with = "0.20.2"
+__generated_with = "0.20.4"
 app = marimo.App(width="full")
 
 
@@ -154,6 +154,12 @@ def _(mo):
     Der Operator `*` wird auch im Zusammenhang mit dem Verbinden (Concatanation) von zwei oder mehreren Zeichenketten (str) genutzt.
     ///
     """)
+    return
+
+
+@app.cell
+def _():
+    "Hallo" * 3
     return
 
 
@@ -324,18 +330,56 @@ def _(mo):
 
     $$A_D = \frac{1}{2} \cdot g\cdot  h$$
 
-    3. Informiere Dich über die eingebaute Funktion `pow` [hier](https://docs.python.org/3/library/functions.html) und erkläre, was sie macht.
-    4. Berechne den folgenden Ausdruck:
+    2. Informiere Dich über die eingebaute Funktion `pow` [hier](https://docs.python.org/3/library/functions.html) und erkläre, was sie macht.
+    3. Berechne den folgenden Ausdruck:
 
     $$\left(\frac{2+5}{5}\right)^{2}, \left((2+5) \% 5\right)^{2}$$
 
-    7. Berechne den Absolutwert einer komplexen Zahl $a = x+ j y$ über
+    4. Berechne den Absolutwert einer komplexen Zahl $a = x+ j y$ über
 
     $$|a|=\sqrt{x^{2}+y^{2}}$$
 
         und die eingebaute Funktion `abs`.
     ///
     """)
+    return
+
+
+@app.cell(disabled=True, hide_code=True)
+def _():
+    # mögliche Lösung zu Aufgabe 1
+    g = 5  # Grundseite
+    h = 10  # Höhe
+    A = 1 / 2 * g * h  # Flächeninhalt eines Dreiecks
+    A
+    return
+
+
+@app.cell(disabled=True, hide_code=True)
+def _():
+    # mögliche Lösung für Aufgabe 3
+    _res1 = pow((2 + 5) / 5, 2)  # Lösung mit der eingebauten Funktion pow
+    _res2 = ((2 + 5) / 5) ** 2  # Lösung mit dem Potenzierungs-Operator **
+    _res3 = ((2 + 5) % 5) ** 2  # Lösung mit dem Modulo-Operator %
+    _res1, _res2
+    return
+
+
+@app.cell(disabled=True, hide_code=True)
+def _():
+    # mögliche Lösung für Aufgabe 4
+    import math
+
+    x = 1  # Realteil
+    y = 1  # Imaginärteil
+
+    # definieren der komplexen Zahl a = x + j*y
+    _a = x + 1j * y
+
+
+    res1 = math.sqrt(x**2 + y**2)  # eigene Berechnung des Absolutwerts
+    res2 = abs(_a)  # Absolutwert mittels eingebauter Funktion abs
+    res1, res2
     return
 
 
@@ -378,7 +422,30 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    **Beispiel**
+    **Beispiele**
+
+    1. einfaches Beispiel
+    """)
+    return
+
+
+@app.cell
+def _():
+    _alter = 45
+
+    if _alter < 18:
+        print("Du bist minderjährig.")
+    elif 18 <= _alter < 65:
+        print("Du bist erwachsen.")
+    else:
+        print("Du bist senior.")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    2. Beispiel mit marimo-Komponnte
     """)
     return
 
@@ -388,6 +455,12 @@ def _(mo):
     number = mo.ui.number(start=1, stop=99, step=1)
     number
     return (number,)
+
+
+@app.cell
+def _(number):
+    number.value
+    return
 
 
 @app.cell
@@ -468,6 +541,38 @@ def _(mo):
         - ab 65 Jahren: “Seniorenpreis: 6 €”
     ///
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### Exkurs zum Thema: Fehlerbehandlung
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    eingegebener_text = mo.ui.text(label="Hier Werte eingeben...", value="0")
+    eingegebener_text
+    return (eingegebener_text,)
+
+
+@app.cell
+def _(eingegebener_text):
+    # mögliche Lösung mit Fehlerbehandlung
+
+    alter = int(eingegebener_text.value)  # Konvertierung von String zu Integer
+
+    # alter = None  # Setze alter auf None, um Fehler zu vermeiden, wenn die Eingabe ungültig ist
+    # try:
+    #    alter = int(eingegebener_text.value)  # Versuche die Eingabe in eine ganze Zahl zu konvertieren
+    # except ValueError:
+    #    print("Ungültige Eingabe! Bitte eine ganze Zahl eingeben.")
+
+    if alter is not None and alter < 18:
+        print("Du bist minderjährig.")
     return
 
 
@@ -905,17 +1010,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    /// note | Übungen
-
-    Arbeiten mit den Paket `Pillow`. Mit diesem Paket kann man Bilder laden, bearbeiten und speichern. Hier ein paar Übungen, um sich mit diesem Paket vertraut zu machen.
-
-
-    1.	Lade ein Bild Deiner Wahl und zeige es an.
-    2. Beschneide das Bild auf einen bestimmten Bereich (z.B. die obere linke Ecke) und zeige das beschnittene Bild an.
-    3. Ändere die Größe des Bildes (z.B. auf 200x200) und zeige das Ergebnis an.
-    4. Drehe das Bild um 90 Grad und zeige das Ergebnis an.
-    5. Speichere das bearbeitete Bild unter einem neuen Namen ab.
-    ///
+    ### Kurze Einführung in Pillow
     """)
     return
 
@@ -929,41 +1024,95 @@ def _():
 
 @app.cell
 def _(Image):
-    frank = Image.open("wasserfarben.png")
+    # Einlesen von Bild
+    frank = Image.open("pictures/wasserfarben.png")
     return (frank,)
-
-
-@app.cell
-def _(frank, mo):
-    slider_x = mo.ui.slider(0, frank.size[0], label="xmax")
-    slider_y = mo.ui.slider(0, frank.size[1], label="ymax")
-    slider_x, slider_y
-    return slider_x, slider_y
-
-
-@app.cell
-def _(slider_x, slider_y):
-    xmax = slider_x.value
-    ymax = slider_y.value
-    return xmax, ymax
-
-
-@app.cell
-def _(frank, xmax, ymax):
-    frank_cropped = frank.crop((0, 0, xmax, ymax))
-    frank_cropped
-    return
-
-
-@app.cell
-def _(frank):
-    frank.size
-    return
 
 
 @app.cell
 def _(frank):
     frank
+    return
+
+
+@app.cell
+def _(frank):
+    breite = frank.size[0]
+    hoehe = frank.size[1]
+    return breite, hoehe
+
+
+@app.cell
+def _(breite, mo):
+    slider_x_2 = mo.ui.slider(0, breite, label="rechte x-Koordinate")
+    return (slider_x_2,)
+
+
+@app.cell
+def _(mo, slider_x_2):
+    slider_x_1 = mo.ui.slider(0, slider_x_2.value, label="linke x-Koordinate")
+    return (slider_x_1,)
+
+
+@app.cell
+def _(hoehe, mo):
+    slider_y_2 = mo.ui.slider(0, hoehe, label="untere y-Koordinate")
+    return (slider_y_2,)
+
+
+@app.cell
+def _(mo, slider_y_2):
+    slider_y_1 = mo.ui.slider(0, slider_y_2.value, label="obere y-Koordinate")
+    return (slider_y_1,)
+
+
+@app.cell
+def _(slider_x_1, slider_x_2, slider_y_1, slider_y_2):
+    xmin = slider_x_1.value
+    ymin = slider_y_1.value
+    xmax = slider_x_2.value
+    ymax = slider_y_2.value
+    return xmax, xmin, ymax, ymin
+
+
+@app.cell
+def _(slider_x_1, slider_x_2, slider_y_1, slider_y_2):
+    slider_x_1, slider_x_2, slider_y_1, slider_y_2
+    return
+
+
+@app.cell
+def _(frank, xmax, xmin, ymax, ymin):
+    frank_cropped = frank.crop((xmin, ymin, xmax, ymax))
+    frank_cropped
+    return (frank_cropped,)
+
+
+@app.cell
+def _(frank_cropped):
+    frank_cropped.size
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    /// note | Übungen
+
+    Arbeiten mit den Paket `Pillow`. Mit diesem Paket kann man Bilder laden, bearbeiten und speichern. Hier ein paar Übungen, um sich mit diesem Paket vertraut zu machen.
+
+    Für die Übungen ist die Dokumentation von `Pillow ` hilfreich. Insbesondere die Dokumentation zu den Methoden der Klasse `Image`:
+
+    https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image
+
+
+    1.	Lade ein Bild Deiner Wahl und zeige es an.
+    2. Beschneide das Bild auf einen bestimmten Bereich (z.B. die obere linke Ecke) und zeige das beschnittene Bild an.
+    3. Ändere die Größe des Bildes (z.B. auf 200x200) und zeige das Ergebnis an.
+    4. Drehe das Bild um 90 Grad und zeige das Ergebnis an.
+    5. Speichere das bearbeitete Bild unter einem neuen Namen ab.
+    ///
+    """)
     return
 
 
