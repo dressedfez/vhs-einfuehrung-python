@@ -563,13 +563,15 @@ def _(mo):
 def _(eingegebener_text):
     # mögliche Lösung mit Fehlerbehandlung
 
-    alter = int(eingegebener_text.value)  # Konvertierung von String zu Integer
+    # alter = int(eingegebener_text.value)  # Konvertierung von String zu Integer
 
-    # alter = None  # Setze alter auf None, um Fehler zu vermeiden, wenn die Eingabe ungültig ist
-    # try:
-    #    alter = int(eingegebener_text.value)  # Versuche die Eingabe in eine ganze Zahl zu konvertieren
-    # except ValueError:
-    #    print("Ungültige Eingabe! Bitte eine ganze Zahl eingeben.")
+    alter = None  # Setze alter auf None, um Fehler zu vermeiden, wenn die Eingabe ungültig ist
+    try:
+        alter = int(
+            eingegebener_text.value
+        )  # Versuche die Eingabe in eine ganze Zahl zu konvertieren
+    except ValueError:
+        print("Ungültige Eingabe! Bitte eine ganze Zahl eingeben.")
 
     if alter is not None and alter < 18:
         print("Du bist minderjährig.")
@@ -617,7 +619,7 @@ def _(mo):
 def _():
     i = 0
     while i < 10:
-        i += 1
+        i += 1  # i = i + 1
         if i == 5:
             print(f"keine Behandlung der Nummer {i}")
             continue  # mit diesem Befehl springt man wieder zum "Start" der Schleife ohne den Programmteil danach auszuführen
@@ -738,9 +740,10 @@ def _(mo):
 @app.cell
 def _():
     for counter in range(0, 100, 5):
-        print(f"{counter} ist gerade") if counter % 2 == 0 else print(
-            f"{counter} ist ungerade"
-        )
+        if counter % 2 == 0:
+            print(f"{counter} ist gerade")
+        else:
+            print(f"{counter} ist ungerade")
     return
 
 
@@ -802,6 +805,55 @@ def _(mo):
         Verwende continue, um diese beiden Zahlen nicht auszugeben.
     ///
     """)
+    return
+
+
+@app.cell(disabled=True, hide_code=True)
+def _():
+    # möglich Lösung zu Übung 1
+
+    eingabene_zahl = 31
+
+    for teiler in range(2, eingabene_zahl):
+        if eingabene_zahl % teiler == 0:
+            print(
+                f"{eingabene_zahl} ist keine Primzahl, da sie durch {teiler} teilbar ist."
+            )
+            break
+    else:
+        print(f"{eingabene_zahl} ist eine Primzahl.")
+    return
+
+
+@app.cell(disabled=True, hide_code=True)
+def _():
+    # mögliche Lösung zu Übung 2
+
+    zahlen = range(1, 100, 1)
+    for zahl in zahlen:
+        if zahl == 42:
+            print("Zahl gefunden!")
+            break
+    else:
+        print("Zahl nicht in der Liste")
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    # mögliche Lösung von Übung 3 im Verzeichnis für Kurstag 2
+    """)
+    return
+
+
+@app.cell(disabled=True, hide_code=True)
+def _():
+    # mögliche Lösung zu Übung 4
+    for z in range(0, 11):
+        if z is 3 or z is 7:
+            continue
+        print(z)
     return
 
 
@@ -886,6 +938,22 @@ def _(mo):
     1.  Gebe von obiger Liste nur die Worte aus, die weniger als sechs Buchstaben haben.
     ///
     """)
+    return
+
+
+@app.cell
+def _():
+    obst_liste = ["Apfel", "banane", "Birne", "kirsche", "Melone"]
+
+    l = [str(obst).capitalize() for obst in obst_liste]
+    l
+    return
+
+
+@app.cell
+def _():
+    _obst_liste = ["Apfel", "banane", "Birne", "kirsche", "Melone"]
+    [str(obst).upper() for obst in _obst_liste if len(obst) < 7]
     return
 
 
