@@ -2,12 +2,13 @@
 # requires-python = ">=3.10"
 # dependencies = [
 #     "marimo>=0.19.11",
+#     "mcp==1.27.0",
 # ]
 # ///
 
 import marimo
 
-__generated_with = "0.19.11"
+__generated_with = "0.22.4"
 app = marimo.App(width="full")
 
 
@@ -34,15 +35,15 @@ def _(mo):
 
     /// note | Definition
 
-    Funktionen erlauben einem zusammenhängende Logik zu gliedern und wiederverwendbar zu machen. Sie können aus anderen Stellen des Programmes aufgerufen werden. Mit **Parametern** können Werte beliebiger Art an Funktionen übergeben werden. Rückgabewerte werden dazu benutzt Werte von der Funktion an den Aufrufer zurückzugeben.
+    Funktionen erlauben es, zusammenhängende Logik zu gliedern und wiederverwendbar zu machen. Sie können von anderen Stellen im Programm aufgerufen werden. Mit **Parametern** können Werte beliebiger Art an Funktionen übergeben werden. Rückgabewerte werden dazu benutzt, Werte von der Funktion an den Aufrufer zurückzugeben.
 
     ```python
     def funktionen_name(parameter_1,...,parameter_n, parameter_with_default_1 = default_1, parameter_with_default_2 = default_2 ):
-        <Funktionen Körper>
+        <Funktionskörper>
         return <Rückgabewert>
     ```
 
-    **Funktionen** können ebenfalls als Parameter an Funktionen übergeben werden (Funktionen höherer Ordnung).
+    **Funktionen** können ebenfalls als Parameter an andere Funktionen übergeben werden. Man spricht dann von Funktionen höherer Ordnung.
 
     ///
 
@@ -54,7 +55,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Defintion einer einfachen Funktion mit **einem** Parameter:
+    Definition einer einfachen Funktion mit **einem** Parameter:
     """)
     return
 
@@ -81,7 +82,7 @@ def _(mo):
 @app.function
 def addiere_zahlen(x, y: float) -> float:
     """
-    Addiere gegebene Zahlen von und gebe Resultat zurück.
+    Addiere gegebene Zahlen und gib das Resultat zurück.
     Argumente:
     - x: Zahl vom Typ float
     - y: Zahl vom Typ float
@@ -119,7 +120,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Funktion höherer Ordnung mit `default`-Verhalten:
+    Funktion höherer Ordnung mit `Default`-Verhalten:
     """)
     return
 
@@ -162,10 +163,8 @@ def _():
 
 
 @app.function
-def aeuser_funktion():
-    print(
-        "Hallo aus der äußeren Funktion vor dem Aufrauf der inneren Funktion"
-    )
+def aeussere_funktion():
+    print("Hallo aus der äußeren Funktion vor dem Aufruf der inneren Funktion")
 
     # Definition der inneren Funktion
     def innere_funktion():
@@ -174,13 +173,13 @@ def aeuser_funktion():
     innere_funktion()  # Aufruf der inneren Funktion
 
     print(
-        "Hallo aus der äußeren Funktion nach dem Aufrauf der inneren Funktion"
+        "Hallo aus der äußeren Funktion nach dem Aufruf der inneren Funktion"
     )
 
 
 @app.cell
 def _():
-    aeuser_funktion()
+    aeussere_funktion()
     return
 
 
@@ -188,8 +187,8 @@ def _():
 def _(mo):
     mo.md(r"""
     /// note | Übungen
-    1. Schreibe eine Funktion, die eine Liste von Worten als ersten Parameter annimmt und diese als `default`-Verhalten alle Elemente in `UpperCase` umwandet. Die Funktion soll als Keyword-Parameter (Name `transform`) auch andere Transformationnen erlauben.
-    2. Erstelle eine Funktion, die das  arithmetische Mittel einer Liste von Zahlen bestimmt, wobei die **äußere** Funktion `mean` und die innere `total` heißen soll (letztere soll die Summe bestimmen).
+    1. Schreibe eine Funktion, die eine Liste von Worten als ersten Parameter annimmt und diese als `default`-Verhalten alle Elemente in `UpperCase` umwandelt. Die Funktion soll als Keyword-Parameter (Name `transform`) auch andere Transformationen erlauben.
+    2. Erstelle eine Funktion, die das arithmetische Mittel einer Liste von Zahlen bestimmt. Die **äußere** Funktion soll `mean` heißen, die innere `total`; letztere soll die Summe bestimmen.
     ///
     """)
     return
@@ -200,20 +199,20 @@ def _(mo):
     mo.md(r"""
     ## Lambda- oder Anonyme-Funktionen
 
-    Lambda- oder Anonyme-Funktionen sind kurze Funktionen, die die folgende Struktur haben:
+    Lambda- oder anonyme Funktionen sind kurze Funktionen, die die folgende Struktur haben:
 
     /// note | Definition
 
     Eine Lambda-Funktion hat den Aufbau:
     ```python
-    lambda: argumente : ausdruck
+    lambda argumente: ausdruck
     ```
 
-    In dieser Form ist er auch eine anonym, da sie **keinen** Namen hat. Eine Lambda-Funktion ist **nicht**
-    mehr anonym, wenn man sie einen Namen hat.
+    In dieser Form ist sie auch anonym, da sie **keinen** Namen hat. Eine Lambda-Funktion ist **nicht**
+    mehr anonym, wenn man ihr einen Namen gibt.
     ///
 
-    **Beispiel:** Lambda Funktion mit Namen
+    **Beispiel:** Lambda-Funktion mit Namen
     """)
     return
 
@@ -233,7 +232,7 @@ def _(add2):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    **Beispiel:** Lambda Funktion mit mehreren Argumenten und Namen
+    **Beispiel:** Lambda-Funktion mit mehreren Argumenten und Namen
     """)
     return
 
@@ -268,13 +267,13 @@ def _(mo):
 @app.function
 def transformiere_liste(liste, transformer=lambda a: a):
     """
-    Transformiert alle Elemente einer Liste mit dem gegebenen Transformer `transformer`.
-    Wenn kein Transformer übergeben wird, wir eine identisch aussehende Liste zurückgegeben,
-    d.h. der Tranformer ist lediglich ein Identitäts-Abbildung.
+    Transformiert alle Elemente einer Liste mit der übergebenen Funktion `transformer`.
+    Wenn kein Transformer übergeben wird, wird eine identisch aussehende Liste zurückgegeben,
+    d.h. `transformer` ist in diesem Fall lediglich eine Identitätsabbildung.
 
     Argumente:
     - liste: Liste, die transformiert werden soll
-    - transformer: Funktion, die jedes Element tranformiert
+    - transformer: Funktion, die jedes Element transformiert
 
     Rückgabe:
     - Transformierte Liste
@@ -295,7 +294,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Beispiel einer anonyomen Lambda-Funktion, die die gegebene Zahl quadriert:
+    Beispiel einer anonymen Lambda-Funktion, die die gegebene Zahl quadriert:
     """)
     return
 
@@ -305,7 +304,7 @@ def _():
     _liste = [1, 2, 3, 4, 5]
     # Transformiere Liste durch Quadrieren der Elemente
     quadrierer = lambda a: a**2
-    # transformiere Liste mittels der Quadrierer-Funktion
+    # Transformiere die Liste mithilfe der Quadrierer-Funktion
     transformiere_liste(_liste, quadrierer)
     return
 
@@ -314,8 +313,8 @@ def _():
 def _(mo):
     mo.md(r"""
     /// note | Übungen
-    1. Schreibe eine  Lamdba-Funktion mit zwei Parametern, die prüft, ob eine Zeichenkette (erster Parameter) länger ist als ein bestimmter ganzzahliger Wert (zweiter Parameter).
-    2. Schreibe eine Funktion, die als Parameter eine Zeichenkette annimmt und als Rückgabewert eine Lambda-Funktion zurückgibt. Im Fall, dass die Zeichenkette `add` ist, soll eine Lambda-Funktion für die Addition zweiter Werte zurückgegeben werden. Im Fall, dass die Zeichenkette `sub` ist, soll eine Lambda-Funktion für die Substraktion zürückgegeben werde. Ansonten soll die Identitätsfunktion zurückgegeben werden.
+    1. Schreibe eine Lambda-Funktion mit zwei Parametern, die prüft, ob eine Zeichenkette (erster Parameter) länger ist als ein bestimmter ganzzahliger Wert (zweiter Parameter).
+    2. Schreibe eine Funktion, die als Parameter eine Zeichenkette annimmt und als Rückgabewert eine Lambda-Funktion zurückgibt. Im Fall, dass die Zeichenkette `add` ist, soll eine Lambda-Funktion für die Addition zweier Werte zurückgegeben werden. Im Fall, dass die Zeichenkette `sub` ist, soll eine Lambda-Funktion für die Subtraktion zurückgegeben werden. Ansonsten soll die Identitätsfunktion zurückgegeben werden.
     ///
     """)
     return
@@ -326,7 +325,7 @@ def _(mo):
     mo.md(r"""
     ## Map, Filter und Reduce Funktionen
 
-    Die Funktionen `map`, `filter` und `reduce` gehören vor allem in den Bereich funktionale Programmierung. Alle Funktione nehmen neben einem Iterable auch eine Funktion an, die auf jedes Element des Iterables angewandt wird.
+    Die Funktionen `map`, `filter` und `reduce` gehören vor allem in den Bereich der funktionalen Programmierung. Alle Funktionen nehmen neben einem Iterable auch eine Funktion an, die auf jedes Element des Iterables angewandt wird.
 
     **Beispiel** für `map`
     """)
@@ -380,8 +379,8 @@ def _(mo):
     mo.md(r"""
     ### Reduce-Funktion
 
-    Die Funktion `reduce` ist nicht Teil des Kern-Python-Moduls, aber Teil der Standard-Python-Installation.
-    Aus diesem Grund müssen wir die Funktion der Umgebung durch Importieren bekannt machen.
+    Die Funktion `reduce` ist nicht Teil des Python-Kerns, aber Bestandteil der Standardbibliothek.
+    Aus diesem Grund müssen wir sie zunächst importieren.
 
     /// attention | Bemerkung
 
@@ -421,7 +420,7 @@ def _(reduce):
 def _(mo):
     mo.md(r"""
     /// note | Übungen
-    1. Schreibe mit Hilfe der `reduce`-Funktion eine Funktion, die die Fakultät für eine natürliche Zahl $n \in \mathbb{N}$ via
+    1. Schreibe mithilfe der `reduce`-Funktion eine Funktion, die die Fakultät für eine natürliche Zahl $n \in \mathbb{N}$ nach
 
         $$n! = n\cdot (n-1)\cdot(n-2)\cdot\dots\cdot 2\cdot 1$$
         berechnet.
@@ -470,20 +469,20 @@ def _(mo):
     mo.md(r"""
     ## Klassen
 
-    In objektorientierten Programmiersprachen, zu denen Python gehört, werden Klassen unter anderem dazu genutzt:
+    In objektorientierten Programmiersprachen, zu denen Python gehört, werden Klassen unter anderem dafür genutzt:
 
-    1. Daten zu kapseln, so dass sie nicht von jedem geändert werden können und
-    2. spezielles Verhalten, dass zu dieser Kategorie von Dingen gehört zu sammeln und mit diesen zu assoziieren.
+    1. Daten zu kapseln, sodass sie nicht von jedem geändert werden können, und
+    2. spezielles Verhalten zu sammeln und mit dieser Kategorie von Dingen zu assoziieren.
 
 
-    Bevor wir uns Klassen und Objekten zuwenden, betrachten wir zunächst den Python internen Typ `Tupel`.
+    Bevor wir uns Klassen und Objekten zuwenden, betrachten wir zunächst den Python-internen Typ `Tupel`.
 
-    ### Kurzes Ausflug: Tupel
+    ### Kurzer Ausflug: Tupel
 
     /// note | Definition
-    Tupel sind wie Listen und Mengen (Sets) Kontainertypen, d.h. man kann diesen Tupeln `Daten` speichern. Tupel haben dabei verschiedene Eigenschaften, die sie von Listen und Mengen unterscheiden:
+    Tupel sind wie Listen und Mengen (Sets) Containertypen, d.h. man kann in ihnen `Daten` speichern. Tupel haben dabei verschiedene Eigenschaften, die sie von Listen und Mengen unterscheiden:
 
-    1. Ein Tupel kann noch der Erstellung nicht mehr geändert werden (**unchangeable**).
+    1. Ein Tupel kann nach der Erstellung nicht mehr geändert werden (**unchangeable**).
     2. Ein Tupel ist geordnet, d.h. die Reihenfolge ist fest.
     ///
 
@@ -495,7 +494,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Tupel werden mit runden Klammen erzeugt:
+    Tupel werden mit runden Klammern erzeugt:
     """)
     return
 
@@ -511,7 +510,7 @@ def _():
 def _():
     t2 = tuple(
         ["Egon", "Zimmer", 93]
-    )  # hier könnten auch andere Kontainertypen verwendet werden
+    )  # hier könnten auch andere Containertypen verwendet werden
     t2
     return
 
@@ -519,7 +518,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    wie bei Listen können die Elemente über Indizes referenziert werden
+    Wie bei Listen können die Elemente über Indizes referenziert werden.
     """)
     return
 
@@ -552,18 +551,18 @@ def _(mo):
 
 @app.cell
 def _():
-    # t2[0] = "Karl" # enterne das Hash am Anfang der Zeile
+    # t2[0] = "Karl" # entferne das Hash am Anfang der Zeile
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Tupel sind gut dafür zusammengehörende Daten zu speichern. Der Nachteil ist:
+    Tupel eignen sich gut dafür, zusammengehörende Daten zu speichern. Der Nachteil ist:
 
-    1. das man die Felder **nicht** mittels eines Namens adressieren kann und
-    2. das **kein Verhalten** einem Tupel zugeordnet werden kann sowie diese
-    3. **nicht** geändert werden können (dies ist auch manchmal ein Vorteil).
+    1. dass man die Felder **nicht** über einen Namen adressieren kann,
+    2. dass einem Tupel **kein Verhalten** zugeordnet werden kann und
+    3. dass Tupel **nicht** geändert werden können; das ist manchmal allerdings auch ein Vorteil.
 
     Diese **Beschränkungen** und einige mehr lassen sich durch die Einführung von Klassen beseitigen.
     """)
@@ -574,7 +573,7 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     /// note | Definition
-    Eine Klasse ist wie eine Blaupause/Schablone (Vorlage) für ein Ding, dass man erzeugen will. Wobei dieses Ding auch Verhalten und veränderbare Eigenschaften haben kann.
+    Eine Klasse ist wie eine Blaupause oder Schablone (Vorlage) für ein Ding, das man erzeugen will. Dieses Ding kann auch Verhalten und veränderbare Eigenschaften haben.
     ///
     Hier zum Beispiel eine Schablone eines Buchstabens:
     """)
@@ -595,22 +594,22 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    sowie eine konkreter Buchstabe W.
+    sowie ein konkreter Buchstabe W.
 
-    Der Buchstabe könnte z.B. die Eigenschaften:
+    Der Buchstabe könnte z.B. folgende Eigenschaften haben:
 
     - Farbe
     - Größe
     - Schriftart
     - etc
 
-    haben. Außerdem könnte er das Verhalten haben, dass man:
+    Außerdem könnte er das folgende Verhalten haben:
 
     - die Farbe und Schriftart ändert sowie
     - die Größe skaliert.
 
 
-    Grafisch kannn dies mittels eines Klassen-(-UML)-Diagrammes dargestellt werden
+    Grafisch kann dies mittels eines Klassen-(-UML)-Diagramms dargestellt werden.
     """)
     return
 
@@ -644,7 +643,7 @@ class MyClass:
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    die Klasse `MyClass` kann mittels dem folgende Ausdruck **erzeugt** werden:
+    Die Klasse `MyClass` kann mit dem folgenden Ausdruck **erzeugt** werden:
     """)
     return
 
@@ -672,31 +671,35 @@ def _(x):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Damit haben wir noch nicht wirklich was gewonnen. Dies ändert sich, wenn wir den Klassen:
+    Damit haben wir noch nicht viel gewonnen. Das ändert sich, wenn wir Klassen
 
     - Eigenschaften und
     - Verhalten
 
-
     geben.
 
     /// note | Definition
-    Eine Klasse mit Eigenschaften und Verhalten kann, wie folgt definiert werden:
+    Eine Klasse mit Eigenschaften und Verhalten kann wie folgt definiert werden:
 
     ```python
     class Buchstabe:
 
-        def __init__(self, buchstabe, farbe = "Scharz", schriftart = "Times New Roman", groesse = 12):
+        def __init__(
+            self,
+            buchstabe,
+            farbe="Schwarz",
+            schriftart="Times New Roman",
+            groesse=12,
+        ):
             # Eigenschaften
-            self._fahrzeug_typ = fahrzeug_typ # gilt via Vereinbarung als interne Variable
+            self._buchstabe = buchstabe  # gilt per Vereinbarung als interne Variable
             self.farbe = farbe
+            self.schriftart = schriftart
+            self.groesse = groesse
 
-            // weiterere Initialisierungsanweisungen
-
-
-        # Verhalten -- Funktion wird in diesem Zusammenhang Methode genannt
-        def fahre(self):
-            print(f"Car of type {self._fahrzeug_typ} is driving")
+        # Verhalten -- eine Funktion wird in diesem Zusammenhang Methode genannt
+        def setze_farbe(self, neue_farbe):
+            self.farbe = neue_farbe
 
     ```
 
@@ -729,7 +732,7 @@ class Buchstabe:
 
     def set_farbe(self, neue_farbe):
         """
-        Methode, die erlaubt die Farbe des Buchstabens zu ändern.
+        Methode, die es erlaubt, die Farbe des Buchstabens zu ändern.
         """
         self.farbe = neue_farbe
         print(
@@ -738,13 +741,13 @@ class Buchstabe:
 
     def set_schriftart(self, neue_schriftart):
         """
-        Methode, die erlaubt die Schriftart zu für den Buchstaben zu ändern.
+        Methode, die es erlaubt, die Schriftart des Buchstabens zu ändern.
         """
         self.schriftart = neue_schriftart
 
     def skaliere_groesse(self, skalierungs_faktor):
         """
-        Methode, die erlaubt die Größe des Buchstabens anzupassen.
+        Methode, die es erlaubt, die Größe des Buchstabens anzupassen.
         """
         self.groesse = skalierungs_faktor * self.groesse
 
@@ -753,12 +756,12 @@ class Buchstabe:
 def _(mo):
     mo.md(r"""
     /// note | Bemerkung
-    Eine wichtiger Gesichtspunkt in der Objekt-Orientierten Programmierung (OOP) ist die **Kapselung von Daten**.
-    Sprachen, wie z.B. Java, erlauben für die Kapselung für Daten mit eigenen Sprachkonstrukten, wie **private**, **protected** oder **public**  zu kontrollieren. Dies ist bei Python nicht so. Hier wir auf **Vereinbarung** gesetzt, d.h.
+    Ein wichtiger Gesichtspunkt in der objektorientierten Programmierung (OOP) ist die **Kapselung von Daten**.
+    Sprachen wie z.B. Java erlauben es, die Kapselung von Daten mit eigenen Sprachkonstrukten wie **private**, **protected** oder **public** zu kontrollieren. Dies ist bei Python nicht so. Hier wird auf **Vereinbarung** gesetzt, d.h.
 
-    - Variablen, die mit einem Unterstrich beginnen, wie z.B. `_buchstaben` in dem obigen Beispiel, gelten als **protected** die eigenen Klasse und deren Unterklassen (siehe nächster Abschnitt) können/sollen darauf zugreifen.
-    - Variable, die mit zwei Unterstrichen beginnen, gelten als **private**, d.h. man kann/soll nur aus der Klasse selbst auf die Variable zugreifen.
-    - alle anderen Variablen gelten als **public**
+    - Variablen, die mit einem Unterstrich beginnen, wie z.B. `_buchstabe` im obigen Beispiel, gelten als **protected**. Die eigene Klasse und deren Unterklassen (siehe nächster Abschnitt) können oder sollen darauf zugreifen.
+    - Variablen, die mit zwei Unterstrichen beginnen, gelten als **private**, d.h. man kann oder soll nur aus der Klasse selbst auf sie zugreifen.
+    - Alle anderen Variablen gelten als **public**.
     ///
     """)
     return
@@ -785,13 +788,20 @@ def _(groesses_A):
     return
 
 
+@app.cell
+def _(groesses_A):
+    groesses_A
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     /// note | Übung
     1. Was passiert, wenn man in der obigen Klasse `Buchstaben` die Methode `__str(...)__` auskommentiert?
-    2. Wie ändert sich der das `print` eines Buchstabens?
-    3. Was bedeutet das Überscheiben einer Methode?
+    2. Wie ändert sich das `print` eines Buchstabens?
+    3. Was bedeutet das Überschreiben einer Methode?
+    4. Was passiert, wenn die Methode `__repr(...)__` überschrieben wird? Wie ändert sich die letzte Ausgabe?
     ///
     """)
     return
@@ -802,12 +812,12 @@ def _(mo):
     mo.md(r"""
     # Vererbung und Komposition von Klassen
 
-    Vererbung ist ein Konzept, dass sehr verbreitet ist, wenn man von Objekt-Orientierten Programmiersprachen spricht. Vererbung erlaubt es
+    Vererbung ist ein Konzept, das sehr verbreitet ist, wenn man über objektorientierte Programmiersprachen spricht. Vererbung erlaubt es,
 
     - Daten und
     - Verhalten
 
-    an Objekte weiterzugeben, die von einer anderen Klasse abstammen (erben). Hier ein Beispiel, dass verschiedene Beziehungen darstellt.
+    an Objekte weiterzugeben, die von einer anderen Klasse abstammen, also von ihr erben. Hier ist ein Beispiel, das verschiedene Beziehungen darstellt.
     Die `Ist-eine-Relation` wird durch Vererbung modelliert. Die `Hat-eine-Relation` wird nicht durch Vererbung modelliert, sondern durch Komposition.
     """)
     return
@@ -825,96 +835,85 @@ def _(mo):
     ## Vererbung von Klassen
 
     Klassen können von anderen Klassen erben. Dies wird durch das Angeben der Elternklasse in Klammern nach dem Klassennamen gemacht.
-    Im folgenden Beispiel erbt die Klasse `Student` von der Klasse `Person` und damit obiges Diagramm umgesetzt. Die **Vererbung** wird durch eine **Ist-eine**-Relation dargestellt  (Der Student ist eine Person).
+    Im folgenden Beispiel erbt die Klasse `Student` von der Klasse `Person`; damit wird das obige Diagramm umgesetzt. Die **Vererbung** wird durch eine **Ist-eine**-Relation dargestellt: Der Student ist eine Person.
     """)
     return
 
 
 @app.class_definition
 class Person:
-    def __init__(
-        self, name: str, alter, telefonnummer=None, email_adresse=None
-    ):
+    def __init__(self, name, email=None):
         self.name = name
-        self.alter = alter
-        self.telefonnummer = telefonnummer
-        self.email_adresse = email_adresse
-        self._adresse = None
+        self.email = email
+        self.adresse = None
 
-    def _validiere_email_adresse(self, email_adresse):
-        if "@" in email_adresse:
-            return True
-        return False
+    def __repr__(self):
+        return f"Person(name={self.name}, email={self.email})"
 
-    def setze_gueltig_email_adresse(self, neue_email_adresse):
-        if _validiere_email_adresse(self, neue_email_adresse):
-            self.email_adresse = neue_email_adresse
-            return
-        print(
-            f"{neue_email_adresse} ist gültig. Alte E-Mail-Adresse wird nicht ersetzt."
-        )
+    def setze_adresse(self, adresse):
+        self.adresse = adresse
+
+    def adresse_ausgeben(self):
+        if self.adresse is not None:
+            self.adresse.adresse_ausgeben()
+        else:
+            print(f"{self.name} hat keine Adresse gesetzt.")
 
 
 @app.class_definition
 class Student(Person):
-    kurse = []
+    def __init__(self, name, student_id, email=None):
+        super().__init__(name, email=email)
+        self.student_id = student_id
 
-    def __init__(self, name, alter, studenten_id):
-        super().__init__(name, alter)
-        self.hat_bezahlt = False
-        self.studenten_id = studenten_id
-
-    def darf_sich_einschreiben(self):
-        return self.hat_bezahlt
-
-    def set_hat_bezahlt(self, hat_bezahlt):
-        self.hat_bezahlt = hat_bezahlt
-
-    def get_alle_kurse(self):
-        return self.kurse
-
-    def schreibt_sich_in_kurs_ein(self, kurs):
-        if self.darf_sich_einschreiben():
-            self.kurse.append(kurs)
-            print(f"{self.name} hat sich in Kurs {kurs} eingeschrieben")
-        else:
-            print(f"{self.name} muss erst die Gebühr bezahlen")
-
-    def get_alle_seminare(self):
-        return self.kurse
+    def __repr__(self):
+        return f"Student(name={self.name}, student_id={self.student_id}, email={self.email})"
 
 
 @app.class_definition
-class Professor(Person):
-    def __init__(self, name, alter, einkommen):
-        super().__init__(name, alter)
-        self.einkommen = einkommen
+class Dozent(Person):
+    def __init__(self, name, fachgebiet, email=None):
+        super().__init__(name, email=email)
+        self.fachgebiet = fachgebiet
+
+    def __repr__(self):
+        return f"Dozent(name={self.name}, fachgebiet={self.fachgebiet}, email={self.email})"
 
 
 @app.cell
 def _():
-    frank = Professor(name="Frank Zimmer", alter=51, einkommen=20000)
-    anna = Student("Anna Müller", 47, 2)
-    return (anna,)
+    frank = Dozent("Frank Zimmer", "Informatik")
+    frank
+    return
 
 
 @app.cell
-def _(anna):
-    anna.schreibt_sich_in_kurs_ein("Python für Anfänger")
-    anna.set_hat_bezahlt(True)
-    anna.schreibt_sich_in_kurs_ein("Python für Anfänger")
-    anna.get_alle_kurse()
-    anna.schreibt_sich_in_kurs_ein("Datenanalyse mit Python")
-    anna.get_alle_kurse()
+def _():
+    anna = Student("Anna Müller", 47, "anna.mueller@mail.de")
+    anna
+    return (anna,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    /// attention | Merken
+    Klassen erben von der Basis-Klasse:
+       - Attribute (oben name, etc)
+       - Verhalten / Methoden (oben z.B. __repr__)
+    ///
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ## Kompisition von Klassen
+    ## Komposition von Klassen
 
-    Neben der Vererbung ist ein anderes wichtiges Konzept die **Kompistion** von Klassen. Kompistion bedeutet, dass eine Klasse eine andere Klasse als Eigenschaft hat. Dies wurde im obigen Beispiel bereits durch die Klasse `Adresse` gezeigt. Hier ist diese Eigenschaft als Programmcode umgesetzt. Die **Komposition** wird durch eine **Hat-eine**-Relation dargestellt Die Person **hat** eine Adresse.
+    Neben der Vererbung ist die **Komposition** ein weiteres wichtiges Konzept von Klassen. Komposition bedeutet, dass eine Klasse eine andere Klasse als Eigenschaft besitzt. Dies wurde im obigen Beispiel bereits durch die Klasse `Adresse` gezeigt. Hier ist diese Eigenschaft als Programmcode umgesetzt.
+    - Die **Komposition** wird durch eine **Hat-eine**-Relation dargestellt. Die Person **hat** eine Adresse.
+    - Wenn man Komposition nutzt, kann man Aufgaben an Komponenten delegieren, was die Wartbarkeit und Wiederverwendbarkeit des Codes verbessert.
     """)
     return
 
@@ -927,31 +926,46 @@ class Adresse:
         self.stadt = stadt
         self.land = land
 
-    def addresse_ausgeben(self):
+    def adresse_ausgeben(self):
         print(f"{self.strasse}, {self.postleitzahl} {self.stadt}, {self.land}")
 
 
 @app.cell
 def _(anna):
-    addresse_anna = Adresse(
+    adresse_anna = Adresse(
         strasse="Hauptstraße 5",
         postleitzahl="12345",
         stadt="Musterstadt",
         land="Deutschland",
     )
-    anna.adresse = addresse_anna
+    anna.setze_adresse(adresse_anna)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Die Ausgabe der Adresse wird durch den Aufruf der Methode `adresse_ausgeben` delegiert, die in der Klasse `Adresse` definiert ist.
+    """)
     return
 
 
 @app.cell
 def _(anna):
-    print(f"{anna.name} wohnt in der Stadt {anna.adresse.stadt}")
+    anna.adresse_ausgeben()
     return
 
 
-@app.cell
-def _(anna):
-    anna.adresse.addresse_ausgeben()
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    /// attention | Merken
+    Komposition hat zwei Hauptmerkmale:
+    1. Komponeten werden als Attribute der Klasse gespeichert.
+    2. Das Delegieren von Aufgaben an Komponenten
+       ist möglich und erlaubt es, die Wartbarkeit und Wiederverwendbarkeit des Codes zu verbessern.
+    ///
+    """)
     return
 
 
@@ -960,14 +974,14 @@ def _(mo):
     mo.md(r"""
     /// note | Übungen
     1. **Einfache Vererbung - Fahrzeuge (Leicht)**
-       Erstelle eine Basisklasse `Fahrzeug` mit den Attributen marke und baujahr. Implementiere eine Methode
+       Erstelle eine Basisklasse `Fahrzeug` mit den Attributen `marke` und `baujahr`. Implementiere eine Methode
        `info()`, die diese Informationen ausgibt.
        Erstelle dann zwei Unterklassen:
 
        - `Auto` mit dem zusätzlichen Attribut `anzahl_tueren`
        - `Motorrad` mit dem zusätzlichen Attribut `hat_beiwagen` (Boolean)
 
-        Beide Unterklassen sollen die `info()`-Methode erweitern, um ihre spezifischen Attribute anzuzeigen.
+       Beide Unterklassen sollen die `info()`-Methode erweitern, um ihre spezifischen Attribute anzuzeigen.
 
     2. **Vererbung mit Methodenüberschreibung - Tiere (Leicht-Mittel)**
 
@@ -983,40 +997,188 @@ def _(mo):
        - `Katze` - überschreibt `laut_geben()` mit "Miau!"
        - `Kuh` - überschreibt `laut_geben()` mit "Muh!"
 
-        Erstelle eine Funktion tier_konzert(tiere), die eine Liste von Tieren erhält und jedes Tier seinen Laut
-       geben lässt.
+       Erstelle eine Funktion `tier_konzert(tiere)`, die eine Liste von Tieren erhält und jedes Tier seinen Laut ausgeben lässt.
 
     3. **Komposition - Computer und Komponenten (Mittel)**
 
-         Erstelle Klassen für Computer-Komponenten:
+       Erstelle Klassen für Computer-Komponenten:
 
-         - `Prozessor` mit Attributen `modell` und `ghz`
-         - `Arbeitsspeicher` mit Attributen `groesse_gb` und `typ`
-         - `Festplatte` mit Attributen `kapazitaet_gb` und `ist_ssd` (Boolean)
+       - `Prozessor` mit den Attributen `modell` und `ghz`
+       - `Arbeitsspeicher` mit den Attributen `groesse_gb` und `typ`
+       - `Festplatte` mit den Attributen `kapazitaet_gb` und `ist_ssd` (Boolean)
 
-         Erstelle dann eine Klasse `Computer`, die diese Komponenten als Attribute enthält (Komposition). Der
-        `Computer` soll eine Methode `spezifikationen()` haben, die alle Komponenten übersichtlich ausgibt.
+       Erstelle dann eine Klasse `Computer`, die diese Komponenten als Attribute enthält (Komposition). Der
+       `Computer` soll eine Methode `spezifikationen()` haben, die alle Komponenten übersichtlich ausgibt.
 
 
     5. **Vererbung und Komposition kombiniert - Bibliothek (Mittel-Schwer)**
 
-        Erstelle ein System für eine Bibliothek:
+       Erstelle ein System für eine Bibliothek:
 
 
-        *Vererbung:*
-
+       *Vererbung:*
         - Basisklasse Medium mit Attributen titel, jahr und ist_ausgeliehen (Boolean)
         - Methode ausleihen() und zurueckgeben()
         - Unterklassen: Buch (zusätzlich: autor, seiten), DVD (zusätzlich: dauer_minuten, genre)
 
-        *Komposition:*
-
+       *Komposition:*
        - Klasse `Bibliothek`, die eine Liste von Medien verwaltet
        - Methoden: `medium_hinzufuegen(medium)`, `alle_verfuegbaren_medien()`, `suche_nach_titel(titel)`
 
-        Teste dein System, indem du mehrere Bücher und DVDs erstellst, sie zur Bibliothek hinzufügst und verschiedene Operationen durchführst.
+       Teste dein System, indem du mehrere Bücher und DVDs erstellst, sie zur Bibliothek hinzufügst und verschiedene Operationen durchführst.
     ///
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Importieren von Modulen
+
+
+    Meist ist es sinnvoll, Funktionen, Klassen und andere Definitionen in Modulen zu organisieren. Ein Modul ist eine Datei, die Python-Code enthält.
+    Module können von anderen Modulen oder Skripten importiert werden, um die darin definierten Funktionen, Klassen und Variablen zu verwenden.
+
+    Packages sind eine Möglichkeit, Module in hierarchischen Verzeichnissen zu organisieren. Ein Package ist ein Verzeichnis, das eine spezielle
+    Datei namens `__init__.py` enthält, die es Python ermöglicht, das Verzeichnis als Package zu erkennen.
+
+    Es gibt verschiedene Möglichkeiten, Module zu importieren:
+    1. `import modulname`: Importiert das gesamte Modul. Auf Funktionen oder Klassen greift man dann über den Modulnamen zu.
+    2. `from modulname import funktionsname`: Importiert eine spezifische Funktion oder Klasse aus einem Modul.
+    3. `from modulname import *`: Importiert alle Funktionen und Klassen aus einem Modul (nicht empfohlen, da es zu Namenskonflikten führen kann).
+    4. `import modulname as alias`: Importiert ein Modul und gibt ihm einen Alias-Namen, um die Verwendung zu erleichtern.
+    5. `from modulname import funktionsname as alias`: Importiert eine spezifische Funktion oder Klasse aus einem Modul und gibt ihr einen Alias-Namen.
+    6. `import modulname.submodul`: Importiert ein Submodul aus einem Package.
+
+    In diesem Kurstag nutzen wir zwei getrennte Beispiele:
+    - `simple_math_package` als reines Mathematik-Paket
+    - `kursverwaltung` als fachliches Paket fuer ein Verwaltungssystem
+    """)
+    return
+
+
+@app.cell
+def _():
+    # nicht erlaubt in Marimo, aber sonst möglich:
+    # from simple_math_package import *
+    return
+
+
+@app.cell
+def _():
+    # Importieren von Funktionen und Klassen aus einem Paket
+    from simple_math_package import Matrix
+    from simple_math_package import add, subtract
+
+    return Matrix, add, subtract
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    nutzen der importierten Funktionen:
+    """)
+    return
+
+
+@app.cell
+def _(add, subtract):
+    add(2, 3), subtract(10, 4)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    arbeiten mit Aliasen
+    """)
+    return
+
+
+@app.cell
+def _():
+    # Importieren und Umbenennen eines Pakets
+    import simple_math_package as smp
+
+    return (smp,)
+
+
+@app.cell
+def _(smp):
+    # Nutzen des Paketalias
+    m_1 = smp.Matrix([[3, 2], [3, 4]])
+    return (m_1,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    arbeiten mit importierten Klassen
+    """)
+    return
+
+
+@app.cell
+def _(Matrix):
+    # Nutzen der importierten Klasse
+    m_2 = Matrix([[1, 2], [3, 4]])
+    m_2
+    return (m_2,)
+
+
+@app.cell
+def _(m_1, m_2):
+    m_1.add(m_2)
+    return
+
+
+@app.cell
+def _(m_1, m_2):
+    m_1.subtract(m_2)
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    Als zweites Beispiel nutzen wir ein eigenes Paket `kursverwaltung`.
+    Dort liegen die Klassen fuer Personen, Kurse und die Verwaltungslogik in getrennten Modulen.
+    """)
+    return
+
+
+@app.cell
+def _():
+    from kursverwaltung import Dozent as KursDozent
+    from kursverwaltung import Kurs, Kursverwaltung
+    from kursverwaltung import Student as KursStudent
+
+    return Kurs, KursDozent, KursStudent, Kursverwaltung
+
+
+@app.cell
+def _(Kurs, KursDozent, KursStudent, Kursverwaltung):
+    dozent = KursDozent("Frank Zimmer", "Python")
+    kurs = Kurs("Python fuer Anfaenger", dozent=dozent, max_teilnehmende=2)
+    student_1 = KursStudent("Anna Mueller", student_id=1)
+    student_2 = KursStudent("Egon Meier", student_id=2)
+    verwaltung = Kursverwaltung()
+    verwaltung.kurs_hinzufuegen(kurs)
+    return kurs, student_1, student_2, verwaltung
+
+
+@app.cell
+def _(student_1, student_2, verwaltung):
+    verwaltung.student_einschreiben(student_1, "Python fuer Anfaenger")
+    verwaltung.student_einschreiben(student_2, "Python fuer Anfaenger")
+    verwaltung.kurs_anzeigen()
+    return
+
+
+@app.cell
+def _(kurs):
+    kurs.teilnehmende_namen()
     return
 
 
