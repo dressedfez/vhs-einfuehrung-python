@@ -8,7 +8,7 @@
 
 import marimo
 
-__generated_with = "0.22.4"
+__generated_with = "0.23.1"
 app = marimo.App(width="full")
 
 
@@ -47,6 +47,12 @@ def _(mo):
 
     ///
 
+    /// warning | Achtung
+    Hat die Funktion mehr als ein Parameter, kommt es bei Aufruf der Funktion auf die Reihenfolge
+    an, d.h. die Reihenfolge der Parameter im Aufruf muss mit der Reihenfolge in der Funktionsdefinition
+    übereinstimmen. **Keyword-Parameter** können hierbei hilfreich sein (siehe Beispiele später).
+    ///
+
     ### Beispiele
     """)
     return
@@ -62,7 +68,7 @@ def _(mo):
 
 @app.function
 def ein_parameter_funktion(name):
-    print(f"Mein Name ist {name}")
+    print(f"Mein Name ist {name}.")
 
 
 @app.cell
@@ -105,6 +111,9 @@ def _():
 def _(mo):
     mo.md(r"""
     Funktion mit **Keyword**-Parameter
+
+    Nutzt man Keyword-Parameter, kommt es nicht mehr auf die Reihenfolge an, sondern man nutzt die Namen,
+    die in der Funktionsdefiniton benutzt werden.
     """)
     return
 
@@ -132,12 +141,14 @@ def tue_was(name, fun=print):
 
 @app.cell
 def _():
-    tue_was("Frank", ein_parameter_funktion)
+    # Nutzung von Keyword-Parameter bei Funktion höherer Ordnung
+    tue_was(fun=ein_parameter_funktion, name="Frank")
     return
 
 
 @app.cell
 def _():
+    # Funktion nutzt Default-Verhalten
     tue_was("Egon")
     return
 
@@ -159,6 +170,17 @@ def first_and_rest(liste):
 def _():
     _namens_liste = ["Frank", "Egon", "Karl", "Gernot", "Stefan"]
     first_and_rest(_namens_liste)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **Definition von äußeren und inneren Funktionen**
+
+    Die Nutzung von _inneren Funktionen_ ist eine Design-Entscheidung. Wenn man die Funktion nur im Zusammenhang mit **einer** anderen Funktion nutzt, kann man sich auch dafür entscheiden diese als
+    innere Funktion dieser Funktion zu definieren.
+    """)
     return
 
 
@@ -191,6 +213,47 @@ def _(mo):
     2. Erstelle eine Funktion, die das arithmetische Mittel einer Liste von Zahlen bestimmt. Die **äußere** Funktion soll `mean` heißen, die innere `total`; letztere soll die Summe bestimmen.
     ///
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _():
+    # mögliche Lösung zu Aufgabe 1
+    def transform_list(list, transform=str.upper):
+        return [transform(el) for el in list]
+
+
+    _input_list = ["frank", "egon", "karl"]
+    # nutze Default-Verhalten
+    _list1 = transform_list(_input_list)
+    # nutze Keyword-Parameter, um Default-Verhalten zu ändern
+    _list2 = transform_list(_input_list, transform=str.capitalize)
+    return
+
+
+@app.cell(hide_code=True)
+def _():
+    # mögliche Lösung zu Aufgabe 2 (erweitert)
+    from statistics import mean, random
+
+
+    def my_mean(liste):
+        def total(liste):
+            sum = 0
+            for el in liste:
+                sum += el
+            return sum
+
+        return total(liste) / len(liste)
+
+
+    # Vergleich mit Python eigener Implementierung
+
+    # erzeuge Tausend Zufallszahlen im Bereich 0 bis 1
+    _data = [random.gauss(0, 1) for _ in range(1000)]
+
+    # berechnen mit beiden Methoden den Mittelwert
+    # my_mean(_data), mean(_data)
     return
 
 
@@ -668,6 +731,12 @@ def _(x):
     return
 
 
+@app.cell
+def _():
+    type(1)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -768,6 +837,12 @@ def _(mo):
 
 
 @app.cell
+def _(x):
+    print(x)
+    return
+
+
+@app.cell
 def _():
     groesses_A = Buchstabe(buchstabe="A")
     groesses_A._buchstabe
@@ -802,9 +877,89 @@ def _(mo):
     2. Wie ändert sich das `print` eines Buchstabens?
     3. Was bedeutet das Überschreiben einer Methode?
     4. Was passiert, wenn die Methode `__repr(...)__` überschrieben wird? Wie ändert sich die letzte Ausgabe?
+    5. Schreibe einen Taschenrechner als Klasse, der die vier Grundrechenarten unterstützt. Er soll eine Methode `eingabe` haben, die einen String wie "10 + 5" entgegennimmt, die Operation und die Operanden extrahiert und speichert. Eine weitere Methode `berechnen` soll dann die gespeicherte Operation ausführen und das Ergebnis ausgeben.
     ///
     """)
     return
+
+
+@app.cell(hide_code=True)
+def _():
+    # Lösung für Aufgabe 1 und 2
+    # es wird die Speicheradresse der Klasse ausgegeben, da die Methode __str__ nicht definiert ist
+    return
+
+
+@app.cell(hide_code=True)
+def _():
+    # Lösung von Aufgabe 3
+    # Das Überschreiben einer Methode bedeutet, dass eine Unterklasse eine Methode mit demselben Namen wie eine Methode der Elternklasse definiert. Dadurch wird die Methode der Elternklasse in der Unterklasse ersetzt, d.h. die Logik der
+    return
+
+
+@app.cell(disabled=True, hide_code=True)
+def _():
+    # mögliche Lösung für Aufgabe 4
+    class Aufgabe4OhneRepr:
+        pass
+
+
+    class Aufgabe4MitReplr:
+        def __repr__(self):
+            return "Aufgabe4MitRepr()"
+
+
+    Aufgabe4OhneRepr(), Aufgabe4MitReplr()
+
+    # Die Ausgabe in Marimo wird durch diese Überschreibung angepasst.
+    return
+
+
+@app.class_definition(hide_code=True)
+# mögliche Lösung für Aufgabe 5
+class Taschenrechner:
+    def __init__(self):
+        self.ergebnis = 0
+        self.eingabe1 = 0
+        self.eingabe2 = 0
+        self.operator = None
+
+    def eingabe(self, eingabe):
+        [eingabe1, op, eingabe2] = eingabe.split(" ")
+        self.eingabe1 = float(eingabe1)
+        self.eingabe2 = float(eingabe2)
+        self.operator = op
+
+    def ausgabe(self):
+        print(f"Ergebnis: {self.ergebnis}")
+
+    def addiere(self, a, b):
+        return a + b
+
+    def subtrahiere(self, a, b):
+        return a - b
+
+    def multipliziere(self, a, b):
+        return a * b
+
+    def dividiere(self, a, b):
+        if b != 0:
+            return a / b
+        else:
+            raise ValueError("Division durch Null ist nicht erlaubt.")
+
+    def berechnen(self):
+        if self.operator == "+":
+            self.ergebnis = self.addiere(self.eingabe1, self.eingabe2)
+        elif self.operator == "-":
+            self.ergebnis = self.subtrahiere(self.eingabe1, self.eingabe2)
+        elif self.operator == "*":
+            self.ergebnis = self.multipliziere(self.eingabe1, self.eingabe2)
+        elif self.operator == "/":
+            self.ergebnis = self.dividiere(self.eingabe1, self.eingabe2)
+        else:
+            raise ValueError(f"Unbekannter Operator: {self.operator}")
+        self.ausgabe()
 
 
 @app.cell(hide_code=True)
