@@ -1,6 +1,8 @@
 # Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
 ## Kurstag 1: Einführung in uv, Python  und marimo
 
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_01/kurstag_01.py)
+
 **Themen:**
 
 In diesem Tag werden wir die folgenden Themen bearbeiten:

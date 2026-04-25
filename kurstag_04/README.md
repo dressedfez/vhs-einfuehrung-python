@@ -2,6 +2,8 @@
 # Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
 ## Kurstag 4: Datenanalyse mit Pandas
 
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_04/kurstag_04.py)
+
 **Themen:**
 
 Folgende Themen werden bearbeitet:

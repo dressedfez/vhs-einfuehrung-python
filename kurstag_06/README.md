@@ -3,6 +3,8 @@
 
 ## Kurstag 6: Einführung in maschinelles Lernen mit Scikit-Learn
 
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_06/kurstag_06.py)
+
 **Themen:**
 
 Folgende Themen werden bearbeitet:
