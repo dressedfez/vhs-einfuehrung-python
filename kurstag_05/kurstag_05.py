@@ -13,7 +13,7 @@
 
 import marimo
 
-__generated_with = "0.19.11"
+__generated_with = "0.23.3"
 app = marimo.App(width="medium")
 
 
@@ -27,7 +27,6 @@ def _():
 @app.cell
 def _():
     import pandas as pd
-    import polars as pl
     import numpy as np
 
     return np, pd
@@ -54,11 +53,25 @@ def _(mo):
     Es wird häufig in Kombination mit Pandas verwendet, um Daten direkt aus DataFrames zu visualisieren, aber kann auch mit anderen Datenquellen genutzt werden.
 
     Darstellungen in Matplotlib haben einen bestimmten Aufbau, den die folgende Abbildung zeigt:
+    """)
+    return
 
-    <div align="center">
-      <img src="https://matplotlib.org/stable/_images/anatomy.png" alt="Matplotlib Diagramm Aufbau" width="500"/>
-    </div>
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(
+        mo.image(
+            src="https://matplotlib.org/stable/_images/anatomy.png",
+            alt="Matplotlib Diagramm Aufbau",
+            width="500",
+        )
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     Folgende Komponenten sind dabei wichtig:
     - **Figure**: Das gesamte Diagramm oder die gesamte Grafik.
     - **Axes**: Der Bereich, in dem die Daten dargestellt werden (kann mehrere pro Figure geben).
@@ -164,6 +177,7 @@ def _(plt):
 
 @app.cell
 def _(np, plt):
+    # LaTex kann wieder deaktiviert werden
     plt.rcParams["text.usetex"] = False
     # Create some fake data.
     x1 = np.linspace(0.0, 5.0)
@@ -188,11 +202,34 @@ def _(np, plt):
 def _(mo):
     mo.md(r"""
     /// note | Übungen
-    1. Erstellen Sie ein Histogramm der Altersverteilung der Passagiere auf der Titanic.
-    2. Erstellen Sie ein Balkendiagramm, das die Anzahl der überlebenden und nicht überlebenden Passagiere zeigt.
-    3. Erstellen Sie ein Boxplot, das die Verteilung der Fahrpreise (Fare) für jede Passagierklasse (Pclass) zeigt.
+    1. Erstellen Sie eine **Figure** mit mehrern **Axes**, z.B. könnte oben links die Sinus-, oben rechts die Cosinus-Funktion und in der zweiten Zeile eine Axe mit beiden Funktionen. Die untere Axe soll so breit sein, wie die oberen Axen zusammen.
+    2. Erstellen Sie ein Histogramm der Altersverteilung der Passagiere auf der Titanic.
+    3. Erstellen Sie ein Balkendiagramm, das die Anzahl der überlebenden und nicht überlebenden Passagiere zeigt.
+    4. Erstellen Sie ein Boxplot, das die Verteilung der Fahrpreise (Fare) für jede Passagierklasse (Pclass) zeigt.
     ///
     """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(np, plt):
+    # Lösung zu Übung 1
+    fig4, axs = plt.subplot_mosaic(
+        [["sin", "cos"], ["both", "both"]], figsize=(10, 8)
+    )
+    fig4.suptitle("Sinus und Cosinus Funktionen")
+    x = np.linspace(0, 10, 100)
+    axs["sin"].plot(x, np.sin(x))
+    axs["sin"].set_title("Sinus")
+    axs["cos"].plot(x, np.cos(x), color="orange")
+    axs["cos"].set_title("Cosinus")
+    axs["both"].plot(x, np.sin(x), label="Sinus")
+    axs["both"].plot(x, np.cos(x), label="Cosinus", color="orange")
+    axs["both"].set_title("Sinus und Cosinus")
+    axs["both"].legend()
+
+    fig4.tight_layout()
+    fig4
     return
 
 
@@ -206,7 +243,7 @@ def _(pd):
 
 @app.cell(disabled=True, hide_code=True)
 def _(df_titanic):
-    # Lösung zu Übung 1
+    # Lösung zu Übung 2
     df_titanic["Age"].plot(
         kind="hist",
         bins=20,
@@ -219,7 +256,7 @@ def _(df_titanic):
 
 @app.cell(disabled=True, hide_code=True)
 def _(df_titanic):
-    # Lösung zu Übung 2
+    # Lösung zu Übung 3
     ax = df_titanic["Survived"].value_counts().plot(kind="bar")
     ax.set_xticks([0, 1])
     ax.set_xticklabels(["Nicht überlebt", "Überlebt"])
@@ -230,7 +267,7 @@ def _(df_titanic):
 
 @app.cell(disabled=True, hide_code=True)
 def _(df_titanic, plt):
-    # Lösung zu Übung 3: Erstellen Sie ein Boxplot, das die Verteilung der Fahrpreise (Fare) für jede Passagierklasse (Pclass) zeigt.
+    # Lösung zu Übung 4: Erstellen Sie ein Boxplot, das die Verteilung der Fahrpreise (Fare) für jede Passagierklasse (Pclass) zeigt.
 
     df_titanic.boxplot(column="Fare", by="Pclass")
     plt.suptitle("Fahrpreise nach Passagierklasse")
@@ -245,6 +282,36 @@ def _(mo):
     mo.md(r"""
     ## Beispielanalyse
     """)
+    return
+
+
+@app.cell
+def _(pd):
+    house = pd.read_csv('data/train.csv')
+    return (house,)
+
+
+@app.cell
+def _(house):
+    house.head()
+    return
+
+
+@app.cell
+def _(house):
+    house.describe()
+    return
+
+
+@app.cell
+def _(house):
+    house.info()
+    return
+
+
+@app.cell
+def _(house):
+    house.isna().sum().sort_values(ascending=False).head(15)
     return
 
 
