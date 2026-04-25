@@ -8,7 +8,7 @@
 
 import marimo
 
-__generated_with = "0.23.1"
+__generated_with = "0.23.2"
 app = marimo.App(width="full")
 
 
@@ -398,7 +398,7 @@ def _(mo):
 @app.cell
 def _():
     namen = ["frank", "egon", "karl", "gustav"]
-    list(map(lambda e: e.title(), namen))
+    list(map(lambda name: name.title(), namen))
     return (namen,)
 
 
@@ -415,6 +415,17 @@ def _(namen):
     contains_a = lambda elem: elem.find("a") != -1
     list(filter(contains_a, namen))
     return (contains_a,)
+
+
+@app.cell
+def _():
+    "Frank".find("Z")
+    return
+
+
+@app.cell
+def _():
+    return
 
 
 @app.cell
@@ -520,7 +531,7 @@ def _(reduce):
         "Brötchen oben",
     ]
 
-    burger = reduce(lambda so_far, zutat: f"{so_far} + {zutat}", zutaten)
+    burger = reduce(lambda bisher, zutat: f"{bisher} + {zutat}", zutaten)
 
     print("🍔 Burger-Bauplan:")
     print(burger)
@@ -915,51 +926,62 @@ def _():
     return
 
 
-@app.class_definition(hide_code=True)
-# mögliche Lösung für Aufgabe 5
-class Taschenrechner:
-    def __init__(self):
-        self.ergebnis = 0
-        self.eingabe1 = 0
-        self.eingabe2 = 0
-        self.operator = None
+@app.cell(hide_code=True)
+def _():
+    # mögliche Lösung für Aufgabe 5
+    class Taschenrechner:
+        def __init__(self):
+            self.ergebnis = 0
+            self.eingabe1 = 0
+            self.eingabe2 = 0
+            self.operator = None
 
-    def eingabe(self, eingabe):
-        [eingabe1, op, eingabe2] = eingabe.split(" ")
-        self.eingabe1 = float(eingabe1)
-        self.eingabe2 = float(eingabe2)
-        self.operator = op
+        def eingabe(self, eingabe):
+            [eingabe1, op, eingabe2] = eingabe.split(" ")
+            self.eingabe1 = float(eingabe1)
+            self.eingabe2 = float(eingabe2)
+            self.operator = op
+            print(eingabe1)
+            print(op)
+            print(eingabe2)
 
-    def ausgabe(self):
-        print(f"Ergebnis: {self.ergebnis}")
+        def ausgabe(self):
+            print(f"Ergebnis: {self.ergebnis}")
 
-    def addiere(self, a, b):
-        return a + b
+        def addiere(self, a, b):
+            return a + b
 
-    def subtrahiere(self, a, b):
-        return a - b
+        def subtrahiere(self, a, b):
+            return a - b
 
-    def multipliziere(self, a, b):
-        return a * b
+        def multipliziere(self, a, b):
+            return a * b
 
-    def dividiere(self, a, b):
-        if b != 0:
-            return a / b
-        else:
-            raise ValueError("Division durch Null ist nicht erlaubt.")
+        def dividiere(self, a, b):
+            if b != 0:
+                return a / b
+            else:
+                raise ValueError("Division durch Null ist nicht erlaubt.")
 
-    def berechnen(self):
-        if self.operator == "+":
-            self.ergebnis = self.addiere(self.eingabe1, self.eingabe2)
-        elif self.operator == "-":
-            self.ergebnis = self.subtrahiere(self.eingabe1, self.eingabe2)
-        elif self.operator == "*":
-            self.ergebnis = self.multipliziere(self.eingabe1, self.eingabe2)
-        elif self.operator == "/":
-            self.ergebnis = self.dividiere(self.eingabe1, self.eingabe2)
-        else:
-            raise ValueError(f"Unbekannter Operator: {self.operator}")
-        self.ausgabe()
+        def berechnen(self):
+            if self.operator == "+":
+                print("Addition wird ausgeführt.")
+                self.ergebnis = self.addiere(self.eingabe1, self.eingabe2)
+                print("Addition abgeschlossen.")
+            elif self.operator == "-":
+                self.ergebnis = self.subtrahiere(self.eingabe1, self.eingabe2)
+            elif self.operator == "*":
+                self.ergebnis = self.multipliziere(self.eingabe1, self.eingabe2)
+            elif self.operator == "/":
+                self.ergebnis = self.dividiere(self.eingabe1, self.eingabe2)
+            else:
+                raise ValueError(f"Unbekannter Operator: {self.operator}")
+            self.ausgabe()
+
+    #t = Taschenrechner() # erstelle Taschenrechner
+    #t.eingabe("1 + 2") # führe Eingabe durch
+    #t.berechnen() # starte Berechnung inklusive Ausgabe
+    return
 
 
 @app.cell(hide_code=True)
@@ -1002,8 +1024,8 @@ class Person:
         self.email = email
         self.adresse = None
 
-    def __repr__(self):
-        return f"Person(name={self.name}, email={self.email})"
+ #   def __repr__(self):
+  #      return f"Person(name={self.name}, email={self.email})"
 
     def setze_adresse(self, adresse):
         self.adresse = adresse
@@ -1031,8 +1053,8 @@ class Dozent(Person):
         super().__init__(name, email=email)
         self.fachgebiet = fachgebiet
 
-    def __repr__(self):
-        return f"Dozent(name={self.name}, fachgebiet={self.fachgebiet}, email={self.email})"
+  #  def __repr__(self):
+  #      return f"Dozent(name={self.name}, fachgebiet={self.fachgebiet}, email={self.email})"
 
 
 @app.cell
@@ -1121,6 +1143,58 @@ def _(mo):
        ist möglich und erlaubt es, die Wartbarkeit und Wiederverwendbarkeit des Codes zu verbessern.
     ///
     """)
+    return
+
+
+@app.cell
+def _():
+    class Fahrzeug:
+        def __init__(self, marke, baujahr):
+            self.marke = marke
+            self.baujahr = baujahr
+
+        def info(self):
+            print(f"Fahrzeug: {self.marke}, Baujahr: {self.baujahr}")
+
+
+    class Auto(Fahrzeug):
+
+        def __init__(self, marke, baujahr, anzahl_tueren):
+            super().__init__(marke, baujahr)
+            self.at = anzahl_tueren
+
+        def info(self):
+            print(f"Auto der Marke: {self.marke} (Baujahr: {self.baujahr}) mit Anzahl Türen {self.at}")
+    
+
+    class Motorrad(Fahrzeug):
+        def __init__(self, marke, baujahr, hat_beiwagen):
+            super().__init__(marke, baujahr)
+            self.hb = hat_beiwagen
+        
+
+    return Auto, Motorrad
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    **Anwendung der Klassen**
+    """)
+    return
+
+
+@app.cell
+def _(Auto):
+    bmw = Auto("BMW", 1999, 2)
+    bmw.info()
+    return
+
+
+@app.cell
+def _(Motorrad):
+    mz = Motorrad("MZ", 1965, False)
+    mz.info()
     return
 
 
@@ -1216,7 +1290,7 @@ def _(mo):
 @app.cell
 def _():
     # nicht erlaubt in Marimo, aber sonst möglich:
-    # from simple_math_package import *
+    #from simple_math_package import *
     return
 
 
