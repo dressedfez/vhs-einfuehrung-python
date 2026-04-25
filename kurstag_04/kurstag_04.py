@@ -12,7 +12,7 @@
 
 import marimo
 
-__generated_with = "0.19.11"
+__generated_with = "0.23.3"
 app = marimo.App(width="medium")
 
 
@@ -26,7 +26,6 @@ def _():
 @app.cell
 def _():
     import pandas as pd
-    import polars as pl
 
     return (pd,)
 
@@ -86,7 +85,7 @@ def _(mo):
 def _(pd):
     _series = pd.Series(
         data=[10, 20, 30, 40]
-        # , index=['a', 'b', 'c', 'd']
+        #, index=['a', 'b', 'c', 'd']
     )
     _series
     return
@@ -702,7 +701,7 @@ def _(df_titanic):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     /// note | Übungen
