@@ -8,6 +8,12 @@
 Folgende Themen werden bearbeitet:
 - Einführung in maschinelles Lernen
 - Übersicht: Scikit-Learn
-- Trainings- und Testdaten separieren
+- Trainings- und Testdaten
 - Modelltraining
 - Modellbewertung
+- Beispiel: Machine-Learning-Projekt zur Ziffernerkennung
+
+**Materialien:**
+
+- `kurstag_06.py`: Marimo-Notebook mit einem vollständigen Scikit-Learn-Projekt.
+- `Kurstag_06.key` und `Kurstag_06.pdf`: Keynote-Folien für die theoretische Einführung.
