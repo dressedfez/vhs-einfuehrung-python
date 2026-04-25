@@ -1,15 +1,14 @@
 # /// script
-# requires-python = ">=3.13"
+# requires-python = ">=3.11"
 # dependencies = [
-#     "marimo>=0.19.11",
-#     "pillow==12.1.1",
+#     "marimo>=0.20.0",
 # ]
 # ///
 
 import marimo
 
-__generated_with = "0.20.4"
-app = marimo.App(width="full")
+__generated_with = "0.23.3"
+app = marimo.App(width="medium")
 
 
 @app.cell
@@ -22,476 +21,115 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    # Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft
+    # Kurstag 2: Entscheidungen und Wiederholungen
 
-    An diesem Kurstag werden wir verschiedene Punkte, die essentiell für die Programmierung in Python (oder auch jeder anderen Programmiersprache) wichtig sind. Wir behandeln:
+        Unser Aufgabenplaner soll heute mehr können als nur eine Aufgabe anzeigen.
+        Er soll prüfen:
 
-    - mathematische Standard-Operatoren, wie: ➕, ➖,✖️, ➗ und andere
-    - Bedingungen oder bedingte Ausführung von Programmteilen
-    - Schleife oder wiederholende Ausführung von Programmteilen
-    - Einführung von Interaktivität durch Nutzung von **marimo**-Elementen
+    - ist ein Eintrag leer?
+    - ist eine Aufgabe dringend?
+    - welche Aufgaben liegen in einer Liste?
 
-
-    ## Mathematische Standard-Operatoren/Operationen
-
-    Die Lösungen von naturwissenschaftlichen oder mathematischen Problemen macht es erforderlich, dass man mit Programmiersprachen auch Berechnungen durchführen kann. Hier sollen zunächst die einfachsten mathematischen Operationen einführen und uns kurz über die Reihenfolge der Ausführung unterhalten.
-
-    ### Addition
-
-    Die Addition von zwei **int**-Werten führt wieder zu einem **int**-Wert:
+        Dafür brauchen wir **Bedingungen** und **Schleifen**.
     """)
     return
 
 
 @app.cell
 def _():
-    1 + 1
-    return
-
-
-@app.cell
-def _():
-    type(1 + 1)
-    return
+    aufgaben = [
+        "Einkauf erledigen",
+        "",
+        "Arzttermin vorbereiten",
+        "Python-Hausaufgabe bearbeiten",
+    ]
+    prioritaeten = [1, 0, 2, 3]
+    return aufgaben, prioritaeten
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Die Addition von **int** und **float** führt zu einem **float**-Wert. Dies nennt man:
+    ## Bedingungen
 
-    /// note | Definition **Widening**
-    Widening bedeutet, dass ein Wert eines Datentyps implizit in einen "größeren" oder allgemeineren Datentyp umgewandelt wird – ohne Informationsverlust.
-    ///
-
-    **Beispiel**
+    Mit `if`, `elif` und `else` kann ein Programm auf unterschiedliche Situationen reagieren.
     """)
     return
 
 
 @app.cell
-def _():
-    1 + 1.1
-    return
-
-
-@app.cell
-def _():
-    type(1 + 1.1)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// tip | Bemerkung
-    **Widening** wird bei Python und vielen anderen höheren Programmiersprachen implizit durchgeführt, d.h.
-    man muss sich nicht selbst um die Konvertierung in den "größeren" Datentyp kümmern.
-    ///
-
-    Man kann mittels **float(zahl)** auch explizit konvertieren, d.h. man erhält das gleichen Ergebnis, wenn man
-    """)
-    return
-
-
-@app.cell
-def _():
-    float(1) + 1.1  # ausführt
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Subtraktion
-
-    Das Verhalten bezüglich Typen ist analog der Addition.
-    """)
-    return
-
-
-@app.cell
-def _():
-    1 - 1
-    return
-
-
-@app.cell
-def _():
-    1.1 - 1
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// attention | Achtung
-    Das Rechnen mit **float**-Zahlen kann, wegen der Binärdarstellung der Zahlen und der Endlichkeit des Computerspeichers zu Ungenauigkeiten (Rundungsfehlern) führen.
-    ///
-
-    **Beispiel**
-
-    $\frac{1}{3}=0.\overline{3}$
-
-    aber im Computer kann dies nicht dargestellt werden, da er nicht unendlich viel Speicher hat, d.h.
-
-    $\frac{1}{3}\approx0.3333$
-
-    Im obigen Beispiel von 0.1 ist die Binärdarstellung im Computer 0.0001100110011...
-    und muss deshalb auch irgendwann abgeschnitten werden. Dies führt zu dem "Fehler".
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Multiplikation
-
-    Für die Multiplikation wird in Python der Operator `*` genutzt.
-
-    /// attention | Achtung
-    Der Operator `*` wird auch im Zusammenhang mit dem Verbinden (Concatanation) von zwei oder mehreren Zeichenketten (str) genutzt.
-    ///
-    """)
-    return
-
-
-@app.cell
-def _():
-    "Hallo" * 3
-    return
-
-
-@app.cell
-def _():
-    2 * 2
-    return
-
-
-@app.cell
-def _():
-    type(2 * 2)
-    return
-
-
-@app.cell
-def _():
-    2 * 2.2, type(2 * 2.2)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Division
-
-    Für die Division (Teilen) wird der Operator / genutzt.
-    """)
-    return
-
-
-@app.cell
-def _():
-    6 / 2
-    return
-
-
-@app.cell
-def _():
-    7 / 2
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    in diesem Fall kommt immer ein **float** als Ergebnis aus, auch, wenn man die Zahl ohne Rest teilen kann.
-    Bei der Division gibt es neben dem Standard-Operator noch zwei weitere Operatoren:
-
-    - die Division ohne Rest //
-    - der Modulo-Operator % zur Bestimmung des Restes
-
-    **Beispiele**
-    """)
-    return
-
-
-@app.cell
-def _():
-    14 // 3
-    return
-
-
-@app.cell
-def _():
-    14 % 3
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Rechnen mit komplexen Zahlen
-
-    Komplexe Zahlen sind Zahlen in der Ebene, die "erweiterte" Standard-Operatoren nutzen.
-
-    __Addition von komplexen Zahlen:__
-
-    Wenn $a_1=x_1+j y_1$ und $a_2=x_2+j y_2$ zwei komplexe Zahlen sind, dann ist ihre Summe gegeben durch
-
-    $$a_1+a_2 = x_1+x_2 + j (y_1+y_2)$$
-
-    __Multiplikation von komplexen Zahlen:__
-
-    Wenn $a_1=x_1+j y_1$ und $a_2=x_2+j y_2$ zwei komplexe Zahlen sind, dann ist ihre Produkt gegeben durch
-
-    $$a_1 a_2 = x_1x_2 - y_1 y_2+ j (x_1 y_2 +x_2 y_1)$$
-
-    __Division von komplexen Zahlen:__
-
-    Wenn $a_1=x_1+j y_1$ und $a_2=x_2+j y_2$ zwei komplexe Zahlen sind, dann ist ihre Division gegeben durch
-
-    $$\frac{a_1}{a_2} = \frac{x_1 x_2 + y_1 y_2+ j (y_1 x_2 - x_1 y_2)}{x_2^2+y_2^2}$$
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Beispiele
-
-    **Definition der komplexen Zahlen**
-    """)
-    return
-
-
-@app.cell
-def _():
-    a_1 = 1 + 1j * 2
-    return (a_1,)
-
-
-@app.cell
-def _():
-    a_2 = complex(2, 1)
-    return (a_2,)
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Addition**
-    """)
-    return
-
-
-@app.cell
-def _(a_1, a_2):
-    a_1 + a_2
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Multiplikation**
-    """)
-    return
-
-
-@app.cell
-def _(a_1, a_2):
-    a_1 * a_2
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Division**
-    """)
-    return
-
-
-@app.cell
-def _(a_1, a_2):
-    a_1 / a_2
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note  | Übungen
-
-    1. Definiere Höhe $h$ und Grundseite $g$ eines Dreieckes und berechne den Flächeninhalt mittels
-
-    $$A_D = \frac{1}{2} \cdot g\cdot  h$$
-
-    2. Informiere Dich über die eingebaute Funktion `pow` [hier](https://docs.python.org/3/library/functions.html) und erkläre, was sie macht.
-    3. Berechne den folgenden Ausdruck:
-
-    $$\left(\frac{2+5}{5}\right)^{2}, \left((2+5) \% 5\right)^{2}$$
-
-    4. Berechne den Absolutwert einer komplexen Zahl $a = x+ j y$ über
-
-    $$|a|=\sqrt{x^{2}+y^{2}}$$
-
-        und die eingebaute Funktion `abs`.
-    ///
-    """)
-    return
-
-
-@app.cell(disabled=True, hide_code=True)
-def _():
-    # mögliche Lösung zu Aufgabe 1
-    g = 5  # Grundseite
-    h = 10  # Höhe
-    A = 1 / 2 * g * h  # Flächeninhalt eines Dreiecks
-    A
-    return
-
-
-@app.cell(disabled=True, hide_code=True)
-def _():
-    # mögliche Lösung für Aufgabe 3
-    _res1 = pow((2 + 5) / 5, 2)  # Lösung mit der eingebauten Funktion pow
-    _res2 = ((2 + 5) / 5) ** 2  # Lösung mit dem Potenzierungs-Operator **
-    _res3 = ((2 + 5) % 5) ** 2  # Lösung mit dem Modulo-Operator %
-    _res1, _res2
-    return
-
-
-@app.cell(disabled=True, hide_code=True)
-def _():
-    # mögliche Lösung für Aufgabe 4
-    import math
-
-    x = 1  # Realteil
-    y = 1  # Imaginärteil
-
-    # definieren der komplexen Zahl a = x + j*y
-    _a = x + 1j * y
-
-
-    res1 = math.sqrt(x**2 + y**2)  # eigene Berechnung des Absolutwerts
-    res2 = abs(_a)  # Absolutwert mittels eingebauter Funktion abs
-    res1, res2
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Bedingungen oder bedingte Ausführung von Programmteilen
-
-    ### `if-elif-else`-Ausdruck
-    Wenn bestimmte Bedingungen gegeben (erfüllt) sind, möchte man haben das ein bestimmter Programmzweig ausgeführt oder nicht ausgeführt wird. In Python und anderen Programmiersprachen gibt es dafür den `if`-Ausdruck. Der in Python wie folgt definiert wird:
-
-    /// note | Definition
-
-    Eine bedingte Ausführung wird durch den `if-elif-else`-Ausdruck definiert
-
-    ```python
-      if Bedingung_1:
-         # Code Block 1
-      elif Bedingung_2:
-        # Code Block 2
-      else:
-        # else Code Block
-    ```
-
-      Der `elif`- und `else`-Zweig ist optional in obiger Definition.
-    ///
-
-    Man sollte auf folgendes achten, wenn man diese bedingte Ausführung nutzt:
-
-    -  ⚠️ Nur der **erste** Code-Block wird ausgeführt, für den die Bedingung erfüllt ist.
-    -  Versuche Bedingungen einfach und lesbar zu formulieren.
-    -  Benutze `elif`,wenn  die Bedingungen gegenseitig ausschließend sind.
-    -  Benutze `else`, wenn Du einen Fallback-Fall hast (kann oft auch vermieden werden).
-    -  Füge ausreichend Kommentare zu Deinem Programm hinzu, sodass Du die Logik schnell erfassen kannst.
-    -  Nutze, wenn von Vorteil, Regeln der booleschen Algebra, um die Bedingungen zu vereinfachen.
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Beispiele**
-
-    1. einfaches Beispiel
-    """)
-    return
-
-
-@app.cell
-def _():
-    _alter = 45
-
-    if _alter < 18:
-        print("Du bist minderjährig.")
-    elif 18 <= _alter < 65:
-        print("Du bist erwachsen.")
+def _(aufgaben):
+    erste_aufgabe = aufgaben[0]
+
+    if erste_aufgabe == "":
+        meldung = "Die erste Aufgabe ist leer."
     else:
-        print("Du bist senior.")
-    return
+        meldung = f"Die erste Aufgabe lautet: {erste_aufgabe}"
 
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    2. Beispiel mit marimo-Komponnte
-    """)
+    meldung
     return
 
 
 @app.cell
-def _(mo):
-    number = mo.ui.number(start=1, stop=99, step=1)
-    number
-    return (number,)
+def _(prioritaeten):
+    letzte_prioritaet = prioritaeten[-1]
 
-
-@app.cell
-def _(number):
-    number.value
-    return
-
-
-@app.cell
-def _(number):
-    if number.value < 16:
-        print("Du darfst nicht alleine in die Eisdiele gehen.")
-    elif 16 <= number.value < 18:
-        print("Du darfst alleine in die Eisdiele gehen.")
+    if letzte_prioritaet >= 3:
+        status = "dringend"
+    elif letzte_prioritaet == 2:
+        status = "bald erledigen"
     else:
-        print("Du musst das Eis in der Eisdiele alleine bezahlen.")
+        status = "kann warten"
+
+    status
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### Kurzschreibweise `if-else`-Ausdruck
+    ## Schleifen
 
-    Es gibt für den `if-else`-Ausdruck, der sich im Prinzip, wie ein englischer Satz liest.
+    Eine `for`-Schleife arbeitet mehrere Werte nacheinander ab.
+    Das brauchen wir, sobald unser Aufgabenplaner mehr als einen Eintrag kennt.
+    """)
+    return
 
-    /// note | Definition
-    Die Kurzschreibweise des `if-else`-Ausdruckes hat die Form:
-    ```python
-    <Code Block 1> if Bedingung else <Code Block 2>
-    ```
-    ///
 
-    Hier gibt es noch einige kleine Anmerkungen:
+@app.cell
+def _(aufgaben):
+    saubere_aufgaben = []
 
-    - man kann diesen `if-else`-Ausdruck auch aneinanderhängen
-    - dieser Ansatz ist besonders hilfreich, wenn man zwischen zwei Handlungen unterscheiden möchte
+    for _aufgabe in aufgaben:
+        if _aufgabe != "":
+            saubere_aufgaben.append(_aufgabe)
+
+    saubere_aufgaben
+    return
+
+
+@app.cell
+def _(aufgaben, prioritaeten):
+    dringende_aufgaben = []
+
+    for _aufgabe, _prioritaet in zip(aufgaben, prioritaeten):
+        if _aufgabe != "" and _prioritaet >= 2:
+            dringende_aufgaben.append(_aufgabe)
+
+    dringende_aufgaben
+    return (dringende_aufgaben,)
+
+
+@app.cell(hide_code=True)
+def _(dringende_aufgaben, mo):
+    mo.md(f"""
+    ## Zwischenstand im Projekt
+
+    Der Aufgabenplaner kann jetzt schon Aufgaben prüfen und filtern.
+
+    Dringende Aufgaben:
+
+    {chr(10).join(f"- {aufgabe}" for aufgabe in dringende_aufgaben)}
     """)
     return
 
@@ -499,693 +137,12 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    **Beispiel**
+    ## Mini-Übungen
+
+        1. Ergänze eine weitere Aufgabe mit hoher Priorität.
+        2. Ändere die Regel für `dringend`, zum Beispiel erst ab Priorität `2`.
+        3. Erzeuge eine neue Liste, die nur Aufgaben mit mindestens 15 Zeichen enthält.
     """)
-    return
-
-
-@app.cell
-def _(number):
-    print("Ich tue...") if number.value < 16 else print("andernfalls tue ich...")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übungen
-
-    1.	Temperatur-Checker
-        Schreibe ein Programm, das eine Temperatur (in Grad Celsius) als Zahl einliest und eine passende Nachricht ausgibt:
-        - über 30 °C: “Es ist heiß!”
-        - zwischen 20 °C und 30 °C (einschließlich): “Angenehmes Wetter.”
-        - unter 20 °C: “Ziemlich kühl heute.”
-    2.	Notenrechner
-        Lies eine Punktzahl (zwischen 0 und 100) vom Benutzer ein und gib die passende Note aus:
-        - 90–100 Punkte: “Note: Sehr gut”
-        - 80–89 Punkte: “Note: Gut”
-        - 70–79 Punkte: “Note: Befriedigend”
-        - unter 70 Punkte: “Note: Verbessern nötig”
-    3.	Gerade oder ungerade Zahl
-        Schreibe ein Programm, das eine ganze Zahl vom Benutzer einliest und ausgibt, ob sie
-        - durch 2 teilbar ist („Gerade Zahl“) oder
-        - nicht durch 2 teilbar ist („Ungerade Zahl“).
-
-        Verwende dabei auch else.
-
-    5.	Eintrittspreis berechnen
-        Erstelle ein Programm, das anhand des Alters einer Person den Eintrittspreis bestimmt:
-        - unter 6 Jahren: “Eintritt frei”
-        - 6 bis 17 Jahre: “Kinderpreis: 5 €”
-        - 18 bis 64 Jahre: “Normalpreis: 10 €”
-        - ab 65 Jahren: “Seniorenpreis: 6 €”
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Exkurs zum Thema: Fehlerbehandlung
-    """)
-    return
-
-
-@app.cell
-def _(mo):
-    eingegebener_text = mo.ui.text(label="Hier Werte eingeben...", value="0")
-    eingegebener_text
-    return (eingegebener_text,)
-
-
-@app.cell
-def _(eingegebener_text):
-    # mögliche Lösung mit Fehlerbehandlung
-
-    # alter = int(eingegebener_text.value)  # Konvertierung von String zu Integer
-
-    alter = None  # Setze alter auf None, um Fehler zu vermeiden, wenn die Eingabe ungültig ist
-    try:
-        alter = int(
-            eingegebener_text.value
-        )  # Versuche die Eingabe in eine ganze Zahl zu konvertieren
-    except ValueError:
-        print("Ungültige Eingabe! Bitte eine ganze Zahl eingeben.")
-
-    if alter is not None and alter < 18:
-        print("Du bist minderjährig.")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Schleife oder wiederholende Ausführung von Programmteilen
-
-    Python kennt verschiedene Schleifentypen, die unterschiedliche Anwendungsgebiete haben. Die wichtigste und verbreitetste Schleife ist die **for-loop**. Weniger oft wird die **while-loop** eingesetzt. Trotzdem behandeln wir diese hier zu erst.
-
-    ### **While-loop**-Schleife
-
-    Die **While-loop** ist wie folgt definiert:
-
-    /// note | Definition
-
-    Einfache Variante:
-    ```python
-    while Bedingung:
-        <Code Block>
-    ```
-
-    Obiger `<Code Block>` wird so lange ausgeführt, wie die Bedingung erfüllt ist.
-
-    Variante mit `else`-Abschnitt:
-    ```python
-    while Bedingung:
-        <Code Block>
-    else:
-        <Code Block für Else-Fall>
-    ```
-
-    Der `Code Block` wird so lange ausgeführt wie die Bedingung erfüllt ist. Wird diese Bedingung irgendwann nicht mehr erfüllt sein, so wird der `else`-Zweig ein Mal durchlaufen.
-    ///
-
-    **Beispiel mit `continue`**
-    """)
-    return
-
-
-@app.cell
-def _():
-    i = 0
-    while i < 10:
-        i += 1  # i = i + 1
-        if i == 5:
-            print(f"keine Behandlung der Nummer {i}")
-            continue  # mit diesem Befehl springt man wieder zum "Start" der Schleife ohne den Programmteil danach auszuführen
-        print(f"Durchlauf Nummer {i}")
-    else:
-        print("Hallo aus dem Else-Zweig")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Beispiel mit `break`**
-
-    Der `else`-Zweig wird in diesem Fall nicht durchlaufen. Dies gilt aber nur, wenn es zum `break` kommt.
-    """)
-    return
-
-
-@app.cell
-def _():
-    index = 0
-    while index < 10:
-        index += 1
-        if index == 5:
-            print(f"keine Behandlung der Nummer {index}")
-            break  # mit diesem Befehl springt man aus der Schleife heraus
-        print(f"Durchlauf Nummer {index}")
-    else:
-        print("Hallo aus dem Else-Zweig")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// tip | Bemerkung
-
-    Die Keywords **break** und **continue** werden auch in anderen Konstruktionen, wie z.B. der **for-loop** benutzt.
-
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übung
-    Schreibe ein Programm, dass die Tilgung eines Kredits modelliert. Nehme dazu folgende Parameter auf:
-    - kreditsumme = 150_000 (Euro)
-    - Rate = 20_000 (Euro)
-    - anfänglicher Jahreszins = 12_000 (Euro)
-    - anfängliche Tilgung = 8_000 (Euro)
-
-    Nutze den Zusammenhang : zinsatz = jahreszins / kreditsumme.
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _():
-    # Lösungs für die Kredittilgung-Übung
-
-    kreditsumme = 150_000
-    tilgung = 8_000
-    jahreszinsen = 12_000
-    rate = 20_000
-
-    zinssatz = jahreszinsen / kreditsumme
-
-    jahr = 0
-    while kreditsumme >= 0:
-        jahr = jahr + 1
-        kreditsumme = kreditsumme - tilgung
-        jahreszinsen = kreditsumme * zinssatz
-        tilgung = rate - jahreszinsen
-        if kreditsumme > 0:
-            print(
-                f"Nach Jahr {jahr} verbleibt Kreditsumme: {kreditsumme:.2f}€, Tilgung: {tilgung:.2f}€, Zinsen: {jahreszinsen:.2f}€ (Rate: {rate:.2f}€)"
-            )
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### **For-loop**-Schleife
-
-    /// note | Definiton
-
-    Die **For**-Schleife wird dazu genutzt über ein Iterable (ein iterierbare Sammlung oder Objekt) zu laufen.
-    Die allgemeine Form sieht wie folgt aus:
-
-    ```python
-    for x in <Iterable>:
-        <Code Block>
-    else: # dieser Anteil ist optional
-        <Code Block für Else-Zweig>
-    ```
-
-    Wie schon bei der **While**-Schleife können die Keyworte **continue** und **break** genutzt werden. Wird das Keyword **break** for dem Ende der Schleife genutzt wird der optionale **else**-Zweig durchlaufen.
-
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Beispiel mit Iterable**
-    """)
-    return
-
-
-@app.cell
-def _():
-    for counter in range(0, 100, 5):
-        if counter % 2 == 0:
-            print(f"{counter} ist gerade")
-        else:
-            print(f"{counter} ist ungerade")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Beispiel mit Liste**
-    """)
-    return
-
-
-@app.cell
-def _():
-    students = ["Ania", "Magda", "Kasia"]
-    for name in students:
-        if name.startswith("M"):
-            continue
-        print(f"{name} nimmt am Kurs teil.")
-    else:
-        print("Nicht alle Elemente der Studentenliste wurden abgearbeitet.")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übungen
-    1. Primzahlprüfung (for-Schleife mit break und else)
-
-        Frage den Benutzer nach einer Zahl größer als 1. Überprüfe mit einer for-Schleife, ob sie eine Primzahl ist.
-
-        - Wenn ein Teiler gefunden wird, gib “Keine Primzahl” aus und beende die Schleife mit break.
-        - Falls die Schleife vollständig durchläuft (ohne break), gib im else-Zweig “Ist eine Primzahl” aus.
-
-
-
-    2. Zahlensuche in einer Liste (for-Schleife mit break und else)
-
-        Gegeben ist eine Liste von Zahlen.
-        Suche nach der Zahl 42.
-
-
-        - Wenn du sie findest, gib “Zahl gefunden!” aus und verlasse die Schleife mit break.
-        - Wenn die Schleife vollständig durchläuft, gib im else-Zweig “Zahl nicht in der Liste” aus.
-
-
-    4. Positive Zahleneingabe (while-Schleife mit continue, break und else)
-
-        Fordere den Benutzer auf, wiederholt ganze Zahlen einzugeben.
-
-
-        - Wenn eine negative Zahl eingegeben wird, gib “Nur positive Zahlen erlaubt” aus und fahre mit der nächsten Eingabe fort (continue).
-        - Wenn der Benutzer die Zahl 0 eingibt, beende die Schleife mit break.
-        - Wenn die Schleife ohne break endet, gib im else-Zweig “Danke für die Eingaben” aus.
-
-    5. Zähle bis 10, überspringe bestimmte Zahlen (for-Schleife mit continue)
-
-        Gib die Zahlen von 1 bis 10 aus, aber überspringe die Zahlen 3 und 7.
-        Verwende continue, um diese beiden Zahlen nicht auszugeben.
-    ///
-    """)
-    return
-
-
-@app.cell(disabled=True, hide_code=True)
-def _():
-    # möglich Lösung zu Übung 1
-
-    eingabene_zahl = 31
-
-    for teiler in range(2, eingabene_zahl):
-        if eingabene_zahl % teiler == 0:
-            print(
-                f"{eingabene_zahl} ist keine Primzahl, da sie durch {teiler} teilbar ist."
-            )
-            break
-    else:
-        print(f"{eingabene_zahl} ist eine Primzahl.")
-    return
-
-
-@app.cell(disabled=True, hide_code=True)
-def _():
-    # mögliche Lösung zu Übung 2
-
-    zahlen = range(1, 100, 1)
-    for zahl in zahlen:
-        if zahl == 42:
-            print("Zahl gefunden!")
-            break
-    else:
-        print("Zahl nicht in der Liste")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    # mögliche Lösung von Übung 3 im Verzeichnis für Kurstag 2
-    """)
-    return
-
-
-@app.cell(disabled=True, hide_code=True)
-def _():
-    # mögliche Lösung zu Übung 4
-    for z in range(0, 11):
-        if z is 3 or z is 7:
-            continue
-        print(z)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// attention | Achtung
-    Verändere niemals die Sammlung über die Du iterierst! Dies führt zu unerwartete Ergebnisse. Diese Aussage gilt für alle Arten von Schleifen.
-    ///
-
-    **Beispiel**
-    """)
-    return
-
-
-@app.cell
-def _():
-    teilnehmer = ["George", "Frank", "Ralf", "Udo"]
-
-    for n in teilnehmer:
-        if n == "Frank":
-            teilnehmer.remove(n)
-        print(n)
-    return (teilnehmer,)
-
-
-@app.cell
-def _(teilnehmer):
-    teilnehmer
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### List-Comprehension
-
-    Dies ist eine spezielle Form der **for**-Schleife, die dazu genutzt wird _spezielle_ Listen zu erzeugen. **List-Comprehensions** lassen sich wie folgt definieren:
-
-    /// note | Definition
-    Definition einer **List-Comprehension**:
-    ```python
-    [f(x) for x in <Iterable> if g(x) ]
-    ```
-
-    -  `x`  -  ein Element
-    -  `f(x)` - Ausdruck, der auf jedes Element angewandt wird
-    -  `g(x)` - wenn Bedigung erfüllt, wie `f(x)` der Liste hinzugefügt
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    **Beispiel: Liste mit Quadratzahlen von 1 bis 10**
-    """)
-    return
-
-
-@app.cell
-def _():
-    liste = [x**2 for x in range(1, 11)]
-    print(liste)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übungen
-
-    1.	Gegeben ist die Liste
-
-        ```python
-          obst_liste = ["Apfel", "banane", "Birne", "kirsche", "Melone"]
-        ```
-
-        erstelle eine neuen Liste bei der alle ersten Buchstaben groß geschrieben sind.
-
-    1.  Gebe von obiger Liste nur die Worte aus, die weniger als sechs Buchstaben haben.
-    ///
-    """)
-    return
-
-
-@app.cell
-def _():
-    obst_liste = ["Apfel", "banane", "Birne", "kirsche", "Melone"]
-
-    l = [str(obst).capitalize() for obst in obst_liste]
-    l
-    return
-
-
-@app.cell
-def _():
-    _obst_liste = ["Apfel", "banane", "Birne", "kirsche", "Melone"]
-    [str(obst).upper() for obst in _obst_liste if len(obst) < 7]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Einführung von Interaktivität durch Nutzung von **marimo**-Elementen
-
-    **Marimo** verfügt über eine Menge von **interaktiven** Elementen und Darstellungsmöglichkeiten, die wir nicht alle hier ansprechen können. Um für spätere Arbeiten und Manipulationsmöglichkeiten vorbereitetet zu sein, werden hier verschiedene Elemente besprochen.
-
-    Die Dokumentation von **marimo** kann man hier:
-
-    - https://docs.marimo.io/ und insbesondere hier
-    - https://docs.marimo.io/api/
-
-    finden.
-
-    Hier ein kurzer Überblick:
-
-    - Slider:  sind z.B. dafür geeignet die Abhängigkeit von Parameter zu realisieren.
-    - Dropdown-Multiple-Choice-Menü: sind dafür geeignet kategorische Auswahl zu treffen
-    - Radio-Button:
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Slider
-    """)
-    return
-
-
-@app.cell
-def _(mo):
-    slider = mo.ui.slider(1, 10, label="Erdbebenstärke")
-    slider
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Dropdown-Multiple-Choice-Menü
-    """)
-    return
-
-
-@app.cell
-def _():
-    # erstelle eine Array zum Speichern der Auswahl
-    choices = []
-    return (choices,)
-
-
-@app.cell
-def _(mo):
-    # erzeuge ein Dropdown-Menü und zeige es an
-    choice = mo.ui.dropdown(options=["Apfel", "Banane", "Birne"])
-    choice
-    return (choice,)
-
-
-@app.cell
-def _(mo):
-    clear_choices = mo.ui.run_button(label="Lösche Auswahl")
-    clear_choices
-    return (clear_choices,)
-
-
-@app.cell
-def _(choice, choices, clear_choices):
-    # wenn die Auswahl (choice) eine Wert enthält, dann Speichern wir ihn
-    # in dem Fall aktualisieren wir auch die Anzeige
-    clear_choices
-    if choice.value is not None:
-        choices.append(choice.value)
-
-    choices
-    return
-
-
-@app.cell
-def _(choices, clear_choices):
-    if clear_choices.value:
-        print("Lösche Auswahl")
-        choices.clear()
-    return
-
-
-@app.cell
-def _(mo):
-    options = ["Äpfel", "Orangen", "Pfirsich"]
-    radio = mo.ui.radio(options=options)
-    radio
-    return (radio,)
-
-
-@app.cell
-def _(radio):
-    radio.value
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übungen
-
-    Geht zur den folgenden Seiten: 🛜
-
-    - https://docs.marimo.io/examples/
-    - https://docs.marimo.io/api/
-
-    und informiert Euch über weitere Möglichkeiten sowie testet dies bei Euch lokal.
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Kurze Einführung in Pillow
-    """)
-    return
-
-
-@app.cell
-def _():
-    from PIL import Image
-
-    return (Image,)
-
-
-@app.cell
-def _(Image):
-    # Einlesen von Bild
-    frank = Image.open("pictures/wasserfarben.png")
-    return (frank,)
-
-
-@app.cell
-def _(frank):
-    frank
-    return
-
-
-@app.cell
-def _(frank):
-    breite = frank.size[0]
-    hoehe = frank.size[1]
-    return breite, hoehe
-
-
-@app.cell
-def _(breite, mo):
-    slider_x_2 = mo.ui.slider(0, breite, label="rechte x-Koordinate")
-    return (slider_x_2,)
-
-
-@app.cell
-def _(mo, slider_x_2):
-    slider_x_1 = mo.ui.slider(0, slider_x_2.value, label="linke x-Koordinate")
-    return (slider_x_1,)
-
-
-@app.cell
-def _(hoehe, mo):
-    slider_y_2 = mo.ui.slider(0, hoehe, label="untere y-Koordinate")
-    return (slider_y_2,)
-
-
-@app.cell
-def _(mo, slider_y_2):
-    slider_y_1 = mo.ui.slider(0, slider_y_2.value, label="obere y-Koordinate")
-    return (slider_y_1,)
-
-
-@app.cell
-def _(slider_x_1, slider_x_2, slider_y_1, slider_y_2):
-    xmin = slider_x_1.value
-    ymin = slider_y_1.value
-    xmax = slider_x_2.value
-    ymax = slider_y_2.value
-    return xmax, xmin, ymax, ymin
-
-
-@app.cell
-def _(slider_x_1, slider_x_2, slider_y_1, slider_y_2):
-    slider_x_1, slider_x_2, slider_y_1, slider_y_2
-    return
-
-
-@app.cell
-def _(frank, xmax, xmin, ymax, ymin):
-    frank_cropped = frank.crop((xmin, ymin, xmax, ymax))
-    frank_cropped
-    return (frank_cropped,)
-
-
-@app.cell
-def _(frank_cropped):
-    frank_cropped.size
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übungen
-
-    Arbeiten mit den Paket `Pillow`. Mit diesem Paket kann man Bilder laden, bearbeiten und speichern. Hier ein paar Übungen, um sich mit diesem Paket vertraut zu machen.
-
-    Für die Übungen ist die Dokumentation von `Pillow ` hilfreich. Insbesondere die Dokumentation zu den Methoden der Klasse `Image`:
-
-    https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image
-
-
-    1.	Lade ein Bild Deiner Wahl und zeige es an.
-    2. Beschneide das Bild auf einen bestimmten Bereich (z.B. die obere linke Ecke) und zeige das beschnittene Bild an.
-    3. Ändere die Größe des Bildes (z.B. auf 200x200) und zeige das Ergebnis an.
-    4. Drehe das Bild um 90 Grad und zeige das Ergebnis an.
-    5. Speichere das bearbeitete Bild unter einem neuen Namen ab.
-    ///
-    """)
-    return
-
-
-@app.cell
-def _():
     return
 
 

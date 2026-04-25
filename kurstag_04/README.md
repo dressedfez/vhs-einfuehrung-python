@@ -1,16 +1,21 @@
-
-# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
-## Kurstag 4: Datenanalyse mit Pandas
+# Python-Kurs: Einstieg in Python mit einem durchgehenden Projekt
+## Kurstag 4: Funktionen und Programmstruktur
 
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_04/kurstag_04.py)
 
-**Themen:**
+**Problem des Tages**
 
-Folgende Themen werden bearbeitet:
-- Was ist Datenanalyse? 
-- Warum ist Datenanalyse wichtig?
-- Was sind Pandas und Polars?
-- Installation und Einrichtung von Pandas und Polars
-- Allgemeines Vorgehen bei der Datenanalyse
-- Beispielanalyse mit Pandas
-- Nutzung Reaktiver Elemente in der Datenanalyse mit marimo
+Der Aufgabenplaner wird größer. Wiederholter Code wird unübersichtlich.
+Wir zerlegen das Programm in kleine, klar benannte Funktionen.
+
+**Neue Werkzeuge**
+
+- Funktionen mit Parametern
+- Rückgabewerte
+- einfache Strategien für Fehlersuche und Lesen von Fehlermeldungen
+
+**Was am Ende funktioniert**
+
+- Zentrale Teile des Aufgabenplaners sind als Funktionen formuliert
+- Aufgaben können hinzugefügt, abgeschlossen und zusammengefasst werden
+- Die Teilnehmenden können kleine Programme sauberer strukturieren

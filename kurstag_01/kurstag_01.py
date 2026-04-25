@@ -1,17 +1,17 @@
 # /// script
-# requires-python = ">=3.13"
+# requires-python = ">=3.11"
 # dependencies = [
-#     "marimo>=0.19.11",
+#     "marimo>=0.20.0",
 # ]
 # ///
 
 import marimo
 
-__generated_with = "0.20.2"
-app = marimo.App()
+__generated_with = "0.23.3"
+app = marimo.App(width="medium")
 
 
-@app.cell(hide_code=True)
+@app.cell
 def _():
     import marimo as mo
 
@@ -21,8 +21,19 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    # Python für Daten und KI
-    ## – Programmieren lernen für die Zukunft -
+    # Kurstag 1: Das Problem verstehen
+
+    Unser Leitprojekt ist ein kleiner **Aufgabenplaner**.
+    Wir starten heute nicht mit vielen Begriffen, sondern mit einer einfachen Frage:
+
+    **Wie kann ein Programm eine Aufgabe beschreiben, damit wir sie später weiterverarbeiten können?**
+
+    Heute brauchen wir dafür nur wenige Bausteine:
+
+    - Werte
+    - Variablen
+    - Strings und Zahlen
+    - erste formatierte Ausgaben
     """)
     return
 
@@ -30,112 +41,19 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    # Variablen
+    ## Hauptziel des Projekts
 
-    Was sind Variablen?
+    Am Ende des Kurses soll unser Aufgabenplaner Folgendes können:
 
-    /// note | Definition
-    Variablen sind Verweise auf Speicherorte von Werte, die dort hinterlegt und von dort ausgelesen werden können.
-    ///
+    - neue Aufgaben speichern
+    - Aufgaben mit Titel, Kategorie, Priorität und Status beschreiben
+    - offene und dringende Aufgaben anzeigen
+    - Aufgaben als erledigt markieren
+    - Aufgaben in einer Datei speichern und später wieder laden
 
-    Hier ein grafische Darstellung für eine gespeicherte Zahl
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.center(mo.image("./public/int_memory.svg", width=200))
-    return
-
-
-@app.cell
-def _():
-    min_zahl_studenten = 5
-    min_zahl_studenten
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Python hat einige Konvenntionen und Regeln, die für Variablennamen gelten. Hier zunächst die Regeln:
-
-    /// tip | Regeln
-    1. Eine Variable darf nur aus Buchstaben (a-z,A-Z), Ziffern (0-9) und Unterstrichen bestehen.
-    2. Eine Variable darf **nicht** mit einer Ziffer beginnen.
-    3. Leer- und Sonderzeichen sind **nicht** erlaubt.
-    4. Groß- und Kleinschreibung wird beachtet
-    5. Python Keywörter sind **nicht** erlaubt (z.B. if-else, while, etc)
-    ///
-    Folgende Variablenname sind nicht erlaubt:
-
-    - Regel 1:  1name ❌
-    - Regel 3: mein name ❌
-    - Regel 3: mein&name ❌
-    - Regel 5: while ❌
-
-    /// tip | Konventionen
-    Die Konventionen wurden in [PEP8](https://peps.python.org/pep-0008/) festgelegt.
-    Zusammegefasst besagt diese Konvention für Variablen:
-
-    1. Variablennamen sollten **beschreibend und in Kleinbuchstaben** geschrieben sein:
-    z. B. benutzername, anzahl_karten, max_wert.
-
-    2. **Unterstriche** werden verwendet, um Wörter lesbar zu trennen:
-    z. B. gesamt_summe statt gesamtsumme oder gesamtsumme123.
-
-    3. Für Konstanten (feste Werte) verwendet man **GROẞBUCHSTABEN**:
-    z. B. PI = 3.1415
-    ///
-    """)
-    return
-
-
-@app.cell
-def _():
-    # gültige Variablen mit Werten
-    benutzer_name = "Frank"
-    anzahl_karten = 2
-    max_wert = 3
-
-    PI = 3.415
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    # Datentypen
-
-    **Was sind Datentypen?**
-
-    /// note | Definition
-    Ein Datentyp ist eine Zusammenfassung von Objekten/Dingen, die vorbestimmte Operationen erfüllt und eine bestimmten Datenbereich abdeckt.
-    ///
-
-
-
-    Python unterstützt eine große Zahl bereits vorgefertigter Datentypen.
-
-    **Beispiele**
-
-    1. **int** - ganze Zahlen mit den mathematischen Operationen, z.B. Plus, Minus, etc
-    2. **str** - Zeichenketten mit verschiedenen Operationen, z.B. Verbinden von Zeicheketten
-
-
-    | Type | Python-Ausdruck |
-    | - | - |
-    |Text Type |	str |
-    | Numeric Types|	int, float, complex|
-    | Boolean Type | 	bool |
-    | None Type|	NoneType |
-    | Sequence Types |	list, tuple, range |
-    | Mapping Type |	dict |
-    | Set Types |	set, frozenset |
-    | Binary Types |	bytes, bytearray, memoryview|
-
-    Weitere Datentypen können von uns definiert werden, mehr dazu später.
+    Das bauen wir nicht alles heute.
+    Kurstag 1 legt nur den ersten Baustein:
+    **Wir beschreiben eine einzelne Aufgabe mit passenden Werten und Variablen.**
     """)
     return
 
@@ -143,676 +61,268 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ## Zeichenketten-Datentyp (str)
+    ## Arbeitsstart mit `uv` und `marimo`
 
-    Mit Zeichenketten (str = Strings) lassen sich Buchstaben, Worte und Sätze abspeichern  und manipulieren.
+    `uv` und `marimo` sind heute nur Mittel zum Zweck.
+    Sobald der Kurs arbeitsfähig ist, konzentrieren wir uns auf Python.
+
+    ```bash
+    uv run marimo edit kurstag_01.py
+    ```
+
+    In einem `marimo`-Notebook besteht das Material aus Textzellen und Codezellen.
+    Jede Codezelle kann einzeln ausprobiert und verändert werden.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Welche Informationen braucht eine Aufgabe?
+
+    Bevor wir programmieren, klären wir das Problem fachlich.
+    Eine Aufgabe ist nicht nur ein Satz. Für unseren Aufgabenplaner sind diese Informationen nützlich:
+
+    - ein Titel, damit wir wissen, worum es geht
+    - eine Priorität, damit Wichtiges auffällt
+    - eine geschätzte Dauer, damit wir planen können
+    - später zusätzlich: Kategorie, Status und Speicherung
+
+    Heute verwenden wir nur Titel, Priorität und Dauer.
+    Das reicht, um die ersten Python-Bausteine sinnvoll zu benutzen.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    titel = mo.ui.text(label="Aufgabentitel", value="Python-Notizen schreiben")
+    prioritaet = mo.ui.dropdown(
+        options=["niedrig", "mittel", "hoch"], value="mittel", label="Priorität"
+    )
+    minuten = mo.ui.number(start=5, stop=180, step=5, value=30, label="Dauer in Minuten")
+    mo.vstack([titel, prioritaet, minuten])
+    return minuten, prioritaet, titel
+
+
+@app.cell(hide_code=True)
+def _(minuten, mo, prioritaet, titel):
+    mo.md(f"""
+    ## Erste Variablen
+
+    In einem Programm geben wir Werten Namen, damit wir später wieder auf sie zugreifen können.
+
+    Aktuell arbeiten wir mit diesen Werten:
+
+    - Titel: `{titel.value}`
+    - Priorität: `{prioritaet.value}`
+    - Dauer: `{minuten.value}` Minuten
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Regeln für Variablennamen
+
+    Variablennamen müssen in Python bestimmten Regeln folgen:
+
+    - Sie dürfen Buchstaben, Zahlen und Unterstriche enthalten.
+    - Sie dürfen nicht mit einer Zahl beginnen.
+    - Sie dürfen keine Leerzeichen oder Sonderzeichen enthalten.
+    - Groß- und Kleinschreibung sind verschieden: `titel` und `Titel` sind zwei unterschiedliche Namen.
+    - Python-Schlüsselwörter wie `if`, `for` oder `while` dürfen nicht als Variablennamen verwendet werden.
+
+    Nach PEP 8 schreibt man normale Variablen in Python meistens klein und trennt Wörter mit Unterstrichen.
+    Diese Schreibweise heißt `snake_case`.
     """)
     return
 
 
 @app.cell
 def _():
-    s1 = "ein"  # können mit einfachem Apostroph
-    s2 = "String"  # oder mit Gänsefüßschen erzeugt werden
-    return s1, s2
+    # Gute Variablennamen fuer unseren Aufgabenplaner
+    beispiel_titel = "Python-Notizen schreiben"
+    beispiel_prioritaet = "mittel"
+    beispiel_minuten = 30
+    beispiel_ist_erledigt = False
+    return (
+        beispiel_ist_erledigt,
+        beispiel_minuten,
+        beispiel_prioritaet,
+        beispiel_titel,
+    )
 
 
 @app.cell
-def _(s1, s2):
-    s1 + s2  # das + erlaubt Zeichenketten zu verbinden (concatonate)
-    return
-
-
-@app.cell
-def _(s1, s2):
+def _(
+    beispiel_ist_erledigt,
+    beispiel_minuten,
+    beispiel_prioritaet,
+    beispiel_titel,
+):
     (
-        s1 + " " + s2
-    )  # hier haben wir nur noch eine dritten leeren String zur Lesbarkeit hinzugefügt
-    return
-
-
-@app.cell
-def _():
-    multiline_string = """
-    Dies ist ein ein 
-    sehr 
-    langer String, der über 
-    mehrere Zeilen geht.
-    """
-    multiline_string
+        beispiel_titel,
+        beispiel_prioritaet,
+        beispiel_minuten,
+        beispiel_ist_erledigt,
+    )
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Interessant sind auch noch formatierte Strings, die wie folgt definiert werden können:
-    """)
-    return
+    Diese Namen sind erlaubt, aber für unseren Kurs weniger gut lesbar:
 
-
-@app.cell
-def _():
-    zahl = 2
-    sf = f"Dies ist ein formatiertier String, mit Variable-Interpolation, wie z.B. dieer Zahl {zahl} oder {zahl:.2f}, wobei letztere zwei Nachkommastellen hat."
-    sf
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Numerische Datentypen
-    ### Ganze Zahlen
-
-    Sind alles natürlichen Zahlen ${\mathbb N}$, d.h. ...-2,-1,0,1,2,...., wobei der Computer nur einen endlichen Speicher hat und diese deshalb eingeschränkt sind auf einen endlichen Bereich. Bei Python, anders als bei Java, ist die Einschränkung nur durch den RAM-Speicher des benutzten Computer begrenzt. Es gibt keine obere Schranke innerhalb der Programmierspache.
-    """)
-    return
-
-
-@app.cell
-def _():
-    ganze_zahl = 3
-    return (ganze_zahl,)
-
-
-@app.cell
-def _(ganze_zahl):
-    type(ganze_zahl)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    folgendes zeigt, dass die riesige Zahlen darstellen kann:
-    """)
-    return
-
-
-@app.cell
-def _():
-    10**100  # ein Google kann ohne Probleme mit Python dargestellt werden
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    man kann auch einfach von Gleitkommazahlen oder String (siehe nächste Abschnitt) nach in **int** konvertieren:
-    """)
-    return
-
-
-@app.cell
-def _():
-    int(3.14)
-    return
-
-
-@app.cell
-def _():
-    anzahl_studenten = "2"
-    int(anzahl_studenten)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Operationen mit **int** werden wir am nächsten Kurstag besprechen.
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Gleitkommazahlen
-
-    Gleitkommazahlen sind Zahlen, die einen Nachkommaanteil haben. Dies können einfach mit Python erstellt werden.
-    """)
-    return
-
-
-@app.cell
-def _():
-    2.5
-    return
-
-
-@app.cell
-def _():
-    1 / 127
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Es gibt auch einige bekannte Konstanten, die in Pyhton eingebaut sind:
-    """)
-    return
-
-
-@app.cell
-def _():
-    import math
-
-    math.pi, math.e
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Wie bei **int** kann man von Strings und ganzen Zahlen nach Gleitkommazahlen konvertieren:
-    """)
-    return
-
-
-@app.cell
-def _():
-    float(3)
-    return
-
-
-@app.cell
-def _():
-    float("3.14")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Listen und Mengen (set)
-
-    Python kennt einige Datentypen, die es erlauben mehrere Elemente eines **bestimmten** Datentypen zusammenzufassen. Wir stellen hier als wichtigste Vertreter den `List` und `Set`-Type vor.
-
-    ### Listen
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Listen haben Eigenschaften, die Sie von anderen Kontainertypen unterscheiden.
-
-    /// tip | Eigenschaften von Listen
-    Folgende Eigenschaften unterscheiden Listen gegenüber anderen Kontainertypen, wie z. B. Mengen und Dictionares (Schlüssel-Wert-Paare):
-
-    1. Listen sind geordnet, d.h. die Reihenfolge der Elemente in einer Liste ist festgelegt und kann nur durch Operationen auf der Liste geändert werden.
-    2. Listen können Elemente von unterschiedlichen Typen enthalten.
-    3. Listen haben keine fest Länge, d.h. sie können wachsen und schrumpfen.
-    ///
-
-    Punkt 3. zeigt, dass **Listen**, nicht wie Strings, veränderbar sind.
-
-
-    Hier eine grafische Darstellung eines Liste (Arrays) von Strings (str)
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.center(mo.image("./public/str_memory.svg", width=200))
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    #### Erzeugung von Listen:
-
-    Eine leere Liste kann auf diese Weisen:
-    """)
-    return
-
-
-@app.cell
-def _():
-    # 1. Möglichkeit
-    leere_liste_1 = list()
-    # 2. Möglichkeit
-    leere_liste_2 = []
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    und eine Liste, die schon Elemente enthält, kann so erzeugt werden:
-    """)
-    return
-
-
-@app.cell
-def _():
-    liste_mit_zeichenketten = [
-        "Hallo",
-        "Welt",
-    ]  # Liste mit Zeichenketten als Elemente
-    liste_mit_zahlen = [1, 2, 3]  # Liste mit Zahlen als Elemente
-    liste_mit_unterschielicher_datentypen = [
-        1,
-        "Hallo",
-        3.14,
-    ]  # Liste, die Elemente enthält, die unterschiedliche Datentypen haben
-    return (liste_mit_zeichenketten,)
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// attention | Bemerkung
-    Eine Liste kann beliebige Elemente enthalten, die auch nicht unbedingt vom gleichen Typ sein müssen. Im Allgemeinen ist es aber üblich, dass die Elemente den gleichen Datentyp haben.
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    #### Operationen auf Listen
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Über die **append**-Methode können Elemente an das Ende einer Liste angehängt werden:
-    """)
-    return
-
-
-@app.cell
-def _(liste_mit_zeichenketten):
-    liste_mit_zeichenketten.append("und")
-    liste_mit_zeichenketten.append("Kurs")
-    liste_mit_zeichenketten.append(
-        "Kurs"
-    )  # ein Element kann auch zwei Mal hinzugefügt werden
-    liste_mit_zeichenketten
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// tip
-    `append` hängt Element am Ende der Liste an.
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    über die **remove**-Methode können Elemente entfernt werden:
-    """)
-    return
-
-
-@app.cell
-def _(liste_mit_zeichenketten):
-    liste_mit_zeichenketten.remove("und")
-    liste_mit_zeichenketten
-    return
-
-
-@app.cell
-def _(liste_mit_zeichenketten):
-    liste_mit_zeichenketten.remove(
-        "Kurs"
-    )  # remove entfernt das erste Element, das in der Liste gefunden wird, wenn man von vorne sucht
-    liste_mit_zeichenketten
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// tip
-    `remove` entfernt das erste Element, das in der Liste gefunden wird.
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Zum Entfernen des letzten Elements einer Liste gibt es den Befehl **pop**:
-    """)
-    return
-
-
-@app.cell
-def _(liste_mit_zeichenketten):
-    el = liste_mit_zeichenketten.pop()
-    el
-    return
-
-
-@app.cell
-def _(liste_mit_zeichenketten):
-    liste_mit_zeichenketten
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// tip
-    `pop` entfernt ohne weiteres Argument das letzte Element der Liste.
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    #### Indizieren in Listen
-
-    Dies bedeutet, dass ich Elemente der Liste aus dieser dediziert auslese. Da eine Liste geordnet ist, kann ich jedes Listenelement direkt anspechen. Die Indizierung der Liste beginnt bei 0 und geht bis Länger der Liste minus 1. Hier ein Beispiel:
-    """)
-    return
-
-
-@app.cell
-def _():
-    indizieren_in_liste = [
-        "erste Element",
-        "zweites Element",
-        "drittes Element",
-        "viertes Element",
-    ]
-    return (indizieren_in_liste,)
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Das erste Element erhalte ich, in dem ich auf das Elemnt mit dem Index 0 zugreife:
-    """)
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    indizieren_in_liste[0]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    das letzte Element erhalte ich, in dem ich auf das Element mit dem Index **Länge der Liste minus 1** zugreife:
-    """)
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    len(indizieren_in_liste)  # Länge der Liste
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    indizieren_in_liste[len(indizieren_in_liste) - 1]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    andere Möglichkeit ist:
-    """)
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    indizieren_in_liste[-1]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Definition:
-    Der Slice-Operator : wird in Python verwendet, um einen zusammenhängenden Teil (Ausschnitt) einer Sequenz wie einer Liste, einem String oder einem Tupel auszuwählen. Mit ihm können Bereiche über Start-, End- und optionalen Schrittwerten spezifiziert werden, sodass ein neuer Teilbereich (Slice) der Sequenz zurückgegeben wird, ohne das Original zu verändern.
-
-    **Synatax:**
-
-    - Syntax: sequence[start:stop:step]
-    - start: Index, an dem der Ausschnitt beginnt (inklusive)
-    - stop: Index, an dem der Ausschnitt endet (exklusive)
-    - step: Schrittweite (optional)
-
-
-    Wenn Werte fehlen, werden Standardwerte verwendet (start=0, stop=Ende der Sequenz, step=1).
-    ///
-
-    **Beipiele:**
-    """)
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    indizieren_in_liste[0:3]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// attention | Achtung
-    Bei dem **Slice**-Operator wird der letzte der **stop**-Wert nicht angenommen.
-    ///
-    """)
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    indizieren_in_liste[0:4]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Mit dem **step** kann man jedes **x**-te Element extrahieren:
-    """)
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    indizieren_in_liste[0:4:2]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Ist der **step** negativ, wird die Liste rückwärts durchlaufen:
-    """)
-    return
-
-
-@app.cell
-def _(indizieren_in_liste):
-    indizieren_in_liste[3:0:-1]
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übungen
-
-    1. Welche weiteren Operationen kann man mit Listen noch machen (tab-completion)?
-    2. Prüfe mittels des Vergleichsoperators (==), ob ein Wort ein Palindrom ist. Zum Beispiel ist das Wort `ANNA` ist ein Palindrom. Ein Wort besteht aus einer Liste von Buchstaben und man kann eine Operation die von Listen.
-    3. Erzeuge mit dem Ausdruck
     ```python
-    zahlen_eins_bis_100 = list(range(1,101))
+    x = "Python-Notizen schreiben"
+    p = "mittel"
+    dauer = 30
     ```
-    alle Zahlen von 1 bis hundert und extrahiere mittels indizieren alle geraden und ungeraden Zahlen aus dieser Liste.
-    ///
-    """)
-    return
 
+    Diese Namen wären in Python nicht erlaubt:
 
-@app.cell(hide_code=True)
-def _(mo):
-    test_wort = "ANNA"
-    test_wort
-    wort = list(test_wort)
-    wort.reverse()
-    "".join(wort) == test_wort
-    mo.md(text="(mögliche) Lösung zu 2.")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    zahlen_eins_bis_100 = list(range(1, 101))
-    ungeraden_zahlen_bis_100 = zahlen_eins_bis_100[0:101:2]
-    geraden_zahlen_bis_100 = zahlen_eins_bis_100[1:101:2]
-    mo.md("(mögliche) Lösung für 3")
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Sets/Mengen
-
-    Mengen (Sets) haben Eigenschaften, die Sie von anderen Kontainertypen unterscheiden.
-
-    /// tip | Eigenschaften von Mengen/Sets
-    Folgende Eigenschaften unterscheiden Sets gegenüber anderen Kontainertypen, wie z. B. Listen und Dictionares (Schlüssel-Wert-Paare):
-
-    1. Listen sind **nicht** geordnet, d.h. die Reihenfolge der Elemente in einer Menge ist **nicht** festgelegt.
-    2. Sets können Elemente von unterschiedlichen Typen enthalten.
-    3. Sets haben keine feste Größe, d.h. sie können wachsen und schrumpfen.
-    4. Mengen haben die Eigenschaft, dass jedes Element nur ein Mal in der Menge vorkommen kann. Ein doppeltes Element, wie bei Listen möglich ist, ist hier nicht erlaubt.
-    ///
-
-    Eine leere Menge wird analog zu der Liste mit:
-    """)
-    return
-
-
-@app.cell
-def _():
-    menge_1 = set()
-    return (menge_1,)
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    erzeugt.
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// attention | Achtung
-    Eine leere Menge kann **nicht** mit dem Befehl `{}` erzeugt werden. Die Konstruktion  `{}` erzeugt einen leeren Dictionary (Schlüssel-Wert-Paar).
-    ///
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    Man kann Elemente hinzufügen:
-    """)
-    return
-
-
-@app.cell
-def _(menge_1):
-    menge_1.add("Hallo")
-    menge_1
-    return
-
-
-@app.cell
-def _(menge_1):
-    menge_1.add("Hallo")  # nochmaliges Hinzufügen ist nicht möglich
-    menge_1
-    return
-
-
-@app.cell
-def _():
-    menge_2 = set(["Welt"])
-    menge_2
-    return (menge_2,)
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Mengenoperationen
-    """)
-    return
-
-
-@app.cell
-def _(menge_1, menge_2):
-    # Vereinigung von zwei Mengen
-    vereinigungs_menge = menge_1.union(menge_2)
-    vereinigungs_menge
-    return (vereinigungs_menge,)
-
-
-@app.cell
-def _(menge_1, vereinigungs_menge):
-    # Teilmengenprüfung
-    menge_1.issubset(vereinigungs_menge)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    /// note | Übungen
-    1. Wir haben zwei Listen mit Schülern, die in GTAs gehen wollen, die zur gleichen Zeit stattfinden. Welche Schüler müssen sich nur für eine GTA entscheiden?
     ```python
-    volleyball = ["Frank", "Egon", "Markus", "Georg", "Frank"]
-    fussball = ["Egon", "Franz","Steffi","Markus"]
+    1_aufgabe = "Startet mit einer Zahl"
+    aufgaben titel = "Enthält ein Leerzeichen"
+    for = "Ist ein Python-Schlüsselwort"
     ```
-    Was machen die Befehle `intersection`, `difference` und `symmetric_difference`?
-    2. Was passiert, wenn man eine Zeichenkette (einen String) in als Argument `set(arg)`
-    übergibt?
-    3. Bestimme die Buchstaben, die sowohl in
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Namen bewerten
+
+    Welche Namen helfen beim Lesen des Programms?
+
+    | Name | Bewertung |
+    | --- | --- |
+    | `x` | erlaubt, aber zu unklar |
+    | `titel` | gut, wenn es nur einen Titel gibt |
+    | `aufgaben_titel` | besser, wenn klar sein soll, wozu der Titel gehört |
+    | `geschätzte_minuten` | fachlich gut, aber im Code verwenden wir besser `geschaetzte_minuten` |
+    | `geschaetzte_minuten` | gut lesbar und ohne Umlaut im Code |
+
+    Grundregel:
+    Ein Name sollte so kurz wie möglich und so deutlich wie nötig sein.
+    """)
+    return
+
+
+@app.cell
+def _(minuten, prioritaet, titel):
+    aufgaben_titel = titel.value
+    aufgaben_prioritaet = prioritaet.value
+    geschaetzte_minuten = minuten.value
+    return aufgaben_prioritaet, aufgaben_titel, geschaetzte_minuten
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Zahlen und Strings
+
+    Mit Zahlen können wir rechnen, mit Strings können wir Text speichern.
+    Beides brauchen wir schon im ersten kleinen Programmfragment.
+
+    Mit einem `f`-String können wir Werte aus Variablen in einen Text einsetzen.
+    """)
+    return
+
+
+@app.cell
+def _(aufgaben_prioritaet, aufgaben_titel, geschaetzte_minuten):
+    (
+        type(aufgaben_titel),
+        type(aufgaben_prioritaet),
+        type(geschaetzte_minuten),
+    )
+    return
+
+
+@app.cell
+def _(aufgaben_prioritaet, aufgaben_titel, geschaetzte_minuten):
+    f"Offene Aufgabe: {aufgaben_titel} ({aufgaben_prioritaet}, {geschaetzte_minuten} Minuten)"
+    return
+
+
+@app.cell
+def _(geschaetzte_minuten):
+    stunden = geschaetzte_minuten / 60
+    stunden
+    return (stunden,)
+
+
+@app.cell
+def _(stunden):
+    type(stunden)
+    return
+
+
+@app.cell
+def _(aufgaben_titel, stunden):
+    f"Für '{aufgaben_titel}' planen wir rund {stunden:.1f} Stunden ein."
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Kleine Fehler bewusst lesen
+
+    Fehler gehören zum Programmieren dazu.
+    Heute reicht es, typische Meldungen grob einzuordnen.
+
+    Beispiel 1: Die Variable wurde anders geschrieben.
+
     ```python
-    text1 = "Hallo Welt"
+    aufgaben_titel = "Python-Notizen schreiben"
+    aufgabe_titel
     ```
-    also auch
+
+    Erwartbare Meldung: `NameError`, weil `aufgabe_titel` ohne `n` nicht definiert wurde.
+
+    Beispiel 2: Der Variablenname ist nicht erlaubt.
+
     ```python
-    text2 = "Weltraum"
+    1_aufgabe = "Python-Notizen schreiben"
     ```
-    enthalten sind. Welche sind nicht in `text1`, aber in `text2` unumgekehrt enthalten?
-    ///
+
+    Erwartbare Meldung: `SyntaxError`, weil ein Variablenname nicht mit einer Zahl beginnen darf.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Abschlussübung
+
+    Beschreibe eine eigene Aufgabe mit vier Variablen:
+
+    ```python
+    eigener_titel = "..."
+    eigene_prioritaet = "..."
+    eigene_minuten = ...
+    eigener_ort = "..."
+    ```
+
+    Gib danach einen Satz mit einem `f`-String aus.
+
+    Zusatzfragen:
+
+    1. Welcher Variablenname ist besonders gut lesbar?
+    2. Welche Werte sind Strings?
+    3. Welcher Wert ist eine Zahl?
+
+    Ziel des Tages:
+    Am Ende kann jede Person ein kleines Python-Programm lesen und eigene Werte darin austauschen.
     """)
     return
 

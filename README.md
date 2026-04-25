@@ -1,30 +1,52 @@
+# Python-Kurs: Einstieg in Python mit einem durchgehenden Projekt
 
-# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
+## Kursidee
 
-## Anforderungen
+Dieser Kurs ist eine Einführung in die Programmiersprache `Python` für Erwachsene mit wenig oder keiner Programmiererfahrung.
+Statt möglichst viele Themen kurz anzureißen, folgt der Kurs einem durchgehenden Projekt:
+Wir bauen gemeinsam einen kleinen textbasierten Aufgabenplaner.
 
-Folgende Programme werden genutzt:
+Jeder Kurstag führt genau eine neue Kernidee ein und nutzt sie sofort, um das Projekt zu erweitern.
+So entsteht Schritt für Schritt ein kleines, vollständiges Programm mit Variablen, Bedingungen, Schleifen, Listen,
+Wörterbüchern, Funktionen und einfacher Dateispeicherung.
 
-1. [uv](https://docs.astral.sh/) - Paketmanager und Verwaltungswerkzeug für Python
-1. [marimo](https://docs.marimo.io) - Reaktives Notebook für Python 
-<p>
-<div class="center">
-<img src="https://docs.marimo.io/_static/marimo-logotype-thick.svg" width=50 alt="marimo">
-<img src="https://docs.astral.sh/uv/assets/logo-letter.svg" width=38 alt="uv" align="right">
-</div>
+`uv` und `marimo` bleiben Teil des Kurses, werden aber nur so weit eingeführt, wie sie das Lernen unterstützen.
+Datenanalyse, Visualisierung und maschinelles Lernen sind kein Kernstoff mehr, sondern nur ein motivierender Ausblick am Ende.
+
+## Werkzeuge
+
+Folgende Programme werden im Kurs verwendet:
+
+1. [uv](https://docs.astral.sh/uv/) für einen schlanken Python-Start
+2. [marimo](https://docs.marimo.io) als interaktives Notebook für Beispiele und Übungen
+
+## Lernziele
+
+Am Ende des Kurses sollen die Teilnehmenden:
+
+- einfache Python-Programme lesen und schrittweise erklären können
+- mit Variablen, Zahlen, Strings und Wahrheitswerten arbeiten können
+- Bedingungen und Schleifen in kleinen Programmen sicher einsetzen können
+- Daten mit Listen und Wörterbüchern modellieren können
+- Funktionen mit Parametern und Rückgabewerten schreiben können
+- kleine Programme in überschaubare Teilschritte zerlegen können
+- einfache Daten in einer Datei speichern und wieder laden können
 
 ## Kursübersicht
 
-Dieser Kurs ist eine Einführung in die Programmiersprache `Python`, wobei am Ende des Kurses ein Schwerpunkt auf 
-Datenanalyse und Nutzung von maschinellem Lernen und künstlicher Intelligenz liegt.
-
-| Kurstag | Themen |
+| Kurstag | Fokus |
 | ---- | ----- |
-| <div align="center">1<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_01/kurstag_01.py)</div> | <ul><li>Übersicht</li><li>Einführung in Paketmanagement mit <br>[uv](https://docs.astral.sh/uv/)</br><ul><li>Instalation von Python</li><li>Erste Schritte in Python-REPL</li><li>Projekt-Management</li></ul></li><li>Einführung in [marimo](https://docs.marimo.io)</li><ul><li>marimo starten und Tutorials</li><li>Erste Schritte in Python unter marimo</li></ul><li>Datentypen</li><li>Variablen</li> </ul> |
-| <div align="center">2<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_02/kurstag_02.py)</div> | <ul> <li>mathematische Standard-Operatoren</li> <li>Bedingungen</li><li>Schleifen</li><li>Nutzung interaktiver Elemente in marimo</li></ul> |
-| <div align="center">3<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_03/kurstag_03.py)</div> | <ul> <li>Funktionen</li> <li>Lambda- oder Anonyme Funktionen</li><li>Map, Filter und Reduce</li><li>Klassen und Vererbung</li><li>Duck-Typing und Polymorphismus</li><li>Module</li> <li>Pakete</li><li>Importing</li></ul> |
-| <div align="center">4<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_04/kurstag_04.py)</div> | <ul> <li>Datenanalyse:</li> <ul><li>Pandas vs. Polars</li><li>Allgemeines Vorgehen</li></ul><li>Einführung in Pandas-Konzepte</li><ul><li>Series</li><li>Einlese und Schreiben von Daten</li><li>Filtern von Daten</li><li>Erstellen von Spalten</li><li>Statistische Auswertungen</li><li>Pivotieren von Daten</li><li>Zeitserien</li></ul></ul> |
-| <div align="center">5<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_05/kurstag_05.py)</div> | <ul> <li>Graphische Darstellung von Daten</li> <ul><li>Matplotlib</li><li>Plotly</li></ul><li>Beispieldatenanalysen</li></ul> |
-| <div align="center">6<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_06/kurstag_06.py)</div> | <ul> <li>Einführung in maschinelles Lernen</li> <li>Übersicht: Scikit-Learn</li><li>Trainings- und Testdaten</li><li>Modelltraining</li><li>Modellbewertung</li></ul> |
+| <div align="center">1<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_01/kurstag_01.py)</div> | Einstieg über das Leitproblem, erste Variablen, Strings, Zahlen und ein erstes kleines Programmfragment des Aufgabenplaners |
+| <div align="center">2<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_02/kurstag_02.py)</div> | Bedingungen und Schleifen, um mehrere Einträge zu prüfen und einfache Regeln umzusetzen |
+| <div align="center">3<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_03/kurstag_03.py)</div> | Listen, Wörterbücher und String-Verarbeitung als Datenmodell des Aufgabenplaners |
+| <div align="center">4<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_04/kurstag_04.py)</div> | Funktionen, Programmstruktur, Fehlersuche und schrittweises Zerlegen des Projekts |
+| <div align="center">5<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_05/kurstag_05.py)</div> | Einfache Datei-Ein/Ausgabe, Abschluss des Projekts und gestufte Übungen zur Festigung |
+| <div align="center">6<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_06/kurstag_06.py)</div> | Rückblick auf das Projekt, kleine Erweiterungen und ein kompakter Ausblick auf Datenanalyse und KI |
 
+## Didaktische Leitlinien
 
+- Pro Termin gibt es genau eine neue große Idee.
+- Jede neue Idee wird aus einem konkreten Problem im Projekt heraus eingeführt.
+- Übungszeit ist fester Bestandteil jedes Kurstags.
+- Fortgeschrittene Themen wie Vererbung, `reduce`, Pakete oder maschinelles Lernen sind kein Pflichtstoff dieses Einstiegskurses.
+- Wer nach dem Kurs weitermachen möchte, sollte auf einem getrennten Folgekurs zu Datenanalyse oder KI aufbauen.

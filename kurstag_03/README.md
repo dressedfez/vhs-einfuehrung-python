@@ -1,16 +1,22 @@
-# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
-## Kurstag 3: Fortgeschrittene Programmierkonzepte in Python
+# Python-Kurs: Einstieg in Python mit einem durchgehenden Projekt
+## Kurstag 3: Daten sinnvoll strukturieren
 
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_03/kurstag_03.py)
 
-**Themen:**
+**Problem des Tages**
 
-Folgende Themen werden bearbeitet:
- - Funktionen
- - Lambda- oder Anonyme Funktionen
- - Map, Filter und Reduce
- - Klassen und Vererbung
- - Duck-Typing
- - Polymorphismus
- - Module und Pakete
- - Importing - verstehen und anwenden
+Unser Aufgabenplaner braucht ein einfaches Datenmodell:
+Wie speichern wir Titel, Kategorie, Priorität und Erledigt-Status so,
+dass das Programm sinnvoll damit arbeiten kann?
+
+**Neue Werkzeuge**
+
+- Listen für mehrere Einträge
+- Wörterbücher für zusammengehörige Informationen
+- einfache String-Verarbeitung
+
+**Was am Ende funktioniert**
+
+- Aufgaben werden als kleine Datenobjekte modelliert
+- Der Aufgabenplaner kann offene Aufgaben filtern und zusammenfassen
+- Die Teilnehmenden verstehen, wann Listen und Wörterbücher hilfreich sind

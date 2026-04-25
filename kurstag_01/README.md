@@ -1,19 +1,30 @@
-# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
-## Kurstag 1: Einführung in uv, Python  und marimo
+# Python-Kurs: Einstieg in Python mit einem durchgehenden Projekt
+## Kurstag 1: Das Problem verstehen und die ersten Bausteine legen
 
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_01/kurstag_01.py)
 
-**Themen:**
+**Problem des Tages**
 
-In diesem Tag werden wir die folgenden Themen bearbeiten:
+Wir starten nicht mit einer langen Liste von Python-Begriffen, sondern mit einer konkreten Frage:
+Wie können wir einen kleinen Aufgabenplaner bauen, der uns an offene Aufgaben erinnert?
 
-- Übersicht
-- Einführung in Paketmanagement mit [uv](https://docs.astral.sh/uv/)
-  - Instalation von Python
-  - Erste Schritte in Python-REPL
-  - Projekt-Management mit uv
-- Einführung in [marimo](https://docs.marimo.io)
-  - marimo starten und Tutorials
-  - Erste Schritte in Python unter marimo
-- Datentypen
-- Variablen
+**Hauptziel des Projekts**
+
+Am Ende des Kurses soll der Aufgabenplaner einfache Aufgaben speichern, anzeigen, filtern und als erledigt markieren können.
+Heute bauen wir davon noch nicht alles. Kurstag 1 legt nur den ersten Baustein: Wir beschreiben eine einzelne Aufgabe mit passenden Werten und Variablen.
+
+**Neue Werkzeuge**
+
+- `uv` und `marimo` nur so weit, dass alle arbeitsfähig sind
+- Werte, Variablen und einfache Ausdrücke
+- Regeln für erlaubte Variablennamen und PEP-8-Schreibweise
+- Strings, Zahlen und erste formatierte Ausgaben
+- kurze Fehlersuche bei typischen Anfängerfehlern
+- `type(...)` als erster Blick auf Datentypen
+
+**Was am Ende funktioniert**
+
+- Die Teilnehmenden können Python-Code in `marimo` ausführen
+- Ein erstes kleines Programmfragment erzeugt eine Aufgabenbeschreibung mit Titel, Priorität und Dauer
+- Die Gruppe versteht, warum Variablen für das Projekt nützlich sind
+- Die Teilnehmenden können eigene Variablennamen bewerten und einfache Fehlermeldungen einordnen
