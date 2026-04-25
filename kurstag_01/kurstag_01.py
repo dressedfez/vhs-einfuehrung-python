@@ -32,8 +32,26 @@ def _(mo):
 
     - Werte
     - Variablen
+    - Datentypen
     - Strings und Zahlen
     - erste formatierte Ausgaben
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Ziele des Kurstags
+
+    Am Ende dieses Kurstags kannst du:
+
+    - erklären, welches Problem unser Aufgabenplaner lösen soll
+    - eine einzelne Aufgabe mit Variablen beschreiben
+    - die Begriffe Wert, Variable und Datentyp unterscheiden
+    - gute und schlechte Variablennamen unterscheiden
+    - einfache Werte als String, Zahl oder Wahrheitswert erkennen
+    - mit einem `f`-String eine lesbare Textausgabe erzeugen
     """)
     return
 
@@ -118,6 +136,15 @@ def _(minuten, mo, prioritaet, titel):
     - Titel: `{titel.value}`
     - Priorität: `{prioritaet.value}`
     - Dauer: `{minuten.value}` Minuten
+
+    /// note | Begriff: Variable
+    Eine Variable ist ein Name für einen Wert.
+    Wir nutzen Variablen, damit ein Programm später wieder auf diesen Wert zugreifen kann.
+    ///
+
+    /// note | Begriff: Wert
+    Ein Wert ist eine konkrete Information im Programm, zum Beispiel `"Python-Notizen schreiben"` oder `30`.
+    ///
     """)
     return
 
@@ -137,6 +164,11 @@ def _(mo):
 
     Nach PEP 8 schreibt man normale Variablen in Python meistens klein und trennt Wörter mit Unterstrichen.
     Diese Schreibweise heißt `snake_case`.
+
+    /// tip | PEP 8 im Kurs
+    Wir schreiben Code-Bezeichner ohne Umlaute, zum Beispiel `geschaetzte_minuten`.
+    In Erklärungstexten verwenden wir normale deutsche Umlaute.
+    ///
     """)
     return
 
@@ -232,6 +264,21 @@ def _(mo):
     Beides brauchen wir schon im ersten kleinen Programmfragment.
 
     Mit einem `f`-String können wir Werte aus Variablen in einen Text einsetzen.
+
+    /// note | Begriff: Datentyp
+    Ein Datentyp beschreibt, welche Art von Wert vorliegt und was Python damit tun kann.
+    `"Text"` ist ein `str`, `30` ist ein `int`, `30.0` ist ein `float` und `False` ist ein `bool`.
+    ///
+
+    /// note | Begriff: String
+    Ein String (`str`) ist Text in Anführungszeichen.
+    Strings brauchen wir zum Beispiel für Titel, Kategorien oder Ausgabetexte.
+    ///
+
+    /// note | Begriff: Integer
+    Ein Integer (`int`) ist eine ganze Zahl.
+    Ganze Zahlen brauchen wir zum Beispiel für Minuten oder Prioritäten.
+    ///
     """)
     return
 
@@ -295,6 +342,11 @@ def _(mo):
     ```
 
     Erwartbare Meldung: `SyntaxError`, weil ein Variablenname nicht mit einer Zahl beginnen darf.
+
+    /// tip | Fehlermeldungen lesen
+    Lies Fehlermeldungen zuerst von unten nach oben.
+    Meist stehen dort der Fehlertyp und ein Hinweis auf die betroffene Zeile.
+    ///
     """)
     return
 

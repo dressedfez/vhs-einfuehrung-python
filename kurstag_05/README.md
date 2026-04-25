@@ -17,5 +17,5 @@ Heute speichern wir Daten in einer Datei und führen das Projekt zu einer kleine
 **Was am Ende funktioniert**
 
 - Aufgaben können gespeichert und wieder geladen werden
-- Das Projekt ist als kleines, vollstaendiges Programm erkennbar
+- Das Projekt ist als kleines, vollständiges Programm erkennbar
 - Die Teilnehmenden festigen die Grundlagen an abgestuften Übungen
