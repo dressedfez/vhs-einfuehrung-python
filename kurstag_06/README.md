@@ -1,21 +1,45 @@
+# Kurstag 6 · Maschinelles Lernen mit Scikit-Learn
 
-# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
+Für Kurstag 6 gibt es zwei aufbereitete Marimo-Notebooks:
 
-## Kurstag 6: Einführung in maschinelles Lernen mit Scikit-Learn
+| Datei | Für wen? | Inhalt |
+| --- | --- | --- |
+| [kurstag_06_folien.py](kurstag_06_folien.py) | Dozent / gemeinsamer Unterricht | Folien mit Beispielen, Trainingsablauf, Modellbewertung und Ziffernfoto-Demo |
+| [kurstag_06_teilnehmende.py](kurstag_06_teilnehmende.py) | Teilnehmende / Nacharbeiten | Arbeitsheft mit ausführbaren Beispielen, vier Basisübungen und automatischer Rückmeldung |
 
-[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_06/kurstag_06.py)
+Das ursprüngliche Notebook [kurstag_06.py](kurstag_06.py) sowie die Keynote- und PDF-Dateien bleiben als Ausgangsmaterial erhalten. Die neuen Notebooks verwenden den eingebauten Digits-Datensatz von Scikit-Learn und benötigen keinen Datendownload.
 
-**Themen:**
+## Folien starten
 
-Folgende Themen werden bearbeitet:
-- Einführung in maschinelles Lernen
-- Übersicht: Scikit-Learn
-- Trainings- und Testdaten
-- Modelltraining
-- Modellbewertung
-- Beispiel: Machine-Learning-Projekt zur Ziffernerkennung
+Alle Befehle im Ordner `kurstag_06` ausführen. Voraussetzung ist eine installierte Version von [uv](https://docs.astral.sh/).
 
-**Materialien:**
+Präsentation starten:
 
-- `kurstag_06.py`: Marimo-Notebook mit einem vollständigen Scikit-Learn-Projekt.
-- `Kurstag_06.key` und `Kurstag_06.pdf`: Keynote-Folien für die theoretische Einführung.
+```sh
+uv run --script kurstag_06_folien.py
+```
+
+Für Live-Coding und die Folienansicht:
+
+```sh
+uvx --from "marimo==0.25.2" marimo edit --sandbox kurstag_06_folien.py
+```
+
+Der Sandbox-Modus bereitet eine getrennte Umgebung aus den Abhängigkeiten im Notebook-Kopf vor. Ohne ihn nutzt Marimo die Python-Umgebung, in der das Programm installiert wurde. Die Datei `layouts/kurstag_06_folien.slides.json` aktiviert das Folienlayout. Mit den Pfeiltasten blättern; **C** blendet den Code der aktuellen Folie ein.
+
+## Arbeitsheft für Teilnehmende
+
+```sh
+uvx --from "marimo==0.25.2" marimo edit --sandbox kurstag_06_teilnehmende.py
+```
+
+Codezellen mit **Shift+Enter** ausführen. Die Übungen behandeln Modelltraining mit einer Pipeline, Vorhersagen, Accuracy und die Confusion Matrix. Im Zusatzteil können Teilnehmende ein eigenes Ziffernfoto hochladen. Auswahlfelder, Vorhersage und verarbeitetes Bild erscheinen gemeinsam auf derselben Notebook-Seite.
+
+## HTML zum Weitergeben
+
+```sh
+uvx --from "marimo==0.25.2" marimo export html kurstag_06_folien.py -o kurstag_06_folien.html
+uvx --from "marimo==0.25.2" marimo export html kurstag_06_teilnehmende.py -o kurstag_06_teilnehmende.html
+```
+
+Der statische Export enthält Texte und berechnete Beispiele. Für den Foto-Upload und das erneute Ausführen von Python die laufende Marimo-Anwendung verwenden.
