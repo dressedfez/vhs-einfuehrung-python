@@ -30,7 +30,7 @@ Notebooks durch Admonitions (`note`, `tip`, `attention`) hervorgehoben.
 Im Ordner `kurstag_01` starten:
 
 ```sh
-uvx --from "marimo==0.25.2" marimo edit kurstag_01_teilnehmende.py
+marimo edit kurstag_01_teilnehmende.py
 ```
 
 Das Arbeitsheft verwendet kein Folienlayout. Erklärung, Beispielcode,
@@ -58,24 +58,33 @@ Die folgende Anleitung bezieht sich auf die Dozentenpräsentation mit
 Alle Befehle im Ordner `kurstag_01` ausführen. Voraussetzung ist eine installierte
 Version von [uv](https://docs.astral.sh/uv/).
 
-Präsentation starten (Python und Abhängigkeiten werden von uv bereitgestellt):
+Präsentation im Browser starten:
 
 ```sh
-uv run --script kurstag_01_folien.py
+marimo run kurstag_01_folien.py
 ```
 
 **Für die interaktiven Codeübungen und für Live-Coding:**
 
 ```sh
-uvx --from "marimo==0.25.2" marimo edit kurstag_01_folien.py
+marimo edit kurstag_01_folien.py
 ```
 
-Die Datei `layouts/kurstag_01.slides.json` aktiviert das Folienlayout.
+Auch Folie 8 lässt sich so live bearbeiten: In der Folienansicht **C** drücken,
+`anzahl_teilnehmende` ändern und mit **Shift+Enter** ausführen. `marimo run`
+zeigt die Präsentation nur an; zum Bearbeiten während des Vortrags `marimo edit`
+verwenden.
+
+Diese Befehle setzen voraus, dass marimo bereits installiert und im aktuellen
+Terminal verfügbar ist. Ohne Installation kannst du es einmalig mit `uvx`
+starten, zum Beispiel: `uvx --from "marimo==0.25.2" marimo run kurstag_01_folien.py`.
+
+Die Datei `layouts/kurstag_01_folien.slides.json` aktiviert das Folienlayout.
 Falls nötig, in der App-Vorschau das Layout **Slides** auswählen.
 Mit den Pfeiltasten navigieren; mit **C** den Code für Live-Änderungen einblenden.
-Die Beispiele berechnen ihre Ergebnisse in Python; der sichtbare Codeblock
-auf der Folie dokumentiert das Beispiel. Bei Änderungen auch diesen Codeblock
-(das Textargument von `beispiel`) anpassen.
+Auf Folie 8 ist der sichtbare Code die echte Python-Zelle und live änderbar.
+Auf den weiteren Beispiel-Folien sind die angezeigten Codeblöcke Dokumentation;
+dort bei Änderungen auch das Textargument von `beispiel` anpassen.
 
 ## Code ergänzen und ausführen
 
@@ -161,7 +170,7 @@ beim erneuten Ausführen wiederholbar.
 ## HTML zum Weitergeben
 
 ```sh
-uvx --from "marimo==0.25.2" marimo export html kurstag_01_folien.py -o kurstag_01_folien.html
+marimo export html kurstag_01_folien.py -o kurstag_01_folien.html
 ```
 
 Der statische Export enthält die berechneten Ergebnisse. Für Live-Coding und

@@ -2,11 +2,8 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "marimo==0.25.2",
-#     "matplotlib",
-#     "openpyxl",
-#     "pandas",
-#     "plotly",
-#     "seaborn",
+#     "pandas==2.3.3",
+#     "openpyxl==3.1.5",
 # ]
 # ///
 
@@ -19,7 +16,10 @@ __generated_with = "0.25.2"
 app = marimo.App(
     width="medium",
     layout_file="layouts/kurstag_05_folien.slides.json",
+    css_file="layouts/folien.css",
 )
+
+
 
 
 @app.cell(hide_code=True)
@@ -29,25 +29,33 @@ def _():
     return (mo,)
 
 
+
+
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    import matplotlib.pyplot as plt
     import pandas as pd
-    import plotly.express as px
-    import seaborn as sns
+    import pprint as _pprint
+
     def beispiel(titel, erklaerung, code, ergebnis):
-        return mo.vstack(
-            [
-                mo.md(
-                    f"## {titel}\n\n{erklaerung}\n\n"
-                    f"**Python-Code**\n\n```python\n{code}\n```"
-                ),
-                ergebnis,
-            ],
-            gap=1,
+        ausgabe = _pprint.pformat(
+            ergebnis, width=88, compact=True, sort_dicts=False
+        )
+        return mo.md(
+            f"## {titel}\n\n"
+            f"{erklaerung}\n\n"
+            f"**Python-Code**\n\n"
+            f"```python\n{code}\n```\n\n"
+            f"**Ergebnis**\n\n"
+            f"```text\n{ausgabe}\n```"
         )
 
-    return beispiel, pd, plt, px, sns
+    return beispiel, pd
+
+
+
+
 
 
 @app.cell(hide_code=True)
@@ -84,15 +92,19 @@ def _(mo):
       <div class="vhs-kursstart-copy">
         <div class="vhs-kursstart-logo"><img src="data:image/png;base64,__VHS_LOGO__" alt="Volkshochschule Dresden e.V."></div>
         <p class="vhs-kursstart-series">Python für Daten und KI</p>
-        <h1 class="vhs-kursstart-title">Kurstag 5<span>Daten visualisieren</span></h1>
-        <p class="vhs-kursstart-summary">Mit Matplotlib, Seaborn und Plotly aus Tabellen verständliche Diagramme machen.</p>
-        <div class="vhs-kursstart-motto">Frage <b>·</b> Diagramm <b>·</b> Aussage</div>
+        <h1 class="vhs-kursstart-title">Kurstag 5<span>Pandas I · Tabellen auswählen</span></h1>
+        <p class="vhs-kursstart-summary">Tabellen laden, prüfen und passende Zeilen auswählen.</p>
+        <div class="vhs-kursstart-motto">Daten <b>·</b> Fragen <b>·</b> Erkenntnisse</div>
       </div>
-      <div class="vhs-kursstart-art" aria-hidden="true"><div class="vhs-kursstart-core">vis</div><i class="vhs-kursstart-dot one"></i><i class="vhs-kursstart-dot two"></i><i class="vhs-kursstart-dot three"></i><i class="vhs-kursstart-dot four"></i><i class="vhs-kursstart-dot five"></i></div>
+      <div class="vhs-kursstart-art" aria-hidden="true"><div class="vhs-kursstart-core">df</div><i class="vhs-kursstart-dot one"></i><i class="vhs-kursstart-dot two"></i><i class="vhs-kursstart-dot three"></i><i class="vhs-kursstart-dot four"></i><i class="vhs-kursstart-dot five"></i></div>
     </section>
     """
     mo.Html(_cover_html.replace("__VHS_LOGO__", _logo_data))
     return
+
+
+
+
 
 
 @app.cell(hide_code=True)
@@ -100,467 +112,513 @@ def _(mo):
     mo.md("""
     ## Unser Weg heute
 
-    1. **Fragen sichtbar machen:** Welcher Diagrammtyp passt zu welcher Frage?
-    2. **Diagramme erstellen:** Matplotlib und Pandas für Linien, Balken, Histogramme und Streudiagramme.
-    3. **Verteilungen vergleichen:** Seaborn für übersichtliche statistische Grafiken.
-    4. **Ergebnisse erkunden:** Plotly und Marimo für interaktive Auswahlen.
+    Tabellen laden und prüfen, Spalten auswählen und Zeilen mit einer oder mehreren Bedingungen filtern. Zum Schluss steuern wir die Auswahl mit interaktiven Elementen.
+
+    **Leitfrage:** Welche Bestellungen passen zu unserer Frage?
     """)
     return
+
+
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.vstack([
+        mo.md("""
+    ## Von der Tabelle zur Erkenntnis
+
+    Eine Datenanalyse beginnt mit einer konkreten Frage. Dann prüfen wir, welche Daten und Spalten dafür passen, filtern die benötigten Zeilen und fassen die Ergebnisse zusammen.
+
+    **Beispiel:** In welcher Region wurde welcher Umsatz erzielt?
+
+    Wir arbeiten heute mit einem kleinen Ausschnitt aus einer Online-Shop-Tabelle. Die Methoden lassen sich später auf größere Datensätze übertragen.
+            """),
+        mo.center(mo.image(src="public/datenanalyse-ablauf.svg", alt="Ablauf einer Datenanalyse von der Datensammlung bis zur Kommunikation", width=560)),
+        mo.md("*Der Ablauf erinnert daran, dass Bereinigen, Auswerten und Kommunizieren zusammengehören.*"),
+    ], gap=1)
+    return
+
+
+
+
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.center(
+        mo.image(
+            "public/01_table_dataframe.svg",
+            alt="Ein DataFrame mit Zeilen, Spalten und Index",
+            width=480,
+        )
+    )
+    return
+
+
+
+
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.vstack([
+        mo.md("""
+    ## Zwei wichtige Datenstrukturen
+
+    - **Series:** eine einzelne Spalte mit Index und Werten.
+    - **DataFrame:** eine Tabelle aus mehreren benannten Series.
+
+    Den Index verwendet Pandas, um Zeilen zu finden. Spaltennamen beschreiben, welche Information in jeder Spalte steht.
+            """),
+        mo.center(mo.image(src="public/01_table_series.svg", alt="Schematische Darstellung einer Pandas-Series als einzelne beschriftete Spalte", width=180)),
+        mo.md("*Eine Series bildet die einzelne Spalte; der DataFrame auf der vorherigen Folie verbindet mehrere Spalten zu einer Tabelle.*"),
+    ], gap=1)
+    return
+
+
+
+
+
+
+@app.cell
+def _(beispiel, pd):
+    _besuche = pd.Series(
+        [12, 18, 15], index=["Montag", "Dienstag", "Mittwoch"], name="Besuche"
+    )
+    beispiel(
+        "Eine Series erstellen",
+        "Werte, Index und Name machen aus einer Liste eine beschriftete Spalte.",
+        'pd.Series([12, 18, 15], index=["Montag", "Dienstag", "Mittwoch"], name="Besuche")',
+        _besuche,
+    )
+    return
+
+
+
+
+
+
+@app.cell
+def _(beispiel, pd):
+    _kurse = pd.DataFrame(
+        {
+            "Kurs": ["Python", "Excel", "Daten"],
+            "Teilnehmende": [12, 16, 9],
+            "Gebühr": [48.0, 36.0, 52.0],
+        }
+    )
+    beispiel(
+        "Ein DataFrame aus einem Dictionary",
+        "Jeder Schlüssel wird zu einem Spaltennamen. Die Listen liefern die Werte jeder Spalte.",
+        'pd.DataFrame({"Kurs": ["Python", "Excel"], "Teilnehmende": [12, 16]})',
+        _kurse,
+    )
+    return
+
+
+
+
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Eine Frage bestimmt das Diagramm
+    ## Erst die Daten prüfen
 
-    Wir arbeiten mit den Verkaufsdaten aus Kurstag 4. Ein Diagramm soll eine konkrete Frage beantworten, zum Beispiel:
+    Bei einer neuen Tabelle schauen wir zuerst auf die Form und einige Zeilen. Danach prüfen wir die Spalten und Datentypen. So fällt auf, wenn Werte fehlen oder als falscher Typ eingelesen wurden.
 
-    **Wie verändert sich der Umsatz im Laufe des Jahres?**
-
-    Dafür brauchen wir zuerst eine passende Zusammenfassung der Tabelle und danach eine Darstellung, die den zeitlichen Verlauf zeigt.
+    - `head()` zeigt die ersten Zeilen.
+    - `tail()` zeigt die letzten Zeilen.
+    - `info()` nennt Spalten, Datentypen und fehlende Werte.
+    - `describe()` fasst numerische Spalten zusammen.
     """)
     return
 
 
+
+
+
+
 @app.cell
-def _(beispiel, mo, pd):
+def _(beispiel, pd):
     verkauf = pd.read_excel(
-        "data/online_shop_verkaufsdaten.xlsx", sheet_name="Verkaufsdaten"
-    )
-    verkauf["Datum"] = pd.to_datetime(verkauf["Datum"])
-    _ueberblick = mo.vstack(
-        [
-            mo.md(
-                f"**{len(verkauf)} Bestellungen**  \n"
-                f"**Zeitraum:** {verkauf['Datum'].min():%d.%m.%Y} bis "
-                f"{verkauf['Datum'].max():%d.%m.%Y}"
-            ),
-            verkauf[["Datum", "Produkt", "Kategorie", "Umsatz"]].head(5),
-        ],
-        gap=1,
+        "online_shop_verkaufsdaten.xlsx", sheet_name="Verkaufsdaten"
     )
     beispiel(
-        "Die Beispieldaten",
-        "Wir verwenden die Verkaufsdaten aus Kurstag 4. Die Spalte `Datum` wird in Datumswerte umgewandelt.",
-        'verkauf = pd.read_excel("data/online_shop_verkaufsdaten.xlsx", sheet_name="Verkaufsdaten")\nverkauf["Datum"] = pd.to_datetime(verkauf["Datum"])\nverkauf.head()',
-        _ueberblick,
+        "Die Beispieldaten ansehen",
+        "Wir lesen die lokale Excel-Datei ein und sehen zunächst nur fünf Zeilen.",
+        'verkauf = pd.read_excel("online_shop_verkaufsdaten.xlsx", sheet_name="Verkaufsdaten")\nverkauf.head()',
+        verkauf.head(),
     )
     return (verkauf,)
 
 
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Diagrammtyp und Frage
-
-    - **Zeitlicher Verlauf:** Ein Liniendiagramm zeigt, wie sich Werte über die Zeit verändern.
-    - **Vergleich von Gruppen:** Ein Balkendiagramm vergleicht Kategorien oder Regionen.
-    - **Verteilung:** Histogramm und Boxplot zeigen, wie Werte verteilt sind.
-    - **Zusammenhang zweier Zahlen:** Ein Streudiagramm zeigt, ob zwei Größen gemeinsam variieren.
-
-    Die Wahl des Diagramms hängt davon ab, was die Daten beantworten sollen.
-    """)
-    return
 
 
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Bausteine eines Matplotlib-Diagramms
-
-    - **Figure:** die gesamte Abbildung, in die alles gezeichnet wird.
-    - **Axes:** der eigentliche Zeichenbereich mit Daten und Achsen.
-    - **Axis:** eine einzelne x- oder y-Achse mit Skala und Teilstrichen.
-
-    In der üblichen Schreibweise erzeugt `plt.subplots()` Figure und Axes gemeinsam. Über `ax` ergänzen wir Daten, Titel und Beschriftungen.
-    """)
-    return
 
 
 @app.cell
-def _(beispiel, pd, plt, verkauf):
-    _umsatz_monat = (
-        verkauf.assign(Monat=verkauf["Datum"].dt.to_period("M").astype(str))
-        .groupby("Monat", as_index=False)["Umsatz"]
-        .sum()
-    )
-    _fig_monat, _ax_monat = plt.subplots(figsize=(8, 3.6), layout="constrained")
-    _ax_monat.plot(_umsatz_monat["Monat"], _umsatz_monat["Umsatz"], marker="o")
-    _ax_monat.set_title("Monatlicher Umsatz")
-    _ax_monat.set_xlabel("Monat")
-    _ax_monat.set_ylabel("Umsatz in Euro")
-    _ax_monat.tick_params(axis="x", rotation=45)
-    _ax_monat.grid(axis="y", alpha=0.3)
+def _(beispiel, verkauf):
+    _pruefung = {
+        "Form (Zeilen, Spalten)": verkauf.shape,
+        "Spalten": list(verkauf.columns),
+        "Erste Zeilen": verkauf.head(3),
+        "Statistik für Preis und Menge": verkauf[["Preis", "Menge"]]
+        .describe()
+        .round(2),
+    }
     beispiel(
-        "Umsatz im Jahresverlauf",
-        "Wir fassen die Bestellungen zunächst je Monat zusammen. Die Linie macht den zeitlichen Verlauf sichtbar.",
-        'verkauf.assign(Monat=verkauf["Datum"].dt.to_period("M").astype(str))\n    .groupby("Monat", as_index=False)["Umsatz"].sum()\n\nfig, ax = plt.subplots()\nax.plot(monat["Monat"], monat["Umsatz"], marker="o")\nax.set(xlabel="Monat", ylabel="Umsatz in Euro", title="Monatlicher Umsatz")',
-        _fig_monat,
+        "Form, Spalten und Kennzahlen",
+        "`shape` zählt Zeilen und Spalten. `describe()` zeigt zum Beispiel Mittelwert und Spannweite.",
+        'verkauf.shape\nverkauf.columns\nverkauf[["Preis", "Menge"]].describe()',
+        _pruefung,
     )
     return
+
+
+
+
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Achsen und Einheiten
+    ## Daten aus Dateien lesen und speichern
 
-    Eine lesbare Grafik beantwortet drei Fragen sofort:
-
-    - Was wird verglichen oder gemessen?
-    - Welche Einheit haben die Werte?
-    - Welchen Zeitraum oder welche Gruppe zeigt die Grafik?
-
-    Beschriftungen wie `Umsatz in Euro` sind genauer als ein allgemeines `Wert`. Ein Titel sollte den Inhalt nennen, nicht nur `Diagramm`.
-    """)
-    return
-
-
-@app.cell
-def _(beispiel, pd, plt, verkauf):
-    _umsatz_region = (
-        verkauf.groupby("Region", as_index=False)["Umsatz"]
-        .sum()
-        .sort_values("Umsatz", ascending=False)
-    )
-    _fig_region, _ax_region = plt.subplots(figsize=(8, 3.8), layout="constrained")
-    _ax_region.bar(_umsatz_region["Region"], _umsatz_region["Umsatz"], color="#17668e")
-    _ax_region.set_title("Umsatz nach Region")
-    _ax_region.set_xlabel("Region")
-    _ax_region.set_ylabel("Umsatz in Euro")
-    _ax_region.tick_params(axis="x", rotation=25)
-    beispiel(
-        "Umsatz nach Region vergleichen",
-        "Balken eignen sich, wenn wir Gruppen vergleichen. Vor dem Zeichnen ordnen wir die Regionen nach Umsatz.",
-        'umsatz_region = verkauf.groupby("Region", as_index=False)["Umsatz"].sum()\numsatz_region = umsatz_region.sort_values("Umsatz", ascending=False)\n\nfig, ax = plt.subplots()\nax.bar(umsatz_region["Region"], umsatz_region["Umsatz"])\nax.set(xlabel="Region", ylabel="Umsatz in Euro", title="Umsatz nach Region")',
-        _fig_region,
-    )
-    return
-
-
-@app.cell
-def _(beispiel, pd, plt, verkauf):
-    _umsatz_kategorie = (
-        verkauf.groupby("Kategorie")["Umsatz"].sum().sort_values()
-    )
-    _fig_kategorie, _ax_kategorie = plt.subplots(
-        figsize=(8, 3.8), layout="constrained"
-    )
-    _ax_kategorie.barh(
-        _umsatz_kategorie.index, _umsatz_kategorie.values, color="#ed6a32"
-    )
-    _ax_kategorie.set_title("Umsatz nach Produktkategorie")
-    _ax_kategorie.set_xlabel("Umsatz in Euro")
-    _ax_kategorie.set_ylabel("Kategorie")
-    beispiel(
-        "Balken horizontal anordnen",
-        "Bei längeren Kategorienamen bleibt ein horizontales Balkendiagramm leichter lesbar.",
-        'umsatz_kategorie = verkauf.groupby("Kategorie")["Umsatz"].sum().sort_values()\numsatz_kategorie.plot(kind="barh")\nplt.xlabel("Umsatz in Euro")',
-        _fig_kategorie,
-    )
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Verteilung und Histogramm
-
-    Ein Histogramm teilt eine Zahlenachse in Intervalle ein. Die Höhe eines Balkens zeigt, wie viele Werte in das jeweilige Intervall fallen.
-
-    `bins` legt die Anzahl oder Lage der Intervalle fest. Sehr wenige Intervalle verbergen Unterschiede. Sehr viele machen das Muster unruhig.
-    """)
-    return
-
-
-@app.cell
-def _(beispiel, plt, verkauf):
-    _fig_hist, _ax_hist = plt.subplots(figsize=(8, 3.6), layout="constrained")
-    _ax_hist.hist(verkauf["Umsatz"], bins=20, color="#39a5d6", edgecolor="white")
-    _ax_hist.set_title("Verteilung der Umsätze pro Bestellung")
-    _ax_hist.set_xlabel("Umsatz in Euro")
-    _ax_hist.set_ylabel("Anzahl Bestellungen")
-    beispiel(
-        "Viele Bestellumsätze zusammenfassen",
-        "Die Grafik zeigt die Häufigkeit der einzelnen Umsatzbereiche. Jeder Datensatz trägt zu genau einem Balken bei.",
-        'fig, ax = plt.subplots()\nax.hist(verkauf["Umsatz"], bins=20)\nax.set(xlabel="Umsatz in Euro", ylabel="Anzahl Bestellungen")',
-        _fig_hist,
-    )
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Boxplots mit Seaborn
-
-    Ein Boxplot vergleicht Verteilungen zwischen Gruppen. Die Linie in der Box markiert den Median. Die Box zeigt den mittleren Bereich der Werte.
-
-    Seaborn baut auf Matplotlib auf und bietet Funktionen für statistische Diagramme. Mit `hue` können wir eine zusätzliche Gruppierung kenntlich machen.
-    """)
-    return
-
-
-@app.cell
-def _(beispiel, plt, sns, verkauf):
-    _fig_box, _ax_box = plt.subplots(figsize=(8, 3.8), layout="constrained")
-    sns.boxplot(
-        data=verkauf,
-        x="Kategorie",
-        y="Umsatz",
-        hue="Kategorie",
-        legend=False,
-        ax=_ax_box,
-    )
-    _ax_box.set_title("Umsatzverteilung nach Kategorie")
-    _ax_box.set_xlabel("Kategorie")
-    _ax_box.set_ylabel("Umsatz pro Bestellung in Euro")
-    _ax_box.tick_params(axis="x", rotation=20)
-    beispiel(
-        "Umsatzverteilungen vergleichen",
-        "Der Boxplot zeigt, wie stark einzelne Bestellungen innerhalb einer Kategorie streuen. Punkte außerhalb der Whisker sind auffällige Werte.",
-        'sns.boxplot(data=verkauf, x="Kategorie", y="Umsatz", hue="Kategorie", legend=False, ax=ax)\nax.set_ylabel("Umsatz pro Bestellung in Euro")',
-        _fig_box,
-    )
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Zusammenhänge mit Streudiagrammen
-
-    Jeder Punkt steht für eine Bestellung. Die Lage zeigt Preis und Menge gemeinsam.
-
-    Ein Streudiagramm kann einen Zusammenhang sichtbar machen. Es beweist für sich allein nicht, dass eine Größe die andere verursacht.
-    """)
-    return
-
-
-@app.cell
-def _(beispiel, plt, verkauf):
-    _fig_streu, _ax_streu = plt.subplots(figsize=(8, 3.7), layout="constrained")
-    _ax_streu.scatter(
-        verkauf["Preis"], verkauf["Menge"], alpha=0.65, color="#147e9e"
-    )
-    _ax_streu.set_title("Preis und Bestellmenge")
-    _ax_streu.set_xlabel("Preis pro Stück in Euro")
-    _ax_streu.set_ylabel("Menge pro Bestellung")
-    _ax_streu.grid(alpha=0.2)
-    beispiel(
-        "Preis und Menge als Punkte",
-        "Die Punktwolke zeigt die Kombinationen aus Einzelpreis und Bestellmenge. Ein einzelner Punkt entspricht einer Zeile der Tabelle.",
-        'fig, ax = plt.subplots()\nax.scatter(verkauf["Preis"], verkauf["Menge"], alpha=0.65)\nax.set(xlabel="Preis pro Stück in Euro", ylabel="Menge pro Bestellung")',
-        _fig_streu,
-    )
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Schneller zeichnen mit Pandas
-
-    Für eine schnelle erste Grafik kann Pandas direkt die Daten zeichnen:
+    Pandas kann unter anderem CSV- und Excel-Dateien lesen:
 
     ```python
-    umsatz_region.set_index("Region")["Umsatz"].plot(kind="bar")
+    pd.read_csv("verkauf.csv")
+    pd.read_excel("verkauf.xlsx", sheet_name="Tabelle1")
     ```
 
-    Pandas verwendet dafür Matplotlib. Wenn wir Titel, Achsen und Layout genauer anpassen möchten, greifen wir auf Figure und Axes zu.
+    Der Dateiname ist relativ zum Arbeitsordner. Beim Speichern geben wir mit `index=False` an, dass der technische Zeilenindex nicht als eigene Spalte exportiert werden soll.
+
+    ```python
+    df.to_csv("auswertung.csv", index=False)
+    df.to_excel("auswertung.xlsx", index=False)
+    ```
     """)
     return
 
 
+
+
+
+
 @app.cell
-def _(beispiel, plt, verkauf):
-    _umsatz_zahlungsmittel = verkauf.groupby("Zahlungsmethode")["Umsatz"].sum()
-    _fig_pandas, _ax_pandas = plt.subplots(
-        figsize=(8, 3.8), layout="constrained"
-    )
-    _umsatz_zahlungsmittel.sort_values().plot(
-        kind="barh", ax=_ax_pandas, color="#f6b627"
-    )
-    _ax_pandas.set_title("Umsatz nach Zahlungsmethode")
-    _ax_pandas.set_xlabel("Umsatz in Euro")
-    _ax_pandas.set_ylabel("Zahlungsmethode")
+def _(beispiel, verkauf):
+    _csv_text = verkauf.head(3).to_csv(index=False)
     beispiel(
-        "Pandas für einen schnellen Entwurf",
-        "Die `plot`-Methode zeichnet die Gruppensummen direkt. Wir übergeben `ax`, damit die Grafik in unserem vorbereiteten Zeichenbereich erscheint.",
-        'umsatz_zahlungsmittel = verkauf.groupby("Zahlungsmethode")["Umsatz"].sum()\nfig, ax = plt.subplots()\numsatz_zahlungsmittel.sort_values().plot(kind="barh", ax=ax)',
-        _fig_pandas,
+        "CSV-Ausgabe vorbereiten",
+        "Ohne Dateinamen gibt `to_csv()` den CSV-Text zurück. Mit einem Dateinamen wird er gespeichert.",
+        "verkauf.head(3).to_csv(index=False)",
+        _csv_text,
     )
     return
+
+
+
+
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.vstack([
+        mo.md("""
+    ## Spalten auswählen
+
+    Mit einem Spaltennamen in eckigen Klammern erhalten wir eine Series. Mit einer Liste von Spaltennamen erhalten wir einen DataFrame.
+
+    ```python
+    df["Produkt"]
+    df[["Produkt", "Umsatz"]]
+    ```
+
+    Die zweite Schreibweise ist für mehrere Spalten wichtig: Die innere Liste nennt die gewünschten Spalten.
+            """),
+        mo.center(mo.image(src="public/03_subset_columns.svg", alt="Grafik zur Auswahl bestimmter DataFrame-Spalten", width=700)),
+        mo.md("*Die Grafik zeigt, wie eine Auswahl bestimmte Spalten beibehält.*"),
+    ], gap=1)
+    return
+
+
+
+
+
+
+@app.cell
+def _(beispiel, verkauf):
+    _auswahl = verkauf[["Produkt", "Umsatz"]].head(5)
+    beispiel(
+        "Zwei Spalten auswählen",
+        "Wir behalten den Produktnamen und den Umsatz jeder Zeile.",
+        'verkauf[["Produkt", "Umsatz"]].head()',
+        _auswahl,
+    )
+    return
+
+
+
+
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Interaktive Diagramme mit Plotly
+    ## `loc` und `iloc`
 
-    Plotly zeigt beim Überfahren mit der Maus zusätzliche Werte. Je nach Diagrammtyp können Teilnehmende zoomen, Bereiche auswählen und die Darstellung verschieben.
+    - `loc` wählt Zeilen und Spalten über **Labels** aus, zum Beispiel über einen Namen.
+    - `iloc` wählt über **Positionen** aus, also über Zahlen von 0 an.
 
-    Die pandas-Auswertung bleibt gleich. Wir übergeben die zusammengefasste Tabelle an Plotly Express.
+    Bei `loc` ist das Ende eines Bereichs eingeschlossen. Bei `iloc` ist das Ende ausgeschlossen – wie bei normalen Python-Slices.
     """)
     return
 
 
+
+
+
+
 @app.cell
-def _(beispiel, pd, px, verkauf):
-    _plotly_region = (
-        verkauf.groupby("Region", as_index=False)["Umsatz"]
-        .sum()
-        .sort_values("Umsatz", ascending=False)
-    )
-    _fig_plotly_region = px.bar(
-        _plotly_region,
-        x="Region",
-        y="Umsatz",
-        color="Region",
-        title="Umsatz nach Region",
-        labels={"Umsatz": "Umsatz in Euro", "Region": "Region"},
-        hover_data={"Umsatz": ":.2f"},
-    )
-    _fig_plotly_region.update_layout(showlegend=False)
+def _(beispiel, verkauf):
+    _labels = verkauf.loc[0:4, ["Produkt", "Umsatz"]]
     beispiel(
-        "Dieselbe Auswertung mit Plotly",
-        "Die Balken zeigen dieselben Gruppensummen. Beim Überfahren erscheint der genaue Umsatz.",
-        'region = verkauf.groupby("Region", as_index=False)["Umsatz"].sum()\nfig = px.bar(region, x="Region", y="Umsatz", color="Region", title="Umsatz nach Region")',
-        _fig_plotly_region,
+        "Mit `loc` nach Labels auswählen",
+        "Der Bereich `0:4` enthält beim Label-Zugriff beide Endpunkte.",
+        'verkauf.loc[0:4, ["Produkt", "Umsatz"]]',
+        _labels,
     )
     return
+
+
+
+
+
+
+@app.cell
+def _(beispiel, verkauf):
+    _positionen = verkauf.iloc[0:5, [1, 5]]
+    beispiel(
+        "Mit `iloc` nach Positionen auswählen",
+        "Die Zeilen 0 bis 4 und die Spalten an Position 1 und 5 werden ausgewählt. Die Endposition 5 ist ausgeschlossen.",
+        "verkauf.iloc[0:5, [1, 5]]",
+        _positionen,
+    )
+    return
+
+
+
+
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.vstack([
+        mo.md("""
+    ## Zeilen mit einer Bedingung filtern
+
+    Ein Vergleich wie `verkauf["Umsatz"] > 500` erzeugt für jede Zeile `True` oder `False`. Diese Wahrheitswerte können wir als Filter verwenden.
+
+    ```python
+    maske = verkauf["Umsatz"] > 500
+    verkauf.loc[maske]
+    ```
+
+    Lies den Vergleich als Frage: „Ist der Umsatz dieser Zeile größer als 500?“
+            """),
+        mo.center(mo.image(src="public/03_subset_rows.svg", alt="Grafik zum Filtern passender DataFrame-Zeilen", width=700)),
+        mo.md("*Die Bedingung wird zeilenweise geprüft und wählt nur passende Einträge aus.*"),
+    ], gap=1)
+    return
+
+
+
+
+
+
+@app.cell
+def _(beispiel, verkauf):
+    _maske = verkauf["Umsatz"] > 500
+    _teure_bestellungen = verkauf.loc[
+        _maske, ["Produkt", "Region", "Umsatz"]
+    ].head(6)
+    beispiel(
+        "Bestellungen über 500 Euro",
+        "Die Maske wählt nur Zeilen aus, die die Bedingung erfüllen.",
+        'maske = verkauf["Umsatz"] > 500\nverkauf.loc[maske, ["Produkt", "Region", "Umsatz"]].head()',
+        _teure_bestellungen,
+    )
+    return
+
+
+
+
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.vstack([
+        mo.md("""
+    ## Mehrere Bedingungen verbinden
+
+    Setze jede Bedingung in Klammern und verbinde sie mit:
+
+    - `&` für **und**
+    - `|` für **oder**
+    - `~` für **nicht**
+
+    ```python
+    (verkauf["Region"] == "Hamburg") & (verkauf["Umsatz"] > 500)
+    ```
+
+    Für Pandas-Series verwenden wir `&` und `|`, nicht die Python-Wörter `and` und `or`.
+            """),
+        mo.center(mo.image(src="public/03_subset_columns_rows.svg", alt="Grafik zur gemeinsamen Auswahl von Zeilen und Spalten", width=700)),
+        mo.md("*Hier werden Zeilenbedingungen und Spaltenauswahl kombiniert.*"),
+    ], gap=1)
+    return
+
+
+
+
+
+
+@app.cell
+def _(beispiel, verkauf):
+    _hamburg_und_hoch = verkauf.loc[
+        (verkauf["Region"] == "Hamburg") & (verkauf["Umsatz"] > 500),
+        ["Produkt", "Kategorie", "Umsatz"],
+    ].head(5)
+    beispiel(
+        "Zwei Bedingungen",
+        "Hier bleiben Bestellungen aus Hamburg, deren Umsatz über 500 Euro liegt.",
+        'verkauf.loc[(verkauf["Region"] == "Hamburg") & (verkauf["Umsatz"] > 500)]',
+        _hamburg_und_hoch,
+    )
+    return
+
+
+
+
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Eine gemeinsame Auswahl
+    ## Interaktiv filtern
 
-    Wähle eine Region und eine Kategorie. Die Monatsgrafik und die Tabelle gehören zur selben Auswahl und aktualisieren sich gemeinsam.
+    Wähle eine Stadt und eine oder mehrere Kategorien aus. Die Tabelle unter den Auswahlfeldern aktualisiert sich direkt.
 
-    **Beobachte:** Wie verändert sich der Verlauf, wenn du statt einer Kategorie `Alle` auswählst?
+    **Beobachte:** Welche Zeilen bleiben übrig, wenn du die Auswahl änderst?
     """)
     return
+
+
+
+
 
 
 @app.cell(hide_code=True)
 def _(mo, verkauf):
     _regionen = ["Alle"] + sorted(verkauf["Region"].dropna().unique().tolist())
-    _kategorien = ["Alle"] + sorted(verkauf["Kategorie"].dropna().unique().tolist())
+    _kategorien = sorted(verkauf["Kategorie"].dropna().unique().tolist())
     auswahl_region = mo.ui.dropdown(
         options=_regionen, value="Alle", label="Region"
     )
-    auswahl_kategorie = mo.ui.dropdown(
-        options=_kategorien, value="Alle", label="Kategorie"
+    auswahl_kategorie = mo.ui.multiselect(
+        options=_kategorien,
+        value=_kategorien[:2],
+        label="Kategorien (leer = alle)",
     )
     return auswahl_kategorie, auswahl_region
 
 
+
+
+
+
 @app.cell
-def _(auswahl_kategorie, auswahl_region, mo, pd, px, verkauf):
+def _(auswahl_kategorie, auswahl_region, mo, verkauf):
     _maske_region = (
-        pd.Series(True, index=verkauf.index)
+        True
         if auswahl_region.value == "Alle"
         else verkauf["Region"].eq(auswahl_region.value)
     )
-    _maske_kategorie = (
-        pd.Series(True, index=verkauf.index)
-        if auswahl_kategorie.value == "Alle"
-        else verkauf["Kategorie"].eq(auswahl_kategorie.value)
-    )
-    _gefiltert = verkauf.loc[_maske_region & _maske_kategorie]
-    _monat_auswahl = (
-        _gefiltert.assign(Monat=_gefiltert["Datum"].dt.to_period("M").astype(str))
-        .groupby("Monat", as_index=False)["Umsatz"]
-        .sum()
-    )
-    _fig_auswahl = px.line(
-        _monat_auswahl,
-        x="Monat",
-        y="Umsatz",
-        markers=True,
-        title=f"Umsatz pro Monat · {auswahl_region.value} · {auswahl_kategorie.value}",
-        labels={"Monat": "Monat", "Umsatz": "Umsatz in Euro"},
-    )
+    _gewählte_kategorien = auswahl_kategorie.value or _kategorien
+    _maske_kategorie = verkauf["Kategorie"].isin(_gewählte_kategorien)
+    _treffer = verkauf.loc[
+        _maske_region & _maske_kategorie,
+        ["Produkt", "Kategorie", "Region", "Umsatz"],
+    ]
     mo.vstack(
         [
-            mo.hstack([auswahl_region, auswahl_kategorie], widths=[1, 1], gap=1),
-            mo.md(f"**{len(_gefiltert)} Bestellungen · {len(_monat_auswahl)} Monate**"),
-            _fig_auswahl,
-            _gefiltert[["Datum", "Produkt", "Kategorie", "Region", "Umsatz"]].head(6),
+            mo.hstack(
+                [auswahl_region, auswahl_kategorie], widths=[1, 2], gap=1
+            ),
+            mo.md(
+                f"**{len(_treffer):,} Treffer · erste 8 Zeilen**".replace(
+                    ",", "."
+                )
+            ),
+            _treffer.head(8),
         ],
         gap=1,
     )
     return
 
 
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Woran gute Diagramme zu erkennen sind
-
-    - Titel und Achsen sagen, was die Zahlen zeigen und welche Einheiten gelten.
-    - Die Skala beginnt bei Balkendiagrammen in der Regel bei null.
-    - Farben unterscheiden Gruppen, wenn die Farbe dafür eine Bedeutung hat.
-    - Die Darstellung passt zur Frage und zum Datentyp.
-    - Eine sichtbare Beziehung wird nicht automatisch als Ursache erklärt.
-    """)
-    return
 
 
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ## Übung: Eine Frage mit einem Diagramm beantworten
-
-    Arbeite in dieser Reihenfolge:
-
-    1. Formuliere die Frage und wähle die nötigen Spalten.
-    2. Gruppiere oder filtere die Daten passend zur Frage.
-    3. Wähle einen Diagrammtyp.
-    4. Ergänze Titel, Achsen und Einheiten.
-    5. Beschreibe in einem Satz, was die Grafik zeigt.
-    """)
-    return
 
 
 @app.cell
-def _(beispiel, pd, plt, verkauf):
-    _uebung_umsatz = (
-        verkauf.groupby("Kategorie", as_index=False)["Umsatz"]
-        .sum()
-        .sort_values("Umsatz", ascending=False)
-    )
-    _fig_uebung, _ax_uebung = plt.subplots(figsize=(8, 3.8), layout="constrained")
-    _ax_uebung.bar(
-        _uebung_umsatz["Kategorie"],
-        _uebung_umsatz["Umsatz"],
-        color="#17668e",
-    )
-    _ax_uebung.set_title("Umsatz nach Produktkategorie")
-    _ax_uebung.set_xlabel("Kategorie")
-    _ax_uebung.set_ylabel("Umsatz in Euro")
-    _ax_uebung.tick_params(axis="x", rotation=20)
+def _(beispiel, verkauf):
+    _loesung_auswahl = verkauf.loc[
+        verkauf["Region"].eq("Hamburg"), ["Produkt", "Umsatz"]
+    ]
     beispiel(
-        "Musterlösung: Umsatz nach Kategorie",
-        "Die Tabelle fasst zuerst alle Bestellungen je Kategorie zusammen. Die Grafik vergleicht anschließend die Summen.",
-        'umsatz = verkauf.groupby("Kategorie", as_index=False)["Umsatz"].sum()\nfig, ax = plt.subplots()\nax.bar(umsatz["Kategorie"], umsatz["Umsatz"])\nax.set(xlabel="Kategorie", ylabel="Umsatz in Euro", title="Umsatz nach Produktkategorie")',
-        _fig_uebung,
+        "Lösung · Zeilen und Spalten auswählen",
+        "Erst filtern wir die Region. Dann wählen wir zwei benannte Spalten aus.",
+        'verkauf.loc[verkauf["Region"] == "Hamburg", ["Produkt", "Umsatz"]]',
+        _loesung_auswahl.head(8),
     )
     return
+
+
+
+
+
+
+
+@app.cell
+def _(beispiel, verkauf):
+    _loesung_filter = verkauf.loc[
+        (verkauf["Region"] == "Hamburg") & (verkauf["Umsatz"] > 500),
+        ["Produkt", "Kategorie", "Umsatz"],
+    ]
+    beispiel(
+        "Lösung · Zwei Bedingungen verbinden",
+        "Jede Bedingung steht in Klammern. `&` verlangt, dass beide Bedingungen zutreffen.",
+        'verkauf.loc[(verkauf["Region"] == "Hamburg") & (verkauf["Umsatz"] > 500), ["Produkt", "Kategorie", "Umsatz"]]',
+        _loesung_filter.head(8),
+    )
+    return
+
+
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Das Wichtigste
+    ## Das nehmen wir mit
 
-    - Die Frage bestimmt, wie wir Daten zusammenfassen und darstellen.
-    - Matplotlib gibt genaue Kontrolle über Figure und Axes. Pandas bietet einen schnellen Einstieg.
-    - Seaborn vereinfacht statistische Diagramme. Plotly ergänzt Mausinteraktion und Zoom.
-    - Marimo kann Auswahlfelder direkt mit Diagramm und Tabelle verbinden.
+    - `head`, `info` und `describe` helfen, eine Tabelle zuerst zu prüfen.
+    - Mit Spaltennamen und `loc` wählen wir gezielt Daten aus.
+    - Boolesche Masken filtern einzelne Bedingungen oder deren Kombination.
+    - Interaktive Auswahlen aktualisieren die gezeigte Tabelle.
 
-    **Nächster Schritt:** Die gezeigten Auswertungen im Arbeitsheft selbst erstellen und beschreiben.
+    **Rückblick:** Welche Spalten und Bedingungen brauchst du für deine nächste Datenfrage?
     """)
     return
 

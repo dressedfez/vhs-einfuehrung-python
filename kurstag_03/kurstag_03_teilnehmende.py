@@ -67,15 +67,11 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Unser Weg heute
+    ## Unser Weg heute · zwei Termine
 
-    1. Funktionen definieren, aufrufen und Ergebnisse zurückgeben.
-    2. Funktionen als Werte verwenden: `lambda`, `map`, `filter`, `reduce`.
-    3. Daten und Verhalten mit Klassen und Objekten verbinden.
-    4. Vererbung, Komposition und gemeinsames Verhalten unterscheiden.
-    5. Code mit Modulen und Packages organisieren.
+    **Termin 3:** Funktionen, Argumente, Rückgabewerte, `lambda`, `map` und `filter`.
 
-    Die Abschnitte **Zusatzteil** sind freiwillig und können nach dem Grundteil bearbeitet werden.
+    **Termin 4:** Klassen, Komposition, Module und Packages. `reduce` und tiefe Vererbung bleiben Zusatzstoff.
     """)
     return
 
@@ -388,8 +384,9 @@ def _(namen_antwort, pruefhinweis):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
-    ## Klassen und Objekte
+    mo.vstack([
+        mo.md("""
+    ## Termin 4 · Klassen und Objekte
 
     Eine **Klasse** beschreibt Daten und Verhalten. Ein erzeugtes Objekt ist eine **Instanz** dieser Klasse.
 
@@ -400,7 +397,12 @@ def _(mo):
     ```
 
     `__init__` richtet eine neue Instanz ein. `self` bezeichnet die Instanz, mit der gerade gearbeitet wird.
-    """)
+    """),
+        mo.center(mo.image(
+            src="public/Klassendiagramm.png",
+            alt="UML-Diagramm einer Klasse Buchstabe mit Eigenschaften und Methoden",
+        )),
+    ], gap=1)
     return
 
 
@@ -478,7 +480,8 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Vererbung und Polymorphismus
 
     Vererbung beschreibt eine **Ist-ein**-Beziehung: Ein Student ist eine Person. Die Unterklasse übernimmt Attribute und Methoden und kann sie erweitern.
@@ -491,7 +494,14 @@ def _(mo):
     ```
 
     `super()` ruft Verhalten der Oberklasse auf.
-    """)
+    """),
+        mo.center(mo.image(
+            src="public/KlassendiagrammVererbung.png",
+            alt="UML-Diagramm mit Vererbung von Student und Professor zu Person sowie einer Adresse als Bestandteil",
+            width=640,
+        )),
+        mo.md("*Links: Student und Professor sind Personen. Rechts: Eine Person lebt in einer Adresse — eine Hat-ein-Beziehung.*"),
+    ], gap=1)
     return
 
 

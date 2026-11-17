@@ -14,6 +14,7 @@ __generated_with = "0.25.2"
 app = marimo.App(
     width="medium",
     layout_file="layouts/kurstag_03_folien.slides.json",
+    css_file="layouts/folien.css",
 )
 
 
@@ -92,12 +93,9 @@ def _(mo):
     mo.md("""
     ## Unser Weg heute
 
-    1. **Funktionen:** Code benennen, aufrufen und wiederverwenden.
-    2. **Funktionen kombinieren:** `lambda`, `map`, `filter` und `reduce` einordnen.
-    3. **Objekte bauen:** Klassen, Vererbung, Komposition und gemeinsames Verhalten.
-    4. **Code organisieren:** Module und Packages importieren.
+    **Termin 3:** Funktionen, Parameter, Rückgabewerte, `lambda`, `map` und `filter`.
 
-    **Zusatzteil:** Innere Funktionen, `reduce` und das Kursverwaltungs-Package.
+    **Termin 4:** Klassen, Komposition, Module und Packages. Vererbung und `reduce` sind Zusatzstoff.
     """)
     return
 
@@ -509,7 +507,7 @@ def _(beispiel):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Klassen und Objekte
+    ## Termin 4 · Klassen und Objekte
 
     Eine **Klasse** beschreibt, welche Daten und welches Verhalten ihre Objekte haben. Ein erzeugtes Objekt heißt **Instanz**.
 
@@ -536,8 +534,11 @@ def _(beispiel):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Eine Klasse definieren
+
+    Das UML-Diagramm zeigt eine Klasse mit ihrem Namen, ihren Eigenschaften und ihren Methoden. In Python bündeln `class`, `__init__` und `self` diese Teile.
 
     ```python
     class Kurs:
@@ -546,7 +547,12 @@ def _(mo):
     ```
 
     `__init__` richtet eine neue Instanz ein. `self` bezeichnet genau diese Instanz.
-    """)
+    """),
+        mo.center(mo.image(
+            src="public/Klassendiagramm.png",
+            alt="UML-Diagramm einer Klasse Buchstabe mit Eigenschaften und Methoden",
+        )),
+    ], gap=1)
     return
 
 
@@ -757,7 +763,8 @@ def _(beispiel):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Vererbung oder Komposition?
 
     | Beziehung | Frage | Beispiel |
@@ -766,7 +773,14 @@ def _(mo):
     | Komposition | Hat ein …? | Kurs hat eine Kursleitung |
 
     Vererbung teilt gemeinsames Verhalten. Komposition verbindet eigenständige Objekte und kann Aufgaben an sie weitergeben.
-    """)
+    """),
+        mo.center(mo.image(
+            src="public/KlassendiagrammVererbung.png",
+            alt="UML-Diagramm mit Vererbung von Student und Professor zu Person sowie einer Adresse als Bestandteil",
+            width=640,
+        )),
+        mo.md("*Links: Student und Professor sind Personen. Rechts: Eine Person lebt in einer Adresse — eine Hat-ein-Beziehung.*"),
+    ], gap=1)
     return
 
 

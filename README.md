@@ -1,30 +1,48 @@
+# Python für Daten und KI
 
-# Python-Kurs: Python für Daten und KI – Programmieren lernen für die Zukunft 
+Ein Einführungskurs der Volkshochschule Dresden. Die acht Termine führen von den
+ersten Python-Programmen über Datenanalyse bis zu Visualisierung und
+maschinellem Lernen.
 
-## Anforderungen
+## Kursmaterialien für acht Termine
 
-Folgende Programme werden genutzt:
+Jeder Kurstag hat Folien für den gemeinsamen Unterricht und ein Arbeitsheft für
+die Teilnehmenden. Die jeweiligen README-Dateien enthalten Startanleitungen.
 
-1. [uv](https://docs.astral.sh/) - Paketmanager und Verwaltungswerkzeug für Python
-1. [marimo](https://docs.marimo.io) - Reaktives Notebook für Python 
-<p>
-<div class="center">
-<img src="https://docs.marimo.io/_static/marimo-logotype-thick.svg" width=50 alt="marimo">
-<img src="https://docs.astral.sh/uv/assets/logo-letter.svg" width=38 alt="uv" align="right">
-</div>
+| Termin | Schwerpunkt | Folien | Arbeitsheft |
+| --- | --- | --- | --- |
+| 1 | Python, uv, marimo, Variablen und Datentypen | [Kurstag 1](kurstag_01/kurstag_01_folien.py) | [Arbeitsheft](kurstag_01/kurstag_01_teilnehmende.py) |
+| 2 | Bedingungen, Schleifen, interaktive Elemente, Listen und Dictionaries | [Kurstag 2](kurstag_02/kurstag_02_folien.py) | [Arbeitsheft](kurstag_02/kurstag_02_teilnehmende.py) |
+| 3 | Funktionen, Parameter, Rückgabewerte, `map` und `filter` | [Folien](kurstag_03/kurstag_03_folien.py) | [Arbeitsheft](kurstag_03/kurstag_03_teilnehmende.py) |
+| 4 | Klassen, Module und Packages; Fehlermeldungen lesen | [Folien](kurstag_03/kurstag_03_folien.py) | [Arbeitsheft](kurstag_03/kurstag_03_teilnehmende.py) |
+| 5 | Pandas I: Tabellen laden, prüfen, auswählen und filtern | [Folien](kurstag_05/kurstag_05_folien.py) | [Arbeitsheft](kurstag_05/kurstag_05_teilnehmende.py) |
+| 6 | Pandas II: fehlende Werte, Berechnungen, Gruppierungen und Pivot-Tabellen | [Folien](kurstag_06/kurstag_06_folien.py) | [Arbeitsheft](kurstag_06/kurstag_06_teilnehmende.py) · [Datenbereinigungsübung](kurstag_06/datenbereinigung_uebung.md) |
+| 7 | Visualisierung und Datenprojekt | [Kurstag 7](kurstag_07/kurstag_07_folien.py) | [Arbeitsheft](kurstag_07/kurstag_07_teilnehmende.py) |
+| 8 | Maschinelles Lernen mit Scikit-Learn | [Kurstag 8](kurstag_08/kurstag_08_folien.py) | [Arbeitsheft](kurstag_08/kurstag_08_teilnehmende.py) |
 
-## Kursübersicht
+Die Termine 3 und 4 stehen als getrennte Abschnitte in den gemeinsamen
+Materialien von [Kurstag 3](kurstag_03/README.md). Für Termine 5 und 6 gibt es
+jetzt jeweils eigene Verzeichnisse mit eigenen Folien und Arbeitsheften:
+[Kurstag 5](kurstag_05/README.md) · [Kurstag 6](kurstag_06/README.md). Auch
+[Kurstag 7](kurstag_07/README.md) und [Kurstag 8](kurstag_08/README.md) haben
+eigene Materialien und Startanleitungen.
 
-Dieser Kurs ist eine Einführung in die Programmiersprache `Python`, wobei am Ende des Kurses ein Schwerpunkt auf 
-Datenanalyse und Nutzung von maschinellem Lernen und künstlicher Intelligenz liegt.
+## Werkzeuge
 
-| Kurstag | Themen |
-| ---- | ----- |
-| <div align="center">1<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_01/kurstag_01.py)</div> | <ul><li>Übersicht</li><li>Einführung in Paketmanagement mit <br>[uv](https://docs.astral.sh/uv/)</br><ul><li>Instalation von Python</li><li>Erste Schritte in Python-REPL</li><li>Projekt-Management</li></ul></li><li>Einführung in [marimo](https://docs.marimo.io)</li><ul><li>marimo starten und Tutorials</li><li>Erste Schritte in Python unter marimo</li></ul><li>Datentypen</li><li>Variablen</li> </ul> |
-| <div align="center">2<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_02/kurstag_02.py)</div> | <ul> <li>mathematische Standard-Operatoren</li> <li>Bedingungen</li><li>Schleifen</li><li>Nutzung interaktiver Elemente in marimo</li></ul> |
-| <div align="center">3<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_03/kurstag_03.py)</div> | <ul> <li>Funktionen</li> <li>Lambda- oder Anonyme Funktionen</li><li>Map, Filter und Reduce</li><li>Klassen und Vererbung</li><li>Duck-Typing und Polymorphismus</li><li>Module</li> <li>Pakete</li><li>Importing</li></ul> |
-| <div align="center">4<br>[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_04/kurstag_04.py)</div> | <ul> <li>Datenanalyse:</li> <ul><li>Pandas vs. Polars</li><li>Allgemeines Vorgehen</li></ul><li>Einführung in Pandas-Konzepte</li><ul><li>Series</li><li>Einlese und Schreiben von Daten</li><li>Filtern von Daten</li><li>Erstellen von Spalten</li><li>Statistische Auswertungen</li><li>Pivotieren von Daten</li><li>Zeitserien</li></ul></ul> |
-| <div align="center">5<br>[![Folien in marimo öffnen](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_05/kurstag_05_folien.py)</div> | <ul> <li>Graphische Darstellung von Daten</li> <ul><li>Matplotlib</li><li>Seaborn</li><li>Plotly</li></ul><li>Beispieldatenanalysen</li></ul> |
-| <div align="center">6<br>[![Folien in marimo öffnen](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dressedfez/vhs-einfuehrung-python/blob/main/kurstag_06/kurstag_06_folien.py)</div> | <ul> <li>Einführung in maschinelles Lernen</li> <li>Scikit-Learn</li><li>Trainings- und Testdaten</li><li>Modelltraining und Modellbewertung</li><li>Confusion Matrix und Fehlbeispiele</li><li>Ziffernerkennung</li></ul> |
+Der Kurs verwendet [uv](https://docs.astral.sh/uv/) für Python und Pakete sowie
+[marimo](https://docs.marimo.io) als reaktives Notebook. Wenn marimo installiert
+ist, startet `marimo run` die Folienpräsentation im Browser; `marimo edit` öffnet
+das Notebook zum Bearbeiten und für Live-Coding. Die jeweilige README enthält
+den passenden Befehl.
 
+```sh
+cd kurstag_01
+marimo run kurstag_01_folien.py
+```
 
+Ohne installierte marimo-Version lässt sich derselbe Befehl einmalig mit uvx
+ausführen: `uvx --from "marimo==0.25.2" marimo run kurstag_01_folien.py`.
+
+Die ursprünglichen Dateien und Präsentationen bleiben in den Kursordnern als
+Ausgangsmaterial erhalten. Die aufbereiteten Marimo-Dateien tragen die Endungen
+`_folien.py` und `_teilnehmende.py`.

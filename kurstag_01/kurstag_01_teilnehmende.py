@@ -54,7 +54,7 @@ def _(mo):
 
     ## So arbeitest du mit dem Notebook
 
-    - Starte es mit `uvx --from "marimo==0.25.2" marimo edit kurstag_01_teilnehmende.py`.
+    - Starte es mit `marimo edit kurstag_01_teilnehmende.py`.
     - Bearbeite die sichtbaren Python-Zellen und führe sie mit **Shift+Enter** aus.
     - **Neutral:** noch offen · **Orange:** Hinweis beachten · **Grün:** Prüfung bestanden.
     - `None` ist ein Platzhalter für eine noch offene Antwort. Ersetze ihn durch deinen Code.

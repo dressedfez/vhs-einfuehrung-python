@@ -11,6 +11,7 @@ __generated_with = "0.25.2"
 app = marimo.App(
     width="medium",
     layout_file="layouts/kurstag_02_folien.slides.json",
+    css_file="layouts/folien.css",
 )
 
 

@@ -11,6 +11,18 @@ Für Kurstag 3 gibt es zwei aufbereitete Notebooks:
 
 Das ursprüngliche Notebook [kurstag_03.py](kurstag_03.py) bleibt als Ausgangsmaterial erhalten. Die beiden vorhandenen Packages `simple_math_package` und `kursverwaltung` werden als Beispiele für Importe und Modulaufbau verwendet.
 
+## Einsatz an zwei Terminen
+
+- **Termin 3:** Abschnitte „Funktionen“, „Parameter und Argumente“, „Rückgabewerte“, „Lambda-Funktionen“ sowie `map` und `filter`. Mit den ersten beiden Basisübungen abschließen.
+- **Termin 4:** Mit „Klassen und Objekte“ fortfahren, dann Vererbung/Polymorphismus und Module/Packages bearbeiten. Die Übungen zu Kleingruppen und austauschbarem Verhalten dienen als Praxisaufgabe. `reduce`, innere Funktionen und tiefe Vererbungsbeispiele bleiben Zusatzstoff.
+
+So bleibt Zeit, Funktionen selbst zu schreiben und die Fehlerausgaben gemeinsam zu lesen, bevor Klassen und Dateistruktur dazukommen.
+
+Im Abschnitt zu Termin 4 zeigen die Folien und das Arbeitsheft zwei lokale
+Abbildungen aus `public/`: `Klassendiagramm.png` ordnet Klassenname,
+Eigenschaften und Methoden ein; `KlassendiagrammVererbung.png` veranschaulicht
+die Ist-ein- und Hat-ein-Beziehungen.
+
 ## Folien starten
 
 Alle Befehle im Ordner `kurstag_03` ausführen. Voraussetzung ist eine installierte Version von [uv](https://docs.astral.sh/).

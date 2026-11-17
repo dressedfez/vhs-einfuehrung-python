@@ -23,6 +23,8 @@ def _():
     return (mo,)
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     def pruefhinweis(status, aufgabe, hinweis):
@@ -42,6 +44,8 @@ def _(mo):
         )
 
     return (pruefhinweis,)
+
+
 
 
 @app.cell(hide_code=True)
@@ -66,20 +70,20 @@ def _(mo):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
-    ## Unser Weg heute
+    ## Unser Weg heute · zwei Termine
 
-    1. Series und DataFrames verstehen.
-    2. Daten prüfen und aus Dateien laden.
-    3. Spalten auswählen und Zeilen filtern.
-    4. Neue Spalten berechnen und Werte gruppieren.
-    5. Pivot-Tabellen lesen und erstellen.
+    **Termin 5:** Series und DataFrames, Dateien laden und prüfen, Spalten auswählen und Zeilen filtern.
 
-    Die Übungen bauen auf `df_verkauf` auf. Mit `head()` kannst du jederzeit prüfen, wie die Tabelle aussieht.
+    **Termin 6:** Fehlende Werte, berechnete Spalten, Gruppierungen und Pivot-Tabellen.
     """)
     return
+
+
 
 
 @app.cell
@@ -89,6 +93,8 @@ def _():
     return (pd,)
 
 
+
+
 @app.cell
 def _(pd):
     df_verkauf = pd.read_excel("online_shop_verkaufsdaten.xlsx", sheet_name="Verkaufsdaten")
@@ -96,9 +102,12 @@ def _(pd):
     return (df_verkauf,)
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Series und DataFrames
 
     Eine **Series** speichert eine Spalte mit Werten und einem Index. Ein **DataFrame** verbindet mehrere benannte Series zu einer Tabelle.
@@ -112,8 +121,16 @@ def _(mo):
     ```
 
     Der Index kennzeichnet Zeilen. Spaltennamen beschreiben, welche Werte die Tabelle enthält.
-    """)
+            """),
+        mo.hstack([
+                mo.image(src="public/01_table_series.svg", alt="Schematische Darstellung einer Pandas-Series als einzelne beschriftete Spalte", width=300),
+                mo.image(src="public/01_table_dataframe.svg", alt="Schematische Darstellung eines Pandas-DataFrames mit Zeilen, Spalten und Index", width=460),
+        ], widths=[1, 1], gap=1),
+        mo.md("*Eine Series ist eine Spalte; ein DataFrame bündelt mehrere Spalten.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -126,6 +143,8 @@ def _(mo, pd):
     )
     mo.vstack([_besuche, _kurse], gap=1)
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -143,6 +162,8 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf, mo):
     _kennzahlen = df_verkauf[["Preis", "Menge", "Umsatz"]].describe().round(2)
@@ -155,6 +176,8 @@ def _(df_verkauf, mo):
         gap=1,
     )
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -179,15 +202,20 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     df_verkauf.head(3).to_csv(index=False)
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Spalten auswählen
 
     ```python
@@ -196,14 +224,21 @@ def _(mo):
     ```
 
     Ein einzelner Spaltenname ergibt eine **Series**. Eine Liste von Spaltennamen ergibt einen **DataFrame**.
-    """)
+            """),
+        mo.center(mo.image(src="public/03_subset_columns.svg", alt="Grafik zur Auswahl bestimmter DataFrame-Spalten", width=700)),
+        mo.md("*Die Abbildung zeigt, welche Spalten die Auswahl enthält.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
 def _(df_verkauf):
     df_verkauf[["Produkt", "Umsatz"]].head()
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -222,10 +257,14 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     df_verkauf.loc[0:4, ["Produkt", "Umsatz"]]
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -244,15 +283,20 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     df_verkauf.iloc[0:5, [1, 5]]
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Zeilen filtern
 
     Ein Vergleich wie `df_verkauf["Umsatz"] > 500` ergibt eine Series aus `True` und `False`. Mit dieser Maske wählen wir die passenden Zeilen aus.
@@ -261,8 +305,13 @@ def _(mo):
     maske = df_verkauf["Umsatz"] > 500
     df_verkauf.loc[maske]
     ```
-    """)
+            """),
+        mo.center(mo.image(src="public/03_subset_rows.svg", alt="Grafik zum Filtern passender DataFrame-Zeilen", width=700)),
+        mo.md("*Die Bedingung entscheidet für jede Zeile, ob sie in der Auswahl bleibt.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -272,9 +321,12 @@ def _(df_verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Bedingungen verbinden
 
     - `&` bedeutet **und**.
@@ -288,8 +340,13 @@ def _(mo):
     ```
 
     Bei Pandas-Series verwenden wir `&` und `|` statt `and` und `or`.
-    """)
+            """),
+        mo.center(mo.image(src="public/03_subset_columns_rows.svg", alt="Grafik zur gemeinsamen Auswahl von Zeilen und Spalten", width=700)),
+        mo.md("*Zeilen filtern und Spalten wählen lassen sich kombinieren.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -302,6 +359,8 @@ def _(df_verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -310,6 +369,8 @@ def _(mo):
     Wähle hier eine Stadt und Produktkategorien aus. Die Trefferliste wird direkt unter den Auswahlfeldern angezeigt und aktualisiert sich mit deiner Auswahl.
     """)
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -321,6 +382,8 @@ def _(df_verkauf, mo):
         options=_kategorien, value=_kategorien[:2], label="Kategorien (leer = alle)"
     )
     return kategorie_auswahl, region_auswahl
+
+
 
 
 @app.cell
@@ -347,10 +410,28 @@ def _(df_verkauf, kategorie_auswahl, mo, region_auswahl):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
-    ## Neue Spalten berechnen
+    mo.vstack([
+        mo.md("""
+    ## Termin 6 · Fehlende Werte und neue Spalten
+
+    Prüfe mit `isna().sum()`, welche Werte in der Verkaufstabelle fehlen. Fehlende Mengen kannst du nicht ohne Begründung als null interpretieren. In der folgenden Übung probierst du zwei bewusste Behandlungen an einer kleinen Kopie.
+
+    ```python
+    mini = pd.DataFrame({
+        "Region": ["Dresden", None, "Leipzig"],
+        "Menge": [2, 1, None],
+        "Preis": [12.0, 12.0, 2.5],
+    })
+    mini.isna().sum()
+    ```
+
+    Ersetze fehlende Regionen durch `"Unbekannt"`. Erzeuge zusätzlich eine zweite Tabelle ohne Zeilen, deren Menge fehlt. Vergleiche die Zeilenzahlen, bevor du Umsatz berechnest.
+
+    ### Neue Spalten berechnen
 
     Rechts von der Zuweisung steht der Ausdruck für die neue Spalte:
 
@@ -359,8 +440,16 @@ def _(mo):
     ```
 
     Pandas berechnet das Ergebnis zeilenweise. Für die folgenden Übungen erstellen wir eine Kopie, damit die Originaldaten unverändert bleiben.
-    """)
+            """),
+        mo.hstack([
+                mo.image(src="public/05_newcolumn_1.svg", alt="Grafik zur Berechnung einer neuen DataFrame-Spalte", width=700),
+                mo.image(src="public/05_newcolumn_2.svg", alt="Grafik zur Berechnung einer neuen DataFrame-Spalte mit einem weiteren Beispiel", width=700),
+        ], widths=[1, 1], gap=1),
+        mo.md("*Die Bilder veranschaulichen das Berechnen zusätzlicher Spalten.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -372,9 +461,12 @@ def _(df_verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Aggregationen und `groupby`
 
     `sum`, `mean`, `min`, `max` und `count` fassen Werte zusammen. Mit `groupby` lassen sich diese Kennzahlen getrennt für jede Gruppe berechnen.
@@ -384,8 +476,16 @@ def _(mo):
     ```
 
     Die Gruppen werden aus den verschiedenen Werten in `Kategorie` gebildet.
-    """)
+            """),
+        mo.hstack([
+                mo.image(src="public/06_aggregate.svg", alt="Grafik zur Zusammenfassung vieler Werte durch Aggregationen", width=650),
+                mo.image(src="public/06_valuecounts.svg", alt="Grafik zum Zählen von Häufigkeiten mit value_counts", width=650),
+        ], widths=[1, 1], gap=1),
+        mo.md("*Aggregation und Häufigkeitszählung fassen die Tabelle auf unterschiedliche Weise zusammen.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -394,15 +494,20 @@ def _(df_verkauf):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     df_verkauf["Zahlungsmethode"].value_counts()
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Pivot und Pivot-Tabelle
 
     `pivot()` stellt Daten um, wenn jede Kombination aus Zeilen- und Spaltenmerkmal eindeutig ist.
@@ -419,8 +524,16 @@ def _(mo):
         fill_value=0,
     )
     ```
-    """)
+            """),
+        mo.hstack([
+                mo.image(src="public/07_pivot.svg", alt="Grafik zum Umstellen einer Tabelle mit pivot", width=650),
+                mo.image(src="public/07_pivot_table.svg", alt="Grafik zur Zusammenfassung mit pivot_table", width=650),
+        ], widths=[1, 1], gap=1),
+        mo.md("*Die Diagramme zeigen den Unterschied zwischen Umordnen und Aggregieren.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -436,6 +549,8 @@ def _(df_verkauf, pd):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -448,12 +563,16 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     antwort_auswahl = None
     # Ergänze die Auswahl nach Region und Spaltennamen.
     antwort_auswahl
     return (antwort_auswahl,)
+
+
 
 
 @app.cell(hide_code=True)
@@ -476,6 +595,8 @@ def _(antwort_auswahl, df_verkauf, mo, pd, pruefhinweis):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -488,12 +609,16 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     antwort_umsatz = None
     # Erstelle eine Kopie und ergänze Umsatz_neu aus Preis und Menge.
     antwort_umsatz
     return (antwort_umsatz,)
+
+
 
 
 @app.cell(hide_code=True)
@@ -510,6 +635,8 @@ def _(antwort_umsatz, df_verkauf, mo, pd, pruefhinweis):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -522,12 +649,16 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     antwort_gruppierung = None
     # Gruppiere nach Kategorie und berechne den Gesamtumsatz.
     antwort_gruppierung
     return (antwort_gruppierung,)
+
+
 
 
 @app.cell(hide_code=True)
@@ -546,6 +677,8 @@ def _(antwort_gruppierung, df_verkauf, mo, pd, pruefhinweis):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -558,12 +691,16 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf, pd):
     antwort_pivot = None
     # Erstelle die Pivot-Tabelle mit Kategorie, Region und Umsatz.
     antwort_pivot
     return (antwort_pivot,)
+
+
 
 
 @app.cell(hide_code=True)
@@ -589,6 +726,8 @@ def _(antwort_pivot, df_verkauf, mo, pd, pruefhinweis):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -606,10 +745,14 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(df_verkauf):
     df_verkauf.groupby("Produkt")["Umsatz"].sum().sort_values(ascending=False).head(5).round(2)
     return
+
+
 
 
 @app.cell(hide_code=True)

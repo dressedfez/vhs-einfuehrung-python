@@ -14,6 +14,7 @@ __generated_with = "0.25.2"
 app = marimo.App(
     width="medium",
     layout_file="layouts/kurstag_01_folien.slides.json",
+    css_file="layouts/folien.css",
 )
 
 
@@ -211,13 +212,13 @@ def _(mo):
     Im Terminal im Ordner `kurstag_01`:
 
     ```sh
-    uv run --script kurstag_01_folien.py
+    marimo run kurstag_01_folien.py
     ```
 
     Zum Bearbeiten und Live-Coding:
 
     ```sh
-    uvx --from "marimo==0.25.2" marimo edit kurstag_01_folien.py
+    marimo edit kurstag_01_folien.py
     ```
 
     **marimo führt abhängige Zellen erneut aus**, wenn sich ein verwendeter Wert ändert.
@@ -247,15 +248,17 @@ def _(mo):
     return
 
 
-@app.cell(hide_code=True)
-def _(beispiel):
-    _anzahl = 10
-    _ergebnis = _anzahl + 1
-    beispiel(
-        "Einen Wert verwenden",
-        "Ändere die Teilnehmerzahl und beobachte das Ergebnis.\n\n**Frage:** Was passiert bei einer zusätzlichen Anmeldung?",
-        "_anzahl = 10\n_ergebnis = _anzahl + 1",
-        _ergebnis,
+@app.cell
+def _(mo):
+    # Ändere die Zahl und führe die Zelle erneut aus.
+    anzahl_teilnehmende = 11
+    anzahl_nach_anmeldung = anzahl_teilnehmende + 1
+
+    mo.md(
+        "## Was passiert bei einer Anmeldung?\n\n"
+        "Die erste Zeile speichert die aktuelle Zahl. Die zweite Zeile "
+        "berechnet den Wert nach einer weiteren Anmeldung.\n\n"
+        f"**Nach einer Anmeldung:** {anzahl_nach_anmeldung} Teilnehmende"
     )
     return
 
@@ -274,25 +277,6 @@ def _(mo):
 
     Python erlaubt auch viele Unicode-Buchstaben, beispielsweise Umlaute.
     Für unsere Beispiele verwenden wir einfache Namen wie `anzahl_karten`.
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ## Gute Namen erklären den Code
-
-    | Wenig aussagekräftig | Verständlich |
-    | --- | --- |
-    | `x = 10` | `anzahl_teilnehmende = 10` |
-    | `b = 2.5` | `preis_pro_karte = 2.5` |
-
-    /// tip | Namenskonventionen
-    Verständliche Namen in Kleinbuchstaben mit Unterstrichen (`snake_case`).
-    Konstanten schreibt man üblicherweise groß: `MAX_TEILNEHMER = 12`.
-    Python verhindert eine spätere Änderung dadurch nicht.
-    ///
     """)
     return
 
@@ -320,17 +304,6 @@ def _(mo):
     return
 
 
-@app.cell
-def _():
-    # Übung 1: a enthält einen Vornamen, b die Anzahl gebuchter Kurse.
-    # Benenne a und b verständlich um – auch in der Ausgabezeile.
-    # Die Werte "Frank" und 3 sollen unverändert bleiben.
-    a = "Frank"
-    b = 3
-    (a, b)  # noqa: B018
-    return a, b
-
-
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -340,8 +313,7 @@ def _(mo):
     - Sind die Namen gültig und in `snake_case` geschrieben?
     - Ist die Ausgabe weiterhin `("Frank", 3)`?
 
-    Verschiedene verständliche Namen sind möglich. Diese Aufgabe wird gemeinsam
-    besprochen und nicht automatisch bewertet.
+    Verschiedene verständliche Namen sind möglich.
     ///
     """)
     return
@@ -350,10 +322,41 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
+    ## Gute Namen erklären den Code
+
+    | Wenig aussagekräftig | Verständlich |
+    | --- | --- |
+    | `x = 10` | `anzahl_teilnehmende = 10` |
+    | `b = 2.5` | `preis_pro_karte = 2.5` |
+
+    /// tip | Namenskonventionen
+    Verständliche Namen in Kleinbuchstaben mit Unterstrichen (`snake_case`).
+    Konstanten schreibt man üblicherweise groß: `MAX_TEILNEHMER = 12`.
+    Python verhindert eine spätere Änderung dadurch nicht.
+    ///
+    """)
+    return
+
+
+@app.cell
+def _():
+    # Übung 1: a enthält einen Vornamen, b die Anzahl gebuchter Kurse.
+    # Benenne a und b verständlich um – auch in der Ausgabezeile.
+    # Die Werte "Frank" und 3 sollen unverändert bleiben.
+    a = "Frank"
+    b = 3
+    (a, b)  # noqa: B018
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     ## Auflösung · Variablennamen
 
-    **Gültig:** A, C und F.
+    <strong>Gültig:</strong> A, C und F.
 
+    <strong>Ungültig:</strong>
     - B beginnt mit einer Ziffer.
     - D enthält ein Minuszeichen; Python liest es als Subtraktion.
     - E ist ein Schlüsselwort.

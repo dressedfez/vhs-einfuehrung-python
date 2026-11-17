@@ -16,6 +16,7 @@ __generated_with = "0.25.2"
 app = marimo.App(
     width="medium",
     layout_file="layouts/kurstag_04_folien.slides.json",
+    css_file="layouts/folien.css",
 )
 
 
@@ -24,6 +25,8 @@ def _():
     import marimo as mo
 
     return (mo,)
+
+
 
 
 @app.cell(hide_code=True)
@@ -45,6 +48,8 @@ def _(mo):
         )
 
     return beispiel, pd
+
+
 
 
 @app.cell(hide_code=True)
@@ -92,24 +97,28 @@ def _(mo):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ## Unser Weg heute
 
-    1. **Tabellen verstehen:** Series, DataFrames und erste Prüfmethoden.
-    2. **Daten finden:** Spalten auswählen, Zeilen filtern, `loc` und `iloc` nutzen.
-    3. **Fragen beantworten:** Spalten berechnen, gruppieren und zusammenfassen.
-    4. **Ergebnisse ordnen:** Pivot und Pivot-Tabellen sinnvoll einsetzen.
+    **Termin 5:** Tabellen laden und prüfen, Spalten auswählen, Zeilen filtern.
+
+    **Termin 6:** Fehlende Werte behandeln, Spalten berechnen, gruppieren und Pivot-Tabellen erstellen.
 
     **Arbeitsweise:** Eine Frage stellen, passende Daten auswählen, Ergebnis prüfen und verständlich beschreiben.
     """)
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Von der Tabelle zur Erkenntnis
 
     Eine Datenanalyse beginnt mit einer konkreten Frage. Dann prüfen wir, welche Daten und Spalten dafür passen, filtern die benötigten Zeilen und fassen die Ergebnisse zusammen.
@@ -117,8 +126,13 @@ def _(mo):
     **Beispiel:** In welcher Region wurde welcher Umsatz erzielt?
 
     Wir arbeiten heute mit einem kleinen Ausschnitt aus einer Online-Shop-Tabelle. Die Methoden lassen sich später auf größere Datensätze übertragen.
-    """)
+            """),
+        mo.center(mo.image(src="public/datenanalyse-ablauf.svg", alt="Ablauf einer Datenanalyse von der Datensammlung bis zur Kommunikation", width=560)),
+        mo.md("*Der Ablauf erinnert daran, dass Bereinigen, Auswerten und Kommunizieren zusammengehören.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -127,22 +141,31 @@ def _(mo):
         mo.image(
             "public/01_table_dataframe.svg",
             alt="Ein DataFrame mit Zeilen, Spalten und Index",
+            width=480,
         )
     )
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Zwei wichtige Datenstrukturen
 
     - **Series:** eine einzelne Spalte mit Index und Werten.
     - **DataFrame:** eine Tabelle aus mehreren benannten Series.
 
     Den Index verwendet Pandas, um Zeilen zu finden. Spaltennamen beschreiben, welche Information in jeder Spalte steht.
-    """)
+            """),
+        mo.center(mo.image(src="public/01_table_series.svg", alt="Schematische Darstellung einer Pandas-Series als einzelne beschriftete Spalte", width=180)),
+        mo.md("*Eine Series bildet die einzelne Spalte; der DataFrame auf der vorherigen Folie verbindet mehrere Spalten zu einer Tabelle.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -157,6 +180,8 @@ def _(beispiel, pd):
         _besuche,
     )
     return
+
+
 
 
 @app.cell
@@ -177,6 +202,8 @@ def _(beispiel, pd):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -192,6 +219,8 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(beispiel, pd):
     verkauf = pd.read_excel(
@@ -204,6 +233,8 @@ def _(beispiel, pd):
         verkauf.head(),
     )
     return (verkauf,)
+
+
 
 
 @app.cell
@@ -223,6 +254,8 @@ def _(beispiel, verkauf):
         _pruefung,
     )
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -247,6 +280,8 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(beispiel, verkauf):
     _csv_text = verkauf.head(3).to_csv(index=False)
@@ -259,9 +294,12 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Spalten auswählen
 
     Mit einem Spaltennamen in eckigen Klammern erhalten wir eine Series. Mit einer Liste von Spaltennamen erhalten wir einen DataFrame.
@@ -272,8 +310,13 @@ def _(mo):
     ```
 
     Die zweite Schreibweise ist für mehrere Spalten wichtig: Die innere Liste nennt die gewünschten Spalten.
-    """)
+            """),
+        mo.center(mo.image(src="public/03_subset_columns.svg", alt="Grafik zur Auswahl bestimmter DataFrame-Spalten", width=700)),
+        mo.md("*Die Grafik zeigt, wie eine Auswahl bestimmte Spalten beibehält.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -286,6 +329,8 @@ def _(beispiel, verkauf):
         _auswahl,
     )
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -301,6 +346,8 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(beispiel, verkauf):
     _labels = verkauf.loc[0:4, ["Produkt", "Umsatz"]]
@@ -311,6 +358,8 @@ def _(beispiel, verkauf):
         _labels,
     )
     return
+
+
 
 
 @app.cell
@@ -325,9 +374,12 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Zeilen mit einer Bedingung filtern
 
     Ein Vergleich wie `verkauf["Umsatz"] > 500` erzeugt für jede Zeile `True` oder `False`. Diese Wahrheitswerte können wir als Filter verwenden.
@@ -338,8 +390,13 @@ def _(mo):
     ```
 
     Lies den Vergleich als Frage: „Ist der Umsatz dieser Zeile größer als 500?“
-    """)
+            """),
+        mo.center(mo.image(src="public/03_subset_rows.svg", alt="Grafik zum Filtern passender DataFrame-Zeilen", width=700)),
+        mo.md("*Die Bedingung wird zeilenweise geprüft und wählt nur passende Einträge aus.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -357,9 +414,12 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Mehrere Bedingungen verbinden
 
     Setze jede Bedingung in Klammern und verbinde sie mit:
@@ -373,8 +433,13 @@ def _(mo):
     ```
 
     Für Pandas-Series verwenden wir `&` und `|`, nicht die Python-Wörter `and` und `or`.
-    """)
+            """),
+        mo.center(mo.image(src="public/03_subset_columns_rows.svg", alt="Grafik zur gemeinsamen Auswahl von Zeilen und Spalten", width=700)),
+        mo.md("*Hier werden Zeilenbedingungen und Spaltenauswahl kombiniert.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -392,6 +457,8 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -402,6 +469,8 @@ def _(mo):
     **Beobachte:** Welche Zeilen bleiben übrig, wenn du die Auswahl änderst?
     """)
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -417,6 +486,8 @@ def _(mo, verkauf):
         label="Kategorien (leer = alle)",
     )
     return auswahl_kategorie, auswahl_region
+
+
 
 
 @app.cell
@@ -449,10 +520,18 @@ def _(auswahl_kategorie, auswahl_region, mo, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
-    ## Neue Spalten berechnen
+    mo.vstack([
+        mo.md("""
+    ## Termin 6 · Daten bereinigen und berechnen
+
+    Prüfe mit `isna().sum()`, welche Werte fehlen. Ein fehlender Wert bedeutet „unbekannt“, nicht automatisch null. Entferne oder ergänze Werte erst, wenn die Fragestellung das begründet.
+
+    - `df.dropna(subset=["Menge"])` entfernt Zeilen ohne Menge.
+    - `df["Region"].fillna("Unbekannt")` kennzeichnet unbekannte Regionen.
 
     Eine neue Spalte entsteht durch eine Zuweisung mit eckigen Klammern. Rechts steht ein Ausdruck, der für alle Zeilen berechnet wird.
 
@@ -461,8 +540,13 @@ def _(mo):
     ```
 
     Pandas führt die Multiplikation für jedes Wertepaar aus. Eine `for`-Schleife ist dafür nicht nötig.
-    """)
+            """),
+        mo.center(mo.image(src="public/05_newcolumn_1.svg", alt="Grafik zur Berechnung einer neuen DataFrame-Spalte", width=700)),
+        mo.md("*Das Bild ergänzt den Abschnitt zur Berechnung neuer Spalten.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -479,9 +563,12 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Zusammenfassen: Aggregationen
 
     Aggregationen reduzieren viele Werte auf Kennzahlen:
@@ -492,8 +579,13 @@ def _(mo):
     - `count()` zählt vorhandene Werte.
 
     `describe()` liefert mehrere Kennzahlen auf einmal. Fehlende Werte werden bei vielen numerischen Aggregationen automatisch ausgelassen.
-    """)
+            """),
+        mo.center(mo.image(src="public/06_aggregate.svg", alt="Grafik zur Zusammenfassung vieler Werte durch Aggregationen", width=650)),
+        mo.md("*Viele Einzelwerte werden auf eine Kennzahl zusammengefasst.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -512,6 +604,8 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md("""
@@ -526,6 +620,8 @@ def _(mo):
     So vergleichen wir beispielsweise den Gesamtumsatz verschiedener Produktkategorien.
     """)
     return
+
+
 
 
 @app.cell
@@ -545,6 +641,8 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell
 def _(beispiel, verkauf):
     _vergleich = (
@@ -562,16 +660,24 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Häufigkeiten zählen
 
     `value_counts()` zählt, wie oft jeder Wert in einer Spalte vorkommt. Das ist eine schnelle Antwort auf Fragen wie „Wie viele Bestellungen gibt es pro Zahlungsmethode?“.
 
     Die gleiche Auswertung lässt sich mit `groupby(...).size()` schreiben.
-    """)
+            """),
+        mo.center(mo.image(src="public/06_valuecounts.svg", alt="Grafik zum Zählen von Häufigkeiten mit value_counts", width=650)),
+        mo.md("*Die Häufigkeiten machen sichtbar, wie oft Werte in einer Spalte vorkommen.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -586,17 +692,28 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Pivot oder Pivot-Tabelle?
 
     - `pivot()` ordnet Daten neu. Jede Kombination aus Zeilen- und Spaltenmerkmal darf nur einmal vorkommen.
     - `pivot_table()` kann wiederholte Kombinationen mit einer Aggregation zusammenfassen.
 
     Nutze `pivot`, wenn die Kombinationen eindeutig sind. Nutze `pivot_table`, wenn Werte zusammengefasst werden müssen.
-    """)
+            """),
+        mo.hstack([
+                mo.image(src="public/07_pivot.svg", alt="Grafik zum Umstellen einer Tabelle mit pivot", width=650),
+                mo.image(src="public/07_pivot_table.svg", alt="Grafik zur Zusammenfassung mit pivot_table", width=650),
+        ], widths=[1, 1], gap=1),
+        mo.md("*Die beiden Bilder führen vom Umstellen mit pivot zum Zusammenfassen mit pivot_table.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell
@@ -620,6 +737,8 @@ def _(beispiel, pd):
     return
 
 
+
+
 @app.cell
 def _(beispiel, pd, verkauf):
     _kreuztabelle = pd.pivot_table(
@@ -639,9 +758,12 @@ def _(beispiel, pd, verkauf):
     return
 
 
+
+
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md("""
+    mo.vstack([
+        mo.md("""
     ## Häufige Stolperstellen
 
     - Für mehrere Spalten: `df[["A", "B"]]` mit zwei Paar eckigen Klammern.
@@ -649,8 +771,13 @@ def _(mo):
     - Bei mehreren Bedingungen: jede Bedingung einklammern und `&` oder `|` verwenden.
     - `pivot()` schlägt fehl, wenn Zeilen- und Spaltenmerkmale nicht eindeutig sind. Dann `pivot_table()` mit `aggfunc` nutzen.
     - Wenn du Spalten ergänzt, arbeite bei Bedarf mit `df.copy()` oder `assign()`, damit das Ausgangsobjekt erhalten bleibt.
-    """)
+            """),
+        mo.center(mo.image(src="public/pivot_titanic_fehler.png", alt="Beispiel für den Fehler bei nicht eindeutigen Kombinationen mit pivot und die Lösung mit pivot_table", width=650)),
+        mo.md("*Wenn Kombinationen mehrfach vorkommen, braucht es eine Aggregation mit pivot_table.*"),
+    ], gap=1)
     return
+
+
 
 
 @app.cell(hide_code=True)
@@ -669,6 +796,8 @@ def _(mo):
     return
 
 
+
+
 @app.cell
 def _(beispiel, verkauf):
     _loesung_auswahl = verkauf.loc[
@@ -681,6 +810,8 @@ def _(beispiel, verkauf):
         _loesung_auswahl.head(8),
     )
     return
+
+
 
 
 @app.cell
@@ -697,6 +828,8 @@ def _(beispiel, verkauf):
     return
 
 
+
+
 @app.cell
 def _(beispiel, verkauf):
     _loesung_gruppierung = (
@@ -709,6 +842,8 @@ def _(beispiel, verkauf):
         _loesung_gruppierung,
     )
     return
+
+
 
 
 @app.cell
